@@ -1,4 +1,75 @@
-/* 크로니콘 위키 — 문서 내 검색 (공통) */
+/* 크로니콘 위키 — 공통 스크립트 */
+
+/* 1. 문서 목록 토글 (모바일). 데스크톱은 CSS가 항상 펼침 */
+(function () {
+  var nav = document.querySelector('nav.side');
+  if (!nav) return;
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'navtoggle';
+  btn.setAttribute('aria-expanded', 'false');
+  btn.setAttribute('aria-controls', 'wikinav');
+  var cur = nav.querySelector('a.cur');
+  btn.textContent = '문서 목록' + (cur ? ' — ' + cur.textContent.replace(/^└\s*/, '') : '');
+  nav.id = 'wikinav';
+  nav.parentNode.insertBefore(btn, nav);
+  btn.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+  });
+})();
+
+/* 2. 문서 내 목차 — h2를 모아 상단에 삽입 (h2가 3개 이상일 때만) */
+(function () {
+  var sec = document.querySelector('section');
+  if (!sec) return;
+  var hs = [].slice.call(sec.querySelectorAll('h2'));
+  if (hs.length < 3) return;
+
+  var used = {};
+  function slug(t, i) {
+    var s = t.trim().replace(/\s+/g, '-').replace(/[^\w가-힣ㄱ-ㅎ-]/g, '').slice(0, 40) || ('s' + i);
+    while (used[s]) s = s + '-' + i;
+    used[s] = 1;
+    return s;
+  }
+
+  var box = document.createElement('div');
+  box.className = 'pagetoc';
+  var t = document.createElement('div');
+  t.className = 't';
+  t.textContent = '이 문서의 목차';
+  box.appendChild(t);
+  var ol = document.createElement('ol');
+
+  hs.forEach(function (h, i) {
+    if (!h.id) h.id = slug(h.textContent, i);
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    // h2 안의 .en 같은 보조 텍스트는 목차에서 제외
+    var clone = h.cloneNode(true);
+    [].slice.call(clone.querySelectorAll('.en,.tag,.chip,.mono')).forEach(function (x) { x.remove(); });
+    a.textContent = clone.textContent.trim();
+    li.appendChild(a);
+    ol.appendChild(li);
+
+    // 제목 옆 앵커 링크
+    if (!h.querySelector('.anchor')) {
+      var an = document.createElement('a');
+      an.className = 'anchor';
+      an.href = '#' + h.id;
+      an.textContent = '#';
+      an.setAttribute('aria-label', '이 절 링크');
+      h.appendChild(an);
+    }
+  });
+
+  box.appendChild(ol);
+  sec.insertBefore(box, sec.firstChild);
+})();
+
+/* 3. 문서 내 검색 */
 (function () {
   var q = document.getElementById('q');
   if (!q) return;
@@ -61,6 +132,7 @@
       blocks.forEach(function (o) {
         if (o.head) return;
         var el = o.el, ok = false;
+        if (el.classList.contains('pagetoc')) { el.classList.add('hide'); return; } // 목차는 검색 대상 제외
         if (el.classList.contains('tw')) {
           var rows = el.querySelectorAll('tr'), rh = 0;
           for (var r = 0; r < rows.length; r++) {
