@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>{{페이지 제목}} · 크로니콘 위키</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="{{ROOT}}assets/wiki.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="brand plain" href="{{ROOT}}index.html">크로니콘 <span>위키</span></a>
+  <span class="crumb">{{빵부스러기: 예) <a href="../index.html">게임 기초</a> › 피해 계산}}</span>
+</div>
+
+<!--
+  ▼ 공통 사이드 목차. 모든 페이지에 그대로 복사하되,
+    (1) {{ROOT}}를 페이지 깊이에 맞게 치환 — 루트면 "", 1단계 하위면 "../", 2단계면 "../../"
+    (2) 현재 페이지에 해당하는 <a>에 class="cur" 추가
+-->
+<nav class="side">
+  <div class="grp">시작</div>
+  <ul>
+    <li><a href="{{ROOT}}index.html">홈</a></li>
+  </ul>
+  <div class="grp">게임 기초</div>
+  <ul>
+    <li><a href="{{ROOT}}basics/damage.html">피해 계산</a></li>
+    <li><a href="{{ROOT}}basics/defense.html">방어</a></li>
+    <li><a href="{{ROOT}}basics/skills.html">스킬 · 태그</a></li>
+    <li><a href="{{ROOT}}basics/items.html">아이템 · 제작</a></li>
+    <li><a href="{{ROOT}}basics/endgame.html">난이도 · 엔드게임</a></li>
+    <li><a href="{{ROOT}}basics/glossary.html">한영 명칭</a></li>
+  </ul>
+  <div class="grp">클래스</div>
+  <ul>
+    <li><a href="{{ROOT}}classes/index.html">클래스 개요</a></li>
+    <li><a href="{{ROOT}}classes/warlock/index.html">워록</a></li>
+    <li><a href="{{ROOT}}classes/warlock/leveling.html">└ 레벨링</a></li>
+    <li><a href="{{ROOT}}classes/warlock/progression.html">└ 성장</a></li>
+    <li><a href="{{ROOT}}classes/warlock/builds.html">└ 빌드</a></li>
+    <li><a class="soon" href="#">템플러 (예정)</a></li>
+    <li><a class="soon" href="#">버서커 (예정)</a></li>
+    <li><a class="soon" href="#">워든 (예정)</a></li>
+    <li><a class="soon" href="#">메카니스트 (예정)</a></li>
+  </ul>
+  <div class="grp">자료</div>
+  <ul>
+    <li><a href="{{ROOT}}meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="{{ROOT}}meta/patches.html">패치 동향</a></li>
+  </ul>
+</nav>
+
+<h1>{{페이지 제목}}</h1>
+<p class="lede">{{한 줄 설명}}</p>
+
+<div class="searchbar">
+  <input type="search" id="q" placeholder="이 문서에서 검색" autocomplete="off" spellcheck="false" aria-label="문서 내 검색">
+  <span class="cnt" id="cnt"></span>
+</div>
+<p id="none">검색 결과가 없습니다.</p>
+
+<section>
+  {{본문 — h2/h3/h4, p, ul, .tw>table, .card, .note, .formula 사용}}
+</section>
+
+<footer>
+  개인 참고용 한국어 정리 · Chronicon 1.54.1 기준 · 검색엔진 색인 제외
+</footer>
+</div>
+<a href="#" class="totop">↑ 맨 위</a>
+<script src="{{ROOT}}assets/wiki.js"></script>
+</body>
+</html>

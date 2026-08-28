@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>클래스 · 크로니콘 위키</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/wiki.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="brand plain" href="../index.html">크로니콘 <span>위키</span></a>
+  <span class="crumb">클래스</span>
+</div>
+
+<nav class="side">
+  <div class="grp">시작</div>
+  <ul>
+    <li><a href="../index.html">홈</a></li>
+  </ul>
+  <div class="grp">게임 기초</div>
+  <ul>
+    <li><a href="../basics/damage.html">피해 계산</a></li>
+    <li><a href="../basics/defense.html">방어</a></li>
+    <li><a href="../basics/skills.html">스킬 · 태그</a></li>
+    <li><a href="../basics/items.html">아이템 · 제작</a></li>
+    <li><a href="../basics/endgame.html">난이도 · 엔드게임</a></li>
+    <li><a href="../basics/glossary.html">한영 명칭</a></li>
+  </ul>
+  <div class="grp">클래스</div>
+  <ul>
+    <li><a class="cur" href="index.html">클래스 개요</a></li>
+    <li><a href="warlock/index.html">워록</a></li>
+    <li><a href="warlock/leveling.html">└ 레벨링</a></li>
+    <li><a href="warlock/progression.html">└ 성장</a></li>
+    <li><a href="warlock/builds.html">└ 빌드</a></li>
+    <li><a class="soon" href="#">템플러 (예정)</a></li>
+    <li><a class="soon" href="#">버서커 (예정)</a></li>
+    <li><a class="soon" href="#">워든 (예정)</a></li>
+    <li><a class="soon" href="#">메카니스트 (예정)</a></li>
+  </ul>
+  <div class="grp">자료</div>
+  <ul>
+    <li><a href="../meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="../meta/patches.html">패치 동향</a></li>
+  </ul>
+</nav>
+
+<h1>클래스</h1>
+<p class="lede">크로니콘의 플레이 가능한 클래스 5종과 각 클래스 문서로 가는 입구입니다.</p>
+
+<div class="searchbar">
+  <input type="search" id="q" placeholder="이 문서에서 검색" autocomplete="off" spellcheck="false" aria-label="문서 내 검색">
+  <span class="cnt" id="cnt"></span>
+</div>
+<p id="none">검색 결과가 없습니다.</p>
+
+<!-- ══════════ 비교 ══════════ -->
+<section id="compare">
+  <h2>5종 비교</h2>
+  <p>본편에 4종, DLC로 1종이 추가됩니다. 아래 수치와 특징은 게임 내 클래스 선택 화면 원문 <code>locale/menu class_*</code>에서 확인한 것입니다. <span class="tag data">데이터</span></p>
+
+  <div class="tw"><table>
+    <tr><th>클래스</th><th>주력 원소</th><th>자원</th><th>특징</th><th>기본 보너스</th></tr>
+    <tr>
+      <td><strong>템플러</strong><br><span class="mono">Templar</span></td>
+      <td><span class="chip holy">신성</span><span class="chip fire">화염</span><span class="chip phys">물리</span><span class="chip lightning">번개</span></td>
+      <td>마나</td>
+      <td>방패로 공격을 차단하고, 치유·방어 수단이 가장 다양합니다</td>
+      <td><strong>피해 감소 +30%</strong></td>
+    </tr>
+    <tr>
+      <td><strong>버서커</strong><br><span class="mono">Berserker</span></td>
+      <td><span class="chip fire">화염</span><span class="chip lightning">번개</span><span class="chip phys">물리</span><span class="chip frost">냉기</span></td>
+      <td>마나 + <strong>분노</strong></td>
+      <td>일부 능력에 분노를 소모합니다. 기본 체력·마나 재생이 2배</td>
+      <td><strong>피해 감소 +30%</strong></td>
+    </tr>
+    <tr>
+      <td><strong>워든</strong><br><span class="mono">Warden</span></td>
+      <td><span class="chip lightning">번개</span><span class="chip frost">냉기</span><span class="chip phys">물리</span><span class="chip poison">독</span></td>
+      <td>마나</td>
+      <td>자연 생물을 소환해 함께 싸웁니다</td>
+      <td>회피 +5% · 전 저항 +10%</td>
+    </tr>
+    <tr>
+      <td><strong>워록</strong><br><span class="mono">Warlock</span></td>
+      <td><span class="chip shadow">암흑</span><span class="chip frost">냉기</span><span class="chip poison">독</span><span class="chip fire">화염</span></td>
+      <td>마나 + <strong>영혼</strong></td>
+      <td><strong>영혼</strong>을 모아 능력에 사용하고, 악마와 언데드를 소환합니다</td>
+      <td>전 저항 +10%</td>
+    </tr>
+    <tr>
+      <td><strong>메카니스트</strong><br><span class="mono">Mechanist</span><br><span class="tag unk">DLC</span></td>
+      <td><span class="chip phys">물리</span><span class="chip fire">화염</span><span class="chip poison">독</span><span class="chip holy">신성</span></td>
+      <td>마나 + <strong>탄약</strong></td>
+      <td><strong>탄약</strong>을 모아 사용합니다. 기계 동료·드론·포탑 중심</td>
+      <td>피해 감소 +20% · 패리 +5%</td>
+    </tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>메카니스트는 별도 DLC가 필요합니다.</strong> 본편만 가지고 있으면 클래스 선택 화면에 잠긴 상태로 표시됩니다. 나머지 4종은 본편에 포함돼 있습니다.<br>
+    참고로 <strong>고대 야수 <span class="mono">Ancient Beasts</span> DLC</strong>는 클래스를 추가하지 않고 <strong>아티팩트·원정 트리</strong>를 여는 별개의 확장입니다. 엔드게임 빌드 상당수가 이쪽을 전제로 합니다.
+  </div>
+</section>
+
+<!-- ══════════ 공통 구조 ══════════ -->
+<section id="common">
+  <h2>클래스마다 공통인 것</h2>
+  <p>클래스가 달라도 스킬 시스템의 골격은 같습니다. <span class="tag data">데이터</span></p>
+  <ul>
+    <li>클래스마다 <strong>스킬 트리 4종</strong>. 트리마다 실제 스킬 열이 <strong>8개</strong>이고, 해금 기준은 세로줄이 아니라 <strong>가로 열</strong>입니다</li>
+    <li>확정 해금 레벨은 1열 = <strong>1</strong>, 2열 = <strong>5</strong>, 3열 = <strong>10</strong>, 8열(궁극기) = <strong>40</strong></li>
+    <li>최대 랭크는 액티브 <strong>5</strong> · 대부분의 패시브 <strong>3</strong> · 궁극기 <strong>1</strong></li>
+    <li>스킬 포인트는 레벨당 1개, 100레벨에 <strong>총 100개</strong>이고 네 트리에 자유 배분합니다 (<code>Ctrl</code> + 클릭 = 5포인트씩)</li>
+    <li><strong>궁극기는 하나만 장착</strong> 가능하고, 8종 전부 쿨다운 60초입니다</li>
+    <li>액티브 슬롯 <strong>6개</strong> + 벨트 슬롯 <strong>4개</strong>. 한 버튼에 여러 스킬을 겹쳐 놓으면 <strong>슬롯 순서상 오른쪽 → 왼쪽</strong>으로 발동합니다</li>
+    <li><strong>의식 <span class="mono">Ritual</span> 스킬은 슬롯에 넣어두기만 해도 패시브 절반이 작동</strong>합니다</li>
+    <li>마스터리는 <strong>100레벨 전부터</strong> 쌓입니다. 클래스 트리 4줄 + 공용(왕관) 줄 3개 구성이고 상한이 없습니다</li>
+  </ul>
+  <div class="note">
+    <strong>영혼 관련 마스터리 노드</strong>(영혼 관리자·영혼 감옥)는 워록 전용이 아니라 <strong>공용 줄</strong> 소속입니다. 한편 워록 <em>스킬 트리</em>의 「최대 영혼 +5」 노드는 <strong>2019년 0.90.0에서 삭제</strong>됐습니다 — 그걸 언급하는 조언은 죽은 정보입니다.
+  </div>
+</section>
+
+<!-- ══════════ 문서 ══════════ -->
+<section id="docs">
+  <h2>클래스 문서</h2>
+  <p>현재 <strong>워록만 작성이 끝났습니다.</strong> 나머지 네 클래스는 자리만 잡아둔 상태입니다.</p>
+
+  <div class="grid">
+    <a class="tile" href="warlock/index.html">
+      <h3>워록 <span class="mono">Warlock</span></h3>
+      <p>영혼 · 저주 · 소환. 레벨링부터 T1000+ 푸시 빌드까지 작성 완료</p>
+    </a>
+    <a class="tile soon" href="#">
+      <h3>템플러 <span class="mono">Templar</span></h3>
+      <p>예정 — 방패·신성·피해 감소 +30%</p>
+    </a>
+    <a class="tile soon" href="#">
+      <h3>버서커 <span class="mono">Berserker</span></h3>
+      <p>예정 — 분노 자원, 근접 화력</p>
+    </a>
+    <a class="tile soon" href="#">
+      <h3>워든 <span class="mono">Warden</span></h3>
+      <p>예정 — 자연 소환, 회피</p>
+    </a>
+    <a class="tile soon" href="#">
+      <h3>메카니스트 <span class="mono">Mechanist</span></h3>
+      <p>예정 — 탄약 자원, 포탑·드론. <strong>별도 DLC 필요</strong></p>
+    </a>
+  </div>
+
+  <h3>워록 하위 문서</h3>
+  <ul>
+    <li><a href="warlock/index.html">워록 개요</a> — 트리 4종(부패자·리치·악마학자·수확자)과 자원</li>
+    <li><a href="warlock/leveling.html">레벨링 1 → 100</a> — 해골 연타, 30레벨 모독자 세트, 도박·염료 파밍</li>
+    <li><a href="warlock/progression.html">성장 (100레벨 이후)</a> — 목적 있는 파밍, 인챈트 순서, 원정 트리</li>
+    <li><a href="warlock/builds.html">엔드게임 빌드 5종</a> — 저주 모독자 · 메테오라 · 데몬 로드 · 태양과 달 화염 태풍</li>
+  </ul>
+</section>
+
+<!-- ══════════ 확장 ══════════ -->
+<section id="scope">
+  <h2>이 위키의 범위</h2>
+  <p>이 위키는 <strong>워록 문서에서 출발했지만 클래스별로 확장할 수 있는 구조</strong>로 짜여 있습니다. 문서는 <code>classes/&lt;클래스&gt;/</code> 아래에 <strong>개요 · 레벨링 · 성장 · 빌드</strong> 4종 세트로 놓이고, 클래스와 무관한 계산식·아이템·난이도 규칙은 <strong>게임 기초</strong> 쪽에 한 번만 적습니다.</p>
+  <ul>
+    <li>새 클래스를 추가할 때는 이 페이지의 <code>.tile.soon</code>에서 <code>soon</code>을 떼고 실제 경로를 넣으면 됩니다</li>
+    <li>왼쪽 목차도 같은 방식입니다 — <code>class="soon"</code>과 <code>href="#"</code>만 교체합니다</li>
+    <li>클래스 문서에서 반복될 만한 설명(피해 계산·저항·룬·보석)은 <strong>게임 기초로 빼고 링크</strong>하는 것을 원칙으로 합니다</li>
+  </ul>
+  <div class="note">
+    수록 기준은 <strong>공식 디스코드 <code>#build-forum</code>에 실제로 올라온 자료</strong>입니다. 근거 등급은 <span class="tag data">데이터</span>(게임 파일 대조) · <span class="tag dev">개발자</span> · <span class="tag comm">커뮤니티</span> · <span class="tag unk">미검증</span>으로 표기합니다.
+  </div>
+</section>
+
+<footer>
+  개인 참고용 한국어 정리 · Chronicon 1.54.1 기준 · 검색엔진 색인 제외
+</footer>
+</div>
+<a href="#" class="totop">↑ 맨 위</a>
+<script src="../assets/wiki.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>패치 동향 · 크로니콘 위키</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/wiki.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="brand plain" href="../index.html">크로니콘 <span>위키</span></a>
+  <span class="crumb"><a href="../index.html">홈</a> › 패치 동향</span>
+</div>
+
+<nav class="side">
+  <div class="grp">시작</div>
+  <ul><li><a href="../index.html">홈</a></li></ul>
+  <div class="grp">게임 기초</div>
+  <ul>
+    <li><a href="../basics/damage.html">피해 계산</a></li>
+    <li><a href="../basics/defense.html">방어</a></li>
+    <li><a href="../basics/skills.html">스킬 · 태그</a></li>
+    <li><a href="../basics/items.html">아이템 · 제작</a></li>
+    <li><a href="../basics/endgame.html">난이도 · 엔드게임</a></li>
+    <li><a href="../basics/glossary.html">한영 명칭</a></li>
+  </ul>
+  <div class="grp">클래스</div>
+  <ul>
+    <li><a href="../classes/index.html">클래스 개요</a></li>
+    <li><a href="../classes/warlock/index.html">워록</a></li>
+    <li><a href="../classes/warlock/leveling.html">└ 레벨링</a></li>
+    <li><a href="../classes/warlock/progression.html">└ 성장</a></li>
+    <li><a href="../classes/warlock/builds.html">└ 빌드</a></li>
+    <li><a class="soon" href="#">템플러 (예정)</a></li>
+    <li><a class="soon" href="#">버서커 (예정)</a></li>
+    <li><a class="soon" href="#">워든 (예정)</a></li>
+    <li><a class="soon" href="#">메카니스트 (예정)</a></li>
+  </ul>
+  <div class="grp">자료</div>
+  <ul>
+    <li><a href="sources.html">출처 · 신뢰도</a></li>
+    <li><a class="cur" href="patches.html">패치 동향</a></li>
+  </ul>
+</nav>
+
+<h1>패치 동향</h1>
+<p class="lede">플레이에 영향을 주는 변경만 골라 정리했습니다. 오래된 가이드를 읽을 때 <strong>무엇이 이미 바뀌었는지</strong> 확인하는 용도입니다.</p>
+
+<div class="searchbar">
+  <input type="search" id="q" placeholder="이 문서에서 검색" autocomplete="off" spellcheck="false" aria-label="문서 내 검색">
+  <span class="cnt" id="cnt"></span>
+</div>
+<p id="none">검색 결과가 없습니다.</p>
+
+<section>
+  <h2>현재 상황</h2>
+  <div class="note">
+    라이브 버전 <strong>1.54.1</strong> (2025-11-24). 이후 정식 패치 없음. <span class="tag data">데이터</span><br>
+    개발자 공지: 다음은 <strong>엔드게임 DLC</strong>이며 그때까지 소소한 버그 수정 외 업데이트가 없습니다. 목표 시점은 2026년 중반. <span class="tag dev">개발자</span>
+  </div>
+  <div class="note warn">
+    <strong>개발 공백이 있었습니다.</strong> 1.52.0(2023-03)은 제목이 <em>"The Final Update"</em>였고, 2.5년 뒤 1.53.0(2025-08)에서 개발이 재개됐습니다. <strong>2023년 3월 ~ 2025년 8월 사이에 쓰인 글은 "게임이 끝났다"는 전제로 작성</strong>된 것이라, 이후 추가된 기능(자동 시전 등)을 모릅니다.
+  </div>
+
+  <h2>1.54.0 · 1.54.1 — Isolation &amp; Anomalies <span class="mono">(2025-11)</span></h2>
+  <h3>레벨링에 직접 영향</h3>
+  <ul>
+    <li><strong>초반 전리품 하향</strong> <span class="tag dev">개발자</span> — 레벨이 오르며 점차 예전 수준으로 회복되도록 재조정. <strong>100레벨 전리품은 그대로.</strong> 낮은 레벨·낮은 난이도에서 마법부여·희귀가 덜 나오고 <strong>가방이 더 자주</strong> 나옵니다. 개발자 설명은 "초반 루팅 경험이 덜 부담스럽도록"</li>
+    <li>버그 수정: 에픽·마법부여가 <strong>의도보다 10배 높은 확률</strong>로 나오고 있었고, 그 탓에 일반(흰색) 등급이 드랍 풀에서 사라져 있었습니다</li>
+    <li><strong>신전 상부 회랑 제단에 동전 헌납</strong> 시 쓸 만한 아이템이 나올 확률 대폭 상승</li>
+    <li>예전 가이드의 "20레벨이면 희귀템이 넘친다"는 서술은 <strong>이제 틀립니다</strong></li>
+  </ul>
+  <h3>전투</h3>
+  <ul>
+    <li><strong>지속 피해(도트)를 걸면 몇 프레임 안에 첫 틱</strong>이 들어옵니다 (기존엔 1초 대기). 도트 위주 빌드에 직접적인 상향 <span class="tag data">데이터</span></li>
+  </ul>
+  <h3>아노말리</h3>
+  <ul>
+    <li>타일셋·레이아웃 조합 <strong>60 → 92</strong>. 새 <strong>Wormgut</strong> 타일셋(4막 최종 보스 기반), 막다른 길 없는 긴 복도 레이아웃, 나선형, 대형 개활지 추가. Bone Pits 레이아웃은 제거(타일셋은 유지) → <a href="../basics/endgame.html">생성 방식 설명</a></li>
+  </ul>
+  <h3>모드 · 아이템</h3>
+  <ul>
+    <li><strong>고립(Isolation) 모드</strong> 신규 — 공용 창고·재화·글로벌 진행까지 완전 분리. 멀티 불가, <strong>해제 불가</strong>, 하드코어와 병행 가능</li>
+    <li><strong>초월(Transcendent) 물약</strong> 4종 — 100레벨 몹 드랍 또는 사렉 구매</li>
+    <li><span class="chip shadow">워록</span> <strong>타락의 로브</strong> 강화치 <strong>4/5%로 하향</strong> (기존 5/8%) — 재생형 역병 마법사 빌드에 영향</li>
+    <li>요툰헬름 강화 상한 <strong>50/100%로 상향</strong> (기존 30/60%)</li>
+  </ul>
+
+  <h2>1.53.0 — 개발 재개 <span class="mono">(2025-08)</span></h2>
+  <ul>
+    <li><strong>자동 시전(Auto Cast)</strong> 추가 <span class="tag dev">개발자</span> — 스킬 바인드 메뉴에서 「Auto」 체크. 해당 키가 자동 시전 토글이 됩니다. <strong>예전의 키바인드 꼼수나 "이 아이템이 대신 시전해준다"는 팁의 가치가 크게 줄었습니다</strong></li>
+    <li><strong>소환수가 항상 스킬을 최대 랭크로 사용</strong> — 소환 빌드 상향</li>
+    <li>무한 아노말리가 <strong>포탈을 두 개</strong> 제공 (다음 층 / 같은 층 반복)</li>
+    <li><span class="chip shadow">워록</span> 비명 해골 지팡이: 튕김을 다 못 채우면 남은 피해의 50%를 주도록 보완</li>
+  </ul>
+
+  <h2>1.50 · 1.52 <span class="mono">(2022–2023)</span></h2>
+  <ul>
+    <li><strong>인젝터·런처는 50레벨 + 영웅 난이도 이상</strong>에서만 드랍 <span class="tag data">데이터</span></li>
+    <li>아이템이 다른 클래스 전용 옵션을 굴리지 않게 됨 — 장비 맞추기가 빨라짐</li>
+    <li><span class="chip shadow">워록</span> 피학주의자 약화 중첩이 <strong>곱연산으로 변경</strong>(하향), 뼈 스킬 상호작용 수정(상향)</li>
+  </ul>
+
+  <h2>1.40 — 영약 체계 전면 개편 <span class="mono">(2022-06)</span></h2>
+  <div class="note warn">
+    <strong>1.40 이전 글의 영약 조언은 전부 무효입니다.</strong> 영약은 더 이상 몹에서 드랍되지 않고 <strong>틴카의 영역·크로니콘의 영약 상점에서 구매</strong>합니다. 구 영약은 레거시로 분류돼 나오지 않습니다. <span class="tag data">데이터</span>
+  </div>
+  <ul>
+    <li>영약 27종 추가, 3등급 · 등급별 2개씩 동시 적용</li>
+    <li><strong>인젝터·런처</strong> 도입 (벨트 장착형 유물) — MK1은 상점, MK2·MK3은 희귀 드랍, MK4·MK5는 숨은 변환 레시피</li>
+    <li><strong>타로에서 두루마리 도박 불가</strong>로 변경 — 별도 두루마리 상점 신설</li>
+    <li><span class="chip shadow">워록</span> 관통의 비술 제단 의식 리워크 — 냉기 창 스킬에 광역을 더하는 대신 <strong>기본 피해를 곱연산으로 증폭</strong>. 「냉기 창 스킬」 태그 신설. 사신 3피스가 골격 파열 상시 발동으로 변경</li>
+  </ul>
+
+  <h2>테스트 빌드 <span class="tag test">테스트빌드</span></h2>
+  <div class="note bad">
+    아래는 공식 디스코드 <code>#tinka-notes</code>에 올라온 <strong>테스트 빌드</strong> 내용입니다. <strong>정식 출시본(1.54.1)에는 들어 있지 않습니다.</strong> 다음 정식 패치나 DLC에 포함될 수 있으나 확정이 아닙니다.
+  </div>
+  <h3>2026-06-25 빌드</h3>
+  <ul>
+    <li><span class="chip shadow">워록</span> <strong>사령 소환 비술 의식</strong>: 최대 랭크 초과 1랭크당 스켈레톤 +1 (기존엔 항상 5로 고정)</li>
+    <li><span class="chip shadow">워록</span> <strong>죽음의 군주 데스나이트</strong>가 파멸 스킬 쿨감을 표기(25%)와 달리 <strong>20%만 주던 버그 수정</strong></li>
+    <li>모든 <strong>유틸리티·궁극기 스킬</strong>이 최대 랭크 초과분을 제대로 반영하도록 수정</li>
+    <li>버프를 거는 스킬 대부분에 <strong>「버프」 태그</strong> 추가</li>
+    <li>적 접두 <strong>4종 추가</strong>: Geyser · Tentacles · Water Nova · Satellites</li>
+    <li>단독 등장 계열 챔피언이 <strong>자기 복제 대신 약한 몹을 소환</strong>하도록 변경</li>
+    <li>동료가 장비 교체 등으로 해산될 때 <strong>사망 폭발이 발동하지 않도록</strong> 수정</li>
+    <li>고대 야수가 <strong>거리에 따라 이동 속도를 조절</strong> — 순간이동을 자주 써도 따라옴</li>
+    <li>던전 아노말리 보스 보상 상자가 <strong>항상 보스 자리에</strong> 생성</li>
+    <li>여러 개활지 레이아웃의 <strong>몹 밀도 상향</strong></li>
+    <li>변환·스킬 재바인드 시 <strong>캐릭터를 새로고침</strong>해 스냅샷 악용 차단</li>
+  </ul>
+
+  <h2>오래된 조언 판별표</h2>
+  <p>다른 자료에서 아래를 보면 옛 정보입니다.</p>
+  <div class="tw"><table>
+    <tr><th>이런 말이 보이면</th><th>실제</th></tr>
+    <tr><td>"마스터리 리스펙해서 최대 영혼 +5부터"</td><td>해당 스킬 트리 노드는 <strong>2019년 0.90.0에서 삭제</strong></td></tr>
+    <tr><td>"마스터리는 100레벨부터"</td><td><strong>100레벨 전부터 축적</strong>됩니다</td></tr>
+    <tr><td>"베테랑 난이도에서"</td><td><strong>존재하지 않는 난이도</strong> — 영웅/서사시로 대체됨</td></tr>
+    <tr><td>"영약을 모아둬라"</td><td>1.40에서 <strong>상점 구매</strong>로 전환, 구 영약은 안 나옴</td></tr>
+    <tr><td>"이 아이템이 자동 시전해준다"(그 이유로 추천)</td><td>1.53부터 <strong>자동 시전이 기본 기능</strong></td></tr>
+    <tr><td>"20레벨이면 희귀템이 넘친다"</td><td>1.54에서 <strong>초반 전리품 하향</strong></td></tr>
+    <tr><td>파쇄된 환영·골격 파열·혼령 기반 저주 모독자</td><td>같은 작성자의 <strong>구버전 빌드</strong> — 디스코드판이 대체 → <a href="../classes/warlock/builds.html">빌드 문서</a></td></tr>
+  </table></div>
+
+  <p class="src">근거 · 게임 설치 폴더 <code>changelog/</code> · 공식 디스코드 <code>#tinka-notes</code> · 스팀 패치 공지 · 자세한 정책은 <a href="sources.html">출처 · 신뢰도</a></p>
+</section>
+
+<footer>
+  개인 참고용 한국어 정리 · Chronicon 1.54.1 기준 · 검색엔진 색인 제외
+</footer>
+</div>
+<a href="#" class="totop">↑ 맨 위</a>
+<script src="../assets/wiki.js"></script>
+</body>
+</html>

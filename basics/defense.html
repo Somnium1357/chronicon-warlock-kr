@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>방어 · 크로니콘 위키</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/wiki.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="brand plain" href="../index.html">크로니콘 <span>위키</span></a>
+  <span class="crumb">게임 기초 › 방어</span>
+</div>
+
+<nav class="side">
+  <div class="grp">시작</div>
+  <ul>
+    <li><a href="../index.html">홈</a></li>
+  </ul>
+  <div class="grp">게임 기초</div>
+  <ul>
+    <li><a href="../basics/damage.html">피해 계산</a></li>
+    <li><a class="cur" href="../basics/defense.html">방어</a></li>
+    <li><a href="../basics/skills.html">스킬 · 태그</a></li>
+    <li><a href="../basics/items.html">아이템 · 제작</a></li>
+    <li><a href="../basics/endgame.html">난이도 · 엔드게임</a></li>
+    <li><a href="../basics/glossary.html">한영 명칭</a></li>
+  </ul>
+  <div class="grp">클래스</div>
+  <ul>
+    <li><a href="../classes/index.html">클래스 개요</a></li>
+    <li><a href="../classes/warlock/index.html">워록</a></li>
+    <li><a href="../classes/warlock/leveling.html">└ 레벨링</a></li>
+    <li><a href="../classes/warlock/progression.html">└ 성장</a></li>
+    <li><a href="../classes/warlock/builds.html">└ 빌드</a></li>
+    <li><a class="soon" href="#">템플러 (예정)</a></li>
+    <li><a class="soon" href="#">버서커 (예정)</a></li>
+    <li><a class="soon" href="#">워든 (예정)</a></li>
+    <li><a class="soon" href="#">메카니스트 (예정)</a></li>
+  </ul>
+  <div class="grp">자료</div>
+  <ul>
+    <li><a href="../meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="../meta/patches.html">패치 동향</a></li>
+  </ul>
+</nav>
+
+<h1>방어</h1>
+<p class="lede">왜 죽는가, 그리고 왜 도트로는 죽지 않는가 — 저항 오버캡부터 챔피언 접두까지</p>
+
+<div class="searchbar">
+  <input type="search" id="q" placeholder="이 문서에서 검색" autocomplete="off" spellcheck="false" aria-label="문서 내 검색">
+  <span class="cnt" id="cnt"></span>
+</div>
+<p id="none">검색 결과가 없습니다.</p>
+
+<!-- ══════════ 5% 상한 ══════════ -->
+<section id="indirect">
+  <h2>가장 중요한 규칙 — 간접 피해 5% 상한</h2>
+
+  <div class="note ok">
+    <strong>간접 피해는 한 번에 최대 체력의 5%를 넘길 수 없습니다.</strong> <span class="tag dev">개발자</span><br>
+    즉 <strong>도트와 장판은 여러분을 즉사시킬 수 없습니다.</strong> <strong>즉사는 오직 직접 타격만</strong> 가능합니다.
+  </div>
+
+  <p>이 한 줄이 크로니콘 방어 설계의 출발점입니다. "갑자기 화면이 회색이 됐다"면 원인은 <strong>장판이나 도트가 아니라, 어디선가 들어온 한 방</strong>입니다. 방어 투자는 그 <strong>한 방</strong>을 견디는 데 집중해야 합니다.</p>
+
+  <div class="tw"><table>
+    <tr><th>간접 피해의 성질</th><th>내용</th></tr>
+    <tr><td>피해 상한</td><td>타격당 <strong>최대 체력의 5%</strong></td></tr>
+    <tr><td>저항</td><td><strong>관통합니다</strong> — 저항으로 줄일 수 없음</td></tr>
+    <tr><td>배리어</td><td><strong>관통합니다</strong> — 배리어가 막아주지 않음</td></tr>
+    <tr><td>발동 효과</td><td><strong>아무것도 발동시키지 않습니다</strong> (피격 시 발동 등)</td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>뒤집으면 이런 뜻입니다.</strong> 저항과 배리어를 아무리 쌓아도 간접 피해는 <strong>그대로 5%씩 계속 들어옵니다.</strong> 장판 위에 오래 서 있으면 회복이 못 따라가 결국 죽습니다. 장판 대응은 방어 스탯이 아니라 <strong>이동</strong>과 <strong>지속 회복</strong>으로 합니다.
+  </div>
+</section>
+
+<!-- ══════════ 회피/피감 ══════════ -->
+<section id="mitigation">
+  <h2>회피와 피해 감소는 곱연산</h2>
+
+  <p>회피 <span class="mono">Dodge</span>와 피해 감소 <span class="mono">Damage Reduction</span>는 <strong>더해지지 않고 곱해집니다.</strong> <span class="tag data">게임 내 도움말</span></p>
+
+  <div class="formula">8% + 8% + 8% → 24%가 아니라 1 − (0.92 × 0.92 × 0.92) = 22.1%</div>
+
+  <p>수치가 커질수록 손해가 커지지만, 대신 <strong>100%에 절대 도달하지 않습니다.</strong> 무적이 될 수 없다는 뜻이기도 하고, 반대로 <strong>몇 %를 더 넣어도 항상 조금씩은 이득</strong>이라는 뜻이기도 합니다.</p>
+
+  <div class="tw"><table>
+    <tr><th>같은 값을 n개</th><th>단순 합산이라면</th><th>실제 (곱연산)</th></tr>
+    <tr><td>10% × 3</td><td>30%</td><td>27.1%</td></tr>
+    <tr><td>20% × 3</td><td>60%</td><td>48.8%</td></tr>
+    <tr><td>20% × 5</td><td>100%</td><td>67.2%</td></tr>
+    <tr><td>30% × 5</td><td>150%</td><td>83.2%</td></tr>
+  </table></div>
+
+  <div class="note">
+    피해 감소 계열 옵션(직접 피해 감소 20% 등)은 <strong>여러 부위에 나눠 넣어도 계속 유효</strong>합니다. 하나에 몰아넣을 수 없는 구조라서, 실전 빌드는 보통 <strong>3부위 이상</strong>에 직접 피해 감소를 깔아둡니다.
+  </div>
+</section>
+
+<!-- ══════════ 저항 ══════════ -->
+<section id="resist">
+  <h2>저항 — 상한 80%, 목표 130%</h2>
+
+  <ul>
+    <li>저항의 <strong>실효 상한은 80%</strong>입니다. 그 이상은 피해 감소로 환산되지 않습니다.</li>
+    <li>그런데 <strong>높은 난이도는 기본 저항을 마이너스로 깎습니다.</strong> 영웅 이상 난이도는 전 저항에 −% 페널티가 붙습니다.</li>
+    <li>그래서 <strong>표기상 130%</strong>를 목표로 잡습니다. 난이도 페널티를 맞고 나서도 실효 80%에 닿게 하려는 <strong>오버캡</strong>입니다.</li>
+  </ul>
+
+  <div class="note warn">
+    <strong>캐릭터 시트의 저항 숫자를 그대로 믿지 마세요.</strong> 신화 XV 같은 고난도에서는 페널티가 크기 때문에, 시트에 80%라고 떠 있어도 실제로는 한참 모자랍니다. 신화 XV 이상을 돌 계획이라면 <strong>총 130% 이상</strong>을 기준으로 잡으세요.
+  </div>
+
+  <h3>저항은 종류별로 챙겨야 합니다</h3>
+  <p>적의 <strong>속성 접두</strong>가 그 몹의 물리 공격을 <strong>다른 속성으로 바꿔버립니다.</strong> 따라서 한 속성만 몰아 올리는 것은 위험합니다.</p>
+  <div class="tw"><table>
+    <tr><th>속성 접두</th><th>변환되는 속성</th></tr>
+    <tr><td><span class="mono">Frozen</span></td><td><span class="chip frost">냉기</span></td></tr>
+    <tr><td><span class="mono">Poisoned</span></td><td><span class="chip poison">독</span></td></tr>
+    <tr><td><span class="mono">Static</span></td><td><span class="chip lightning">번개</span></td></tr>
+    <tr><td><span class="mono">Plagued</span></td><td><span class="chip poison">독/역병</span></td></tr>
+    <tr><td><span class="mono">Infernal</span></td><td><span class="chip fire">화염</span></td></tr>
+  </table></div>
+  <p class="src">실전 순서: <strong>전 저항</strong> 인챈트를 가능한 모든 부위에 먼저 깔고, 그다음 물리 저항 메이저 하나 + 원소별 마이너를 하나씩 채우는 방식이 무난합니다.</p>
+
+  <h3>클래스 기본 저항</h3>
+  <div class="tw"><table>
+    <tr><th>클래스</th><th>기본 방어 특성</th></tr>
+    <tr><td>워록 <span class="mono">Warlock</span></td><td><strong>전 저항 +10%</strong> <span class="tag data">데이터</span></td></tr>
+    <tr><td>워든 <span class="mono">Warden</span></td><td><strong>전 저항 +10%</strong> · 회피 +5%</td></tr>
+    <tr><td>템플러 <span class="mono">Templar</span></td><td>피해 감소 +30% · 방패로 공격 차단</td></tr>
+    <tr><td>버서커 <span class="mono">Berserker</span></td><td>피해 감소 +30% · 기본 체·마 재생 2배</td></tr>
+    <tr><td>메카니스트 <span class="mono">Mechanist</span></td><td>피해 감소 +20% · 패리 +5%</td></tr>
+  </table></div>
+</section>
+
+<!-- ══════════ 군중제어 ══════════ -->
+<section id="cc">
+  <h2>기절 · 방해 · 스태거 · 막기</h2>
+
+  <h3>기절은 쿨다운까지 정지시킵니다</h3>
+  <div class="note warn">
+    <strong>기절</strong> <span class="mono">Stun</span> 상태에서는 <strong>쿨다운이 흐르지 않습니다.</strong> 조작 불능 시간이 그대로 빌드 정지 시간이 됩니다. 방어 스킬에 의존하는 빌드일수록 기절 한 번이 곧 사망으로 이어집니다.
+  </div>
+  <p><strong>방해</strong> <span class="mono">Interrupt</span>는 더 나쁩니다 — 쿨다운을 <strong>최대치로 되돌립니다.</strong> 시전 도중 끊기면 그 스킬은 처음부터 다시 기다려야 합니다.</p>
+
+  <h3>스태거</h3>
+  <p><strong>스태거</strong> <span class="mono">Stagger</span>는 받은 피해의 일부를 <strong>3초에 걸쳐 분산</strong>시킵니다. 한 방을 즉시 다 맞지 않고 나눠 맞기 때문에, 그 사이에 회복·배리어가 개입할 여지가 생깁니다.</p>
+  <div class="note ok">
+    스태거는 <strong>곱연산으로 스케일</strong>합니다. 다른 피해 감소 수단과 별도의 통에 들어가므로, 이미 피해 감소가 높은 빌드에도 체감이 있습니다.
+  </div>
+
+  <h3>막기는 방패 전용</h3>
+  <div class="note warn">
+    <strong>막기</strong> <span class="mono">Block</span>는 <strong>방패를 든 클래스만</strong> 쓸 수 있습니다. <strong>워록과 워든에는 해당 사항이 없습니다.</strong> 영어 가이드에서 "블록 수치를 올려라"는 조언을 보면 방패 클래스(주로 템플러) 이야기인지 먼저 확인하세요.
+  </div>
+</section>
+
+<!-- ══════════ 배리어 ══════════ -->
+<section id="barrier">
+  <h2>배리어</h2>
+
+  <p><strong>배리어</strong> <span class="mono">Barrier</span>는 체력 위에 얹히는 임시 보호막입니다. 고난도 캐스터 빌드의 실질적인 생명선입니다.</p>
+
+  <div class="tw"><table>
+    <tr><th>막는 것</th><th>못 막는 것</th></tr>
+    <tr><td>직접 타격</td><td><strong>간접 피해</strong> (관통당함)</td></tr>
+  </table></div>
+
+  <p>체력이 낮아도 배리어가 두꺼우면 한 방을 견딜 수 있기 때문에, 캐스터 빌드는 대체로 <strong>체력보다 배리어 총량</strong>을 지표로 삼습니다. 예를 들어 워록의 <em>잃어버린 영혼의 유물</em> 룬 빌드는 5초마다 최대 마나의 15%를 소모해 <strong>소모량의 40배</strong>를 배리어로 전환하며, T900+ 목표는 <strong>배리어 300만 이상</strong>입니다.</p>
+
+  <div class="note">
+    배리어가 마나에서 나오는 구조라면 <strong>마나 인챈트가 곧 방어 인챈트</strong>가 됩니다. 방어 스탯 칸이 부족할 때 마나를 늘리는 우회로가 되는 경우가 많습니다.
+  </div>
+</section>
+
+<!-- ══════════ 정예/챔피언 ══════════ -->
+<section id="elite">
+  <h2>정예와 챔피언</h2>
+
+  <div class="tw"><table>
+    <tr><th>구분</th><th>표시</th><th>특징</th></tr>
+    <tr><td><strong>정예</strong> <span class="mono">Elite</span></td><td>왕관 1개</td><td>강화된 일반 몹. <strong>무리로</strong> 등장</td></tr>
+    <tr><td><strong>챔피언</strong> <span class="mono">Champion</span></td><td>왕관 3개</td><td><strong>단독</strong> 등장 · 체력 훨씬 많음 · 접두 다수 · 길찾기 우수(도망쳐도 놓치지 않음) · <strong>기본 저항 10%</strong></td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>높은 층에서 진짜 위협은 보스가 아니라 챔피언입니다.</strong> 보스는 패턴이 정해져 있고 같은 난이도 챔피언보다 오히려 쉽습니다.
+  </div>
+
+  <h3>캐스터를 죽이는 접두 목록</h3>
+  <div class="tw"><table>
+    <tr><th>접두</th><th>왜 위험한가</th></tr>
+    <tr><td><strong><span class="mono">Explosive</span></strong></td><td><strong>사망 시 최대 체력 비례 폭발</strong> — 캐스터 즉사 원인 1위</td></tr>
+    <tr><td><span class="mono">Warp</span></td><td>순간이동 — 거리를 벌려도 붙어옴</td></tr>
+    <tr><td><span class="mono">Grappler</span></td><td>1.5초간 <strong>80% 감속</strong> — 도망이 봉쇄됨</td></tr>
+    <tr><td><span class="mono">Fast</span></td><td>이동 속도로 따라잡음</td></tr>
+    <tr><td><span class="mono">Static</span></td><td>사망 시 번개 — 마무리 순간이 위험</td></tr>
+    <tr><td><span class="mono">Sorcerer</span> · <span class="mono">Embershot</span></td><td>원거리 공격 — 거리 유지가 안전을 보장하지 않음</td></tr>
+    <tr><td><span class="mono">Vampiric</span> + <span class="mono">Regenerative</span></td><td>회복량이 내 딜을 넘기면 영원히 안 죽음</td></tr>
+    <tr><td><span class="mono">Stoneskin</span> · <span class="mono">Resistance</span></td><td>저항이 매우 높음 — <strong>제압 필요</strong></td></tr>
+    <tr><td><span class="mono">Summoner</span></td><td>계속 소환 — 정리 안 하면 눈덩이</td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>테스트 빌드 정보</strong> <span class="tag test">테스트빌드</span> — 2026-06-25 <span class="mono">tinka build</span>에서 적 접두 4종(<span class="mono">Geyser</span> · <span class="mono">Tentacles</span> · <span class="mono">Water Nova</span> · <span class="mono">Satellites</span>)이 추가되었습니다. <strong>정식 출시본에는 없습니다.</strong>
+  </div>
+</section>
+
+<!-- ══════════ 사망 ══════════ -->
+<section id="death">
+  <h2>사망 페널티와 모드</h2>
+
+  <h3>소프트코어</h3>
+  <div class="tw"><table>
+    <tr><th>부활 방식</th><th>대가</th></tr>
+    <tr><td>시체 근처 부활</td><td><strong>크리스탈</strong> 소모 + 소량 <strong>경험치 손실</strong></td></tr>
+    <tr><td>마을 부활</td><td><strong>무료</strong></td></tr>
+  </table></div>
+  <div class="note ok">
+    <strong>아이템은 잃지 않습니다.</strong> <span class="tag dev">개발자</span> 크로니콘의 사망은 다른 핵앤슬래시보다 훨씬 가볍습니다. 죽는 게 무서워서 난이도를 낮게 유지할 이유는 없습니다.
+  </div>
+
+  <h3>하드코어</h3>
+  <div class="tw"><table>
+    <tr><th>잃는 것</th><th>남는 것</th></tr>
+    <tr><td>캐릭터 <strong>영구 삭제</strong> · <strong>개인 창고</strong></td><td><strong>공용 창고 · 재화는 보존</strong></td></tr>
+  </table></div>
+
+  <h3>고립 (1.54 신규)</h3>
+  <div class="note warn">
+    <strong>고립</strong> <span class="mono">Isolation</span>은 <strong>공용 창고 · 재화 · 글로벌 진행까지 완전히 분리</strong>합니다.
+    <ul>
+      <li><strong>멀티플레이 불가</strong></li>
+      <li><strong>해제 불가</strong> — 한 번 켜면 되돌릴 수 없습니다</li>
+      <li>하드코어와 <strong>병행 가능</strong></li>
+    </ul>
+    처음부터 아무 지원 없이 키우는 모드입니다. 첫 캐릭터에는 권장하지 않습니다.
+  </div>
+
+  <h3>아노말리에서의 사망</h3>
+  <p>아노말리에서 죽어도 <strong>런이 끝나지 않고 틴카의 영역으로 이동</strong>합니다. 단 <strong>정예 던전 아노말리는 사망 불가</strong> 모드라 예외입니다. 자세한 내용은 <a href="endgame.html">난이도 · 엔드게임</a>을 보세요.</p>
+</section>
+
+<!-- ══════════ 관련 문서 ══════════ -->
+<section id="related">
+  <h2>관련 문서</h2>
+  <ul>
+    <li><a href="damage.html">피해 계산</a> — 제압으로 <span class="mono">Stoneskin</span> 뚫기, 도트가 발동을 못 시키는 이유</li>
+    <li><a href="endgame.html">난이도 · 엔드게임</a> — 난이도별 저항 페널티와 하향 판단 기준</li>
+    <li><a href="items.html">아이템 · 제작</a> — 저항·체력 옵션이 붙는 부위 표</li>
+  </ul>
+</section>
+
+<footer>
+  개인 참고용 한국어 정리 · Chronicon 1.54.1 기준 · 검색엔진 색인 제외
+</footer>
+</div>
+<a href="#" class="totop">↑ 맨 위</a>
+<script src="../assets/wiki.js"></script>
+</body>
+</html>

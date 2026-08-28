@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>레벨링 1→100 · 크로니콘 위키</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../../assets/wiki.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="brand plain" href="../../index.html">크로니콘 <span>위키</span></a>
+  <span class="crumb"><a href="../index.html">클래스</a> › <a href="index.html">워록</a> › 레벨링</span>
+</div>
+
+<nav class="side">
+  <div class="grp">시작</div>
+  <ul>
+    <li><a href="../../index.html">홈</a></li>
+  </ul>
+  <div class="grp">게임 기초</div>
+  <ul>
+    <li><a href="../../basics/damage.html">피해 계산</a></li>
+    <li><a href="../../basics/defense.html">방어</a></li>
+    <li><a href="../../basics/skills.html">스킬 · 태그</a></li>
+    <li><a href="../../basics/items.html">아이템 · 제작</a></li>
+    <li><a href="../../basics/endgame.html">난이도 · 엔드게임</a></li>
+    <li><a href="../../basics/glossary.html">한영 명칭</a></li>
+  </ul>
+  <div class="grp">클래스</div>
+  <ul>
+    <li><a href="../../classes/index.html">클래스 개요</a></li>
+    <li><a href="../../classes/warlock/index.html">워록</a></li>
+    <li><a class="cur" href="../../classes/warlock/leveling.html">└ 레벨링</a></li>
+    <li><a href="../../classes/warlock/progression.html">└ 성장</a></li>
+    <li><a href="../../classes/warlock/builds.html">└ 빌드</a></li>
+    <li><a class="soon" href="#">템플러 (예정)</a></li>
+    <li><a class="soon" href="#">버서커 (예정)</a></li>
+    <li><a class="soon" href="#">워든 (예정)</a></li>
+    <li><a class="soon" href="#">메카니스트 (예정)</a></li>
+  </ul>
+  <div class="grp">자료</div>
+  <ul>
+    <li><a href="../../meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="../../meta/patches.html">패치 동향</a></li>
+  </ul>
+</nav>
+
+<h1>레벨링 1 → 100</h1>
+<p class="lede">워록으로 캠페인을 밀어 100레벨까지 가는 전 과정 — 스탯 우선순위, 저레벨 도박 요령, 장비, 트리 배분.</p>
+
+<div class="searchbar">
+  <input type="search" id="q" placeholder="이 문서에서 검색" autocomplete="off" spellcheck="false" aria-label="문서 내 검색">
+  <span class="cnt" id="cnt"></span>
+</div>
+<p id="none">검색 결과가 없습니다.</p>
+
+<section id="intro">
+  <p class="src">원저자 <strong>Rahlence</strong> · 원문 <code>lock_leveling_v3.pdf</code> (2026-06-26, 공식 디스코드 #build-forum «Warlock Leveling and Progression») · 게임 버전 <strong>1.54.1</strong> (인게임 표기 <code>v1.541</code>)</p>
+  <div class="note ok">
+    <strong>한 줄 요약</strong> — <strong>수확자 트리의 해골을 연타</strong>합니다. 10레벨·30레벨에 <strong>캐릭터 복사본</strong>을 만들어 싸게 도박한 장비를 공용 창고로 넘기고, 30레벨에 <strong>모독자 세트</strong>를 끼면 끝입니다. 원저자 표현 그대로 <em>"해골 얻고, 해골 난사하고, 이긴다."</em> 그리고 전설 난이도에서도 <em>"손쉬운 진행"</em>입니다.
+  </div>
+  <p>가이드 캐릭터는 워록 <strong>Ecknacht</strong>이고, 염료 파밍 스크린샷만 별개 캐릭터(버서커 <strong>Rolgor</strong>)입니다. 스크린샷 헤더의 <code>Lv. / M</code> 표기가 이 문서 곳곳의 근거로 쓰입니다.</p>
+</section>
+
+<section id="stats">
+  <h2>1 · 스탯 우선순위</h2>
+  <p>레벨링 구간에서 인챈트·보석·도박 목표를 정할 때의 순서입니다. 위쪽일수록 체감이 큽니다. <span class="tag comm">커뮤니티</span></p>
+  <div class="tw"><table>
+    <tr><th>순위</th><th>스탯</th><th>이유</th></tr>
+    <tr><td>1</td><td><strong>적중 시 피해 발동</strong> 옵션<br><span class="mono">on-hit damage procs</span></td><td>징벌·연소 등. 빌드가 아직 빈약한 초반에 매우 강력하고 레벨링 속도를 크게 올립니다. 특히 <strong>징벌</strong><span class="mono">(Smite)</span>은 <strong>루솜브라의 장화</strong><span class="mono">(Lusombra's boots, 템플러 전설)</span>를 확보하고 전설 도박 + 인챈트·보석 커스터마이즈를 돌릴 재료가 있다면 <strong>레벨링 내내</strong> 강력합니다</td></tr>
+    <tr><td>2</td><td><strong>이동 속도</strong></td><td>캠페인 진행 속도를 <em>훨씬</em> 빠르게 만듭니다. 원문 표현으로 "아무리 강조해도 지나치지 않다". 주로 <strong>방어구 보석</strong>과 <strong>처치 시 신속</strong> 발동에서 확보</td></tr>
+    <tr><td>3</td><td><strong>저항, 특히 전 저항</strong></td><td>고민할 것도 없는 항목. 높은 난이도에서 편하게 살아남으려면 필수입니다</td></tr>
+    <tr><td>4</td><td>쿨감 + <strong>효과 지속시간</strong></td><td>추천 빌드들은 자주 쓰는 스킬·버프에 의존하므로, 둘을 <strong>같이</strong> 챙겨 가동률 100%를 만듭니다</td></tr>
+    <tr><td>5</td><td>고정 피해<span class="mono"> (flat damage)</span></td><td>50레벨 이상 장비에서 특히 쓸 만합니다. <strong>상급 강화</strong>가 있으면 훨씬 좋지만 첫 캐릭터엔 없는 선택지 — 나중에 키우는 부캐에서 빛납니다</td></tr>
+    <tr><td>6</td><td>치명타 확률 · 치명타 피해</td><td>스케일링은 좋지만 필수는 아닙니다. <strong>치확 100% 근처까지 채울 수 있을 때</strong>만 의미가 커지고, 재료가 빠듯하면 잡기 어렵습니다</td></tr>
+    <tr><td>7</td><td>공격 속도</td><td>공격 쿨다운을 다 소화하려면 <strong>초당 2회 이상</strong> 때려야 하는 시점부터 중요해집니다. 일부 빌드(예: 템플러 격발)에서는 가치가 훨씬 높습니다</td></tr>
+    <tr><td>8</td><td>경험치 보너스</td><td>속도엔 좋지만 필수는 아닙니다 — 스킨 목적으로 캠페인만 밀어도 <strong>3막~4막 사이</strong>에 100을 찍습니다</td></tr>
+  </table></div>
+</section>
+
+<section id="strategy">
+  <h2>2 · 10 → 100레벨 운영</h2>
+  <div class="note warn">
+    <strong>핵심 요령 — 캐릭터 복사본으로 싸게 도박하기</strong><br>
+    <strong>10레벨과 30레벨</strong>, 그리고 <strong>해당 클래스의 추천 아이템이 열리는 레벨</strong>에서 캐릭터를 복사해 두세요. 그 저레벨 캐릭터로 도박한 뒤 <strong>공용 창고로 넘기면</strong> 됩니다. 원저자는 첫 캐릭터 이후로는 <strong>모든 캐릭터에 같은 투구/목걸이/갑옷/장화/장신구/반지</strong>를 돌려 씁니다.
+  </div>
+  <div class="tw"><table>
+    <tr><th>항목</th><th>값</th></tr>
+    <tr><td>세이브 위치</td><td><code>%localappdata%/chronicon/save</code></td></tr>
+    <tr><td>필수 절차</td><td>복사 후 <strong>게임을 재시작</strong>해야 목록에 뜹니다</td></tr>
+    <tr><td>이름 규칙</td><td><code>Tenlock</code> · <code>Twentylock</code>처럼 레벨이 드러나게</td></tr>
+    <tr><td>복사 레벨</td><td><strong>10</strong> · <strong>30</strong> + 클래스별 추천템 해금 레벨</td></tr>
+    <tr><td><strong>클래스 세트 도박 비용 (30레벨)</strong></td><td><strong>3,775</strong> 크리스탈 / 회</td></tr>
+    <tr><td><strong>클래스 세트 도박 비용 (100레벨)</strong></td><td><strong>24,884</strong> 크리스탈 / 회</td></tr>
+    <tr><td>차이</td><td>약 <strong>6.6배</strong> — 복사본 트릭 하나로 이 비용을 걷어냅니다</td></tr>
+    <tr><td>그 외 아이템</td><td>Rahlence의 <strong>Chronicon FAQ</strong> «Gambling Legendaries» 절에 적힌 레벨 요구치에 맞는 캐릭터를 씁니다</td></tr>
+  </table></div>
+  <ul>
+    <li>클래스 레벨링 가이드가 지목한 <strong>파워 아이템이 나올 때까지 계속 도박</strong>하세요</li>
+    <li><strong>팔려고 아이템을 줍지 마세요.</strong> 시간 낭비이고, 장기적으로는 <strong>안 줍는 쪽이 크리스탈이 더 많습니다</strong></li>
+    <li><strong>저항 · 쿨감 · 효과 지속시간</strong>에 집중</li>
+    <li>재화를 아껴 쓰세요 — 리롤·강화는 운이 나쁘면 순식간에 바닥납니다. 원저자는 <strong>반지에 쿨감 하나 띄우는 데 수백 번</strong> 리롤한 적이 있다고 적었습니다</li>
+    <li>주로 <strong>전설</strong> 장비를 노리되 일부 <strong>유니크</strong>도 괜찮습니다</li>
+  </ul>
+  <div class="note">
+    참고 — 세트 등급별 해금 레벨은 <strong>유니크 세트 10레벨 · 전설 클래스 세트 30레벨</strong>입니다 <span class="tag data">데이터</span>. 복사본을 10과 30에 만드는 이유가 이것입니다.
+  </div>
+</section>
+
+<section id="dye">
+  <h2>3 · 크리스탈 벌기 — 염료 파밍</h2>
+  <p><strong>캐주얼 난이도에서 첫 보스를 반복</strong>해서 잡고, 나오는 <strong>염료를 팔면</strong> 수백만 크리스탈이 쉽게 모입니다.</p>
+  <div class="note warn"><strong>염료는 쓰지 마세요. <span class="mono">DO NOT USE THEM</span></strong> — 파는 용도입니다.</div>
+  <div class="card">
+    <h4>원문 증거 스크린샷 <span class="tag data">데이터</span></h4>
+    <ul>
+      <li>캐릭터: <strong>Rolgor, 버서커 — Lv. 10, M 1</strong></li>
+      <li>보유 크리스탈: <strong>5,176,560</strong> (약 517만)</li>
+      <li>창고: <strong>1/5 페이지</strong>가 염료 병으로 거의 가득 (페이지당 약 5행 × 10열)</li>
+      <li>난이도 표기: <code>The Chronicon / ISOHC Casual - v1.541</code></li>
+    </ul>
+    <p>이 스크린샷은 <strong>10레벨 캐릭터가 이미 <code>M 1</code></strong>이라는 점에서도 근거로 쓰입니다 — 아래 마스터리 경고 참조.</p>
+  </div>
+</section>
+
+<section id="trove">
+  <h2>4 · 3막부터 — 보물함 루프</h2>
+  <p>3막에 진입하면 <strong>도박 대신 무료로 장비를 파밍</strong>할 수 있습니다. 원문 평가는 <em>"지루하지만 확실하다"</em>.</p>
+  <ol>
+    <li><strong>왕립 정원</strong><span class="mono">(Royal Garden)</span> 웨이포인트로 이동</li>
+    <li>웨이포인트에 선 채로 <strong>보물함<span class="mono">(trove)</span> 위치가 지도에 보입니다</strong> — 달려가서 엽니다</li>
+    <li>마을로 복귀</li>
+    <li>마을 웨이포인트에서 해당 구역을 <strong>우클릭해 리셋</strong></li>
+    <li>반복</li>
+  </ol>
+  <figure>
+    <img src="../../images/img_trove.jpg" alt="왕립 정원 지도와 웨이포인트 화면 — 보물함 위치가 웨이포인트에서 보이는 모습">
+    <figcaption>좌: 왕립 정원 지도(하단 중앙에 보물함 아이콘) · 우: 웨이포인트 실제 화면. <strong>웨이포인트에서 보물함 위치가 보입니다.</strong></figcaption>
+  </figure>
+  <div class="note">구역 리셋은 <strong>마을 웨이포인트에서 지역을 우클릭</strong>하는 것이 유일한 절차입니다. 포탈을 다시 타는 것과 다릅니다.</div>
+</section>
+
+<section id="gear10">
+  <h2>5 · 저레벨 추천 장비 8종 (10레벨)</h2>
+  <p>앞의 두 개는 <strong>유니크 무기</strong>, 나머지 여섯 개는 <strong>10레벨 복사본에서 도박해 창고로 돌려 쓰는 전설 세트</strong>입니다. 수치는 원문 툴팁 그대로입니다. <span class="tag data">데이터</span></p>
+  <div class="tw"><table>
+    <tr><th>부위</th><th>아이템</th><th>등급</th><th>핵심 옵션</th><th>기본 스탯 · 가치</th></tr>
+    <tr>
+      <td>지팡이</td><td><strong>악의 뿌리</strong><br><span class="mono">Root of Evil</span></td><td>유니크</td>
+      <td>독 +9% · <strong>암흑 +20%</strong> · 치확 +12% · <strong>적중 시 암흑 105% 즉발 + 5초간 초당</strong> · 획득 반경 +35%</td>
+      <td>체력 +15 · 마나 +15 · 피해 76 · 공속 85% · 치확 11%<br>가치 <strong>1,784</strong></td>
+    </tr>
+    <tr>
+      <td>마도서</td><td><strong>유혈의 서</strong><br><span class="mono">Book of Gore</span></td><td>유니크</td>
+      <td><strong>처치 시 15% 확률 시체 폭발</strong> — 대상 최대 체력의 최대 30%를 에테르 피해로 주변에 · 치확 +12% · 적중 시 암흑 105% 도트 · 효과 지속 +12%</td>
+      <td>체력 +15 · 마나 +28 · 피해 +23<br>가치 <strong>2,296</strong></td>
+    </tr>
+    <tr>
+      <td>장화</td><td><strong>헤르메스의 장화</strong><br><span class="mono">Boots of Hermes</span></td><td>전설</td>
+      <td><strong>넉백 · 이동 방해 완전 면역</strong> + <strong>끌어당김 면역</strong> · 이동 속도 +15% · 전 저항 +15% · 물약 효과 +13% · 획득 반경 +40%</td>
+      <td>체력 +59 · 마나 +11 · 피해 +12 · 보석 이속 +8%<br>가치 <strong>2,562</strong></td>
+    </tr>
+    <tr>
+      <td>장신구</td><td><strong>지식의 연대기</strong><br><span class="mono">Chronicle of Knowledge</span></td><td>전설</td>
+      <td><strong>처치당 경험치 +3%, 최대 100중첩</strong> — <em>유니크 이상 등급이 드랍되면 초기화</em> · 전 저항 +15% · 치확 +15% · 쿨감 +15% · 보석 효과 +15%</td>
+      <td>체력 +36 · 마나 +11 · 피해 +15 · 보석 암흑 +8%<br>가치 <strong>4,163</strong></td>
+    </tr>
+    <tr>
+      <td>투구</td><td><strong>폭풍의 왕관</strong><br><span class="mono">Crown of Storms</span></td><td>전설</td>
+      <td>치확 +15% · <strong>적중 시 냉기 120% 즉발</strong> · <strong>적중 시 25% 확률 연쇄 번개 120%</strong> · 치피 +25% · 번개 +25% · 효과 지속 +15% · 쿨감 +15%</td>
+      <td>체력 +71 · 마나 +11 · 피해 +27 · 보석 이속 +8% ×2<br>가치 <strong>3,708</strong></td>
+    </tr>
+    <tr>
+      <td>목걸이</td><td><strong>고어넥</strong><br><span class="mono">Goreneck</span></td><td>전설</td>
+      <td>적을 <strong>터뜨린</strong>(gib) 뒤 5초간 <strong>체·마 재생 +150%</strong>, <strong>피해 +20%</strong> · 처치 시 15% 확률로 10초간 피해 +20%(<strong>5중첩</strong>) · 치확 +15% · 전 저항 +15% · 보석 효과 +15% · 쿨감 +15%</td>
+      <td>체력 +30 · 마나 +12 · 피해 +15 · 보석 암흑 +8% ×2<br>가치 <strong>5,448</strong></td>
+    </tr>
+    <tr>
+      <td>반지</td><td><strong>테라의 결속</strong><br><span class="mono">Terra's Binding</span></td><td>전설</td>
+      <td><strong>전 저항 및 전 원소 +25%</strong> · 처치 시 15% 확률로 10초간 이동 속도 +15%(<strong>5중첩</strong>) · 치확 +15% · 전 저항 +15% · 쿨감 +15% · 보석 효과 +15%</td>
+      <td>체력 +30 · 마나 +13 · 피해 +15 · 보석 암흑 +8%<br>가치 <strong>5,157</strong></td>
+    </tr>
+    <tr>
+      <td>갑옷</td><td><strong>뱀파이어 로드의 망토</strong><br><span class="mono">Vampire Lord's Cape</span></td><td>전설</td>
+      <td>소모하거나 적에게 흡수된 <strong>마나의 123%만큼 회복</strong>(체력 대신 마나를 소모하는 마나 보호막류에는 미적용) · <strong>적중 시 마나 +2</strong> · 전 원소 +20% · 전 저항 +15% · 획득 반경 +40% · 보석 효과 +15%</td>
+      <td>체력 +106 · 마나 +17 · 피해 +31 · 보석 이속 +8% ×3<br>가치 <strong>3,625</strong></td>
+    </tr>
+  </table></div>
+  <div class="note">
+    <strong>지식의 연대기 주의</strong> — 스택은 "유니크 이상 아이템이 드랍되면" 끊깁니다. <strong>루팅 필터로 숨겨도 드랍 자체는 발생</strong>하므로, 스택을 유지하려면 <strong>마법 발견 0%</strong>가 조건입니다 <span class="tag data">데이터</span>. 경험치 스택과 마법 발견은 양립하지 않습니다.
+  </div>
+  <div class="note">
+    이 여섯 전설은 <strong>워록 전용이 아닙니다.</strong> 그래서 한 번 뽑아 두면 이후 모든 클래스의 레벨링에 그대로 재활용됩니다. 워록 전용 아이템은 표에서 <span class="mono">Warlock Item</span>이 붙은 악의 뿌리 · 유혈의 서, 그리고 뒤의 모독자 세트입니다.
+  </div>
+</section>
+
+<section id="skills">
+  <h2>6 · 스킬 — 해골 연타</h2>
+  <p><strong>수확자</strong><span class="mono">(Reaper)</span> 트리의 해골을 <strong>우클릭</strong>에 놓고 계속 씁니다. 원문 캡션 그대로 <em>"해골을 얻고, 해골을 난사하고, 이긴다"</em><span class="mono">(Get skulls, spam skulls, win)</span>.</p>
+
+  <h3>레벨 구간별 배분</h3>
+  <div class="tw"><table>
+    <tr><th>레벨</th><th>마스터리</th><th>수확자</th><th>다른 트리</th><th>키 배치</th><th>원문 지시</th></tr>
+    <tr><td><strong>Lv 10</strong></td><td>M 1</td><td><strong>10</strong></td><td>—</td><td>해골 <strong>우클릭</strong>(5랭크) · 의식 <code>[R]</code>(1)</td><td>1포인트 노드 4개로 나머지</td></tr>
+    <tr><td><strong>Lv 20</strong></td><td>M 5</td><td><strong>20</strong></td><td>—</td><td>해골 <strong>우클릭</strong>(5) · 의식 <code>[R]</code>(5)</td><td>상단 3번 노드 추가, 망령 노드 3랭크</td></tr>
+    <tr><td><strong>Lv 40</strong></td><td>M 19</td><td><strong>33</strong></td><td>부패자 6 · 악마학자 1</td><td>해골 <strong>우클릭</strong>(5) · <strong>두 번째 우클릭</strong>(4) · 의식 <code>[R]</code>(5) · <code>[E]</code> ×2</td><td>"계속 해골을 난사하며 <strong>암흑 트리 안쪽으로</strong> 파고들 것. <strong>파멸</strong> 몇 개를 바에 올리되 실제로 쓰지는 말 것"</td></tr>
+    <tr><td><strong>Lv 50</strong></td><td>M 28</td><td><strong>35</strong></td><td>—</td><td>해골(5) · 두 번째 우클릭(<strong>5</strong>) · 의식 <code>[R]</code>(5) · <code>[E]</code>(1)</td><td>"여기서 빌드는 사실상 완성. 이후는 소소한 추가뿐"</td></tr>
+    <tr><td><strong>Lv 63</strong></td><td>M 42</td><td>(스크린샷 없음)</td><td>부패자 <strong>22</strong> · 리치 <strong>5</strong> · 미사용 5</td><td>부패자 <code>[E]</code>(3)</td><td>"남는 포인트는 자유롭게"</td></tr>
+    <tr><td><strong>Lv 100</strong></td><td><strong>M 90</strong></td><td>—</td><td>—</td><td><code>&lt;nonSPC</code> · 우클릭 ×2 · <code>[E]</code> ×3 · <code>[R]</code></td><td>마스터리 48 · 스킬 37 미사용. "전설 난이도에서 손쉬운 진행"</td></tr>
+  </table></div>
+  <div class="note">
+    <strong>두 개의 우클릭</strong> — 40레벨부터 우클릭에 <strong>스킬 두 개</strong>가 겹쳐 배치됩니다. 한 버튼에 여러 스킬을 올리면 <strong>슬롯 순서상 오른쪽 → 왼쪽</strong>으로 발동합니다 <span class="tag data">데이터</span>. 쿨이 있는 쪽이 먼저 나가고 쿨 없는 해골이 빈틈을 메우는 구조입니다.
+  </div>
+
+  <figure>
+    <img src="../../images/img_tree_10_20.jpg" alt="10레벨과 20레벨 시점의 수확자 스킬 트리 및 마스터리 화면">
+    <figcaption><strong>10레벨(M 1) · 20레벨(M 5)</strong> — 수확자 트리에 각각 10 / 20포인트. 흰 해골 노드가 5랭크로 <strong>우클릭</strong>, 금색 의식 노드가 <code>[R]</code>. 20레벨 마스터리 화면은 <strong>수확자 줄에만 5포인트</strong>가 들어가 있습니다.</figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/img_tree_40.jpg" alt="40레벨 시점의 수확자·악마학자·부패자 트리와 마스터리">
+    <figcaption><strong>40레벨(M 19)</strong> — 수확자 33 · 부패자 6 · 악마학자 1 = 40. <strong>파멸<span class="mono">(Bane)</span> 스킬 몇 개를 바에 올리되 실제로 쓰지는 않습니다.</strong> 마스터리 19는 전부 수확자 줄(5 + 14).</figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/img_tree_50.jpg" alt="50레벨 시점의 수확자 트리와 마스터리 화면">
+    <figcaption><strong>50레벨(M 28)</strong> — 수확자 35. 여기서 빌드는 사실상 완성입니다. 마스터리 28도 전부 수확자 줄(6·15·1·5·1).</figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/img_tree_63.jpg" alt="63레벨 시점의 부패자 트리, 리치 트리, 마스터리 화면">
+    <figcaption><strong>63레벨(M 42)</strong> — 부패자 22 · 리치 5, 스킬 포인트 5 미사용. 마스터리 42는 여전히 <strong>전부 수확자 줄</strong>(8·15·1·5·1·11·1).</figcaption>
+  </figure>
+
+  <div class="note warn">
+    <strong>정정 — 마스터리는 100레벨 전부터 쌓입니다.</strong><br>
+    "마스터리는 100렙부터 시작"이라는 통설은 위 스크린샷들이 전부 반박합니다. 헤더 표기는 <code>Lv10/M1 · Lv20/M5 · Lv40/M19 · Lv50/M28 · Lv63/M42 · Lv100/M90</code>이고, 그 모든 시점에서 <code>Mastery Points: 0</code> — <strong>얻는 족족 이미 투자했다</strong>는 뜻입니다. 레벨링 중 마스터리는 예치되거나 사라지지 않습니다. <span class="tag data">데이터</span>
+  </div>
+  <div class="note">
+    <strong>참고: 트리 해금은 세로줄이 아니라 가로 열 기준</strong>입니다 <span class="tag data">데이터</span>. 확정 해금 레벨은 1열 <strong>1</strong> · 2열 <strong>5</strong> · 3열 <strong>10</strong> · 8열(궁극기) <strong>40</strong>이고, 4~7열은 15/20/25/30으로 <span class="tag unk">추정</span>됩니다. 액티브 최대 5랭크, 대부분의 패시브 3랭크, 궁극기 1랭크. <strong>Ctrl+클릭이면 5포인트씩</strong> 들어갑니다.
+  </div>
+</section>
+
+<section id="set30">
+  <h2>7 · 30레벨 — 모독자 세트</h2>
+  <p>원문 캡션은 <em>"모독자 세트를 챙겨라. <strong>2피스면 충분하고, 많을수록 좋다</strong>"</em>입니다. 세트는 <strong>투구 · 갑옷 · 마도서 · 지팡이</strong> 4부위이고 <strong>1피스 효과는 없습니다.</strong></p>
+  <div class="card">
+    <h4>모독자의 예복 <span class="mono">Desecrator's Raiment</span> — 세트 효과 전문 <span class="tag data">데이터</span></h4>
+    <ul>
+      <li><strong>2피스</strong> — 신성 모독<span class="mono">(Desecration)</span>이 <strong>해골</strong>도 함께 소환합니다. 해골은 주변의 모든 신성 모독 발동 피해를 저장했다가, <strong>1.5초 뒤 저장한 총량의 300%</strong>를 <strong>5m 내 모든 적</strong>에게 터뜨립니다</li>
+      <li><strong>3피스</strong> — 신성 모독에 맞은 적은 <strong>신성 모독과 해골로부터 받는 피해가 50% 증가</strong>하며, 이 효과는 <strong>무한 중첩</strong>됩니다. 또한 신성 모독이 적중한 적을 2초간 <strong>50% 감속</strong>시킵니다</li>
+      <li><strong>4피스</strong> — 신성 모독이 적을 때릴 때마다 워록의 체력을 <strong>1% 회복</strong>합니다. 또한 <strong>모든 출처의 초과 회복분이 보호막으로 전환</strong>되어 <strong>최대 체력의 30%</strong>까지 흡수합니다</li>
+    </ul>
+  </div>
+  <p><strong>3피스의 "무한 중첩"이 이 세트의 정체</strong>입니다. 신성 모독을 계속 깔수록 같은 적이 받는 해골 피해가 끝없이 불어나므로, 2피스로 해골을 켜고 3피스로 배수를 붙이는 순간 레벨링 구간의 피해 문제가 사라집니다.</p>
+  <div class="tw"><table>
+    <tr><th>부위</th><th>아이템</th><th>고유 옵션</th><th>기본 스탯 · 가치</th></tr>
+    <tr><td>투구</td><td><strong>모독자의 얼굴</strong><br><span class="mono">Desecrator's Face</span></td><td>암흑 +25% · 치확 +15% · 치피 +25% · 효과 지속 +15% · 쿨감 +15%</td><td>체력 +293 · 마나 +35 · 피해 +95<br>가치 <strong>8,550</strong></td></tr>
+    <tr><td>갑옷</td><td><strong>모독자의 우리</strong><br><span class="mono">Desecrator's Cage</span></td><td>암흑 +25% · <strong>도달 +15%</strong> · 전 원소 +20% · 전 저항 +15% · 보석 효과 +15% · 획득 반경 +40%</td><td>체력 +423 · 마나 +49 · 피해 +106<br>가치 <strong>10,343</strong></td></tr>
+    <tr><td>마도서</td><td><strong>모독자의 연구 결과</strong><br><span class="mono">Desecrator's Work</span></td><td>암흑 +25% · <strong>적중 시 체력 +10</strong> · 치확 +15% · <strong>피해 +157</strong> · 효과 지속 +15% · 도달 +15%</td><td>체력 +62 · 마나 +126 · 피해 +112<br>가치 <strong>11,640</strong></td></tr>
+    <tr><td>지팡이</td><td><strong>모독자의 손길</strong><br><span class="mono">Desecrator's Touch</span></td><td>암흑 +25% · 공속 +15% · 치확 +15% · <strong>치명타 시 5% 확률로 5초간 모든 스킬 기본 공속 +30%</strong> · 쿨감 +15% · 효과 지속 +15%</td><td>체력 +57 · 마나 +59 · 피해 281 · 공속 100% · 치확 18%<br>가치 <strong>13,325</strong></td></tr>
+  </table></div>
+  <div class="note">
+    이 네 부위는 <strong>100레벨에서 같은 이름으로 다시 등장</strong>합니다(모독자의 얼굴 → <span class="mono">Solitary Desecrator's Face</span> 등). 즉 30레벨에 익힌 운영이 그대로 엔드게임까지 이어집니다 — <a href="progression.html">성장 문서</a> 참조.
+  </div>
+</section>
+
+<section id="next">
+  <h2>8 · 100레벨에 도착하면</h2>
+  <p>캠페인만 밀어도 <strong>3막~4막 사이</strong>에 100을 찍습니다. 캠페인 완주 시점의 레벨은 대체로 60~80이고, 완주하면 <strong>틴카의 영역</strong>이 계정 전체에 열립니다 <span class="tag data">데이터</span>.</p>
+  <p>레벨링 빌드는 그대로도 <strong>초반 신화 난이도 아노말리</strong>까지 소화합니다. 성장 빌드로 갈아타는 시점, 파밍 우선순위, 원정 트리는 아래 문서에서 이어집니다.</p>
+  <div class="grid">
+    <a class="tile" href="progression.html">
+      <h3>성장 (100렙 이후) →</h3>
+      <p>목적별 파밍처 · 인챈트 순서 경고 · DLC 원정 트리와 황금 크리스탈 · 아티팩트 · 인젝터/영약</p>
+    </a>
+    <a class="tile" href="index.html">
+      <h3>← 워록 개요</h3>
+      <p>영혼 시스템 · 4개 트리 · 강약점</p>
+    </a>
+  </div>
+  <p class="src">원저자 <strong>Rahlence</strong> · 원문 <code>lock_leveling_v3.pdf</code> (2026-06-26, 공식 디스코드 #build-forum) · 스크린샷 10장(<code>lv_01</code>~<code>lv_10</code>) 전사 기준</p>
+</section>
+
+<footer>
+  개인 참고용 한국어 정리 · Chronicon 1.54.1 기준 · 검색엔진 색인 제외
+</footer>
+</div>
+<a href="#" class="totop">↑ 맨 위</a>
+<script src="../../assets/wiki.js"></script>
+</body>
+</html>

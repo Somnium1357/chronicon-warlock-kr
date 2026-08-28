@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>스킬 · 태그 · 크로니콘 위키</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/wiki.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="brand plain" href="../index.html">크로니콘 <span>위키</span></a>
+  <span class="crumb">게임 기초 › 스킬 · 태그</span>
+</div>
+
+<nav class="side">
+  <div class="grp">시작</div>
+  <ul>
+    <li><a href="../index.html">홈</a></li>
+  </ul>
+  <div class="grp">게임 기초</div>
+  <ul>
+    <li><a href="../basics/damage.html">피해 계산</a></li>
+    <li><a href="../basics/defense.html">방어</a></li>
+    <li><a class="cur" href="../basics/skills.html">스킬 · 태그</a></li>
+    <li><a href="../basics/items.html">아이템 · 제작</a></li>
+    <li><a href="../basics/endgame.html">난이도 · 엔드게임</a></li>
+    <li><a href="../basics/glossary.html">한영 명칭</a></li>
+  </ul>
+  <div class="grp">클래스</div>
+  <ul>
+    <li><a href="../classes/index.html">클래스 개요</a></li>
+    <li><a href="../classes/warlock/index.html">워록</a></li>
+    <li><a href="../classes/warlock/leveling.html">└ 레벨링</a></li>
+    <li><a href="../classes/warlock/progression.html">└ 성장</a></li>
+    <li><a href="../classes/warlock/builds.html">└ 빌드</a></li>
+    <li><a class="soon" href="#">템플러 (예정)</a></li>
+    <li><a class="soon" href="#">버서커 (예정)</a></li>
+    <li><a class="soon" href="#">워든 (예정)</a></li>
+    <li><a class="soon" href="#">메카니스트 (예정)</a></li>
+  </ul>
+  <div class="grp">자료</div>
+  <ul>
+    <li><a href="../meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="../meta/patches.html">패치 동향</a></li>
+  </ul>
+</nav>
+
+<h1>스킬 · 태그</h1>
+<p class="lede">트리는 세로가 아니라 가로로 열립니다 — 해금 구조, 슬롯 규칙, 그리고 태그 두 축</p>
+
+<div class="searchbar">
+  <input type="search" id="q" placeholder="이 문서에서 검색" autocomplete="off" spellcheck="false" aria-label="문서 내 검색">
+  <span class="cnt" id="cnt"></span>
+</div>
+<p id="none">검색 결과가 없습니다.</p>
+
+<!-- ══════════ 트리 구조 ══════════ -->
+<section id="tree">
+  <h2>스킬 트리 해금 구조</h2>
+
+  <div class="note ok">
+    <strong>해금 기준은 세로줄이 아니라 가로 열(column)입니다.</strong> <span class="tag data">데이터: changelog 0.750</span><br>
+    화면상 세로 위치는 <strong>배치용일 뿐</strong> 아무 의미가 없습니다. "위쪽 스킬을 먼저 찍어야 아래가 열린다"는 것은 오해입니다.
+  </div>
+
+  <p>트리 하나당 실제 스킬 <strong>열은 8개</strong>이고, 열마다 해금 레벨이 정해져 있습니다.</p>
+
+  <div class="tw"><table>
+    <tr><th>열</th><th>해금 레벨</th><th>근거</th></tr>
+    <tr><td>1열</td><td><strong>1</strong></td><td><span class="tag data">데이터</span></td></tr>
+    <tr><td>2열</td><td><strong>5</strong></td><td><span class="tag data">데이터</span></td></tr>
+    <tr><td>3열</td><td><strong>10</strong></td><td><span class="tag data">데이터</span></td></tr>
+    <tr><td>4열</td><td>15</td><td><span class="tag unk">추정</span></td></tr>
+    <tr><td>5열</td><td>20</td><td><span class="tag unk">추정</span></td></tr>
+    <tr><td>6열</td><td>25</td><td><span class="tag unk">추정</span></td></tr>
+    <tr><td>7열</td><td>30</td><td><span class="tag unk">추정</span></td></tr>
+    <tr><td>8열 (궁극기)</td><td><strong>40</strong></td><td><span class="tag data">데이터</span></td></tr>
+  </table></div>
+
+  <p class="src">4~7열의 15/20/25/30은 <strong>추정치</strong>입니다. 체인지로그에 등장하는 8개의 해금 레벨을 8개 열에 순서대로 대응시킨 결과이며, 게임 내 직접 확인은 되지 않았습니다.</p>
+</section>
+
+<!-- ══════════ 랭크와 포인트 ══════════ -->
+<section id="points">
+  <h2>최대 랭크와 스킬 포인트</h2>
+
+  <div class="tw"><table>
+    <tr><th>종류</th><th>최대 랭크</th></tr>
+    <tr><td>액티브</td><td><strong>5</strong></td></tr>
+    <tr><td>패시브 (대부분)</td><td><strong>3</strong></td></tr>
+    <tr><td>궁극기</td><td><strong>1</strong></td></tr>
+  </table></div>
+
+  <ul>
+    <li>포인트는 <strong>레벨당 1개</strong>, 100레벨에 총 <strong>100개</strong>입니다.</li>
+    <li>네 트리에 <strong>자유롭게 배분</strong>할 수 있습니다. 한 트리에 몰아도 되고 나눠도 됩니다.</li>
+    <li><strong><code>Ctrl</code> + 클릭 = 5포인트씩</strong> 한 번에 투자됩니다. 최대 랭크까지 빨리 올릴 때 씁니다.</li>
+  </ul>
+
+  <div class="note">
+    <strong>포인트를 일부러 남기는 빌드가 있습니다.</strong> 아티팩트 <em>메건의 불꽃</em>은 <strong>미사용 포인트 1개당 부 스탯을 1%</strong> 올려줍니다. 예를 들어 저주 모독자 빌드는 100레벨에서 <strong>44포인트를 비워둡니다.</strong> 트리를 무조건 채우는 것이 정답이 아닙니다.
+  </div>
+</section>
+
+<!-- ══════════ 궁극기 ══════════ -->
+<section id="ult">
+  <h2>궁극기</h2>
+
+  <div class="tw"><table>
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td>장착 수</td><td><strong>1개만</strong> 장착 가능</td></tr>
+    <tr><td>최대 랭크</td><td>1</td></tr>
+    <tr><td>쿨다운</td><td><strong>8종 전부 60초</strong></td></tr>
+    <tr><td>해금</td><td>40레벨 (8열)</td></tr>
+  </table></div>
+
+  <p class="src">0.800 패치에서 쿨다운이 100초 → 60초로 하향되었습니다. <span class="tag data">데이터</span> 구버전 가이드가 "궁극기는 100초라 못 쓴다"고 적어두었다면 낡은 정보입니다.</p>
+</section>
+
+<!-- ══════════ 슬롯 ══════════ -->
+<section id="slots">
+  <h2>슬롯과 키 배치</h2>
+
+  <div class="tw"><table>
+    <tr><th>슬롯</th><th>개수</th></tr>
+    <tr><td>액티브 스킬 슬롯</td><td><strong>6개</strong></td></tr>
+    <tr><td>벨트 슬롯 (소모품·스크롤·서책)</td><td><strong>4개</strong></td></tr>
+  </table></div>
+
+  <h3>한 버튼에 여러 스킬 겹치기</h3>
+  <div class="note ok">
+    <strong>여러 스킬을 같은 버튼에 배정할 수 있습니다.</strong> 버튼을 누르고 있으면 <strong>슬롯 순서상 오른쪽에서 왼쪽으로</strong> 순서대로 발동합니다.
+  </div>
+  <p>이 규칙 덕분에 크로니콘의 실제 조작은 대부분 "<strong>버튼 하나를 누르고 있기</strong>"가 됩니다. 쿨다운이 없는 스킬이 쿨다운 있는 스킬을 밀어내지 않도록, <strong>슬롯 순서 자체가 우선순위 설정</strong>이 됩니다.</p>
+  <div class="note warn">
+    쿨다운 없는 스킬(예: 기본 공격, 해골 연타)이 같은 버튼에 섞여 있으면, 쿨다운 있는 스킬이 <strong>영영 발동하지 않는</strong> 일이 생깁니다. 그럴 땐 그 스킬을 <strong>키를 비우고 자동 시전</strong>으로 돌리는 것이 실전 해법입니다.
+  </div>
+
+  <h3>의식은 장착만으로 작동합니다</h3>
+  <div class="note ok">
+    <strong>의식</strong> <span class="mono">Ritual</span> 스킬은 <strong>슬롯에 넣어두기만 해도 패시브 효과의 절반이 작동</strong>합니다. 키를 배정하지 않고, 실제로 시전하지 않아도 됩니다.
+  </div>
+  <p>그래서 실전 빌드는 의식 스킬을 <strong>"장착 전용" 슬롯</strong>으로 한두 칸 쓰는 경우가 많습니다. 워록의 <em>파멸의 비술 제단 의식</em>이 대표적으로, 시전하지 않고 장착만 해서 피해 감소 오라를 얻습니다.</p>
+</section>
+
+<!-- ══════════ 태그 ══════════ -->
+<section id="tags">
+  <h2>스킬 태그 — 두 축을 구분하세요</h2>
+
+  <p>모든 스킬에는 <strong>계열(School)</strong>과 <strong>형태(Type)</strong>가 각각 붙습니다. 이 둘은 <strong>완전히 다른 축</strong>이며, 장비·룬·패시브가 어느 쪽을 노리는지에 따라 빌드가 갈립니다. <span class="tag data">데이터: locale/EN/skills</span></p>
+
+  <h3>축 1 — 계열 (School)</h3>
+  <p>스킬이 "무엇에 속하는가". 대체로 <strong>계열 피해 %</strong> 옵션이 이 축을 봅니다.</p>
+  <div class="tw"><table>
+    <tr><th>한글</th><th>영문</th></tr>
+    <tr><td>검</td><td><span class="mono">Sword</span></td></tr>
+    <tr><td>방패</td><td><span class="mono">Shield</span></td></tr>
+    <tr><td>마법</td><td><span class="mono">Magic</span></td></tr>
+    <tr><td>난투</td><td><span class="mono">Brawl</span></td></tr>
+    <tr><td>드래곤</td><td><span class="mono">Dragon</span></td></tr>
+    <tr><td>함성</td><td><span class="mono">Shout</span></td></tr>
+    <tr><td>궁술</td><td><span class="mono">Archery</span></td></tr>
+    <tr><td>자연</td><td><span class="mono">Nature</span></td></tr>
+    <tr><td>폭풍</td><td><span class="mono">Storm</span></td></tr>
+    <tr><td><strong>비술</strong></td><td><span class="mono">Sorcery</span></td></tr>
+    <tr><td><strong>저주</strong></td><td><span class="mono">Curse</span></td></tr>
+    <tr><td><strong>파멸</strong></td><td><span class="mono">Bane</span></td></tr>
+    <tr><td>전투</td><td><span class="mono">Combat</span></td></tr>
+    <tr><td>중기계</td><td><span class="mono">Heavy Machinery</span></td></tr>
+    <tr><td>팅커</td><td><span class="mono">Tinker</span></td></tr>
+    <tr><td>유틸리티</td><td><span class="mono">Utility</span></td></tr>
+    <tr><td>지원</td><td><span class="mono">Support</span></td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>영문 표기 주의</strong> <span class="tag unk">일부 미확인</span> — 원자료에서 <strong>영문이 직접 확인된 것은 <span class="mono">Sorcery</span> · <span class="mono">Curse</span> · <span class="mono">Bane</span> 세 개</strong>입니다. 나머지 영문은 한글 계열명에 대응하는 자연스러운 영어 표기를 옮긴 것이므로, 게임 내 표기와 다를 수 있습니다.
+  </div>
+
+  <div class="note warn">
+    <strong>한글패치 번역 함정 — "비술"</strong><br>
+    한글패치는 계열 <span class="mono">Sorcery</span>를 <strong>비술</strong>로 옮겼는데, <strong>의식 스킬 이름 안에도 "비술"이라는 단어가 들어갑니다</strong>(예: 파멸의 비술 제단 의식, 사령 소환 비술 의식). 장비 설명에 "비술 피해 +%"라고 적혀 있으면 <strong>계열 태그 Sorcery</strong>를 말하는 것이고, 스킬 이름의 "비술"과는 별개일 수 있습니다. 헷갈리면 <strong>스킬 툴팁의 태그 줄</strong>을 직접 확인하세요.
+  </div>
+
+  <h3>축 2 — 형태 (Type)</h3>
+  <p>스킬이 "어떻게 작동하는가". <strong>의식/동료/유산/오라 효과 %</strong> 같은 옵션이 이 축을 봅니다.</p>
+  <div class="tw"><table>
+    <tr><th>한글</th><th>영문</th><th>비고</th></tr>
+    <tr><td>기본</td><td><span class="mono">Base</span></td><td>기본 공격. 마나 무소모 + 마나 4% 회복</td></tr>
+    <tr><td>액티브</td><td><span class="mono">Active</span></td><td>직접 시전</td></tr>
+    <tr><td>패시브</td><td><span class="mono">Passive</span></td><td>찍기만 하면 상시</td></tr>
+    <tr><td>펄크</td><td><span class="mono">Perk</span></td><td>—</td></tr>
+    <tr><td>버프</td><td><span class="mono">Buff</span></td><td>—</td></tr>
+    <tr><td>동료</td><td><span class="mono">Companion</span></td><td>동료 피해/체력 스탯이 적용됨</td></tr>
+    <tr><td>궁극기</td><td><span class="mono">Ultimate</span></td><td>1개만 장착, 쿨 60초</td></tr>
+    <tr><td>유산</td><td><span class="mono">Legacy</span></td><td>—</td></tr>
+    <tr><td><strong>의식</strong></td><td><span class="mono">Ritual</span></td><td><strong>장착만으로 패시브 절반 작동</strong></td></tr>
+    <tr><td>오라</td><td><span class="mono">Aura</span></td><td><strong>공격 속도 영향 없음</strong></td></tr>
+    <tr><td>기동</td><td><span class="mono">Mobility</span></td><td>—</td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>테스트 빌드 정보</strong> <span class="tag test">테스트빌드</span> — 2026-06-25 <span class="mono">tinka build</span>에서 <strong>버프를 거는 스킬 대부분에 "버프" 태그가 추가</strong>되었고, 모든 유틸리티·궁극기 스킬이 최대 랭크 초과분을 제대로 반영하도록 수정되었습니다. <strong>정식 출시본이 아닙니다.</strong>
+  </div>
+
+  <h3>축 3 — 특수 그룹</h3>
+  <p>계열·형태와 별개로, <strong>일부 아이템과 룬이 콕 집어 노리는 좁은 그룹</strong>이 있습니다.</p>
+  <div class="tw"><table>
+    <tr><th>그룹</th><th>영문</th></tr>
+    <tr><td>뼈</td><td><span class="mono">Bone</span></td></tr>
+    <tr><td>냉기 창</td><td><span class="mono">Ice Spear</span></td></tr>
+    <tr><td>균류</td><td><span class="mono">Fungus</span></td></tr>
+    <tr><td>대지 암석</td><td><span class="mono">Earth / Rock</span></td></tr>
+    <tr><td>환영 검</td><td><span class="mono">Phantom Sword</span></td></tr>
+    <tr><td>망치</td><td><span class="mono">Hammer</span></td></tr>
+  </table></div>
+  <p class="src">특수 그룹의 영문 표기도 <strong>한글명에서 옮긴 것</strong>이며 게임 내 표기와 다를 수 있습니다 <span class="tag unk">미확인</span>.</p>
+  <div class="note">
+    특수 그룹을 노리는 장비는 <strong>대상이 좁은 대신 배율이 큽니다.</strong> 빌드 하나를 굳히기로 했다면, 계열/형태 옵션보다 <strong>특수 그룹 옵션이 더 큰 도약</strong>이 되는 경우가 많습니다.
+  </div>
+</section>
+
+<!-- ══════════ 마스터리 ══════════ -->
+<section id="mastery">
+  <h2>마스터리</h2>
+
+  <div class="note ok">
+    <strong>마스터리는 100레벨 전부터 쌓입니다.</strong> <span class="tag data">데이터</span><br>
+    "마스터리는 100레벨부터"라는 통설은 <strong>틀렸습니다.</strong>
+  </div>
+
+  <p>근거는 레벨링 가이드의 스크린샷 헤더입니다. 아래처럼 레벨과 마스터리가 함께 올라가고 있으며, 전부 <code>Mastery Points: 0</code> — 즉 <strong>얻는 족족 쓰고 있다</strong>는 뜻입니다.</p>
+
+  <div class="tw"><table>
+    <tr><th>레벨</th><th>10</th><th>20</th><th>40</th><th>50</th><th>63</th><th>100</th></tr>
+    <tr><td><strong>마스터리</strong></td><td>M1</td><td>M5</td><td>M19</td><td>M28</td><td>M42</td><td>M90</td></tr>
+  </table></div>
+
+  <h3>구성</h3>
+  <ul>
+    <li><strong>상한이 없습니다.</strong> 마스터리는 계속 쌓입니다.</li>
+    <li>클래스 트리 <strong>4줄</strong> + <strong>공용(왕관) 줄 3개</strong>로 구성됩니다.</li>
+    <li>영혼 관련 노드(<strong>영혼 관리자 · 영혼 감옥</strong>)는 클래스 트리가 아니라 <strong>공용 줄</strong> 소속입니다.</li>
+  </ul>
+
+  <div class="note warn">
+    <strong>죽은 정보 주의 — "워록 스킬 트리의 최대 영혼 +5"</strong><br>
+    워록 <em>스킬 트리</em>에 있던 최대 영혼 +5 노드는 <strong>2019년 0.90.0에서 삭제</strong>되었습니다. 그 조언을 담은 가이드는 <strong>7년 전 버전</strong>을 보고 있는 것입니다. 지금 최대 영혼을 늘리는 것은 <strong>마스터리 공용 줄</strong>입니다.
+  </div>
+</section>
+
+<!-- ══════════ 관련 문서 ══════════ -->
+<section id="related">
+  <h2>관련 문서</h2>
+  <ul>
+    <li><a href="damage.html">피해 계산</a> — 계열 피해 %가 어디서 곱해지는지, 기본 공격 랭크 수치</li>
+    <li><a href="items.html">아이템 · 제작</a> — 룬과 아티팩트가 어떤 태그를 노리는가</li>
+    <li><a href="glossary.html">한영 명칭</a> — 태그·계열의 영문 ⇄ 한글패치 대조표</li>
+  </ul>
+</section>
+
+<footer>
+  개인 참고용 한국어 정리 · Chronicon 1.54.1 기준 · 검색엔진 색인 제외
+</footer>
+</div>
+<a href="#" class="totop">↑ 맨 위</a>
+<script src="../assets/wiki.js"></script>
+</body>
+</html>

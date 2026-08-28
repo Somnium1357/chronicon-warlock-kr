@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>난이도 · 엔드게임 · 크로니콘 위키</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/wiki.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="brand plain" href="../index.html">크로니콘 <span>위키</span></a>
+  <span class="crumb">게임 기초 › 난이도 · 엔드게임</span>
+</div>
+
+<nav class="side">
+  <div class="grp">시작</div>
+  <ul>
+    <li><a href="../index.html">홈</a></li>
+  </ul>
+  <div class="grp">게임 기초</div>
+  <ul>
+    <li><a href="../basics/damage.html">피해 계산</a></li>
+    <li><a href="../basics/defense.html">방어</a></li>
+    <li><a href="../basics/skills.html">스킬 · 태그</a></li>
+    <li><a href="../basics/items.html">아이템 · 제작</a></li>
+    <li><a class="cur" href="../basics/endgame.html">난이도 · 엔드게임</a></li>
+    <li><a href="../basics/glossary.html">한영 명칭</a></li>
+  </ul>
+  <div class="grp">클래스</div>
+  <ul>
+    <li><a href="../classes/index.html">클래스 개요</a></li>
+    <li><a href="../classes/warlock/index.html">워록</a></li>
+    <li><a href="../classes/warlock/leveling.html">└ 레벨링</a></li>
+    <li><a href="../classes/warlock/progression.html">└ 성장</a></li>
+    <li><a href="../classes/warlock/builds.html">└ 빌드</a></li>
+    <li><a class="soon" href="#">템플러 (예정)</a></li>
+    <li><a class="soon" href="#">버서커 (예정)</a></li>
+    <li><a class="soon" href="#">워든 (예정)</a></li>
+    <li><a class="soon" href="#">메카니스트 (예정)</a></li>
+  </ul>
+  <div class="grp">자료</div>
+  <ul>
+    <li><a href="../meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="../meta/patches.html">패치 동향</a></li>
+  </ul>
+</nav>
+
+<h1>난이도 · 엔드게임</h1>
+<p class="lede">난이도 6단계, 캠페인 5막, 그리고 아노말리가 실제로 어떻게 만들어지는가</p>
+
+<div class="searchbar">
+  <input type="search" id="q" placeholder="이 문서에서 검색" autocomplete="off" spellcheck="false" aria-label="문서 내 검색">
+  <span class="cnt" id="cnt"></span>
+</div>
+<p id="none">검색 결과가 없습니다.</p>
+
+<!-- ══════════ 난이도 ══════════ -->
+<section id="difficulty">
+  <h2>난이도 6단계</h2>
+
+  <div class="note warn">
+    <strong>"베테랑"은 존재하지 않는 난이도입니다.</strong><br>
+    옛 영어 가이드에 나오는 <span class="mono">Veteran</span>은 <strong>삭제되었습니다.</strong> 그 이름이 나오는 자료는 상당히 오래된 버전을 보고 있는 것이니, 다른 내용도 함께 의심하세요.
+  </div>
+
+  <div class="tw"><table>
+    <tr><th>영문</th><th>한글</th><th>핵심</th></tr>
+    <tr><td><span class="mono">Casual</span></td><td><strong>캐주얼</strong></td><td>몬스터가 항상 내 레벨 −5 · <strong>전설 드랍 없음</strong> · 전리품·재화·경험치 감소</td></tr>
+    <tr><td><span class="mono">Normal</span></td><td><strong>일반</strong></td><td>표준. <strong>전설 드랍 없음</strong>. 게임 설명이 "숙련자도 새 캐릭터는 여기서"를 권장</td></tr>
+    <tr><td><span class="mono">Heroic</span></td><td><strong>영웅</strong></td><td><strong>전설·고유 재료 드랍 시작 (레벨 10+)</strong> · 전 저항 −% · 마법 발견·크리스탈·경험치 +</td></tr>
+    <tr><td><span class="mono">Epic</span></td><td><strong>서사시</strong></td><td>보너스·페널티 확대 · 레벨 30+ 권장</td></tr>
+    <tr><td><span class="mono">Legendary</span></td><td><strong>전설</strong></td><td><strong>100레벨에서 진전설 드랍</strong> · 레벨 50+ 권장</td></tr>
+    <tr><td><span class="mono">Mythic I–XV</span></td><td><strong>신화 I–XV</strong></td><td><strong>캠페인 완주 후</strong> 개방 · 세트 + 최상급 장비 권장</td></tr>
+  </table></div>
+
+  <h3>경험치 보너스 <span class="tag comm">커뮤니티</span></h3>
+  <div class="tw"><table>
+    <tr><th>난이도</th><th>경험치</th></tr>
+    <tr><td>서사시</td><td>+40%</td></tr>
+    <tr><td>전설</td><td>+100%</td></tr>
+    <tr><td><strong>신화 XV</strong></td><td><strong>+4,500%</strong></td></tr>
+  </table></div>
+
+  <h3>난이도 변경</h3>
+  <p><strong>영웅 불러오기 메뉴</strong> 또는 크로니콘의 <strong>틴카</strong>에게서 바꿉니다. <strong>언제든 가능하고, 진행 초기화가 없습니다.</strong></p>
+
+  <h3>판단 기준</h3>
+  <div class="note ok">
+    <strong>한 단계 내려야 할 때</strong>
+    <ul>
+      <li>챔피언 팩을 <strong>5초 안에 못 잡을 때</strong></li>
+      <li><strong>같은 것에 두 번 죽었을 때</strong></li>
+    </ul>
+    크로니콘은 사망 페널티가 가볍기 때문에 무리해서 버티는 것보다 <strong>빨리 도는 난이도</strong>가 결과적으로 효율이 높습니다.
+  </div>
+
+  <div class="note warn">
+    <strong>영웅 난이도 이상이어야 전설이 나옵니다.</strong> 캐주얼·일반에서 아무리 오래 파밍해도 전설은 드랍되지 않습니다. 레벨 10을 넘겼다면 <strong>영웅으로 올리는 것이 사실상 필수</strong>입니다.
+  </div>
+</section>
+
+<!-- ══════════ 캠페인 ══════════ -->
+<section id="campaign">
+  <h2>캠페인 — 5막</h2>
+
+  <ul>
+    <li>완주하면 대체로 레벨 <strong>60~80</strong>이 됩니다.</li>
+    <li>완주 시 <strong>틴카의 영역</strong>이 <strong>계정 전체에</strong> 개방됩니다.</li>
+  </ul>
+
+  <div class="tw"><table>
+    <tr><th>막</th><th>보스 (한글)</th><th>영문</th></tr>
+    <tr><td>1막</td><td>대여사제 메델라</td><td><span class="mono">High Priestess Medela</span></td></tr>
+    <tr><td>2막</td><td>대드루이드 오크스톰</td><td><span class="mono">Archdruid Oakstorm</span></td></tr>
+    <tr><td>3막</td><td>매독</td><td><span class="mono">Maddok</span></td></tr>
+    <tr><td>4막</td><td>에지마</td><td><span class="mono">Edzima</span></td></tr>
+    <tr><td>5막</td><td>아래의 야수</td><td><span class="mono">The Beast Below</span></td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>3막의 바닥 버튼 구간 — 버그가 아닙니다.</strong><br>
+    3막에는 <strong>바닥의 버튼을 밟아야 진행되는 구간</strong>이 있습니다. 길이 막힌 것처럼 보여 막혔다고 오해하기 쉽지만 정상 설계입니다. 주변 바닥을 살펴보세요.
+  </div>
+
+  <div class="note ok">
+    <strong>보스는 같은 난이도의 챔피언보다 쉽습니다.</strong> 보스방에 들어가기 전에 주변 구역을 정리해 <strong>신단 버프</strong>를 챙겨두면 더 편합니다.<br>
+    1.54부터는 <strong>신전 상부 회랑의 제단에 동전을 헌납</strong>하면 유용한 아이템이 나올 확률이 크게 올라갑니다.
+  </div>
+</section>
+
+<!-- ══════════ 아노말리 생성 ══════════ -->
+<section id="anomaly-gen">
+  <h2>아노말리 — 맵이 만들어지는 방식</h2>
+
+  <p>아노말리 맵은 <strong>두 단계 추첨</strong>으로 만들어집니다. <span class="tag dev">개발자: tinka-notes 2025-09-30</span></p>
+
+  <div class="tw"><table>
+    <tr><th>단계</th><th>추첨 대상</th><th>결정하는 것</th></tr>
+    <tr><td><strong>1</strong></td><td><strong>타일셋</strong> <span class="mono">Tileset</span></td><td>바닥·벽 <strong>비주얼</strong> (동굴 · 신전 · 사막 등)</td></tr>
+    <tr><td><strong>2</strong></td><td><strong>레이아웃</strong> <span class="mono">Layout</span></td><td>맵의 <strong>구조</strong> (넓은 개활지 · 좁은 동굴 등)</td></tr>
+  </table></div>
+
+  <div class="note">
+    <strong>타일셋과 레이아웃은 자유롭게 섞입니다.</strong> 레이아웃은 "타일셋에 어울리는 것" 중에서 뽑히지만 서로 고정 짝이 아닙니다. 그래서 <strong>숲 타일셋 + 사막 레이아웃 = 탁 트인 숲 공터</strong> 같은 조합이 나옵니다.
+  </div>
+
+  <p>가능한 조합 수는 <strong>1.54에서 60 → 92</strong>로 늘었습니다.</p>
+
+  <div class="tw"><table>
+    <tr><th>1.54 변경</th><th>내용</th></tr>
+    <tr><td rowspan="5"><strong>추가</strong></td><td><strong>Wormgut</strong> 타일셋 — 4막 최종 보스 기반</td></tr>
+    <tr><td>막다른 길이 없는 <strong>긴 복도</strong> 레이아웃</td></tr>
+    <tr><td><strong>나선형</strong> <span class="mono">Worm</span> 레이아웃</td></tr>
+    <tr><td><strong>대형 개활지</strong> <span class="mono">Big Gut</span> 레이아웃</td></tr>
+    <tr><td>축소판 <span class="mono">Lost City</span></td></tr>
+    <tr><td><strong>제거</strong></td><td><span class="mono">Bone Pits</span> <strong>레이아웃</strong> (동명 <strong>타일셋은 유지</strong>)</td></tr>
+  </table></div>
+</section>
+
+<!-- ══════════ 아노말리 종류 ══════════ -->
+<section id="anomaly-types">
+  <h2>아노말리 종류별 파밍 목적</h2>
+
+  <div class="note ok">
+    <strong>항상 목적을 갖고 파밍하세요.</strong> 아노말리는 종류마다 나오는 것이 다릅니다. 아무거나 돌면 필요한 재료가 영영 안 모입니다.
+  </div>
+
+  <div class="tw"><table>
+    <tr><th>종류</th><th>얻는 것</th></tr>
+    <tr><td><strong>무작위</strong></td><td>고정 난이도 무한 맵 — <strong>경험치 · 마스터리</strong> · 상급 강화 재료</td></tr>
+    <tr><td><strong>던전</strong> (3층 + 보스)</td><td>클래스 <strong>하급 룬 직드랍</strong> · 기억 정수</td></tr>
+    <tr><td><strong>정예 던전</strong></td><td><strong>룬스톤</strong>(룬 제작 재료) · <strong>사망 불가</strong> 모드</td></tr>
+    <tr><td><strong>무한</strong> <span class="mono">Endless</span></td><td>무한 스케일링 푸시. 10층마다 보상 상승 · 마법 발견 <strong>+700% 상한</strong> · <strong>황금 크리스탈</strong></td></tr>
+    <tr><td><strong>소형 보스</strong></td><td>프리즈매틱 보석 · 룬로드의 후회 · 프리즈매틱 액체 (마법 발견을 쌓으면 <strong>진전설</strong> 공급원)</td></tr>
+    <tr><td><strong>대형 보스</strong> (신화 XV)</td><td><strong>신화 무기 제작 재료</strong></td></tr>
+  </table></div>
+
+  <h3>무한 아노말리 — 포탈 두 개</h3>
+  <div class="note">
+    <strong>1.53부터 무한 아노말리는 포탈을 두 개 줍니다.</strong>
+    <ul>
+      <li>하나는 <strong>다음 층</strong>으로 (난이도 상승 · 푸시)</li>
+      <li>하나는 <strong>같은 층 반복</strong>으로 (안정적인 파밍)</li>
+    </ul>
+    <strong>황금 크리스탈</strong>을 모으는 목적이라면 무리해서 층을 올리기보다, 안정적으로 클리어되는 층을 <strong>반복</strong>하는 편이 시간당 효율이 높습니다.
+  </div>
+
+  <h3>룬 40종 순환</h3>
+  <p>아노말리 룬은 <strong>40종이 순환으로 보장</strong>됩니다 <span class="tag comm">커뮤니티</span>. 원하는 룬이 안 나오는 것이 아니라 <strong>순서를 기다리는 것</strong>입니다. 다만 이미 상당수를 모았다면 남은 대기가 길어지므로, <strong>새 캐릭터를 키우는 편이 빠를 수도</strong> 있습니다.</p>
+
+  <div class="note warn">
+    소환·세트 의존 빌드를 만드는 중이라면 <strong>신화 I 던전 아노말리에서 멈추세요.</strong> 신화 XIV까지는 룬이 <strong>1개씩만</strong> 나오므로 더 밀어봐야 룬 수급은 같습니다. 사이사이 <strong>정예 던전</strong>으로 룬스톤을 모아 직접 제작하는 편이 빠릅니다.
+  </div>
+</section>
+
+<!-- ══════════ 틴카의 영역 ══════════ -->
+<section id="tinka">
+  <h2>틴카의 영역</h2>
+
+  <ul>
+    <li><strong>캠페인을 완주하면 계정 전체에</strong> 개방됩니다. 캐릭터마다 다시 뚫을 필요가 없습니다.</li>
+    <li><strong>난이도 변경</strong>을 여기서 할 수 있습니다 (영웅 불러오기 메뉴에서도 가능).</li>
+    <li><strong>상급 강화</strong> — <strong>기억 정수</strong>를 소모해 인챈트 수치를 더 올립니다.</li>
+    <li><strong>영약 구매</strong> — 1.40 개편 이후 영약은 여기와 크로니콘 영약 상점에서만 나옵니다.</li>
+    <li><strong>아노말리에서 죽으면</strong> 런이 끝나지 않고 <strong>틴카의 영역으로 이동</strong>합니다. 단 <strong>정예 던전은 사망 불가</strong> 모드입니다.</li>
+  </ul>
+
+  <div class="note ok">
+    <strong>서두르지 마세요.</strong> 레벨링 빌드만으로도 <strong>초반 신화 난이도 아노말리는 충분히</strong> 돌 수 있습니다. 자원이 갖춰지고 나면 낮은 마스터리에서도 <strong>신화 VIII 이상</strong>에 바로 들어갈 수 있습니다.
+  </div>
+</section>
+
+<!-- ══════════ 관련 문서 ══════════ -->
+<section id="related">
+  <h2>관련 문서</h2>
+  <ul>
+    <li><a href="items.html">아이템 · 제작</a> — 룬스톤·황금 크리스탈·신화 재료를 무엇에 쓰는가</li>
+    <li><a href="defense.html">방어</a> — 난이도별 저항 페널티와 130% 오버캡, 사망 페널티</li>
+    <li><a href="glossary.html">한영 명칭</a> — 난이도 · 지역 · NPC 영문 대조표</li>
+  </ul>
+</section>
+
+<footer>
+  개인 참고용 한국어 정리 · Chronicon 1.54.1 기준 · 검색엔진 색인 제외
+</footer>
+</div>
+<a href="#" class="totop">↑ 맨 위</a>
+<script src="../assets/wiki.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>성장 (100렙 이후) · 크로니콘 위키</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../../assets/wiki.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="brand plain" href="../../index.html">크로니콘 <span>위키</span></a>
+  <span class="crumb"><a href="../index.html">클래스</a> › <a href="index.html">워록</a> › 성장</span>
+</div>
+
+<nav class="side">
+  <div class="grp">시작</div>
+  <ul>
+    <li><a href="../../index.html">홈</a></li>
+  </ul>
+  <div class="grp">게임 기초</div>
+  <ul>
+    <li><a href="../../basics/damage.html">피해 계산</a></li>
+    <li><a href="../../basics/defense.html">방어</a></li>
+    <li><a href="../../basics/skills.html">스킬 · 태그</a></li>
+    <li><a href="../../basics/items.html">아이템 · 제작</a></li>
+    <li><a href="../../basics/endgame.html">난이도 · 엔드게임</a></li>
+    <li><a href="../../basics/glossary.html">한영 명칭</a></li>
+  </ul>
+  <div class="grp">클래스</div>
+  <ul>
+    <li><a href="../../classes/index.html">클래스 개요</a></li>
+    <li><a href="../../classes/warlock/index.html">워록</a></li>
+    <li><a href="../../classes/warlock/leveling.html">└ 레벨링</a></li>
+    <li><a class="cur" href="../../classes/warlock/progression.html">└ 성장</a></li>
+    <li><a href="../../classes/warlock/builds.html">└ 빌드</a></li>
+    <li><a class="soon" href="#">템플러 (예정)</a></li>
+    <li><a class="soon" href="#">버서커 (예정)</a></li>
+    <li><a class="soon" href="#">워든 (예정)</a></li>
+    <li><a class="soon" href="#">메카니스트 (예정)</a></li>
+  </ul>
+  <div class="grp">자료</div>
+  <ul>
+    <li><a href="../../meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="../../meta/patches.html">패치 동향</a></li>
+  </ul>
+</nav>
+
+<h1>성장 (100렙 이후)</h1>
+<p class="lede">파밍 우선순위, 인챈트 비용 함정, DLC 원정 트리, 완성 트리와 아티팩트 — 레벨링이 끝난 뒤의 워록 운영.</p>
+
+<div class="searchbar">
+  <input type="search" id="q" placeholder="이 문서에서 검색" autocomplete="off" spellcheck="false" aria-label="문서 내 검색">
+  <span class="cnt" id="cnt"></span>
+</div>
+<p id="none">검색 결과가 없습니다.</p>
+
+<section id="intro">
+  <p class="src">원저자 <strong>Rahlence</strong> · 원문 <code>lock_prog.pdf</code> (2026-06-18, 공식 디스코드 #build-forum «Warlock Leveling and Progression», 7쪽) · 레벨링편은 <code>lock_leveling_v3.pdf</code> (2026-06-26)</p>
+  <div class="note ok">
+    <strong>서두르지 마세요.</strong> <a href="leveling.html">레벨링 빌드</a>로도 <strong>최소한 초반 신화 난이도 아노말리</strong>는 충분히 돌아갑니다. 성장 빌드로 당장 갈아탈 필요가 없습니다 — 그쪽은 <strong>자원이 갖춰졌을 때</strong>를 위한 것이고, 갖춰지면 낮은 마스터리에서도 <strong>신화 VIII 이상</strong>에 바로 들어갑니다.
+  </div>
+</section>
+
+<section id="farm">
+  <h2>1 · 항상 목적을 갖고 파밍하기</h2>
+  <p>원문의 지시는 한 문장입니다 — <em>"마스터리나 드랍 말고도 <strong>지금 필요한 무언가</strong>를 항상 노리면서 돌아라."</em></p>
+  <div class="tw"><table>
+    <tr><th>파밍처</th><th>목적</th></tr>
+    <tr><td><strong>던전 아노말리</strong><br><span class="mono">Dungeon Anomalies</span></td><td><strong>아노말리 룬</strong> (클래스 하급 룬 직드랍)</td></tr>
+    <tr><td><strong>정예 던전 아노말리</strong><br><span class="mono">Elite Dungeon</span></td><td><strong>룬스톤</strong> — 제작 룬 재료. <strong>사망 불가</strong> 모드입니다</td></tr>
+    <tr><td>무작위 아노말리<br><span class="mono">Random</span></td><td>단순 노가다 · <strong>상급 강화 재료</strong> 수급</td></tr>
+    <tr><td><strong>소형 보스 아노말리</strong><br><span class="mono">Lesser Boss</span></td><td><strong>프리즈매틱 보석</strong> · <strong>룬로드의 후회</strong> · <strong>프리즈매틱 액체</strong>. 마법 발견을 쌓아 두면 <strong>진전설</strong> 공급원으로도 쓸 만합니다</td></tr>
+    <tr><td>대형 보스 아노말리 (신화 XV)<br><span class="mono">Greater Boss</span></td><td><strong>신화 무기</strong> 제작 재료</td></tr>
+    <tr><td><strong>무한 던전 아노말리</strong><br><span class="mono">Endless Dungeon</span></td><td><strong>황금 크리스탈</strong> — 원정 패시브 강화용</td></tr>
+  </table></div>
+  <p>아노말리 룬은 <strong>40종이 순환으로 보장</strong>되기 때문에, 룬을 더 모으고 싶다면 <strong>새 캐릭터를 하나 키우는 편이 더 빠를 수 있습니다.</strong> 파밍이 아니라 캐릭터 육성이 룬 수급 수단이 되는 드문 구조입니다.</p>
+  <p class="src">진행 순서 요약: <strong>저항 캡</strong> → 룬(던전) → 룬스톤(정예 던전) → <strong>원정 노드 전부</strong> → 프리즈매틱 보석(소형 보스) → 상급 강화 재료(무작위) → 신화 무기 재료(대형 보스 · 신화 XV) → <strong>황금 크리스탈(무한 던전)</strong></p>
+</section>
+
+<section id="ench">
+  <h2>2 · 인챈트 — 순서를 지키세요</h2>
+  <div class="note warn">
+    <strong>순서를 어기면 비용이 몇 배가 됩니다.</strong> <span class="tag data">데이터</span><br>
+    ① <strong>100레벨로 올리기 전에</strong> 인챈트와 <strong>보석 소켓</strong>을 먼저 굴리세요. 저레벨 장비 쪽이 리롤 비용이 훨씬 쌉니다.<br>
+    ② <strong>원하는 옵션이 전부 나오기 전에는 완전 강화(full augment)를 하지 마세요.</strong> 아이템 가치가 오르면 비용도 같이 오릅니다. 지키고 싶은 옵션만 <strong>딱 한 번 강화해 잠그는</strong> 정도로 두고, 나머지가 정리된 뒤에 마저 올리세요.
+  </div>
+  <p><strong>저항 캡이 1순위입니다.</strong> 초반에는 가능한 <strong>모든 부위에 전 저항 인챈트</strong>를 넣고, 거기에 <strong>물리 저항 메이저 1개 + 원소별 마이너 1개씩</strong>을 더하는 형태가 원문 권장입니다.</p>
+  <div class="note">
+    저항 상한은 <strong>80%</strong>이고, 높은 난이도는 기본 저항을 마이너스로 깎으므로 표기상 <strong>130% 오버캡</strong>을 목표로 잡습니다 <span class="tag data">데이터</span>. 워록은 클래스 기본으로 <strong>전 저항 +10%</strong>를 갖고 출발합니다.
+  </div>
+  <div class="note">
+    <strong>속성 접두를 기억하세요</strong> — <code>Frozen</code>·<code>Poisoned</code>·<code>Static</code>·<code>Plagued</code>·<code>Infernal</code>은 몹의 물리 공격을 그 속성으로 <strong>변환</strong>합니다. 한 저항만 몰아 올리면 안 되는 이유입니다.
+  </div>
+</section>
+
+<section id="expedition">
+  <h2>3 · DLC 원정 트리 — 황금 크리스탈이 갈림길</h2>
+  <p>원저자에게 <em>"DLC는 언제 하나?"</em>의 답은 곧 위의 진행 순서입니다. <strong>원정 노드를 전부 열고</strong>, 자기 빌드에 좋은 패시브의 랭크를 감당되는 만큼 올리는 것이 축입니다.</p>
+  <p>문제는 <strong>황금 크리스탈</strong>입니다. 없을 때와 최대치의 차이가 항목에 따라 <strong>2배에서 10배</strong>까지 벌어집니다. (원문 표기: "not an exhaustive list" — 전체 목록은 아닙니다)</p>
+  <div class="tw"><table>
+    <tr><th>원정 패시브</th><th>황금 크리스탈 없이</th><th>최대</th><th>배수</th></tr>
+    <tr><td>저항</td><td>8%</td><td><strong>20%</strong></td><td>2.5×</td></tr>
+    <tr><td><strong>스킬 피해</strong></td><td>20%</td><td><strong>200%</strong></td><td><strong>10×</strong></td></tr>
+    <tr><td>체력</td><td>2,300</td><td><strong>5,750</strong></td><td>2.5×</td></tr>
+    <tr><td>보석 강도</td><td>6%</td><td>15%</td><td>2.5×</td></tr>
+    <tr><td>원소 피해</td><td>20%</td><td>60%</td><td>3×</td></tr>
+    <tr><td>의식 / 동료 / 유산 / 오라 효과</td><td>16%</td><td>40%</td><td>2.5×</td></tr>
+    <tr><td>왕관 적 대상 피해</td><td>8%</td><td>20%</td><td>2.5×</td></tr>
+    <tr><td>적중 시 체력</td><td>21</td><td>70</td><td>3.3×</td></tr>
+    <tr><td>적중 시 마나</td><td>15</td><td>50</td><td>3.3×</td></tr>
+    <tr><td>클래식 개별 스킬 태그</td><td>6%</td><td>20%</td><td>3.3×</td></tr>
+    <tr><td>공용 스킬 태그</td><td>6%</td><td>15%</td><td>2.5×</td></tr>
+  </table></div>
+  <div class="note warn">
+    <strong>각 가지의 최종 노드는 황금 크리스탈 10개씩 없으면 아예 찍을 수 없습니다.</strong> 수치가 낮아지는 정도가 아니라 <strong>접근 자체가 잠깁니다.</strong> 원정 트리를 제대로 하려면 <strong>무한 던전을 아주 많이</strong> 돌 각오를 하라는 것이 원문의 마무리 문장입니다.
+  </div>
+  <div class="note warn">
+    <strong>완성 장비의 인챈트를 그대로 베끼지 마세요.</strong><br>
+    가이드에 실린 엔드게임 장비는 <strong>원정 트리를 끝낸 뒤</strong>의 상태입니다. 원정 패시브가 메워주던 <strong>저항 구멍이 그대로 뚫린 채</strong> 복사하게 되므로, 트리를 끝내기 전에는 <strong>표시된 것보다 저항을 더 넣고 피해·공격 속도 등을 희생</strong>해야 합니다.
+  </div>
+  <p class="src">원정 트리를 진행하는 동안에는 <strong>처치 축적</strong><span class="mono">(kill-hoarder)</span> 계열을 돌리고, 획득 쪽과 피해 쪽 중 자기 체감에 맞는 것을 교체해 쓰라는 것이 원문의 마지막 조언입니다.</p>
+</section>
+
+<section id="tree100">
+  <h2>4 · 100레벨 완성 트리</h2>
+  <figure>
+    <img src="../../images/img_tree_100.jpg" alt="100레벨 엔드게임 시점의 악마학자·수확자 트리와 마스터리 화면">
+    <figcaption>엔드게임 트리와 마스터리. 스킬 포인트 <strong>69개가 일부러 남아 있습니다</strong> — 아티팩트 <strong>메건의 불꽃</strong>이 미사용 포인트를 스탯으로 바꿔주기 때문입니다.</figcaption>
+  </figure>
+  <div class="tw"><table>
+    <tr><th>구분</th><th>배분</th><th>비고</th></tr>
+    <tr><td>수확자 <span class="mono">Reaper</span></td><td><strong>30</strong></td><td>해골 <strong>우클릭</strong>(5) · 의식 <code>[R]</code>(5) · 두 번째 우클릭(1) · 하단 기둥 노드(5) 등</td></tr>
+    <tr><td>악마학자 <span class="mono">Demonologist</span></td><td><strong>1</strong></td><td><code>[E]</code> 급속 폭사 불꽃 사격 하나뿐</td></tr>
+    <tr><td>미사용 스킬 포인트</td><td><strong>69</strong></td><td><strong>의도적</strong> — 메건의 불꽃용</td></tr>
+    <tr><td>마스터리 (총 392 투자)</td><td>부패자 12 · 리치 <strong>0</strong> · 공용 65 / 86 / 65 · 악마학자 70 · 수확자 94</td><td>미사용 마스터리 포인트 <strong>1,018</strong></td></tr>
+  </table></div>
+  <div class="note warn">
+    <strong>엔드게임 트리는 레벨링 트리의 연장이 아닙니다.</strong> 엔드게임 수확자 배분은 <strong>30포인트</strong>로, 50레벨 레벨링 배분(<strong>35</strong>)보다 <em>적습니다</em>. 100레벨에서 다시 짜는 별개의 배분이며, 남는 포인트는 <strong>메건의 불꽃</strong>에 먹이는 자원으로 취급합니다.
+  </div>
+  <div class="note">
+    <strong>원문의 내부 불일치</strong> <span class="tag unk">미확인</span> — 같은 페이지의 스킬 트리 캡처는 <code>Lv. 100, M 401</code>, 마스터리 캡처는 <code>Lv. 100, M 1410</code>으로 <strong>촬영 시점이 다릅니다.</strong> 두 배분을 하나의 스냅샷으로 읽지 마세요.
+  </div>
+
+  <h3>엔드게임 운영</h3>
+  <ol>
+    <li><strong>영혼 전송 왜곡</strong><span class="mono">(Soul Warp)</span>으로 맵을 순간이동해 다닙니다</li>
+    <li><code>E</code>(<strong>급속 폭사 불꽃 사격</strong>, flashfire)를 탭해 <strong>엘레멘티움 스택을 하나 더</strong> 쌓습니다</li>
+    <li><strong>영혼이 가득 차면</strong> <code>R</code>(<strong>의식</strong>)을 눌러 피해를 올립니다</li>
+    <li><strong>우클릭을 누르고 있으면 이깁니다</strong> <span class="mono">(Hold RMB to win)</span></li>
+  </ol>
+  <div class="tw"><table>
+    <tr><th>보조 릴릭</th><th>내용</th><th>가치</th></tr>
+    <tr><td><strong>영혼 전송 왜곡 두루마리</strong><br><span class="mono">Scroll of Soul Warp</span></td><td>사용: <span class="mono">Soul Warp I</span> 시전. <strong>쿨다운이 없고 개수 제한만 있습니다</strong> — 상인에게서 대량 구매해 씁니다</td><td><strong>1,350</strong></td></tr>
+    <tr><td><strong>뿌리 장막의 서책</strong><br><span class="mono">Codex of Root Veil</span></td><td>유니크 릴릭 · 사용: <span class="mono">Root Veil III</span> 시전 · <strong>쿨다운 5초</strong></td><td><strong>31,947</strong></td></tr>
+  </table></div>
+  <div class="note">
+    HUD 실측 <span class="tag data">데이터</span> — 엔드게임 캐릭터(Lv 100 · M 1410)는 체력 <strong>63,956</strong>에 보호막 <strong>35,175</strong>, 마나 <strong>6,698</strong>, <strong>영혼 10 / 10</strong>입니다. 레벨링 시점(Lv 100 · M 90)의 <strong>영혼 5 / 5</strong>와 비교하면 <strong>상한이 5 올라 있습니다</strong> — <a href="index.html#souls">영혼 시스템</a> 참조.
+  </div>
+</section>
+
+<section id="artifacts">
+  <h2>5 · 아티팩트</h2>
+  <p>전부 <strong>100레벨</strong>이고 <strong>고대 야수가 들고 다닙니다</strong><span class="mono">(Artifacts are carried by your Ancient Beast)</span>. 좌클릭으로 선택, 우클릭으로 해제. <span class="tag data">데이터</span></p>
+  <div class="tw"><table>
+    <tr><th>형태</th><th>아티팩트</th><th>효과</th></tr>
+    <tr><td>삼각형</td><td><strong>자기 장치</strong> <span class="mono">Magnetic Device</span></td><td>획득 반경 +50%</td></tr>
+    <tr><td>삼각형</td><td><strong>쌍둥이</strong> <span class="mono">The Twins</span></td><td>체력·마나 획득물이 항상 <strong>쌍으로</strong> 드랍</td></tr>
+    <tr><td>마름모</td><td><strong>의식석</strong> <span class="mono">Ritual Stone</span></td><td><strong>모든 의식 스킬 +1랭크</strong></td></tr>
+    <tr><td>마름모</td><td><strong>영혼 보석</strong> <span class="mono">Soul Gem</span></td><td><strong>최대 영혼 +1</strong></td></tr>
+    <tr><td>별</td><td><strong>메건의 불꽃</strong> <span class="mono">Megan's Spark</span></td><td><strong>미사용 스킬 포인트 1개당 모든 부 스탯 +1%</strong></td></tr>
+    <tr><td>별</td><td><strong>랄렌스의 부활</strong> <span class="mono">Rahlence's Resurrection</span></td><td>처치 시 발동하는 인챈트·파워가 <strong>적중 시에도 7% 확률로 발동</strong>. 단 <strong>패시브 스킬과 적 체력을 피해로 쓰는 효과에는 미적용</strong></td></tr>
+  </table></div>
+  <p><strong>메건의 불꽃이 스킬 포인트 69개를 남겨 두는 이유</strong>입니다. 워록의 의식 의존도를 감안하면 <strong>의식석</strong>도 사실상 필수 취급이고, <strong>영혼 보석</strong>은 워록 전용으로 의미가 있는 유일한 상한 증가 수단입니다.</p>
+</section>
+
+<section id="consum">
+  <h2>6 · 인젝터 · 영약 · 물약</h2>
+  <p>인젝터/런처는 <strong>50레벨 + 영웅 난이도 이상</strong>에서만 드랍합니다 <span class="tag data">데이터</span>. 아래는 원저자의 엔드게임 세팅 그대로입니다.</p>
+  <div class="tw"><table>
+    <tr><th>릴릭</th><th>등급</th><th>슬롯 / 쿨</th><th>받는 것</th><th>보정</th><th>가치</th></tr>
+    <tr><td><strong>MK 4 영약 주입기</strong> ×2<br><span class="mono">MK 4 Elixir Injector</span></td><td>유니크 · 제작</td><td>3 / 5초</td><td>영약만</td><td>슬롯 영약의 <strong>효과 +30% · 지속 +30%</strong></td><td>180,000</td></tr>
+    <tr><td><strong>MK 5 슈퍼 주입기</strong><br><span class="mono">MK 5 Super Injector</span></td><td>전설 · 제작</td><td>4 / 5초</td><td>물약만</td><td>물약 효과 +45% · <strong>벨트 슬롯에 있으면 체력이나 마나가 30% 아래로 떨어질 때 자동 발동</strong></td><td>225,000</td></tr>
+    <tr><td><strong>MK 5 슈퍼 발사기</strong><br><span class="mono">MK 5 Super Launcher</span></td><td>전설 · 제작</td><td>4 / 3초</td><td>유리병만</td><td>사거리 증가 · <strong>모든 유리병을 좁은 부채꼴로 한 번에 투척</strong> · 충돌 반경 +30%</td><td>225,000</td></tr>
+  </table></div>
+  <p><strong>영약 주입기는 두 개를 나란히</strong> 돌려 영약 6종을 동시에 유지합니다. 전부 <strong>450초 지속</strong>입니다.</p>
+  <div class="tw"><table>
+    <tr><th>주입기</th><th>영약</th><th>효과</th></tr>
+    <tr><td>A</td><td>제압의 영약 <span class="mono">Elixir of Overpower</span></td><td>제압 +30%</td></tr>
+    <tr><td>A</td><td>상급 피해의 영약 <span class="mono">Greater Damage</span></td><td>피해 <strong>+100%</strong></td></tr>
+    <tr><td>A</td><td>획득 강도의 영약 <span class="mono">Pickup Strength</span></td><td>획득 강도 +40%</td></tr>
+    <tr><td>B</td><td>치명타 피해의 영약 <span class="mono">Critical Damage</span></td><td>치명타 피해 +80%</td></tr>
+    <tr><td>B</td><td>공격 속도의 영약 <span class="mono">Attack Speed</span></td><td>공격 속도 +50%</td></tr>
+    <tr><td>B</td><td>획득 반경의 영약 <span class="mono">Pickup Radius</span></td><td>획득 반경 +60%</td></tr>
+  </table></div>
+  <div class="tw"><table>
+    <tr><th>물약 (MK 5 슈퍼 주입기)</th><th>효과</th></tr>
+    <tr><td>숭고한 체력 물약 <span class="mono">Sublime Health</span></td><td>즉시 + 5초에 걸쳐 <strong>10,985</strong> 회복</td></tr>
+    <tr><td>초월 시간 물약 <span class="mono">Transcendent Temporal</span></td><td>보유 중인 <strong>스태거 피해의 33% 제거</strong></td></tr>
+    <tr><td>초월 재생 물약 <span class="mono">Transcendent Restoration</span></td><td>체력 22% + 마나 22% 즉시 회복</td></tr>
+    <tr><td>초월 체력 물약 <span class="mono">Transcendent Health</span></td><td>체력 33% 즉시 회복</td></tr>
+  </table></div>
+  <div class="tw"><table>
+    <tr><th>유리병 (MK 5 슈퍼 발사기)</th><th>효과 — 전부 착탄 지점 <strong>반경 3m</strong></th></tr>
+    <tr><td>약화의 유리병 <span class="mono">Vial of Weakness</span></td><td>적이 받는 <strong>직접 피해 +50%</strong></td></tr>
+    <tr><td>암흑 반감의 유리병 <span class="mono">Shadow Aversion</span></td><td>적이 받는 <strong>암흑 직접 피해 +20%</strong></td></tr>
+    <tr><td>번개 작렬의 유리병 <span class="mono">Lightning Burst</span></td><td><strong>번개 200%</strong> — 직접 피해로 취급되어 <strong>온힛 발동 가능</strong></td></tr>
+    <tr><td>신성 작렬의 유리병 <span class="mono">Holy Burst</span></td><td><strong>신성 200%</strong> — 마찬가지로 온힛 발동 가능</td></tr>
+  </table></div>
+  <div class="note">
+    영약은 <strong>1.40에서 전면 개편</strong>되어 더 이상 몹이 드랍하지 않고 <strong>틴카의 영역 · 크로니콘의 영약 상점</strong>에서 구매합니다 <span class="tag data">데이터</span>. 등급별로 2개씩 동시에 적용됩니다.
+  </div>
+</section>
+
+<section id="next">
+  <h2>7 · 다음 단계 — 엔드게임 빌드</h2>
+  <p>여기까지가 <strong>클래스 공통 성장 절차</strong>입니다. 실제로 어떤 빌드로 밀지는 목적에 따라 갈립니다 — 레벨링 가이드 작성자의 2026-07 시점 추천은 <strong>속도 파밍은 메테오라, 푸시는 저주 모독자</strong>입니다.</p>
+  <div class="grid">
+    <a class="tile" href="builds.html">
+      <h3>엔드게임 빌드 →</h3>
+      <p>저주 모독자 · 메테오라 · 데몬 로드 · 태양과 달 화염 태풍</p>
+    </a>
+    <a class="tile" href="leveling.html">
+      <h3>← 레벨링 1 → 100</h3>
+      <p>스탯 우선순위 · 캐릭터 복사 도박 · 저레벨 장비 · 해골 연타 트리</p>
+    </a>
+    <a class="tile" href="index.html">
+      <h3>← 워록 개요</h3>
+      <p>영혼 시스템 · 4개 트리 · 강약점</p>
+    </a>
+  </div>
+  <p class="src">원저자 <strong>Rahlence</strong> · 원문 <code>lock_prog.pdf</code> (2026-06-18, 공식 디스코드 #build-forum) · 스크린샷 7장(<code>pg_01</code>~<code>pg_07</code>) 전사 기준</p>
+</section>
+
+<footer>
+  개인 참고용 한국어 정리 · Chronicon 1.54.1 기준 · 검색엔진 색인 제외
+</footer>
+</div>
+<a href="#" class="totop">↑ 맨 위</a>
+<script src="../../assets/wiki.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>워록 · 크로니콘 위키</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../../assets/wiki.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="brand plain" href="../../index.html">크로니콘 <span>위키</span></a>
+  <span class="crumb"><a href="../index.html">클래스</a> › 워록</span>
+</div>
+
+<nav class="side">
+  <div class="grp">시작</div>
+  <ul>
+    <li><a href="../../index.html">홈</a></li>
+  </ul>
+  <div class="grp">게임 기초</div>
+  <ul>
+    <li><a href="../../basics/damage.html">피해 계산</a></li>
+    <li><a href="../../basics/defense.html">방어</a></li>
+    <li><a href="../../basics/skills.html">스킬 · 태그</a></li>
+    <li><a href="../../basics/items.html">아이템 · 제작</a></li>
+    <li><a href="../../basics/endgame.html">난이도 · 엔드게임</a></li>
+    <li><a href="../../basics/glossary.html">한영 명칭</a></li>
+  </ul>
+  <div class="grp">클래스</div>
+  <ul>
+    <li><a href="../../classes/index.html">클래스 개요</a></li>
+    <li><a class="cur" href="../../classes/warlock/index.html">워록</a></li>
+    <li><a href="../../classes/warlock/leveling.html">└ 레벨링</a></li>
+    <li><a href="../../classes/warlock/progression.html">└ 성장</a></li>
+    <li><a href="../../classes/warlock/builds.html">└ 빌드</a></li>
+    <li><a class="soon" href="#">템플러 (예정)</a></li>
+    <li><a class="soon" href="#">버서커 (예정)</a></li>
+    <li><a class="soon" href="#">워든 (예정)</a></li>
+    <li><a class="soon" href="#">메카니스트 (예정)</a></li>
+  </ul>
+  <div class="grp">자료</div>
+  <ul>
+    <li><a href="../../meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="../../meta/patches.html">패치 동향</a></li>
+  </ul>
+</nav>
+
+<h1>워록</h1>
+<p class="lede"><span class="mono">Warlock</span> · 암흑 · 냉기 · 독 · 화염 — <strong>영혼</strong>을 자원으로 쓰고 악마와 언데드를 부리는 캐스터 클래스.</p>
+
+<div class="searchbar">
+  <input type="search" id="q" placeholder="이 문서에서 검색" autocomplete="off" spellcheck="false" aria-label="문서 내 검색">
+  <span class="cnt" id="cnt"></span>
+</div>
+<p id="none">검색 결과가 없습니다.</p>
+
+<section id="overview">
+  <h2>클래스 개요</h2>
+  <p class="src">원저자 <strong>Rahlence</strong> · 원문 <code>lock_leveling_v3.pdf</code> (2026-06-26, 공식 디스코드 #build-forum) · 게임 데이터 대조는 설치 폴더의 <code>changelog/</code> · <code>locale/EN</code></p>
+  <p>워록은 <strong>영혼</strong><span class="mono">(Souls)</span>이라는 고유 자원을 모아 쓰는 캐스터입니다. 지팡이 + 마도서를 들고, 도트·저주·소환·폭발형 암흑 주문으로 무리를 통째로 지웁니다. 방패가 없어 <strong>막기</strong>는 쓸 수 없고, 대신 <strong>보호막(배리어)</strong>과 <strong>저항</strong>으로 버티는 구조입니다.</p>
+  <div class="tw"><table>
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td>원소</td><td><span class="chip shadow">암흑</span><span class="chip frost">냉기</span><span class="chip poison">독</span><span class="chip fire">화염</span></td></tr>
+    <tr><td><strong>클래스 기본 보정</strong></td><td><strong>전 저항 +10%</strong> <span class="tag data">데이터</span> — 워든과 같은 값이며, 템플러·버서커의 피해 감소 +30%나 메카니스트의 피해 감소 +20%와 대비되는 워록의 기본 방어 지분입니다</td></tr>
+    <tr><td>고유 자원</td><td><strong>영혼</strong> — HUD에 <code>Souls x / y</code>로 표시됩니다 <span class="tag data">데이터</span></td></tr>
+    <tr><td>무기</td><td>지팡이 <span class="mono">Staff</span> + 마도서 <span class="mono">Spellbook (Offhand)</span>. <strong>방패 없음 → 막기 불가</strong></td></tr>
+    <tr><td>스킬 트리</td><td>부패자 · 리치 · 악마학자 · 수확자 (+ 마스터리 탭)</td></tr>
+    <tr><td>소환</td><td>악마 · 언데드 계열 동료를 다수 운용할 수 있습니다</td></tr>
+  </table></div>
+  <div class="note">
+    이 문서 계열의 수치는 두 갈래에서 옵니다. <span class="tag data">데이터</span>는 게임 설치 폴더의 <code>changelog/</code>·<code>locale/EN</code>이나 가이드 원문 스크린샷에서 직접 확인한 값, <span class="tag comm">커뮤니티</span>는 가이드·검증 스레드의 주장, <span class="tag unk">미확인</span>은 교차 확인에 실패한 항목입니다.
+  </div>
+</section>
+
+<section id="souls">
+  <h2>영혼 <span class="mono">Souls</span> 시스템</h2>
+  <p>워록의 자원 축입니다. 마나와 별개로 존재하며, <strong>쌓아 두었다가 한 번에 쓰는</strong> 형태입니다. 가이드의 엔드게임 운영 지시가 <em>"영혼이 가득 차면 <code>R</code>(의식)을 눌러 피해를 올린다"</em>인 것도 이 구조 때문입니다. <span class="tag data">데이터</span></p>
+
+  <h3>1 · 획득</h3>
+  <div class="tw"><table>
+    <tr><th>경로</th><th>내용</th><th>근거</th></tr>
+    <tr><td>적 처치</td><td>기본 수급 경로. 잡몹을 꾸준히 정리하는 빌드는 영혼이 자연히 참니다</td><td><span class="tag comm">커뮤니티</span></td></tr>
+    <tr><td><strong>적중 시 강탈</strong></td><td><strong>헬스톤 목걸이</strong> <span class="mono">Hellstone Amulet</span> — "워록이 적중 시 <strong>20% 확률로 영혼을 강탈</strong>. 0.5초 쿨다운"</td><td><span class="tag data">데이터</span></td></tr>
+    <tr><td>보석</td><td><strong>차로아이트 별</strong>(장신구용) = <strong>영혼 강탈 확률</strong> 증가</td><td><span class="tag data">데이터</span></td></tr>
+    <tr><td>스킬</td><td><strong>영혼 함정</strong> 계열로 영혼을 빠르게 채우는 운영이 데몬 로드 빌드에서 쓰입니다</td><td><span class="tag comm">커뮤니티</span></td></tr>
+  </table></div>
+
+  <h3>2 · 유지 · 보유</h3>
+  <ul>
+    <li>영혼에는 <strong>유지시간이 있습니다</strong> — 방어구용 <strong>헤마타이트 별</strong> 보석의 효과가 곧 <strong>"영혼 지속"</strong>이라는 점이 근거입니다 <span class="tag data">데이터</span>. 방치했을 때의 정확한 소멸 속도는 <span class="tag unk">미확인</span></li>
+    <li>보유 자체로 붙는 이득은 <strong>마스터리 공용(왕관) 줄</strong>의 영혼 노드(<strong>영혼 관리자</strong> · <strong>영혼 감옥</strong>)에서 나옵니다. 이 노드들은 클래스 줄이 아니라 <strong>공용 줄</strong> 소속입니다 <span class="tag data">데이터</span>. 랭크별 정확한 수치는 <span class="tag unk">미확인</span></li>
+    <li>가득 찬 상태를 <strong>방아쇠로 쓰는</strong> 것이 워록의 기본 운영입니다 — 의식 스킬을 영혼이 만렙일 때 눌러 피해 구간을 만듭니다</li>
+  </ul>
+
+  <h3>3 · 소모</h3>
+  <ul>
+    <li><strong>의식</strong><span class="mono">(Ritual)</span> 계열 스킬 — 영혼을 소모해 강한 버프·피해 구간을 만듭니다. 참고로 의식 스킬은 <strong>슬롯에 넣어두기만 해도 패시브 절반이 작동</strong>합니다 <span class="tag data">데이터</span></li>
+    <li><strong>영혼 결계막 장벽</strong> 계열 — 영혼을 방어로 환산합니다. 데몬 로드 빌드는 이 경로로 <strong>최대 체력 200% 배리어</strong>를 만듭니다 <span class="tag comm">커뮤니티</span></li>
+    <li>일부 액티브가 영혼을 조건으로 요구합니다. 스킬별 소모량 전수 목록은 <span class="tag unk">미확인</span></li>
+  </ul>
+
+  <h3>4 · 최대 영혼 늘리기</h3>
+  <div class="tw"><table>
+    <tr><th>수단</th><th>효과</th><th>근거</th></tr>
+    <tr><td>기본 최대치</td><td><strong>5</strong> — 레벨링 캐릭터(Lv 100 · M 90) HUD가 <code>Souls 5 / 5</code></td><td><span class="tag data">데이터</span></td></tr>
+    <tr><td><strong>아티팩트 「영혼 보석」</strong> <span class="mono">Soul Gem</span> (마름모)</td><td><strong>최대 영혼 +1</strong> — 툴팁 원문 <span class="mono">"+1 Maximum Souls"</span></td><td><span class="tag data">데이터</span></td></tr>
+    <tr><td>마스터리 공용 줄 영혼 노드</td><td>영혼 관리자 · 영혼 감옥. 상한 증가 폭은 확인 못 했습니다</td><td><span class="tag unk">미확인</span></td></tr>
+    <tr><td>엔드게임 실측</td><td>Lv 100 · <strong>M 1410</strong> 캐릭터 HUD가 <code>Souls 10 / 10</code> — 기본 5에서 <strong>+5</strong>가 붙어 있습니다</td><td><span class="tag data">데이터</span></td></tr>
+    <tr><td class="mono">(삭제됨)</td><td><strong>스킬 트리의 "최대 영혼 +5" 노드</strong> — 아래 경고 참조</td><td><span class="tag data">데이터</span></td></tr>
+  </table></div>
+  <div class="note warn">
+    <strong>정정 — "최대 영혼 +5"는 죽은 정보입니다.</strong><br>
+    한국·영어권 옛 가이드에 남아 있는 <em>"워록은 트리에서 최대 영혼 +5를 찍는다"</em>는 조언은 <strong>2019년 <code>0.90.0</code>에서 해당 노드가 삭제</strong>되면서 무효가 됐습니다 <span class="tag data">데이터</span>. 지금 상한을 올리는 확인된 수단은 <strong>아티팩트 영혼 보석(+1)</strong>과 <strong>마스터리 공용 줄</strong>이며, 엔드게임 실측치 <code>10 / 10</code>도 이쪽에서 나온 값으로 보입니다. 이 노드를 근거로 트리를 짜라는 자료를 보면 <strong>2019년 이전 문서</strong>입니다.
+  </div>
+</section>
+
+<section id="trees">
+  <h2>스킬 트리 4종</h2>
+  <p>게임 내 탭 순서는 왼쪽부터 <strong>부패자 → 리치 → 악마학자 → 수확자 → 마스터리</strong>입니다(가이드 스크린샷 전편에서 동일) <span class="tag data">데이터</span>. 포인트는 레벨당 1개씩 총 100개이고 <strong>네 트리에 자유 배분</strong>합니다.</p>
+  <div class="tw"><table>
+    <tr><th>트리</th><th>원소</th><th>성격</th><th>레벨링에서의 역할</th></tr>
+    <tr><td><strong>부패자</strong> <span class="mono">Corruptor</span></td><td><span class="chip poison">독</span></td><td>저주 · 도트 · 역병 연쇄</td><td>중반부터 보조로 6 → 22포인트까지 확장. 엔드게임 저주 빌드의 본진</td></tr>
+    <tr><td><strong>리치</strong> <span class="mono">Lich</span></td><td><span class="chip frost">냉기</span></td><td>냉기 주문 · 뼈 계열</td><td>레벨링 가이드에선 63레벨에 5포인트만 찍고 끝. 엔드게임 표본에선 <strong>0</strong></td></tr>
+    <tr><td><strong>악마학자</strong> <span class="mono">Demonologist</span></td><td><span class="chip fire">화염</span></td><td>악마 소환 · 화염</td><td>레벨링 내내 <strong>1포인트</strong>만 — <code>[E]</code>에 급속 폭사 불꽃 사격 하나. 엔드게임에서도 트리 투자는 1이지만 <strong>마스터리는 70</strong></td></tr>
+    <tr><td><strong>수확자</strong> <span class="mono">Reaper</span></td><td><span class="chip shadow">암흑</span></td><td>해골 · 신성 모독 · 의식 · 파멸</td><td><strong>주력.</strong> 10레벨부터 100레벨까지 이 트리가 캐리합니다</td></tr>
+  </table></div>
+  <div class="note">
+    <strong>탭 아이콘 식별</strong> — 부패자=암적색 로브 인물, 리치=파란 해골, 악마학자=붉은 얼굴, 수확자=낫 든 후드, 마스터리=금색 왕관. 스크린샷만 보고 트리를 구분해야 할 때 씁니다.
+  </div>
+  <div class="note warn">
+    <strong>정정 — 마스터리는 100레벨 전부터 쌓입니다.</strong><br>
+    "마스터리는 100렙 찍고 시작"이라는 통설은 틀렸습니다. 가이드 스크린샷 헤더가 전부 반례입니다 — <code>Lv10/M1 · Lv20/M5 · Lv40/M19 · Lv50/M28 · Lv63/M42 · Lv100/M90</code>. 게다가 이 모든 시점에서 <code>Mastery Points: 0</code>, 즉 <strong>얻는 족족 이미 쓰고 있습니다.</strong> 레벨링 중에 쌓인 마스터리는 묵히거나 낭비되는 게 아닙니다. <span class="tag data">데이터</span>
+  </div>
+</section>
+
+<section id="pros">
+  <h2>강점과 약점</h2>
+  <h3>강점</h3>
+  <ul>
+    <li><strong>화면 단위 청소력</strong> — 도트·연쇄·폭발이 겹치면 화면 밖 처치까지 이어져 맵 하나가 한 번의 킬 연계가 됩니다</li>
+    <li><strong>레벨링 난이도가 낮음</strong> — 30레벨 모독자 세트 2피스만 맞춰도 전설 난이도가 원저자 표현으로 "손쉬운 진행"입니다</li>
+    <li><strong>기본 전 저항 +10%</strong> — 저항 캡 130% 오버캡을 향해 갈 때 출발점이 유리합니다</li>
+    <li><strong>빌드 폭</strong> — 저주 도트, 소환, 화염 폭격, 냉기까지 네 방향이 다 굴러갑니다</li>
+    <li>영혼·마나를 방어(배리어)로 환산하는 경로가 여럿이라, 자원 스탯이 그대로 생존력이 됩니다</li>
+  </ul>
+  <h3>약점</h3>
+  <ul>
+    <li><strong>막기 불가</strong> — 방패가 없어 템플러식 차단이 없습니다. 배리어가 깨지면 그대로 맞습니다</li>
+    <li><strong>즉사 위험</strong> — 캐스터를 죽이는 접두가 그대로 위협입니다. 특히 <code>Explosive</code>(최대 체력 비례 사망 폭발), <code>Grappler</code>, <code>Warp</code></li>
+    <li><strong>저항 관리 부담</strong> — 속성 접두가 몹의 물리 공격을 다른 속성으로 <strong>변환</strong>하므로 한 저항만 올려두면 통째로 무너집니다</li>
+    <li><strong>도트 빌드의 스탯 함정</strong> — 도트는 공격 속도의 영향을 받지 않고, 직접 타격만 온힛을 발동시킵니다. 치명타·제압이 무의미해지는 구간이 존재합니다</li>
+    <li><strong>보스전 약세</strong> — 밀집도 배수를 못 쓰는 단일 대상 구간에서 속도가 크게 떨어집니다</li>
+  </ul>
+</section>
+
+<section id="sub">
+  <h2>하위 문서</h2>
+  <div class="grid">
+    <a class="tile" href="leveling.html">
+      <h3>레벨링 1 → 100</h3>
+      <p>스탯 우선순위 · 캐릭터 복사 도박 · 염료 파밍 · 보물함 루프 · 저레벨 장비 8종 · 해골 연타 트리 · 모독자 세트</p>
+    </a>
+    <a class="tile" href="progression.html">
+      <h3>성장 (100렙 이후)</h3>
+      <p>목적별 파밍처 · 인챈트 순서 · DLC 원정 트리와 황금 크리스탈 · 100렙 트리 · 아티팩트 · 인젝터/영약</p>
+    </a>
+    <a class="tile" href="builds.html">
+      <h3>엔드게임 빌드</h3>
+      <p>저주 모독자 · 메테오라 · 데몬 로드 · 태양과 달 화염 태풍</p>
+    </a>
+  </div>
+  <p class="src">원저자 <strong>Rahlence</strong> · 원문 <code>lock_leveling_v3.pdf</code> (2026-06-26) · <code>lock_prog.pdf</code> (2026-06-18) · 공식 디스코드 #build-forum «Warlock Leveling and Progression»</p>
+</section>
+
+<footer>
+  개인 참고용 한국어 정리 · Chronicon 1.54.1 기준 · 검색엔진 색인 제외
+</footer>
+</div>
+<a href="#" class="totop">↑ 맨 위</a>
+<script src="../../assets/wiki.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+/* 크로니콘 위키 (한국어) — 공통 스타일 */
+:root{
+  --bg:#16121e; --panel:#1e1929; --panel2:#251f33; --line:#372e4a;
+  --text:#e8e1d6; --muted:#9b92aa; --accent:#b294e0;
+  --fire:#e07a45; --poison:#93c25b; --frost:#74afd3; --shadow-el:#b08bd9; --holy:#d9be6b; --lightning:#d9d06b; --phys:#c9c2b8;
+  --link:#c9aef5; --ok:#7fb98a; --warn:#d9a45b; --bad:#d97a7a;
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    --bg:#f4f1f8; --panel:#fff; --panel2:#f8f5fc; --line:#ddd6e8;
+    --text:#2a2237; --muted:#6b6280; --accent:#6b4fa8;
+    --fire:#b54f1f; --poison:#4f7d1e; --frost:#2a6e99; --shadow-el:#7a4fb5; --holy:#8a6f1e; --lightning:#8a7a12; --phys:#5f584e;
+    --link:#5e3fa0; --ok:#2f6b3d; --warn:#8a5a12; --bad:#a33;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:auto;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:"IBM Plex Sans KR","Malgun Gothic",sans-serif;
+  font-size:16.5px;line-height:1.78;
+  padding:0 16px calc(64px + env(safe-area-inset-bottom));
+}
+.wrap{max-width:840px;margin:0 auto}
+a{color:var(--link);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--link) 38%,transparent)}
+a:active{opacity:.7}
+a.plain{border-bottom:none}
+
+/* ── 상단 바 ── */
+.topbar{display:flex;align-items:center;gap:10px;padding:14px 0 12px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.brand{font-weight:700;font-size:15px;border-bottom:none;color:var(--text)}
+.brand span{color:var(--accent)}
+.crumb{font-size:13px;color:var(--muted)}
+.crumb a{color:var(--muted);border-bottom:none}
+.crumb a:hover{color:var(--text)}
+
+/* ── 사이드 목차 ── */
+nav.side{padding:14px 0;border-bottom:1px solid var(--line)}
+nav.side .grp{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:12px 0 5px}
+nav.side .grp:first-child{margin-top:0}
+nav.side ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+nav.side li{margin:0}
+nav.side a{display:block;font-size:13.5px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+nav.side a.cur{color:var(--bg);background:var(--accent);border-color:var(--accent)}
+nav.side .soon{opacity:.45;pointer-events:none}
+
+/* ── 본문 ── */
+h1{font-size:27px;line-height:1.3;margin:22px 0 8px;font-weight:700}
+.lede{color:var(--muted);margin:0 0 4px;font-size:15px}
+h2{font-size:22px;margin:40px 0 6px;line-height:1.35;font-weight:700;scroll-margin-top:12px;padding-bottom:5px;border-bottom:1px solid var(--line)}
+h3{font-size:17.5px;margin:26px 0 6px;font-weight:700;scroll-margin-top:12px}
+h4{font-size:15.5px;margin:20px 0 4px;color:var(--accent);font-weight:700}
+p{margin:10px 0}
+ul,ol{margin:8px 0;padding-left:20px}
+li{margin:5px 0}
+li::marker{color:var(--accent)}
+code,.mono{font-family:"IBM Plex Mono",monospace;font-size:.86em}
+code{background:var(--panel2);border:1px solid var(--line);padding:1px 5px;border-radius:3px}
+img{max-width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:6px;margin:12px 0}
+figure{margin:16px 0}
+figcaption{font-size:13px;color:var(--muted);margin-top:-4px}
+hr{border:none;border-top:1px solid var(--line);margin:32px 0}
+
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:14px 0}
+.card > :first-child{margin-top:0}
+.card > :last-child{margin-bottom:0}
+.note{background:var(--panel2);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;padding:11px 14px;margin:16px 0;font-size:14.5px}
+.note.warn{border-left-color:var(--warn)}
+.note.ok{border-left-color:var(--ok)}
+.note.bad{border-left-color:var(--bad)}
+.formula{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:11px 14px;margin:12px 0;font-family:"IBM Plex Mono",monospace;font-size:13.5px;overflow-x:auto;white-space:nowrap}
+
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px;background:var(--panel);min-width:340px}
+th,td{text-align:left;padding:8px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--panel2);font-family:"IBM Plex Mono",monospace}
+tr:last-child td{border-bottom:none}
+
+.chip{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.06em;padding:2px 8px;border:1px solid currentColor;border-radius:999px;margin-right:5px;white-space:nowrap}
+.chip.fire{color:var(--fire)}.chip.poison{color:var(--poison)}.chip.frost{color:var(--frost)}
+.chip.shadow{color:var(--shadow-el)}.chip.holy{color:var(--holy)}.chip.lightning{color:var(--lightning)}
+.chip.phys{color:var(--phys)}.chip.neutral{color:var(--muted)}
+
+/* 근거 등급 배지 */
+.tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.05em;padding:1px 7px;border:1px solid currentColor;border-radius:999px;margin-left:5px;white-space:nowrap;vertical-align:1px}
+.tag.data{color:var(--ok)}
+.tag.dev{color:var(--frost)}
+.tag.comm{color:var(--muted)}
+.tag.unk{color:var(--warn)}
+.tag.test{color:var(--bad)}
+
+.src{font-size:13px;color:var(--muted);margin-top:12px;padding-top:8px;border-top:1px dashed var(--line)}
+.src a{color:var(--muted)}
+
+/* 카드 그리드 (허브 페이지용) */
+.grid{display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0}
+.grid a.tile{border-bottom:none;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:14px 16px;display:block;color:var(--text)}
+.grid a.tile:hover{border-color:var(--accent)}
+.grid .tile h3{margin:0 0 3px;font-size:16.5px}
+.grid .tile p{margin:0;font-size:13.5px;color:var(--muted)}
+.grid .tile.soon{opacity:.5}
+
+/* 검색 */
+.searchbar{position:sticky;top:0;z-index:10;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:8px;align-items:center}
+.searchbar input{flex:1;min-width:0;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font:inherit;font-size:15px;-webkit-appearance:none}
+.searchbar input::placeholder{color:var(--muted)}
+.cnt{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);white-space:nowrap}
+mark{background:color-mix(in srgb,var(--accent) 36%,transparent);color:inherit;border-radius:2px}
+.hide{display:none !important}
+#none{display:none;padding:34px 0;text-align:center;color:var(--muted)}
+#none.on{display:block}
+
+footer{margin-top:52px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+.totop{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));background:var(--panel);border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:10px 14px;font-size:13px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+
+/* ── 데스크톱 ── */
+@media (min-width:1000px){
+  body{font-size:16px;padding:0 36px 90px}
+  .wrap{max-width:1240px;display:grid;grid-template-columns:250px minmax(0,1fr);column-gap:52px;align-items:start}
+  .topbar{grid-column:1 / -1;padding:20px 0 14px}
+  nav.side{
+    grid-column:1;grid-row:2 / span 200;
+    position:sticky;top:18px;border-bottom:none;padding:8px 0;
+  }
+  nav.side ul{flex-direction:column;gap:3px}
+  nav.side a{border-radius:7px;text-align:left;padding:7px 13px;font-size:14px}
+  nav.side a:hover{color:var(--text);border-color:var(--accent)}
+  .wrap > *:not(.topbar):not(nav.side){grid-column:2}
+  h1{font-size:33px;margin-top:8px}
+  h2{margin-top:48px;font-size:24px}
+  p,ul,ol,.lede{max-width:76ch}
+  img{max-width:780px}
+  .grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .totop{display:none}
+}
+@media (min-width:1400px){
+  .wrap{max-width:1360px;grid-template-columns:260px minmax(0,1fr);column-gap:64px}
+  img{max-width:860px}
+}

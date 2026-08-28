@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>워록 빌드 · 크로니콘 위키</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../../assets/wiki.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="brand plain" href="../../index.html">크로니콘 <span>위키</span></a>
+  <span class="crumb"><a href="../index.html">클래스</a> › <a href="index.html">워록</a> › 빌드</span>
+</div>
+
+<nav class="side">
+  <div class="grp">시작</div>
+  <ul>
+    <li><a href="../../index.html">홈</a></li>
+  </ul>
+  <div class="grp">게임 기초</div>
+  <ul>
+    <li><a href="../../basics/damage.html">피해 계산</a></li>
+    <li><a href="../../basics/defense.html">방어</a></li>
+    <li><a href="../../basics/skills.html">스킬 · 태그</a></li>
+    <li><a href="../../basics/items.html">아이템 · 제작</a></li>
+    <li><a href="../../basics/endgame.html">난이도 · 엔드게임</a></li>
+    <li><a href="../../basics/glossary.html">한영 명칭</a></li>
+  </ul>
+  <div class="grp">클래스</div>
+  <ul>
+    <li><a href="../index.html">클래스 개요</a></li>
+    <li><a href="index.html">워록</a></li>
+    <li><a href="leveling.html">└ 레벨링</a></li>
+    <li><a href="progression.html">└ 성장</a></li>
+    <li><a class="cur" href="builds.html">└ 빌드</a></li>
+    <li><a class="soon" href="#">템플러 (예정)</a></li>
+    <li><a class="soon" href="#">버서커 (예정)</a></li>
+    <li><a class="soon" href="#">워든 (예정)</a></li>
+    <li><a class="soon" href="#">메카니스트 (예정)</a></li>
+  </ul>
+  <div class="grp">자료</div>
+  <ul>
+    <li><a href="../../meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="../../meta/patches.html">패치 동향</a></li>
+  </ul>
+</nav>
+
+<h1>워록 빌드</h1>
+<p class="lede">공식 디스코드 <code>#build-forum</code>에 올라온 워록 엔드게임 빌드 5종을 한국어로 정리했습니다.</p>
+
+<div class="searchbar">
+  <input type="search" id="q" placeholder="이 문서에서 검색" autocomplete="off" spellcheck="false" aria-label="문서 내 검색">
+  <span class="cnt" id="cnt"></span>
+</div>
+<p id="none">검색 결과가 없습니다.</p>
+
+<!-- ══════════ 선택 가이드 ══════════ -->
+<section id="pick">
+  <h2>어떤 빌드를 고를까</h2>
+
+  <div class="note ok">
+    <strong>추천 — 속도 파밍은 메테오라, 푸시는 저주 모독자.</strong><br>
+    커뮤니티의 현행 워록 레벨링·성장 가이드 작성자 <strong>Rahlence</strong>가 2026-07 기준으로 지목한 조합입니다. 파밍용과 티어 푸시용을 나눠 쓰라는 취지입니다. <span class="tag comm">커뮤니티</span>
+  </div>
+
+  <div class="tw"><table>
+    <tr><th>빌드</th><th>원소</th><th>성격</th><th>DLC</th><th>도달 티어</th><th>자료 상태</th></tr>
+    <tr>
+      <td><strong><a href="#desecrator">저주 모독자</a></strong><br><span class="mono">Curse Spell Desecrator</span></td>
+      <td><span class="chip poison">독</span><span class="chip shadow">암흑</span></td>
+      <td><strong>푸시</strong>. 무리를 끌고 다니다 한 번에 폭사</td>
+      <td>필요</td>
+      <td><strong>T1000+</strong> (권장 마스터리 1000+)</td>
+      <td>PDF 전문 확보 — <strong>가장 상세</strong></td>
+    </tr>
+    <tr>
+      <td><strong><a href="#meteora">메테오라</a></strong><br><span class="mono">Meteora Warlock</span></td>
+      <td><span class="chip fire">화염</span></td>
+      <td><strong>속도 파밍</strong>. 순간이동 연타</td>
+      <td>필요</td>
+      <td>명시 없음</td>
+      <td>텍스트 없음 — <strong>영상만</strong></td>
+    </tr>
+    <tr>
+      <td><strong><a href="#demonlord">데몬 로드</a></strong><br><span class="mono">Demon Lord T500</span></td>
+      <td><span class="chip fire">화염</span><span class="chip neutral">소환</span></td>
+      <td><strong>초보 친화</strong>. 산책 시뮬레이터</td>
+      <td>권장 (필수 아님)</td>
+      <td>T500</td>
+      <td>스레드 + 이미지</td>
+    </tr>
+    <tr>
+      <td><strong><a href="#sunmoon">태양과 달 화염 태풍</a></strong><br><span class="mono">Sun &amp; Moon Firestorm</span></td>
+      <td><span class="chip fire">화염</span><span class="chip frost">냉기</span></td>
+      <td>화염 태풍 연타 + 순간이동</td>
+      <td>필요</td>
+      <td>T700+</td>
+      <td><strong>가장 최근 갱신</strong>된 텍스트 가이드</td>
+    </tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>2022년 빌드인데 아직 유효한가?</strong> — 유효합니다. 저주 모독자와 메테오라는 v1.4x 시절 자료지만, 그 뒤로 <strong>워록 세트 리워크가 없었고</strong> 2026-07에도 커뮤니티에서 그대로 추천되고 있습니다. 라이브 버전은 <strong>1.54.1</strong>(2025-11-24)에서 멈춰 있고 개발자는 다음이 엔드게임 DLC라고 밝힌 상태입니다.<br>
+    다만 <strong>개별 수치는 리밸런스됐을 수 있습니다.</strong> 구조(어떤 룬·세트를 왜 쓰는가)는 믿고 따라가되, 툴팁의 % 숫자는 게임에서 직접 확인하세요.
+  </div>
+</section>
+
+<!-- ══════════ 저주 모독자 ══════════ -->
+<section id="desecrator">
+  <h2>1 · 저주 모독자</h2>
+
+  <div class="card">
+    <h3><span class="chip poison">독</span><span class="chip shadow">암흑</span>저주 모독자 <span class="mono">Curse Spell Desecrator</span></h3>
+    <p class="src">원저자 <strong>TMaz94</strong> · 공식 디스코드 <code>#build-forum</code> 스레드 «Curse Spell Desecrator» 첨부 <code>Curse-Spell-Desecrator.pdf</code> (2022-07-14, 10쪽) · <strong>고대 야수 <span class="mono">Ancient Beasts</span> DLC 필요</strong> · 권장 최소 마스터리 <strong>1000</strong> · <a href="https://www.youtube.com/watch?v=8UV-L4sxe70">T900 시연 영상</a> <span class="tag comm">커뮤니티</span></p>
+
+    <div class="note warn">
+      <strong>스팀 가이드판과 다른 빌드입니다.</strong> 같은 작성자의 스팀 가이드 «The Shattered Spirits Curse Spell Desecrator»(2022-02 게시·갱신)는 <strong>더 오래된 다른 변형</strong>입니다. 그쪽은 <strong>파쇄된 환영 <span class="mono">Shattered Spirits</span> · 골격 파열 <span class="mono">Corpse Shatter</span> · 고통의 혼령 <span class="mono">Spirit of Torment</span> · 서리 방막 <span class="mono">Frozen Veil</span> · 순수 에너지의 반지 <span class="mono">Ring of Pure Energies</span></strong>를 씁니다.<br>
+      <strong>이 디스코드판(2022-07)은 그 다섯 가지를 전부 버리고</strong> 기만자의 혀 · 「하나를 위한 모두」 세트 · 단순 · 원소술사의 축복으로 갑니다. <strong>위 다섯 가지를 언급하는 자료를 보면 구버전</strong>이라고 판단하세요.
+    </div>
+
+    <h4>한눈에</h4>
+    <ul>
+      <li>독 도트를 초당 25중첩 넘게 쌓고, <strong>매초 자동 시전되는 저주 3종이 그 도트 총량을 한 방에 현금화</strong>합니다</li>
+      <li>핵심은 <strong>신화 제작 지팡이</strong> 하나 — 룬을 2개 끼울 수 있는 유일한 슬롯입니다</li>
+      <li>방어는 <strong>마나 기반 배리어 하나</strong>에 전부 걸려 있습니다 (목표 200만~300만)</li>
+      <li>운영은 <strong>좌클릭 홀드 + 몇 걸음</strong>의 반복. 무리를 맵 절반만큼 끌고 다니다 한 번에 터뜨립니다</li>
+    </ul>
+
+    <h4>피해 구조 — 4단계</h4>
+    <ol>
+      <li><strong>부패성 오염 맹독 <span class="mono">Putrefying Poisons</span></strong> 룬이 모든 <strong>부패자</strong> 스킬(고통 결계 고리·흑사병)에 <strong>피의 역병 저주 + 부패병 저주를 최대 랭크로</strong> 자동 적용하고, 그 피해를 <strong>+300%</strong> 올립니다</li>
+      <li><strong>죽음의 대변자 <span class="mono">Death Speaker</span></strong>가 그 두 도트(와 사신의 손아귀)를 <strong>무한 중첩</strong>시키고, <strong>도트가 없는 저주</strong>가 대상에 남은 <strong>저주 도트 총 잔여량의 200%</strong>를 추가 피해로 즉시 터뜨리게 만듭니다</li>
+      <li><strong>죽음의 속박 <span class="mono">Death's Bond</span></strong> 반지 룬이 <strong>비탄의 늪 · 심연의 극심 공포 · 응징의 낙인</strong> 세 저주를 시전자 위치에 <strong>초당 1회씩 자동 시전</strong>(셋 중 하나만 장착해도 셋 다 발동)하고 피해를 +200% 올립니다 — 이것이 쌓인 도트를 현금화하는 방아쇠입니다</li>
+      <li>결과적으로 초당 <strong>피의 역병 12~13중첩 + 부패병 13중첩</strong>이 쌓이고, 매초 자동 저주가 그 풀 전체를 폭발시킵니다</li>
+    </ol>
+    <p>여기에 <strong>신성 모독 <span class="mono">Desecration</span></strong> 층(모독자 세트 + 타고난 확률의 왕관 + 비명 해골의 약화 중첩)이 <strong>곱연산으로</strong> 얹힙니다.</p>
+
+    <div class="note">
+      <strong>죽음의 대변자의 추가 피해는 고정값이라 거의 모든 배수를 무시합니다.</strong> 암흑 피해 · 제압 · 치명타 확률 · 치명타 피해 · "유령/언데드/정예 등 대상 종류별 추가 피해" · 일반 약화가 전부 무의미합니다. 단 <strong>조건부 약화</strong>(예: 절망의 목걸이 <span class="mono">Amulet of Despair</span>)는 그대로 적용됩니다.<br>
+      그래서 이 빌드는 그 스탯들을 전부 버리고 <strong>피의 역병 · 부패병의 스킬 피해</strong> — 즉 <strong>독 피해 · 효과 지속시간 · 스킬 피해 배수</strong>만 올립니다.
+    </div>
+
+    <h4>왜 장비에 암흑 보석이 가득한가</h4>
+    <p>피해를 무시한다면서 보석은 <strong>암흑 피해 +46%</strong>가 7개, 인챈트는 <strong>원소형 적 대상 피해 +35%</strong>가 4부위입니다. 모순처럼 보이지만 <strong>세탁 파이프라인</strong>입니다.</p>
+    <div class="tw"><table>
+      <tr><th>단계</th><th>출처</th><th>하는 일</th></tr>
+      <tr><td>1</td><td><strong>원소술사의 축복</strong> <span class="mono">Elementalist's Boon</span> (별 아티팩트)</td><td><strong>「원소형 적 대상 피해」 수치의 250%를 모든 원소 피해 스탯에</strong> 더합니다. 대신 원소형 적에게 추가 피해를 주지 못하게 됩니다</td></tr>
+      <tr><td>2</td><td><strong>하나를 위한 모두 (2)</strong> <span class="mono">All For One</span></td><td>모든 <strong>보너스 원소 피해 스탯</strong>을 <strong>1번 스킬 슬롯에 놓인 스킬의 원소</strong>로 몰아줍니다</td></tr>
+      <tr><td>3</td><td><strong>1번 슬롯 = 고통 결계 고리</strong> (독)</td><td>그래서 <strong>암흑 보석도, 원소형 적 피해 인챈트도 전부 독 피해</strong>가 됩니다</td></tr>
+    </table></div>
+    <p>제압·치피 같은 흔한 주 스탯을 이 빌드가 안 쓰기 때문에, 그 인챈트 슬롯이 전부 <strong>원소형 적 대상 피해</strong>로 비워집니다. 그게 이 조합이 성립하는 이유입니다.</p>
+
+    <h4>스킬바 6칸</h4>
+    <div class="tw"><table>
+      <tr><th>슬롯</th><th>스킬</th><th>키</th><th>실제 시전?</th></tr>
+      <tr>
+        <td>1</td><td><strong>고통 결계 고리</strong> <span class="mono">Affliction</span> (부패자)</td>
+        <td><code>없음</code> + <strong>자동 시전 ON</strong></td>
+        <td><strong>예 — 자동.</strong> <strong>반드시 1번 슬롯</strong>(하나를 위한 모두 조건). 자동 시전이 아니면 <strong>쿨다운이 없는 비명 해골</strong>에 막혀 왼쪽 스킬이 아예 안 나갑니다</td>
+      </tr>
+      <tr><td>2</td><td><strong>비명 지르는 사령의 해골</strong> <span class="mono">Screaming Skull</span> (수확자)</td><td>좌클릭</td><td>예 — 신성 모독 약화 중첩 엔진</td></tr>
+      <tr><td>3</td><td><strong>흑사병 독안개</strong> <span class="mono">Plague</span> (부패자)</td><td>좌클릭</td><td>예 — 도트 공급</td></tr>
+      <tr><td>4</td><td><strong>골격 돌출창 옭아매기</strong> <span class="mono">Bone Spears</span> (수확자)</td><td>좌클릭</td><td>예 — 몹몰이 겸 게으른 운영용.<br><em>최적화 대안</em>: 여기에 <strong>비탄의 늪</strong>을 넣고 몹몰이는 <strong>번개 와이번</strong>으로</td></tr>
+      <tr><td>5</td><td><strong>파멸의 비술 제단 의식</strong> <span class="mono">Ritual of Banes</span></td><td>—</td><td><strong>장착만</strong> — 피해 감소 오라 (의식 스킬은 슬롯에 두기만 해도 작동)</td></tr>
+      <tr><td>6</td><td>저주 아무거나 <span class="mono">Woe / Terror / Reckoning</span></td><td>—</td><td><strong>장착만</strong> — 죽음의 속박이 셋 다 자동 시전</td></tr>
+    </table></div>
+    <p><strong>슬롯 2~4가 전부 좌클릭입니다.</strong> 크로니콘은 여러 스킬을 한 버튼에 겹칠 수 있고, 쿨다운이 허락하는 대로 슬롯 순서로 발동합니다.</p>
+    <div class="tw"><table>
+      <tr><th>벨트</th><th>내용</th></tr>
+      <tr><td><code>우클릭</code></td><td><strong>영혼 전송 왜곡 스크롤</strong> <span class="mono">Scroll of Soul Warp</span> ×999 — 맵 횡단용</td></tr>
+      <tr><td><code>스페이스</code></td><td><strong>번개 와이번 서책</strong> <span class="mono">Codex of Lightning Wyrms</span> — 5랭크 시전, 쿨 3초</td></tr>
+      <tr><td><code>1</code> · <code>2</code></td><td>비워둠</td></tr>
+    </table></div>
+
+    <h4>스킬 포인트 (100레벨 · <strong>44포인트 미사용</strong>)</h4>
+    <div class="tw"><table>
+      <tr><th>트리</th><th>투자</th><th>내용</th></tr>
+      <tr><td><strong>부패자</strong> <span class="mono">Corruptor</span></td><td><strong>30</strong></td><td>흑사병 <strong>5</strong>(최대) · 고통 결계 고리 <strong>1</strong> · 역병 창궐 <span class="mono">Outbreak</span> <strong>3</strong>(최대) + 고통 결계 고리에 도달하기 위한 경유 패시브 약 21 (전제 조건이 29포인트)</td></tr>
+      <tr><td><strong>리치</strong> <span class="mono">Lich</span></td><td><strong>1</strong></td><td>심연의 지각 마력 <span class="mono">Deep Pools</span> 1개만. <strong>정확히 1개</strong> — 2개째부터는 메건의 불꽃으로 남겨두는 쪽이 이득</td></tr>
+      <tr><td><strong>수확자</strong> <span class="mono">Reaper</span></td><td><strong>25</strong></td><td>비명 해골 <strong>5</strong>(최대) · 골격 돌출창 <strong>1</strong> · 파멸의 비술 <strong>5</strong>(의식석 덕에 화면엔 <strong>6랭크</strong>로 표시) · 저주 1종 <strong>1</strong> + 즉사 돌연사 <span class="mono">Sudden Death</span> · 신성 모독 등 패시브</td></tr>
+      <tr><td><strong>악마학자</strong> <span class="mono">Demonologist</span></td><td><strong>0</strong></td><td>전혀 찍지 않습니다. 마스터리가 낮을 때만 <strong>악마 가죽 갑주</strong> <span class="mono">Demon Skin</span>를 방어용 임시 목발로</td></tr>
+    </table></div>
+    <p><strong>44포인트를 일부러 남깁니다</strong> — <strong>메건의 불꽃</strong>이 미사용 스킬 포인트 1점당 모든 <strong>보조 스탯</strong>을 1%씩 올려주기 때문입니다. 여기엔 보석 강도와 효과 지속시간이 포함되고, 둘 다 이 빌드의 피해에 직결됩니다.</p>
+    <p><strong>즉사 돌연사</strong>는 사실상 적 체력을 15% 깎아줍니다. <strong>역병 창궐</strong>은 무리 중 하나만 죽으면 연쇄로 전멸시키며, 고티어에서 무리가 커질 때 <strong>렉 방지</strong> 효과도 큽니다.</p>
+
+    <h4>마스터리 (원문 기준 M 3567, 잔여 0)</h4>
+    <div class="tw"><table>
+      <tr><th>줄</th><th>합계</th><th>요점</th></tr>
+      <tr><td><strong>부패자</strong></td><td><strong>94</strong></td><td><strong>전부 최대</strong>. 「역병 의사 <span class="mono">Plague Doctor</span>」를 고르고 「저주받은 자와 모독된 자 <span class="mono">Cursed and Defiled</span>」는 <strong>고르지 마세요</strong> — 후자는 툴팁 피해에 반영되지 않아 저주 도트에 아무 효과가 없습니다</td></tr>
+      <tr><td>리치</td><td>56</td><td><strong>맨 마지막 노드만</strong> 의미가 있습니다 (하나를 위한 모두와 시너지). 나머지는 필수 아님</td></tr>
+      <tr><td>공용 1줄</td><td>65</td><td><strong>평온한 마음 <span class="mono">Calm Mind</span>은 일부러 8/10에서 멈춤</strong> — 흑사병·골격 돌출창의 쿨을 더 줄이면 <strong>비명 해골 시전 속도가 오히려 느려집니다</strong></td></tr>
+      <tr><td>공용 2줄</td><td><strong>3137</strong></td><td>첫 노드 <strong>3072 = 상한 없는 마나 노드</strong>. 남는 마스터리를 전부 여기에 붓습니다</td></tr>
+      <tr><td>공용 3줄</td><td>65</td><td>1줄과 동일 배분</td></tr>
+      <tr><td>악마학자</td><td>70</td><td><strong>신성 모독 시너지</strong>와 <strong>화염 친화</strong>만 의미 있음</td></tr>
+      <tr><td>수확자</td><td>80</td><td><strong>광역 시너지 <span class="mono">Wide Synergy</span></strong>를 고르고 <strong>수확자 집중 <span class="mono">Reaper Focus</span>은 고르지 마세요</strong> — 암흑 스킬 피해가 이 빌드엔 무가치합니다</td></tr>
+    </table></div>
+    <div class="note ok">
+      <strong>마스터리가 3567보다 낮을 때 우선순위</strong> — ① 부패자 줄 전체 → ② 수확자의 광역 시너지 → ③ 악마학자의 신성 모독 시너지 + 화염 친화 → ④ 공용 줄의 평온한 마음 <strong>8까지만</strong> + 피해·마나 노드 → ⑤ 리치 마지막 노드 → ⑥ 남는 건 전부 <strong>마나 노드</strong>에.
+    </div>
+
+    <h4>장비 — 슬롯별</h4>
+    <div class="tw"><table>
+      <tr><th>부위</th><th>아이템</th><th>룬</th><th>보석</th><th>핵심 옵션</th></tr>
+      <tr>
+        <td>투구</td><td><strong>타고난 확률의 왕관</strong> <span class="mono">Crown of Innate Probability</span></td>
+        <td><strong>속삭임</strong> <span class="mono">Murmur</span></td>
+        <td>마나 +46% ×2 · 영약 효율 +46%</td>
+        <td>직접 피해 20% 감소 · 치확 +20% · 물리 저항 +30% · 쿨감 +17% · 효과 지속 +17%</td>
+      </tr>
+      <tr>
+        <td>장신구</td><td><strong>우주의 망토</strong> <span class="mono">Cosmic Cape</span></td>
+        <td><strong>기만자의 혀</strong> <span class="mono">Deceiver's Tongue</span></td>
+        <td>암흑 피해 +46% ×2</td>
+        <td>마나 +800 · 공속 +20% · <strong>원소형 적 피해 +35%</strong> · 쿨감 +17% · 보석 효과 +20%</td>
+      </tr>
+      <tr>
+        <td>목걸이</td><td><strong>아토스</strong> <span class="mono">Athos</span> <em>(하나를 위한 모두)</em></td>
+        <td><strong>분할 투척</strong> <span class="mono">Splitting Throws</span></td>
+        <td>암흑 피해 +46% ×3</td>
+        <td>치피 +35% · 직접 피해 20% 감소 · 공속 +20% · <strong>원소형 적 피해 +35%</strong> · 효과 지속 +17% · 보석 효과 +20%</td>
+      </tr>
+      <tr>
+        <td>반지</td><td><strong>다르타냥</strong> <span class="mono">D'Artagnan</span> <em>(하나를 위한 모두)</em></td>
+        <td><strong>죽음의 속박</strong> <span class="mono">Death's Bond</span></td>
+        <td>암흑 피해 +46% ×2</td>
+        <td>적중 시 체력 +65 · 회피 +15% · 공속 +20% · 마나 +800 · 효과 지속 +17% · 보석 효과 +20%</td>
+      </tr>
+      <tr>
+        <td>마도서</td><td><strong>모독자의 연구 결과</strong> <span class="mono">Desecrator's Work</span> <em>(모독자 세트)</em></td>
+        <td><strong>단순</strong> <span class="mono">Simplicity</span></td>
+        <td>공속 +25% ×2</td>
+        <td>암흑 피해 +35% · 적중 시 체력 +65 · 공속 +20% · <strong>원소형 적 피해 +35%</strong> · 효과 지속 +17% · 사거리 +17%</td>
+      </tr>
+      <tr>
+        <td>갑옷</td><td><strong>모독자의 우리</strong> <span class="mono">Desecrator's Cage</span> <em>(모독자 세트)</em></td>
+        <td><strong>잃어버린 영혼의 유물</strong> <span class="mono">Vestige of Lost Souls</span></td>
+        <td><strong>마나 +46% ×4</strong></td>
+        <td>암흑 피해 +35% · 사거리 +17% · 직접 피해 20% 감소 · 전 저항 +20% · 보석 효과 +20% · 획득 반경 +60%</td>
+      </tr>
+      <tr>
+        <td>장화</td><td><strong>폭풍추적자</strong> <span class="mono">Stormchasers</span></td>
+        <td><strong>초병</strong> <span class="mono">The Sentry</span></td>
+        <td>마나 +46% ×2</td>
+        <td>회피 +15% · 5% 확률 공격 차단 · 전 저항 +20% · 지면 장판 피해 25% 감소 · 획득 반경 +60%</td>
+      </tr>
+      <tr>
+        <td><strong>지팡이</strong></td><td><strong>모독자의 손길</strong> <span class="mono">Desecrator's Touch</span> — <strong>신화 제작</strong> <em>(모독자 세트)</em></td>
+        <td><strong>죽음의 대변자 + 부패성 오염 맹독</strong> <span class="mono">(룬 2개)</span></td>
+        <td>공속 +25% ×2 · 적중 시 15% 기절</td>
+        <td>암흑 피해 +35% · 공속 +20% · <strong>회오리 인챈트</strong>(치명타 시 15%, 초당 220% 에테르) · 치확 +20% · <strong>원소형 적 피해 +35%</strong> · 쿨감 +17% · 효과 지속 +17% · 사거리 +17%</td>
+      </tr>
+    </table></div>
+
+    <div class="note warn">
+      <strong>신화 제작 지팡이가 빌드의 전부입니다.</strong> 룬을 <strong>두 개</strong> 끼울 수 있는 유일한 슬롯이고, <strong>죽음의 대변자</strong>와 <strong>부패성 오염 맹독</strong>이 둘 다 없으면 이 빌드는 피해가 아예 나오지 않습니다.<br>
+      세트 개수는 <strong>모독자의 예복 3/4</strong>(투구 자리를 타고난 확률의 왕관에 내주므로 4피스 회복·보호막은 미발동) + <strong>하나를 위한 모두 2/2</strong>입니다.
+    </div>
+
+    <h4>룬 선택 이유</h4>
+    <div class="tw"><table>
+      <tr><th>룬</th><th>이유</th></tr>
+      <tr><td><strong>죽음의 대변자</strong></td><td>도트 무한 중첩 + 비도트 저주가 잔여 도트의 200%를 즉발. 빌드의 심장</td></tr>
+      <tr><td><strong>부패성 오염 맹독</strong></td><td>고통 결계 고리·흑사병이 도트를 최대 랭크로 뿌리게 만드는 공급 장치</td></tr>
+      <tr><td><strong>죽음의 속박</strong></td><td>매초 저주 3종 자동 시전 = 죽음의 대변자의 정산 방아쇠</td></tr>
+      <tr><td><strong>잃어버린 영혼의 유물</strong></td><td>마나 기반 배리어. <strong>유일한 생존 수단</strong></td></tr>
+      <tr><td><strong>속삭임</strong></td><td>모든 저주 지속 <strong>+300%</strong> → 피의 역병·부패병이 길어져 죽음의 대변자 정산액이 4배로</td></tr>
+      <tr><td><strong>기만자의 혀</strong></td><td>저주 스킬 시전 속도 +50%, 마나 소모 −50%, 기본 피해 +50%</td></tr>
+      <tr><td><strong>단순</strong></td><td>모든 <strong>기본 스킬</strong> 피해 +200% → 피의 역병 피해 상승 → 정산액 상승</td></tr>
+      <tr><td><strong>분할 투척</strong></td><td>비명 해골이 신성 모독 약화 중첩을 쌓는 속도가 <strong>5배</strong>. 마스터리가 낮으면 이 룬을 우주의 망토로 옮기고 목걸이 룬 슬롯에 <strong>순수한 자의 별</strong> <span class="mono">Star of the Pure</span>을 넣어 배리어를 키웁니다</td></tr>
+      <tr><td><strong>초병</strong></td><td>고통 결계 고리·흑사병의 가동률 상승 → 동시에 존재하는 장판 수 증가 → 초당 도트 중첩 수 증가</td></tr>
+    </table></div>
+
+    <div class="note">
+      <strong>한글패치 표기 대조</strong> — 이 문서는 읽기 쉬운 쪽으로 룬 이름을 정리했습니다. 게임 안에서 검색할 때 쓸 <strong>한글패치 실제 표기</strong>는 아래와 같습니다. <span class="tag data">데이터</span>
+      <div class="tw"><table>
+        <tr><th>이 문서</th><th>한글패치 표기</th><th>영문</th></tr>
+        <tr><td>죽음의 대변자</td><td>사신의 죽음 인도자 (접두 <em>죽음 인도</em>)</td><td><span class="mono">Death Speaker</span></td></tr>
+        <tr><td>부패성 오염 맹독</td><td>부패성 오염 맹독 룬 (접두 <em>부패성</em>)</td><td><span class="mono">Putrefying Poisons</span></td></tr>
+        <tr><td>죽음의 속박</td><td>사신의 죽음의 서약 (접두 <em>죽음의 서약</em>)</td><td><span class="mono">Death's Bond</span></td></tr>
+        <tr><td>잃어버린 영혼의 유물</td><td>상실된 망령의 잔여 유골 (접두 <em>잔해물</em>)</td><td><span class="mono">Vestige of Lost Souls</span></td></tr>
+        <tr><td>속삭임</td><td>심연 속닥임의 인장 반지 (접두 <em>속닥임</em>)</td><td><span class="mono">Murmur</span></td></tr>
+        <tr><td>기만자의 혀</td><td>사기꾼의 달콤한 혓바닥 (접두 <em>사기꾼의</em>)</td><td><span class="mono">Deceiver's Tongue</span></td></tr>
+        <tr><td>단순</td><td>단순 명료 기초 강화 룬 (접두 <em>단순</em>)</td><td><span class="mono">Simplicity</span></td></tr>
+        <tr><td>분할 투척</td><td>갈래 분할 투척 룬 (접두 <em>분할 투척</em>)</td><td><span class="mono">Splitting Throws</span></td></tr>
+        <tr><td>초병</td><td>보초 초병 함정 룬 (접두 <em>초병</em>)</td><td><span class="mono">The Sentry</span></td></tr>
+        <tr><td>의식석</td><td>사술 의식의 돌</td><td><span class="mono">Ritual Stone</span></td></tr>
+        <tr><td>원소술사의 축복</td><td>원소술사의 축복 고리</td><td><span class="mono">Elementalist's Boon</span></td></tr>
+      </table></div>
+    </div>
+
+    <h4>아티팩트 (고대 야수 DLC)</h4>
+    <div class="tw"><table>
+      <tr><th>형태</th><th>아티팩트</th><th>효과 · 이유</th></tr>
+      <tr><td>삼각</td><td>자력 끌어당김 장치 <span class="mono">Magnetic Device</span></td><td>획득 반경 +50%. 순수 편의</td></tr>
+      <tr><td>삼각</td><td>검투사의 매혹 <span class="mono">Gladiator's Allure</span></td><td>연쇄 처치 경험치 +50%. <strong>야수 먹이가 아직 필요하면 대파괴 <span class="mono">Havoc</span></strong>로 교체</td></tr>
+      <tr><td>마름모</td><td>소모성 극독 서리 장비 <span class="mono">Attrition's Yield</span></td><td>독·냉기 피해 +50%. <strong>원소 피해 스탯을 2개 올리는 아티팩트면 무엇이든 가능</strong>(하나를 위한 모두로 전부 독이 되므로)</td></tr>
+      <tr><td>마름모</td><td><strong>의식석</strong> <span class="mono">Ritual Stone</span></td><td>모든 의식 스킬 +1랭크 → 파멸의 비술 피해 감소 <strong>64% → 72%</strong>. 피해 감소는 곱연산이라 실제로는 <strong>받는 피해 약 22.2% 감소</strong>. 이 빌드가 쓸 수 있는 최고의 마름모</td></tr>
+      <tr><td>별</td><td><strong>메건의 불꽃</strong> <span class="mono">Megan's Spark</span></td><td>미사용 스킬 포인트 1점당 모든 보조 스탯 +1%. 40포인트 이상을 쉽게 남길 수 있어 <strong>선택의 여지가 없는 필수</strong></td></tr>
+      <tr><td>별</td><td><strong>원소술사의 축복</strong> <span class="mono">Elementalist's Boon</span></td><td>원소형 적 대상 피해의 <strong>250%</strong>를 모든 원소 피해 스탯에. 하나를 위한 모두와의 핵심 시너지</td></tr>
+    </table></div>
+
+    <h4>인챈트 우선순위</h4>
+    <ol>
+      <li><strong>원소형 적 대상 피해 +35%</strong> — 가능한 많은 부위에. 원소술사의 축복 → 하나를 위한 모두 세탁 파이프라인 (실제 착용: 망토·목걸이·마도서·지팡이)</li>
+      <li><strong>마나</strong> — 피해(우주의 망토)와 방어(유물 배리어) <strong>양쪽</strong>에 들어가는 유일한 스탯</li>
+      <li><strong>효과 지속시간 +17%</strong> — 저주 도트가 길수록 정산 폭발이 커집니다 (투구·목걸이·반지·마도서·지팡이)</li>
+      <li><strong>공격 속도</strong> — 고통 결계 고리·흑사병·비명 해골의 초당 시전 수</li>
+      <li><strong>보석 효과 +20%</strong> — 2~4번을 통째로 곱해줍니다</li>
+      <li><strong>쿨감 +17%</strong> — 단, <strong>평온한 마음은 8/10에서 정지</strong>. 쿨감이 과하면 비명 해골 시전 속도가 느려집니다</li>
+      <li>방어: 직접 피해 20% 감소 ×3 · 전 저항 +20% ×2 · 물리 저항 +30% · 지면 장판 25% 감소 · 적중 시 체력 +65 ×2 · 회피 +15% ×2</li>
+      <li><strong>치명타 확률</strong>은 오직 <strong>회오리 인챈트 → 폭풍추적자 중첩</strong>을 굴리기 위한 것입니다. 피해 목적이 아닙니다. 치명타 확률 영약을 쓰면 반지의 치확 슬롯을 <strong>마나</strong>로 돌릴 수 있습니다</li>
+      <li><strong>넣지 말 것</strong> — 제압 · 치명타 피해 · (피해 목적의) 암흑 피해 · 유령/언데드/정예 대상 추가 피해. <strong>죽음의 대변자가 전부 무시합니다</strong></li>
+    </ol>
+    <p><strong>보석 배치</strong>: 마나 +46% 8개(투구 2 · 갑옷 4 · 장화 2) · 암흑 피해 +46% 7개(망토 2 · 목걸이 3 · 반지 2) · 공속 +25% 4개(마도서 2 · 지팡이 2) · 유틸 2개(영약 효율, 적중 시 기절).</p>
+
+    <h4>방어 — 4겹</h4>
+    <ol>
+      <li><strong>잃어버린 영혼의 유물 배리어</strong> — 5초마다 최대 마나의 15%를 소모해 <strong>소모량의 40배</strong>에 해당하는 배리어를 만듭니다. 기존 배리어보다 강할 때만 갱신됩니다. <strong>이게 방어의 전부</strong>이고 없으면 빌드가 성립하지 않습니다. 목표는 <strong>항상 200만 이상, T900+에서는 300만 이상</strong> (원문 캐릭터는 <strong>2,922,985</strong>)</li>
+      <li><strong>우주의 망토 마나 변환 비율</strong> — 최대 마나의 몇 %를 1.5배 피해로 바꿀지 슬라이더로 조절합니다. <strong>위 배리어 목표치에 맞춰 조절</strong>하세요. 변환이 많을수록 피해↑ 배리어↓ (원문은 50%)</li>
+      <li><strong>파멸의 비술 제단 의식</strong> — 의식석 포함 <strong>72% 피해 감소</strong>. 피해 감소는 다른 배수 없이 얻기 어려워 사실상 필수 의식입니다</li>
+      <li><strong>배리어 강화 영약 +50%</strong> — 마스터리가 어느 정도 되면 이것만으로 <strong>순수한 자의 별이 필요 없어집니다</strong></li>
+    </ol>
+    <p>그 밖에 인챈트로 쌓은 감소·저항 층과, 모독자 3피스의 <strong>신성 모독 50% 감속(2초)</strong>이 보조로 깔립니다.</p>
+
+    <h4>영약 — MK 4 주입기 2개</h4>
+    <p>주입기는 <strong>슬롯 3칸 · 쿨 5초 · 슬롯 영약 효율 +30% · 지속 +30%</strong>이고, 한 번 누르면 슬롯 영약을 한 개씩 전부 소비합니다. 지속은 전부 450초.</p>
+    <div class="tw"><table>
+      <tr><th>주입기</th><th>영약</th><th>비고</th></tr>
+      <tr><td>A</td><td>이동 속도 +50% · <strong>상급 피해 +83%</strong> · <strong>배리어 강화 +50%</strong></td><td>이동 속도는 순수 편의라 교체 자유. 배리어 강화는 3번째 방어층</td></tr>
+      <tr><td>B</td><td>사거리 +25% · <strong>상급 마나 +83%</strong> · 치명타 확률 +25%</td><td>사거리는 고통 결계 고리·흑사병·골격 돌출창의 범위. 마나는 피해와 배리어 양쪽에 작용</td></tr>
+    </table></div>
+
+    <h4>운영 — 5단계</h4>
+    <ol>
+      <li>무리를 찾아 <strong>좌클릭을 누르고 있습니다</strong> (비명 해골 → 흑사병 → 골격 돌출창이 슬롯 순서로 나가고, 고통 결계 고리는 자동 시전)</li>
+      <li><strong>골격 돌출창 쿨이 돌아오기 직전에</strong> 몇 걸음 이동한 뒤 다시 누르고 있으면 무리가 끌려옵니다</li>
+      <li>계속 무리를 모으며 <strong>맵을 가로질러 끌고 다닙니다</strong></li>
+      <li>하나가 죽는 순간 <strong>역병 창궐 연쇄</strong>로 기차 전체가 한 번에 폭사합니다. 방을 열 때마다 반복</li>
+      <li><strong>보스전</strong>은 밀집도 배율이 사라져 클리어 속도가 크게 떨어집니다. 다만 잡는 데는 문제없고, 마스터리가 충분하면 <strong>T1000+ 던전</strong>이 무난합니다</li>
+    </ol>
+    <p>이 운영 때문에 <strong>무작위 아노말리 파밍</strong>에 특히 잘 맞습니다.</p>
+
+    <h4>파밍 순서 — 11단계</h4>
+    <ol>
+      <li><strong>모독자의 예복 3부위</strong> — 갑옷(모독자의 우리) · 마도서(모독자의 연구 결과) · 지팡이(모독자의 손길). 투구 자리는 왕관에 내주므로 <strong>3피스가 목표</strong></li>
+      <li><strong>신화 제작 지팡이</strong> — 룬 2개를 끼울 수 있는 유일한 슬롯. 죽음의 대변자 + 부패성 오염 맹독</li>
+      <li><strong>잃어버린 영혼의 유물</strong> 룬 (갑옷) — 필수. 이게 없으면 아무것도 못 버팁니다</li>
+      <li><strong>우주의 망토 + 속삭임</strong> — 기본 피해와 저주 지속 300%</li>
+      <li><strong>하나를 위한 모두 세트</strong> — 아토스(목걸이) + 다르타냥(반지), 반지에 <strong>죽음의 속박</strong></li>
+      <li><strong>타고난 확률의 왕관 — 후순위.</strong> 그전까지는 <strong>웨이릭의 왕관</strong> <span class="mono">Weyrick's Crown</span>이 배리어가 더 강합니다</li>
+      <li><strong>분할 투척</strong> — 마스터리가 낮은 동안에는 <strong>우주의 망토</strong>에 끼우고, 비워진 목걸이 룬 슬롯에 <strong>순수한 자의 별</strong>을 넣어 배리어를 확보합니다. 배리어가 넉넉해지면 목걸이로 옮기세요</li>
+      <li><strong>폭풍추적자 + 초병</strong> — 회오리·치명타 패키지. 장비를 맞추는 동안의 간단한 대안은 <strong>히드라비늘 장화</strong> <span class="mono">Hydrascale Boots</span> + 회오리 대신 <strong>격노</strong> <span class="mono">Enrage</span> 인챈트 (피해는 낮지만 손이 편합니다)</li>
+      <li><strong>기만자의 혀</strong>(망토) · <strong>단순</strong>(마도서) — 피해 배수 마무리</li>
+      <li>아티팩트: <strong>메건의 불꽃 · 의식석</strong> 먼저 → <strong>원소술사의 축복</strong> → 편의용 삼각</li>
+      <li><strong>악마 가죽 갑주</strong>(악마학자)는 마스터리가 낮은 동안의 <strong>임시 방어 목발</strong>. 갖춰지면 뺍니다</li>
+    </ol>
+
+    <h4>버전 주의</h4>
+    <div class="note warn">
+      원문은 <strong>v1.4x</strong> 기준이고 현재는 <strong>1.54.1</strong>입니다. 아래 항목은 숫자 하나가 바뀌면 빌드가 통째로 흔들리는 지점이라 <strong>게임 내 툴팁으로 직접 확인</strong>하는 것을 권합니다. <span class="tag unk">미검증</span>
+      <ul>
+        <li><strong>죽음의 대변자</strong>의 「200%」와 <strong>무한 중첩</strong> 문구 — 무한 중첩 조항이 빌드의 전부</li>
+        <li><strong>부패성 오염 맹독</strong>의 「최대 랭크로 적용 · +300%」</li>
+        <li><strong>잃어버린 영혼의 유물</strong>의 「15% / 5초 / <strong>40배</strong>」</li>
+        <li><strong>죽음의 속박</strong>의 「초당 1회 · +200% · 하나만 장착」</li>
+        <li><strong>하나를 위한 모두 (2)</strong>의 <strong>1번 슬롯</strong> 판정 — 자동 시전 차단 규칙이 바뀌면 세탁 트릭 전체가 무너집니다</li>
+        <li><strong>원소술사의 축복</strong>의 250% · <strong>단순</strong>의 200%와 「피의 역병이 여전히 기본 스킬인가」 · <strong>초병</strong>의 150%와 「고통 결계 고리·흑사병이 여전히 초병 스킬인가」</li>
+        <li><strong>타고난 확률의 왕관</strong>이 신성 모독 발동률을 80% → 100%로 올려 피해 56.25% 증가를 만든다는 계산 — 현재 발동 공식에 의존합니다</li>
+        <li>작성자가 이름으로 지목한 마스터리 노드들(역병 의사 · 저주받은 자와 모독된 자 · 평온한 마음 · 신성 모독 시너지 · 화염 친화 · 광역 시너지 · 수확자 집중) — 노드 이름과 위치는 이전에도 버전 간에 바뀐 적이 있습니다</li>
+        <li>고통 결계 고리에 도달하는 <strong>29포인트 전제 조건 체인</strong></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 메테오라 ══════════ -->
+<section id="meteora">
+  <h2>2 · 메테오라</h2>
+
+  <div class="card">
+    <h3><span class="chip fire">화염</span>메테오라 <span class="mono">Meteora Warlock</span></h3>
+    <p class="src">원저자 <strong>Blondyn</strong> · 공식 디스코드 <code>#build-forum</code> 스레드 (2022-07, v1.40.1 기준) · <strong>DLC 필요</strong> · <a href="https://www.youtube.com/watch?v=dkBKpd9uwb4">시연 영상</a> <span class="tag comm">커뮤니티</span></p>
+
+    <p><strong>속도 파밍 빌드</strong>입니다. 조작이 즐겁다는 평이 많고, 레벨링 가이드 작성자가 <strong>파밍용으로 지목한 빌드</strong>이기도 합니다. 핵심은 <strong>영혼 전송 왜곡 스크롤</strong> <span class="mono">Scroll of Soul Warp</span>을 상인에게서 <strong>대량으로 사서 쌓아두고</strong> 계속 순간이동하며 도는 것입니다.</p>
+
+    <h4>스크롤 vs 서책 — 왜 스크롤인가</h4>
+    <div class="tw"><table>
+      <tr><th>구분</th><th>쿨다운</th><th>제한</th><th>비고</th></tr>
+      <tr><td><strong>스크롤</strong> <span class="mono">Scroll</span></td><td><strong>없음</strong></td><td><strong>개수</strong> (소모품)</td><td>상인에게서 대량 구매해 999개까지 쌓아둡니다. 쿨이 없으니 <strong>연속으로 순간이동</strong>할 수 있어 속도 파밍이 성립합니다</td></tr>
+      <tr><td>서책 (코덱스) <span class="mono">Codex</span></td><td><strong>있음</strong></td><td>없음 (영구)</td><td>소모되지 않는 대신 쿨을 기다려야 합니다. 예: 번개 와이번 서책은 쿨 3초</td></tr>
+    </table></div>
+    <p>즉 <strong>같은 스킬이라도 스크롤이냐 서책이냐에 따라 운영이 완전히 달라집니다.</strong> 저주 모독자도 이동용으로는 서책이 아니라 <strong>스크롤 999개</strong>를 씁니다.</p>
+
+    <div class="note warn">
+      <strong>상세 로드아웃은 영상에만 있습니다.</strong> 디스코드 스레드에 첨부 파일이나 장비 스크린샷이 없어, 스킬·룬·인챈트 세팅을 그대로 따라 하려면 <strong>위 영상을 직접 보셔야 합니다.</strong> 이 문서에 표로 옮길 수 있는 텍스트 원자료가 존재하지 않습니다. <span class="tag unk">미검증</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 데몬 로드 ══════════ -->
+<section id="demonlord">
+  <h2>3 · 데몬 로드</h2>
+
+  <div class="card">
+    <h3><span class="chip fire">화염</span><span class="chip neutral">소환</span>데몬 로드 <span class="mono">Demon Lord T500</span></h3>
+    <p class="src">원저자 <strong>yolo4566</strong> · 공식 디스코드 <code>#build-forum</code> 스레드 (2023, v1.51.0 기준) · DLC 권장(필수 아님) · <a href="https://www.youtube.com/watch?v=9G1YqVWgilU">T500 영상</a> · <a href="https://imgur.com/a/eNIwNVD">장비·설명 이미지</a> <span class="tag comm">커뮤니티</span></p>
+
+    <p><strong>초보에게 가장 친절한 워록 빌드</strong>이자, 작성자 본인 표현으로 <strong>악마가 다 해주는 산책 시뮬레이터</strong>입니다. <strong>스테이지당 스킬 버튼 하나만 누르고 나머지는 전부 자동 시전</strong>이라 손이 거의 필요 없습니다. 마스터리 1.4천 정도면 T400 이하를 한 방에 정리합니다.</p>
+
+    <h4>구성</h4>
+    <ul>
+      <li><strong>네쌍둥이</strong> <span class="mono">Quadruplets</span>로 온힛(적중 시) 효과를 발동시킵니다 — <strong>세트 3피스 효과 포함</strong></li>
+      <li>실제 피해는 <strong>엘레멘티움 스톤</strong> <span class="mono">Elementium Stone</span>이 냅니다</li>
+      <li><strong>전진하는 군대</strong> <span class="mono">Marching Army</span>가 이동 속도를, <strong>악마 소환술</strong> <span class="mono">Demonology</span>이 대악마 추가 피해를 스케일링합니다</li>
+      <li>방어는 <strong>영혼 함정</strong> <span class="mono">Soul Trap</span>으로 영혼을 빠르게 채우고 <strong>영혼 결계막 장벽</strong> <span class="mono">Soul Ward</span>으로 <strong>최대 체력 200% 배리어</strong>를 두르는 구조</li>
+      <li>세트 <strong>4피스가 피해 감소 50%</strong>라 다른 워록 세트 4피스보다 좋고, <strong>치유의 손길 서책</strong>과 합치면 매우 단단해집니다</li>
+    </ul>
+
+    <h4>100레벨 이후 진행</h4>
+    <ol>
+      <li>도박·파밍으로 <strong>데몬 로드 세트를 최대한 빨리</strong> 맞춥니다</li>
+      <li><strong>신화 I 던전 아노말리</strong>에서 빌드용 아노말리 룬을 파밍합니다</li>
+      <li><strong>더 밀지 마세요</strong> — <strong>신화 XIV까지는 룬이 1개씩만</strong> 나옵니다. 난이도를 올려도 룬 수급이 늘지 않으니 시간 낭비입니다</li>
+      <li>사이사이 <strong>정예 던전 아노말리</strong>를 돌아 룬스톤을 모으고 룬을 <strong>제작</strong>합니다</li>
+      <li>진전설 순서는 <strong>존의 영혼의 서 <span class="mono">Zon's Book of Souls</span> → 네쌍둥이</strong></li>
+      <li><strong>네쌍둥이를 얻기 전에는</strong> <strong>유황 지옥 분출구</strong> <span class="mono">Brimstone Hellvent</span>로 3피스 효과를 직접 발동시킵니다</li>
+      <li>저항은 <strong>현재 난이도에서 최소 70%</strong>, <strong>신화 XV 이상에서는 총 130%</strong>를 유지하세요</li>
+    </ol>
+
+    <div class="note ok">
+      <strong>첫 엔드게임 워록으로 가장 무난한 선택입니다.</strong> DLC가 없어도 굴러가고, 조작이 단순하며, 저주 모독자처럼 <strong>신화 제작 무기 하나에 모든 것이 걸려 있지 않습니다.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 태양과 달 ══════════ -->
+<section id="sunmoon">
+  <h2>4 · 태양과 달 화염 태풍</h2>
+
+  <div class="card">
+    <h3><span class="chip fire">화염</span><span class="chip frost">냉기</span>태양과 달 화염 태풍 <span class="mono">Sun &amp; Moon Firestorm</span></h3>
+    <p class="src">원저자 <strong>Blu</strong> · <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3398273798">스팀 가이드 원문</a> (2025-01 게시 · <strong>2025-08 갱신</strong>) · <strong>DLC 필요</strong> · T700+ <span class="tag comm">커뮤니티</span></p>
+
+    <p><strong>화염 태풍</strong> <span class="mono">Firestorm</span>을 연타하면서 무리 사이를 순간이동으로 옮겨 다니는 빌드입니다. 이름의 <strong>태양과 달</strong> <span class="mono">Sun &amp; Moon</span>은 화염과 냉기를 함께 쓰는 세트에서 왔습니다.</p>
+
+    <div class="note ok">
+      <strong>현존하는 워록 텍스트 가이드 중 가장 최근에 갱신된 자료입니다.</strong> 다른 빌드들이 2022~2023년 자료인 것과 달리 <strong>2025-08</strong>에 손을 봤기 때문에, 지금 게임 버전(1.54.1)과의 괴리가 가장 적습니다.
+    </div>
+
+    <p>세부 로드아웃(스킬 트리 · 룬 · 인챈트 · 아티팩트)은 <strong>스팀 가이드 원문</strong>에 정리돼 있습니다. 이 문서에는 아직 옮기지 않았습니다.</p>
+  </div>
+</section>
+
+<!-- ══════════ 출처 ══════════ -->
+<section id="src">
+  <h2>출처</h2>
+  <p>이 페이지는 아래 자료를 한국어로 옮기고 정리한 것입니다. <strong>원저작은 각 작성자에게 있습니다.</strong></p>
+  <div class="tw"><table>
+    <tr><th>자료</th><th>작성자</th><th>날짜</th><th>형태</th></tr>
+    <tr><td>Curse Spell Desecrator (<code>Curse-Spell-Desecrator.pdf</code>, 10쪽)</td><td><strong>TMaz94</strong></td><td>2022-07-14</td><td>디스코드 첨부 PDF — <strong>전문 확보</strong></td></tr>
+    <tr><td>The Shattered Spirits Curse Spell Desecrator</td><td><strong>TMaz94</strong></td><td>2022-02</td><td>스팀 가이드 — <strong>구버전</strong></td></tr>
+    <tr><td>Meteora Warlock</td><td><strong>Blondyn</strong></td><td>2022-07</td><td>디스코드 스레드 + 영상</td></tr>
+    <tr><td>Demon Lord Warlock T500</td><td><strong>yolo4566</strong></td><td>2023</td><td>디스코드 스레드 + 이미지 + 영상</td></tr>
+    <tr><td>Sun &amp; Moon Firestorm Warlock</td><td><strong>Blu</strong></td><td>2025-01 / 2025-08</td><td>스팀 가이드</td></tr>
+    <tr><td>Warlock Leveling and Progression</td><td><strong>Rahlence</strong></td><td>2026-06 / 2026-07</td><td>디스코드 PDF (빌드 추천의 근거)</td></tr>
+  </table></div>
+  <p>원문은 크로니콘 <strong>공식 디스코드</strong>의 <code>#build-forum</code> 채널에 있습니다. 한글 명칭과 룬·아티팩트 표기는 게임 설치 폴더의 <strong>한글패치 로케일 원문</strong>과 대조했습니다. <span class="tag data">데이터</span></p>
+  <ul>
+    <li><a href="https://chronicondb.com">ChroniconDB</a> — 아이템 데이터베이스</li>
+    <li><a href="https://iconmaster.info/Chronomancer/">Chronomancer</a> — 빌드 플래너</li>
+    <li><a href="https://www.subworldgames.com/category/chronicon-notes/">공식 패치 노트</a></li>
+  </ul>
+</section>
+
+<footer>
+  개인 참고용 한국어 정리 · Chronicon 1.54.1 기준 · 검색엔진 색인 제외
+</footer>
+</div>
+<a href="#" class="totop">↑ 맨 위</a>
+<script src="../../assets/wiki.js"></script>
+</body>
+</html>

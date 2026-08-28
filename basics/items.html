@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>아이템 · 제작 · 크로니콘 위키</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/wiki.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="brand plain" href="../index.html">크로니콘 <span>위키</span></a>
+  <span class="crumb">게임 기초 › 아이템 · 제작</span>
+</div>
+
+<nav class="side">
+  <div class="grp">시작</div>
+  <ul>
+    <li><a href="../index.html">홈</a></li>
+  </ul>
+  <div class="grp">게임 기초</div>
+  <ul>
+    <li><a href="../basics/damage.html">피해 계산</a></li>
+    <li><a href="../basics/defense.html">방어</a></li>
+    <li><a href="../basics/skills.html">스킬 · 태그</a></li>
+    <li><a class="cur" href="../basics/items.html">아이템 · 제작</a></li>
+    <li><a href="../basics/endgame.html">난이도 · 엔드게임</a></li>
+    <li><a href="../basics/glossary.html">한영 명칭</a></li>
+  </ul>
+  <div class="grp">클래스</div>
+  <ul>
+    <li><a href="../classes/index.html">클래스 개요</a></li>
+    <li><a href="../classes/warlock/index.html">워록</a></li>
+    <li><a href="../classes/warlock/leveling.html">└ 레벨링</a></li>
+    <li><a href="../classes/warlock/progression.html">└ 성장</a></li>
+    <li><a href="../classes/warlock/builds.html">└ 빌드</a></li>
+    <li><a class="soon" href="#">템플러 (예정)</a></li>
+    <li><a class="soon" href="#">버서커 (예정)</a></li>
+    <li><a class="soon" href="#">워든 (예정)</a></li>
+    <li><a class="soon" href="#">메카니스트 (예정)</a></li>
+  </ul>
+  <div class="grp">자료</div>
+  <ul>
+    <li><a href="../meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="../meta/patches.html">패치 동향</a></li>
+  </ul>
+</nav>
+
+<h1>아이템 · 제작</h1>
+<p class="lede">등급 사다리부터 변환·마법부여·룬·보석·영약까지 — 그리고 어떤 옵션이 어느 부위에 붙는가</p>
+
+<div class="searchbar">
+  <input type="search" id="q" placeholder="이 문서에서 검색" autocomplete="off" spellcheck="false" aria-label="문서 내 검색">
+  <span class="cnt" id="cnt"></span>
+</div>
+<p id="none">검색 결과가 없습니다.</p>
+
+<!-- ══════════ 등급 ══════════ -->
+<section id="rarity">
+  <h2>아이템 등급</h2>
+
+  <div class="formula">일반 → 마법부여 → 희귀 → 고유 → 전설 → 진전설</div>
+
+  <div class="tw"><table>
+    <tr><th>등급</th><th>영문</th><th>비고</th></tr>
+    <tr><td>일반</td><td><span class="mono">Common</span></td><td>—</td></tr>
+    <tr><td>마법부여</td><td><span class="mono">Enchanted</span></td><td>—</td></tr>
+    <tr><td>희귀</td><td><span class="mono">Rare</span></td><td>하급 룬 추출 가능</td></tr>
+    <tr><td>고유</td><td><span class="mono">Unique</span></td><td>유니크 등급 <strong>세트는 10레벨</strong>부터 드랍</td></tr>
+    <tr><td>전설</td><td><span class="mono">Legendary</span></td><td><strong>영웅 난이도 이상 + 레벨 10+</strong>부터 드랍 · 전설 <strong>클래스 세트는 30레벨</strong>부터</td></tr>
+    <tr><td><strong>진전설</strong></td><td><span class="mono">True Legendary</span></td><td><strong>100레벨 + 전설 난이도 이상</strong> 전용 · <strong>도박 불가</strong></td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>진전설은 도박으로 얻을 수 없습니다.</strong> 상점 도박은 전설까지입니다. 진전설은 오직 드랍(주로 소형 보스 아노말리·마법 발견 누적)과 <strong>변환</strong>으로만 나옵니다.
+  </div>
+
+  <div class="note ok">
+    <strong>세트 드랍 레벨</strong> <span class="tag data">데이터: help/4.txt</span><br>
+    유니크 등급 세트 <strong>10레벨</strong> · 전설 클래스 세트 <strong>30레벨</strong>. 그래서 레벨링 가이드가 <strong>10레벨과 30레벨에서 캐릭터를 복사</strong>해 두라고 하는 것입니다 — 그 저레벨 캐릭터로 도박하면 훨씬 싸고(30레벨 3,775 크리스탈 vs 100레벨 24,884 크리스탈), 얻은 세트는 공용 창고로 넘기면 됩니다.
+  </div>
+</section>
+
+<!-- ══════════ 변환 ══════════ -->
+<section id="transmute">
+  <h2>변환 (테오)</h2>
+
+  <p>NPC <strong>테오</strong>에게서 아이템을 재료로 다른 아이템을 만듭니다. 재화는 주로 <strong>챔피언의 왕관</strong> <span class="mono">Champion's Crown</span>입니다.</p>
+
+  <div class="tw"><table>
+    <tr><th>레시피</th><th>재료</th><th>결과</th></tr>
+    <tr><td><strong>세트 아이템 변환</strong></td><td>세트템 1 + 챔피언의 왕관 <strong>30</strong></td><td>같은 세트의 <strong>다른 부위</strong></td></tr>
+    <tr><td>전설 변환</td><td>전설 <strong>3</strong></td><td>무작위 전설 — <strong>같은 부위 3개를 넣으면 그 부위 확정</strong></td></tr>
+    <tr><td>진전설 변환</td><td>진전설 <strong>5</strong></td><td>무작위 진전설</td></tr>
+    <tr><td><strong>전설 강화</strong></td><td>전설 + <strong>같은 부위</strong> 진전설 + 왕관 <strong>20</strong></td><td>진전설급 기본 스탯을 가진 전설</td></tr>
+    <tr><td>프리즈매틱 소켓</td><td>왕관 <strong>30</strong> (큐브/구체/별 각각)</td><td>아이템당 <strong>1개, 영구</strong></td></tr>
+    <tr><td><strong>신화 무기 제작</strong><br>(야수 DLC · 헬포지)</td><td>세트 무기 + 대형 보스 재료</td><td><strong>룬 소켓 2개</strong>짜리 무기</td></tr>
+  </table></div>
+
+  <div class="note ok">
+    <strong>같은 부위 3개 확정</strong> 규칙이 실전에서 가장 유용합니다. 원하는 세트 부위가 안 나올 때, 필요 없는 전설을 <strong>부위별로 모아두었다가</strong> 3개씩 갈아 넣으면 원하는 부위를 계속 뽑을 수 있습니다.
+  </div>
+
+  <div class="note warn">
+    <strong>신화 제작 무기는 룬을 두 개 낄 수 있는 유일한 슬롯입니다.</strong> 빌드가 핵심 룬 두 개를 동시에 요구한다면(예: 저주 모독자의 <em>죽음의 대변자</em> + <em>부패성 오염 맹독</em>) 신화 제작 무기 없이는 그 빌드가 성립하지 않습니다.
+  </div>
+</section>
+
+<!-- ══════════ 마법부여 ══════════ -->
+<section id="enchant">
+  <h2>마법부여 (샹텔)</h2>
+
+  <div class="tw"><table>
+    <tr><th>기능</th><th>내용</th></tr>
+    <tr><td><strong>스크램블</strong> <span class="mono">Scramble</span></td><td>옵션 <strong>전체</strong>를 다시 굴림</td></tr>
+    <tr><td><strong>리롤</strong> <span class="mono">Reroll</span></td><td>옵션 <strong>하나</strong>만 다시 굴림</td></tr>
+    <tr><td><strong>강화</strong> <span class="mono">Upgrade</span></td><td>수치를 올림 — <strong>해당 옵션이 잠깁니다</strong></td></tr>
+  </table></div>
+
+  <h3>색으로 구분하기</h3>
+  <div class="tw"><table>
+    <tr><th>색</th><th>의미</th></tr>
+    <tr><td><strong>진한 주황</strong></td><td>아이템 파워 (그 아이템의 고유 효과)</td></tr>
+    <tr><td>연주황 <span class="mono">Solid</span></td><td><strong>제거할 수 없는</strong> 고정 옵션</td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>원소 % 피해는 인챈트로 붙일 수 없습니다.</strong> <span class="tag comm">커뮤니티 DB 검증</span><br>
+    화염 +%, 암흑 +% 같은 원소 피해 옵션은 <strong>아이템이 원래 갖고 나오는 옵션</strong>입니다. 리롤로 뽑아낼 수 없습니다. 원소 피해가 필요하면 <strong>그 옵션을 갖고 나오는 아이템 자체</strong>를 파밍하거나 보석·룬으로 채워야 합니다.
+  </div>
+
+  <h3>순서가 돈을 아낍니다</h3>
+  <div class="note">
+    <ol>
+      <li><strong>100레벨로 올리기 전에</strong> 인챈트와 보석 소켓을 먼저 굴리세요. 저레벨 장비가 훨씬 쌉니다.</li>
+      <li><strong>원하는 옵션이 전부 나오기 전엔 완전 강화하지 마세요.</strong> 아이템 가치가 오르면 비용도 같이 오릅니다.</li>
+      <li>지키고 싶은 옵션만 <strong>한 번 강화해 잠가</strong> 두는 정도로 두세요.</li>
+    </ol>
+  </div>
+  <p><strong>상급 강화</strong>는 틴카의 영역에서 <strong>기억 정수</strong> <span class="mono">Memory Essence</span>를 소모합니다. 첫 캐릭터에는 사실상 없는 선택지입니다.</p>
+</section>
+
+<!-- ══════════ 옵션 부위 표 ══════════ -->
+<section id="affixslots">
+  <h2>어떤 옵션이 어느 부위에 붙는가</h2>
+
+  <p>인챈트로 굴려도 <strong>그 부위에 나올 수 없는 옵션</strong>이 있습니다. 재화를 태우기 전에 확인하세요. <span class="tag comm">커뮤니티 DB</span></p>
+
+  <div class="tw"><table>
+    <tr><th>옵션</th><th>붙는 부위</th></tr>
+    <tr><td><strong>피해(고정)</strong></td><td>무기 · 반지 · 보조장비 <strong>만</strong></td></tr>
+    <tr><td>공격 속도<br><span class="mono">= 시전 속도</span></td><td>무기 · 장신구 · 반지 · 목걸이 · 보조장비</td></tr>
+    <tr><td>치명타 확률</td><td>투구 · 무기 · 장신구 · 반지 · 목걸이 · 보조장비</td></tr>
+    <tr><td>이동 속도</td><td><strong>장화</strong> · 장신구 · 반지 · 목걸이</td></tr>
+    <tr><td>체력</td><td>투구 · 갑옷 · 무기 · 장화 · 장신구 · 반지 · 목걸이</td></tr>
+    <tr><td>적중 시 체력</td><td>무기 · 장화 · 목걸이 · 보조장비</td></tr>
+    <tr><td>저항</td><td>투구 · 갑옷 · 장화 · 반지 · 목걸이 · 보조장비 (<strong>무기 불가</strong>)</td></tr>
+    <tr><td>경험치 +% (최대 50%)</td><td>투구 · 무기 · 장신구 · 반지 · 목걸이 · 마도서 (<strong>갑옷·장화 불가</strong>)</td></tr>
+  </table></div>
+
+  <ul>
+    <li><strong>시전 속도라는 별도 스탯은 없습니다.</strong> 공격 속도가 곧 시전 속도입니다.</li>
+    <li><strong>반지와 목걸이는 에픽 옵션이 확정 1개</strong> 붙습니다. 그래서 두 부위가 유독 값어치가 큽니다.</li>
+    <li>피해(고정) 스탯이 <strong>무기·반지·보조장비에만</strong> 붙는다는 점이 빌드 설계의 큰 제약입니다.</li>
+  </ul>
+</section>
+
+<!-- ══════════ 룬 ══════════ -->
+<section id="runes">
+  <h2>룬</h2>
+
+  <div class="tw"><table>
+    <tr><th>구분</th><th>출처</th></tr>
+    <tr><td><strong>하급 룬</strong></td><td>전설·희귀 아이템 <strong>파워 추출</strong>, 또는 <strong>던전 아노말리 보스</strong> 직드랍</td></tr>
+    <tr><td><strong>상급 룬</strong></td><td><strong>진전설</strong> 파워 추출</td></tr>
+  </table></div>
+
+  <ul>
+    <li>착용 가능한 상급 룬은 <strong>최대 3개</strong>입니다. 「<strong>위대함</strong>」 룬을 쓰면 <strong>4개</strong>가 됩니다.</li>
+    <li>제작: 파워가 있는 아이템 + <strong>룬스톤</strong> + <strong>챔피언의 왕관 50</strong> (테오)</li>
+    <li>룬스톤은 <strong>정예 던전 아노말리</strong>에서 나옵니다.</li>
+    <li><strong>아이템당 룬 1개</strong>이고, <strong>같은 이름의 룬은 중첩할 수 없습니다.</strong> (예외: 신화 제작 무기는 2개)</li>
+  </ul>
+
+  <div class="note">
+    아노말리 룬은 <strong>40종이 순환으로 보장</strong>됩니다 <span class="tag comm">커뮤니티</span>. 이미 상당수를 모았다면 다음 룬까지의 대기가 길어지므로, <strong>새 캐릭터를 하나 키우는 편이 빠를 수도</strong> 있습니다.
+  </div>
+</section>
+
+<!-- ══════════ 보석 ══════════ -->
+<section id="gems">
+  <h2>보석 (젬마)</h2>
+
+  <p>7종 원소 × <strong>큐브 · 구체 · 별</strong> 3형태 × 3부위군 = <strong>63가지 효과</strong>, 각 3품질입니다.</p>
+
+  <div class="tw"><table>
+    <tr><th>형태</th><th>영문</th><th>비고</th></tr>
+    <tr><td>큐브</td><td><span class="mono">Cube</span></td><td>—</td></tr>
+    <tr><td>구체</td><td><span class="mono">Sphere</span></td><td>—</td></tr>
+    <tr><td><strong>별</strong></td><td><span class="mono">Star</span></td><td><strong>가장 강력</strong> — 무기·보조장비에 우선 배치</td></tr>
+  </table></div>
+
+  <h3>원소 대응</h3>
+  <div class="tw"><table>
+    <tr><th>보석</th><th>영문</th><th>원소</th></tr>
+    <tr><td>시트린</td><td><span class="mono">Citrine</span></td><td><span class="chip fire">화염</span></td></tr>
+    <tr><td>카이아나이트</td><td><span class="mono">Kyanite</span></td><td><span class="chip frost">냉기</span></td></tr>
+    <tr><td>라리마</td><td><span class="mono">Larimar</span></td><td><span class="chip lightning">번개</span></td></tr>
+    <tr><td>크리소베릴</td><td><span class="mono">Chrysoberyl</span></td><td><span class="chip poison">독</span></td></tr>
+    <tr><td>헤마타이트</td><td><span class="mono">Hematite</span></td><td><span class="chip phys">물리 / 출혈</span></td></tr>
+    <tr><td>차로아이트</td><td><span class="mono">Charoite</span></td><td><span class="chip shadow">암흑</span></td></tr>
+  </table></div>
+
+  <ul>
+    <li><strong>동일 보석 3개</strong>를 합치면 상위 등급이 됩니다.</li>
+    <li>고정 피해를 주는 보석 효과는 <strong>공격 속도의 영향을 받지 않습니다.</strong></li>
+  </ul>
+
+  <div class="note ok">
+    <strong>워록이 특히 챙기는 보석</strong> — 헤마타이트 <strong>별</strong>(방어구) = 영혼 지속시간 · 차로아이트 <strong>별</strong>(장신구) = 영혼 강탈 확률.
+  </div>
+</section>
+
+<!-- ══════════ 영약 ══════════ -->
+<section id="elixir">
+  <h2>영약 · 물약</h2>
+
+  <div class="note warn">
+    <strong>1.40에서 영약이 전면 개편되었습니다.</strong> <span class="tag data">데이터</span><br>
+    이제 <strong>몹이 영약을 드랍하지 않습니다.</strong> <strong>틴카의 영역</strong>과 <strong>크로니콘의 영약 상점</strong>에서 구매합니다. 구버전 영약은 더 이상 나오지 않으므로, "영약은 파밍으로 모은다"는 가이드는 <strong>낡은 정보</strong>입니다.
+  </div>
+
+  <div class="tw"><table>
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td>영약 동시 적용</td><td>등급별 <strong>2개씩</strong></td></tr>
+    <tr><td><strong>인젝터 · 런처</strong></td><td><strong>50레벨 + 영웅 난이도 이상</strong>에서만 드랍 <span class="tag data">데이터: 1.50</span></td></tr>
+    <tr><td>물약 쿨다운</td><td><strong>10초</strong></td></tr>
+    <tr><td>물약 회복</td><td><strong>절반만 즉시</strong>, 나머지는 5초에 걸쳐</td></tr>
+    <tr><td><strong>초월 물약</strong> <span class="mono">Transcendent</span></td><td>1.54 신규 <strong>4종</strong> — 100레벨 몹 드랍 또는 <strong>사렉</strong> 구매</td></tr>
+  </table></div>
+
+  <div class="note">
+    물약이 <strong>절반만 즉시</strong> 회복된다는 점이 실전에서 중요합니다. 체력이 바닥일 때 물약을 눌러도 <strong>다음 한 방을 못 버티는</strong> 경우가 많습니다. 물약은 위급할 때가 아니라 <strong>위급해지기 전에</strong> 눌러야 합니다.
+  </div>
+</section>
+
+<!-- ══════════ 루팅 필터 ══════════ -->
+<section id="filter">
+  <h2>루팅 필터</h2>
+
+  <p>루팅 필터는 <strong>두 벌</strong>로 나뉘어 있습니다. 이 구분을 모르면 설정이 안 먹는 것처럼 보입니다. <span class="tag data">데이터: locale/EN/menu FILTER OPTIONS</span></p>
+
+  <div class="tw"><table>
+    <tr><th>필터</th><th>역할</th></tr>
+    <tr><td><strong>1. 표시 필터</strong></td><td>바닥에 <strong>보여줄 것</strong>을 정함</td></tr>
+    <tr><td><strong>2. 방사형 루팅</strong> <span class="mono">Radial Loot</span> (기본 <code>Q</code>)</td><td>그 키를 눌렀을 때 <strong>주워올 것</strong>을 정함</td></tr>
+  </table></div>
+
+  <h3>조절 항목</h3>
+  <ul>
+    <li>등급 토글: 일반 · 마법부여 · 희귀 · 고유 · 전설 · 진정한 전설 — <strong>표시용과 방사형용을 각각</strong> 설정</li>
+    <li>소모품: 물약 · 영약 · 두루마리 · 열쇠 · 기타 소모품</li>
+    <li>다른 클래스 아이템 필터링</li>
+    <li>게임 세계에서 품질 필터링된 장비 제거 (<strong>되돌릴 수 없음</strong>)</li>
+    <li>방사형 루팅으로 장비를 줍지 않음 (<code>Q</code>를 소모품 전용으로)</li>
+    <li>방사형 루팅 키로 자동 루팅 전환 (<code>Q</code>를 토글로)</li>
+    <li>프로필을 <strong>여러 개</strong> 만들어 상황별로 전환 가능</li>
+  </ul>
+
+  <p>능력치 <strong>획득 반경</strong>이 방사형 루팅의 사거리도 함께 늘립니다. <span class="tag data">데이터: help/9.txt</span></p>
+
+  <div class="note warn">
+    <strong>필터로 숨겨도 드랍 자체는 발생합니다.</strong><br>
+    그래서 <em>지식의 연대기</em>의 경험치 스택(유니크 이상이 드랍되면 초기화)을 유지하려면, 필터가 아니라 <strong>마법 발견 0%</strong>가 조건입니다. 필터로 안 보이게 해도 스택은 끊깁니다.
+  </div>
+</section>
+
+<!-- ══════════ 관련 문서 ══════════ -->
+<section id="related">
+  <h2>관련 문서</h2>
+  <ul>
+    <li><a href="damage.html">피해 계산</a> — 고정 피해·원소·계열이 어디서 곱해지는가</li>
+    <li><a href="endgame.html">난이도 · 엔드게임</a> — 룬스톤·룬·신화 재료를 어디서 파밍하는가</li>
+    <li><a href="glossary.html">한영 명칭</a> — 세트 · 룬 · 보석 · NPC 영문 대조표</li>
+  </ul>
+</section>
+
+<footer>
+  개인 참고용 한국어 정리 · Chronicon 1.54.1 기준 · 검색엔진 색인 제외
+</footer>
+</div>
+<a href="#" class="totop">↑ 맨 위</a>
+<script src="../assets/wiki.js"></script>
+</body>
+</html>
