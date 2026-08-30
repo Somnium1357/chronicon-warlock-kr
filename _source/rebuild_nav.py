@@ -42,7 +42,7 @@ NAV = [
         ('워든', 'classes/warden/index.html'),
         ('└ 레벨링', 'classes/warden/leveling.html'),
         ('└ 성장', 'classes/warden/progression.html'),
-        ('메카니스트 (예정)', None),
+        ('메카니스트', 'classes/mechanist/index.html'),
     ]),
     ('자료', [
         ('출처 · 신뢰도', 'meta/sources.html'),
