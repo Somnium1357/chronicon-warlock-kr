@@ -121,7 +121,33 @@
 <section id="dye">
   <h2>3 · 크리스탈 벌기 — 염료 파밍</h2>
   <p><strong>캐주얼 난이도에서 첫 보스를 반복</strong>해서 잡고, 나오는 <strong>염료를 팔면</strong> 수백만 크리스탈이 쉽게 모입니다.</p>
-  <div class="note warn"><strong>염료는 쓰지 마세요. <span class="mono">DO NOT USE THEM</span></strong> — 파는 용도입니다.</div>
+  <div class="note bad">
+    <strong>🔴 염료는 절대 쓰지 마세요. <span class="mono">DO NOT USE THEM</span></strong><br>
+    단순히 "팔 물건을 낭비하지 마라"가 아닙니다. <strong>한 번 사용하면 그 염료는 드랍 목록에서 영구히 빠집니다.</strong>
+    되돌릴 수 없고, 계정 전체에 적용됩니다. 원저자가 이 줄만 대문자로 쓴 이유가 이것입니다.
+  </div>
+
+  <h3>왜 영구적인가 — 염료 시스템 구조</h3>
+  <div class="tw"><table>
+    <tr><th>항목</th><th>내용</th><th>근거</th></tr>
+    <tr><td>총 수량</td><td><strong>32종 = 클래스당 8종</strong></td><td><span class="tag data">데이터</span></td></tr>
+    <tr><td>기본 염료</td><td>클래스당 <strong>4종</strong> — 처음부터 갖고 있고 드랍되지 않습니다</td><td><span class="tag data">데이터</span></td></tr>
+    <tr><td><strong>보스 드랍 염료</strong></td><td>클래스당 <strong>4종</strong> — 보스에게서 무작위로 나옵니다. <strong>계정 단위 해금</strong></td><td><span class="tag data">데이터</span></td></tr>
+    <tr><td><strong>해금하면</strong></td><td><strong>그 염료는 더 이상 드랍되지 않습니다</strong></td><td><span class="tag comm">커뮤니티</span></td></tr>
+  </table></div>
+  <p class="src">앞 세 줄은 <code>changelog/1.200.txt</code> 원문 — <em>"Added 32 dyes: 8 per class - 4 base dyes that are always available, and 4 dyes that drop from bosses randomly (account-wide unlock)"</em>. 마지막 줄은 공식 디스코드에서 확인된 내용입니다.</p>
+
+  <div class="note warn">
+    <strong>즉 계정당 파밍 가능한 염료는 <span class="mono">4종 × 5클래스 = 20종</span>이 상한이고, 하나 쓸 때마다 줄어듭니다.</strong>
+    잠긴 염료는 반복해서 떨어지지만 해금된 염료는 풀에서 빠지므로, <strong>드랍 효율이 영구적으로 나빠집니다</strong>.
+    옷장에서 예쁜 색을 발견해도 <strong>레벨링이 끝난 뒤에</strong> 쓰세요.
+  </div>
+
+  <div class="note">
+    <strong>이미 써버렸다면</strong> — 아직 안 쓴 클래스로 저레벨 캐릭터를 하나 만들어 같은 파밍을 돌리면 됩니다.
+    해금은 계정 단위지만 염료 자체는 <strong>클래스별로 따로</strong> 있으므로, 손대지 않은 클래스에는 4종이 그대로 남아 있습니다.
+    (드랍이 <em>현재 플레이 중인 클래스의</em> 염료만 나오는지는 <span class="tag unk">미확인</span>입니다.)
+  </div>
   <div class="card">
     <h4>원문 증거 스크린샷 <span class="tag data">데이터</span></h4>
     <ul>
