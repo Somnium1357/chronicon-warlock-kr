@@ -117,6 +117,7 @@ tr:last-child td{border-bottom:none}
 .tag.comm{color:var(--muted)}
 .tag.unk{color:var(--warn)}
 .tag.test{color:var(--bad)}
+.tag.obs{color:var(--accent)}
 
 .src{font-size:13px;color:var(--muted);margin-top:12px;padding-top:8px;border-top:1px dashed var(--line)}
 .src a{color:var(--muted)}
