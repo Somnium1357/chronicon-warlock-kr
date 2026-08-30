@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>템플러 레벨링 · 크로니콘 위키</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../../assets/wiki.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="brand plain" href="../../index.html">크로니콘 <span>위키</span></a>
+  <span class="crumb"><a href="../index.html">클래스</a> › <a href="index.html">템플러</a> › 레벨링</span>
+</div>
+
+<nav class="side">
+  <div class="grp">시작</div>
+  <ul>
+    <li><a href="../../index.html">홈</a></li>
+  </ul>
+  <div class="grp">게임 기초</div>
+  <ul>
+    <li><a href="../../basics/damage.html">피해 계산</a></li>
+    <li><a href="../../basics/defense.html">방어</a></li>
+    <li><a href="../../basics/skills.html">스킬 · 태그</a></li>
+    <li><a href="../../basics/items.html">아이템 · 제작</a></li>
+    <li><a href="../../basics/endgame.html">난이도 · 엔드게임</a></li>
+    <li><a href="../../basics/glossary.html">한영 명칭</a></li>
+  </ul>
+  <div class="grp">클래스</div>
+  <ul>
+    <li><a href="../../classes/index.html">클래스 개요</a></li>
+    <li><a href="../../classes/warlock/index.html">워록</a></li>
+    <li><a href="../../classes/warlock/leveling.html">└ 레벨링</a></li>
+    <li><a href="../../classes/warlock/progression.html">└ 성장</a></li>
+    <li><a href="../../classes/warlock/builds.html">└ 빌드</a></li>
+    <li><a href="../../classes/templar/index.html">템플러</a></li>
+    <li><a class="cur" href="../../classes/templar/leveling.html">└ 레벨링</a></li>
+    <li><a href="../../classes/templar/progression.html">└ 성장</a></li>
+    <li><a class="soon" href="#">버서커 (예정)</a></li>
+    <li><a class="soon" href="#">워든 (예정)</a></li>
+    <li><a class="soon" href="#">메카니스트 (예정)</a></li>
+  </ul>
+  <div class="grp">자료</div>
+  <ul>
+    <li><a href="../../meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="../../meta/patches.html">패치 동향</a></li>
+  </ul>
+</nav>
+
+<h1>템플러 레벨링 1 → 100</h1>
+<p class="lede">Rahlence의 «Templar Leveling and Progression» 중 레벨링 편. <strong>진 레전더리 없이</strong> 굴리는 것을 전제로 합니다.</p>
+
+<div class="searchbar">
+  <input type="search" id="q" placeholder="이 문서에서 검색" autocomplete="off" spellcheck="false" aria-label="문서 내 검색">
+  <span class="cnt" id="cnt"></span>
+</div>
+<p id="none">검색 결과가 없습니다.</p>
+
+<section id="common">
+  <h2>먼저 — 클래스 공통 요령</h2>
+  <p class="src">원저자 <strong>Rahlence</strong> · <code>temp_leveling.pdf</code> 1~2쪽</p>
+  <div class="note">
+    <strong>이 절의 내용은 5개 클래스 가이드가 통째로 공유합니다.</strong> 스탯 우선순위, 캐릭터 복사 도박 트릭, 염료 파밍은 워록 문서에 이미 정리돼 있고 <strong>문구까지 동일</strong>합니다 — <a href="../warlock/leveling.html">워록 레벨링</a>을 보세요. 여기서는 템플러에 해당하는 부분만 짚습니다.
+  </div>
+
+  <h3>스탯 우선순위에서 템플러에만 붙는 말</h3>
+  <ul>
+    <li><strong>온힛 피해 발동</strong>(강타 <span class="mono">Smite</span>, 연소 등)이 초반에 특히 강합니다. 원문이 <em>“<strong>Smite is VERY strong throughout the leveling process</strong>”</em>라고 못박습니다 — 단, <strong>루솜브라의 장화</strong><span class="mono">(Lusombra's boots, 템플러 레전더리)</span>와 도박·인챈트 재료가 있을 때 이야기입니다 <span class="tag comm">커뮤니티</span></li>
+    <li><strong>공격 속도</strong>의 가치가 다른 클래스보다 높습니다. 원문 예시가 <em>“like fulmination templar”</em> — <strong>전격 폭발</strong><span class="mono">(Fulmination)</span> 계열은 공속이 곧 화력입니다 <span class="tag comm">커뮤니티</span></li>
+    <li><strong>쿨다운 감소 + 효과 지속</strong>은 선택이 아닙니다. 가이드가 소개하는 빌드는 전부 버프·스킬을 상시 유지하는 구조라 <strong>100% 가동률</strong>을 목표로 두 스탯을 같이 올립니다</li>
+  </ul>
+
+  <div class="note warn">
+    <strong>주의 — 완성 장비의 인챈트를 그대로 베끼지 마세요.</strong> 성장 문서에 실린 장비는 <strong>원정 트리를 다 찍은 뒤</strong>의 모습입니다. 원정 패시브가 메워 주는 저항이 아직 없으므로, 레벨링 중에는 <strong>저항을 더 많이</strong> 챙기고 그만큼 공격 스탯을 포기해야 합니다. <span class="tag comm">커뮤니티</span>
+  </div>
+</section>
+
+<section id="lv10">
+  <h2>Lv 10 — 저레벨 도박 장비 8종</h2>
+  <p class="src"><code>temp_leveling.pdf</code> 3~4쪽 · 캡션 <em>“Here are useful leveling items”</em></p>
+  <p>10레벨 캐릭터로 도박해서 뽑는 범용 세팅입니다. 아래 6종은 <strong>클래스 공용</strong>이고, 뒤의 2종이 <strong>템플러 전용</strong>입니다.</p>
+
+  <div class="tw"><table>
+    <tr><th>부위</th><th>아이템</th><th>핵심 효과</th></tr>
+    <tr><td>장화</td><td><strong>헤르메스의 장화</strong><br><span class="mono">Boots of Hermes</span></td><td>★ <strong>넉백·이동 방해 완전 면역</strong> · 이동 속도 +15% · 전 저항 +15% · 물약 효과 +13% · 획득 반경 +40%</td></tr>
+    <tr><td>장신구</td><td><strong>지식의 연대기</strong><br><span class="mono">Chronicle of Knowledge</span></td><td>★ 처치당 <strong>보너스 경험치 +3%</strong>, <strong>100회 중첩</strong>, 유니크 이상 드랍 전까지 유지 · 전 저항 +15% · 치명타 확률 +15% · 쿨감 +15%</td></tr>
+    <tr><td>투구</td><td><strong>폭풍의 왕관</strong><br><span class="mono">Crown of Storms</span></td><td>★ 적중 시 <strong>냉기 120%</strong> 즉시 · ★ 적중 시 <strong>25% 확률로 연쇄 번개 120%</strong> · 번개 피해 +25% · 치명타 피해 +25%</td></tr>
+    <tr><td>목걸이</td><td><strong>유혈 목장식</strong><br><span class="mono">Goreneck</span></td><td>★ 적을 <strong>산산조각 낸 뒤 5초간</strong> 체·마 재생 +150%, 피해 +20% · 처치 후 피해 +20%(10초·5중첩)</td></tr>
+    <tr><td>반지</td><td><strong>테라의 속박</strong><br><span class="mono">Terra's Binding</span></td><td>★ <strong>전 저항 및 전 원소 +25%</strong> · 처치 후 이동 속도 +15%(10초·5중첩)</td></tr>
+    <tr><td>갑옷</td><td><strong>뱀파이어 로드의 망토</strong><br><span class="mono">Vampire Lord's Cape</span></td><td>★ <strong>소모한 마나의 123%만큼 회복</strong> · 적중 시 마나 +4 · 전 원소 +20% · 전 저항 +15%</td></tr>
+    <tr><td><strong>검</strong></td><td><strong>굴러가는 천둥</strong><br><span class="mono">Rolling Thunder</span> <span class="tag data">템플러 전용</span></td><td>공격 속도 <strong>100%</strong> · ★ <strong>굴러가는 천둥 발동 확률 +50%</strong> · 번개 피해 +25% · 치명타 시 5% 확률로 <strong>전 스킬 기본 공속 +30%</strong>(5초)</td></tr>
+    <tr><td><strong>보조</strong></td><td><strong>저항의 마도서</strong><br><span class="mono">Tome of Defiance</span> <span class="tag data">템플러 전용</span></td><td>전 저항 +12% · 피해 +36 · 치명타 피해 +20% · 치명타 확률 +12% · 효과 지속 +12%</td></tr>
+  </table></div>
+  <p class="src"><span class="tag comm">커뮤니티</span> 수치는 가이드 스크린샷의 <strong>강화된</strong><span class="mono">(Augmented)</span> Lv10 표본이라 개체마다 다릅니다. 한글 명칭은 <code>locale/KR items</code> 대조 <span class="tag data">데이터</span></p>
+
+  <div class="note">
+    <strong>왜 이 조합인가</strong> — 넉백 면역(헤르메스) + 이동 속도 + 전 저항이 캠페인 통과 속도를 지배하고, 지식의 연대기의 <strong>경험치 100중첩</strong>이 레벨업을 당깁니다. 화력은 폭풍의 왕관·굴러가는 천둥의 <strong>온힛 발동</strong>이 담당합니다 — 저레벨에서는 스킬 피해보다 온힛이 훨씬 큽니다.
+  </div>
+</section>
+
+<section id="lv45">
+  <h2>Lv 45 — 전쟁신의 갑옷</h2>
+  <p class="src"><code>temp_leveling.pdf</code> 8~9쪽 · 캡션 <em>“45 is the lowest level you need to use the lightning synergy + war god's set”</em></p>
+  <p><strong>45레벨이 번개 시너지 + 전쟁신 세트를 굴릴 수 있는 최소 레벨</strong>입니다. 여기서 빌드가 완성 형태로 바뀝니다.</p>
+
+  <h3>세트 보너스</h3>
+  <div class="tw"><table>
+    <tr><th>피스</th><th>효과</th></tr>
+    <tr><td>구성</td><td><strong>투구 · 갑옷 · 마도서(보조) · 검</strong></td></tr>
+    <tr><td><strong>2</strong></td><td>타오르는 확신이 <strong>무한 중첩</strong>, 적 <strong>30% 감속</strong></td></tr>
+    <tr><td><strong>3</strong></td><td>타오르는 확신에 걸린 적이 피격 시 <strong>남은 연소 총량의 30%</strong>만큼 화염 폭발</td></tr>
+    <tr><td><strong>4</strong></td><td><strong>피해 감소 +40%</strong></td></tr>
+  </table></div>
+
+  <h3>구성품</h3>
+  <div class="tw"><table>
+    <tr><th>부위</th><th>아이템</th><th>Lv45 표본 수치</th></tr>
+    <tr><td>투구</td><td><strong>전쟁신의 왕관</strong><br><span class="mono">War God's Crown</span></td><td>체력 +563 · 마나 +59 · 피해 +177 · 화염 +15% · <strong>적중 시 마나 +23</strong> · 치명타 확률 +15% · 효과 지속 +15% · 쿨감 +15%</td></tr>
+    <tr><td>갑옷</td><td><strong>전쟁신의 판금갑</strong><br><span class="mono">War God's Plate</span></td><td>체력 +847 · 마나 +87 · 피해 +185 · 화염 +14% · 마나 재생 +16 · <strong>전 원소 +20%</strong> · 전 저항 +15%</td></tr>
+    <tr><td>보조</td><td><strong>전쟁신의 대작</strong><br><span class="mono">War God's Opus</span></td><td>체력 +151 · 마나 +165 · 피해 +209 · 화염 +15% · <strong>공격 속도 +15%</strong> · 피해 +280 · 사거리 +15%</td></tr>
+    <tr><td>검</td><td class="mono">War God's Blade</td><td><strong>이 시점에서는 안 씁니다</strong> — 아래 참조</td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>45레벨 구성은 세트 3피스입니다.</strong> 검 슬롯에는 전쟁신의 검이 아니라 <strong>굴러가는 천둥</strong>(Lv45 승급본)이 들어갑니다. 즉 2·3피스 효과(무한 중첩 + 폭발)만 켜지고 <strong>4피스 피해 감소 +40%는 아직 없습니다</strong>. 100레벨에서 검이 <strong>«전쟁신의 굴러가는 천둥과 차단의 칼날»</strong>(신화 등급 제작)로 바뀌면서 세트가 완성됩니다 — <a href="progression.html">성장 문서</a> 참조.
+  </div>
+
+  <h3>나머지 부위 (Lv45 승급본)</h3>
+  <p>10레벨에서 쓰던 범용 6종의 옵션 구성이 그대로이고 수치만 오릅니다.</p>
+  <div class="tw"><table>
+    <tr><th>아이템</th><th>Lv45 표본</th></tr>
+    <tr><td>헤르메스의 장화</td><td>체력 +380 · 마나 +54 · 피해 +67 (효과 동일)</td></tr>
+    <tr><td>지식의 연대기</td><td>체력 +215 · 마나 +54 · 피해 +80 (보석 <strong>번개 피해 +16%</strong>)</td></tr>
+    <tr><td>유혈 목장식</td><td>체력 +202 · 마나 +66 · 피해 +85 (보석 번개 피해 +16% ×2)</td></tr>
+    <tr><td>테라의 속박</td><td>체력 +178 · 마나 +69 · 피해 +85 · <strong>피해 +280</strong></td></tr>
+    <tr><td>굴러가는 천둥</td><td>체력 +154 · 마나 +67 · <strong>피해 457</strong> · 피해 +280 · 쿨감 +15%</td></tr>
+  </table></div>
+  <p class="src"><span class="tag comm">커뮤니티</span> 전부 가이드 스크린샷의 강화 표본입니다</p>
+</section>
+
+<section id="trees">
+  <h2>레벨 구간별 트리 배분</h2>
+  <p class="src"><code>temp_leveling.pdf</code> 4~7 · 9~12쪽 (캐릭터 <span class="mono">Tamtori</span>)</p>
+
+  <div class="note warn">
+    <strong>노드 이름은 비워 두었습니다.</strong> 원본이 저해상도 스크린샷이라 아이콘만 보이고 이름이 판독되지 않습니다. 아래는 <strong>확인 가능한 것만</strong> — 어느 트리에 몇 포인트가 들어갔는지, 어떤 키에 물렸는지입니다. 노드 이름 전체는 <span class="tag unk">미확인</span>.
+  </div>
+
+  <div class="tw"><table>
+    <tr><th>시점</th><th>마스터리</th><th>트리별 포인트</th><th>메모</th></tr>
+    <tr><td><strong>Lv 10</strong></td><td>M 1</td><td>격노 <strong>10</strong></td><td>주력 노드 3개가 <code>LMB</code>에 물려 있습니다 (좌클릭 = 기본 공격 대체)</td></tr>
+    <tr><td><strong>Lv 20</strong></td><td>M 5</td><td>격노 <strong>20</strong></td><td>격노 트리 오른쪽 절반은 아직 잠김. 마스터리는 공용(왕관) 줄에만 5</td></tr>
+    <tr><td><strong>Lv 30</strong></td><td>M 11</td><td>격노 <strong>22</strong> · 구원 <strong>8</strong></td><td>주력이 <code>LMB</code> → <code>RMB</code>로 이동. 구원 트리를 엽니다. <strong>스킬 포인트 8 미사용</strong> 상태로 찍혀 있습니다</td></tr>
+    <tr><td><strong>Lv 40</strong></td><td>M 19</td><td>구원 <strong>18</strong></td><td>구원 집중 구간. 마스터리 공용 줄이 5노드로 확장</td></tr>
+    <tr><td><strong>Lv 45</strong></td><td>M 24</td><td>격노 <strong>35</strong> · 신념 <strong>10</strong></td><td>신념 트리 개시 — <code>[E]</code>에 노드 하나. 마스터리 <strong>6번째(적색) 줄</strong>에 20 투입 시작</td></tr>
+    <tr><td><strong>Lv 100 (완성)</strong></td><td>M 127</td><td>격노 <strong>37</strong> · 신념 <strong>36</strong> · 구원 <strong>27</strong></td><td>캡션 <em>“This is the finished tree to work towards”</em> — <strong>이게 목표형</strong>입니다</td></tr>
+  </table></div>
+
+  <div class="note">
+    <strong>읽는 법</strong> — 격노를 20레벨까지 몰아 찍어 기본 공격 축을 세우고, 30에 구원으로 생존을 보강한 뒤, 45에 전쟁신 세트가 들어오면서 신념(화염·연소)을 본격적으로 올립니다. <strong>복수 트리는 끝까지 0</strong>입니다.
+  </div>
+
+  <div class="note ok">
+    <strong>마스터리는 100레벨 전부터 쌓입니다.</strong> 스크린샷 헤더가 전부 반례입니다 — <code>Lv10/M1 · Lv20/M5 · Lv30/M11 · Lv40/M19 · Lv45/M24 · Lv100/M127</code>. 게다가 모든 시점에서 <code>Mastery Points: 0</code>, 즉 얻는 족족 이미 쓰고 있습니다. <span class="tag data">데이터</span>
+  </div>
+</section>
+
+<section id="next">
+  <h2>다음</h2>
+  <div class="grid">
+    <a class="tile" href="progression.html">
+      <h3>성장 (100렙 이후) →</h3>
+      <p>엔드게임 장비 8종 · 룬 조합 · 완성 트리와 마스터리 · 아티팩트</p>
+    </a>
+    <a class="tile" href="index.html">
+      <h3>← 템플러 개요</h3>
+      <p>트리 4종 · 타오르는 확신 · 번개 시너지 · 강약점</p>
+    </a>
+  </div>
+  <p class="src">원저자 <strong>Rahlence</strong> · «Templar Leveling and Progression» (2026-06-01, 공식 디스코드 #build-forum) · 전사본 <code>guides/transcripts/templar_transcript.md</code></p>
+</section>
+
+<footer>
+  개인 참고용 한국어 정리 · Chronicon 1.54.1 기준 · 검색엔진 색인 제외
+</footer>
+</div>
+<a href="#" class="totop">↑ 맨 위</a>
+<script src="../../assets/wiki.js"></script>
+</body>
+</html>
