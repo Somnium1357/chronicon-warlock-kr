@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>워든 레벨링 · 크로니콘 위키</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../../assets/wiki.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="brand plain" href="../../index.html">크로니콘 <span>위키</span></a>
+  <span class="crumb"><a href="../index.html">클래스</a> › <a href="index.html">워든</a> › 레벨링</span>
+</div>
+
+<nav class="side">
+  <div class="grp">시작</div>
+  <ul>
+    <li><a href="../../index.html">홈</a></li>
+  </ul>
+  <div class="grp">게임 기초</div>
+  <ul>
+    <li><a href="../../basics/damage.html">피해 계산</a></li>
+    <li><a href="../../basics/defense.html">방어</a></li>
+    <li><a href="../../basics/skills.html">스킬 · 태그</a></li>
+    <li><a href="../../basics/items.html">아이템 · 제작</a></li>
+    <li><a href="../../basics/endgame.html">난이도 · 엔드게임</a></li>
+    <li><a href="../../basics/glossary.html">한영 명칭</a></li>
+  </ul>
+  <div class="grp">클래스</div>
+  <ul>
+    <li><a href="../../classes/index.html">클래스 개요</a></li>
+    <li><a href="../../classes/warlock/index.html">워록</a></li>
+    <li><a href="../../classes/warlock/leveling.html">└ 레벨링</a></li>
+    <li><a href="../../classes/warlock/progression.html">└ 성장</a></li>
+    <li><a href="../../classes/warlock/builds.html">└ 빌드</a></li>
+    <li><a href="../../classes/templar/index.html">템플러</a></li>
+    <li><a href="../../classes/templar/leveling.html">└ 레벨링</a></li>
+    <li><a href="../../classes/templar/progression.html">└ 성장</a></li>
+    <li><a href="../../classes/berserker/index.html">버서커</a></li>
+    <li><a href="../../classes/berserker/leveling.html">└ 레벨링</a></li>
+    <li><a href="../../classes/berserker/progression.html">└ 성장</a></li>
+    <li><a href="../../classes/warden/index.html">워든</a></li>
+    <li><a class="cur" href="../../classes/warden/leveling.html">└ 레벨링</a></li>
+    <li><a href="../../classes/warden/progression.html">└ 성장</a></li>
+    <li><a class="soon" href="#">메카니스트 (예정)</a></li>
+  </ul>
+  <div class="grp">자료</div>
+  <ul>
+    <li><a href="../../meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="../../meta/patches.html">패치 동향</a></li>
+  </ul>
+</nav>
+
+<h1>워든 레벨링 1 → 100</h1>
+<p class="lede">Rahlence의 «Warden Leveling and Progression» 중 레벨링 편. <strong>진 레전더리 없이</strong> 굴리는 것을 전제로 합니다.</p>
+
+<div class="searchbar">
+  <input type="search" id="q" placeholder="이 문서에서 검색" autocomplete="off" spellcheck="false" aria-label="문서 내 검색">
+  <span class="cnt" id="cnt"></span>
+</div>
+<p id="none">검색 결과가 없습니다.</p>
+
+<section id="common">
+  <h2>먼저 — 클래스 공통 요령</h2>
+  <div class="note">
+    스탯 우선순위, 캐릭터 복사 도박 트릭, 염료 파밍은 <strong>5개 클래스 가이드가 문자 그대로 공유</strong>합니다 — <a href="../warlock/leveling.html">워록 레벨링</a>을 보세요.
+  </div>
+  <p class="src">해당 원문: <code>ward_leveling.pdf</code> 1~2쪽</p>
+</section>
+
+<section id="lv10">
+  <h2>Lv 10 — 저레벨 도박 장비</h2>
+  <p class="src"><code>ward_leveling.pdf</code> 3~4쪽 · 캡션 <em>“Here are useful leveling items:”</em> · 캐릭터 <span class="mono">Bongie</span></p>
+  <p>범용 6종은 <a href="../templar/leveling.html">템플러 레벨링</a>과 <strong>같습니다</strong> — 헤르메스의 장화 · 지식의 연대기 · 폭풍의 왕관 · 유혈 목장식 · 테라의 속박 · 뱀파이어 로드의 망토. 아래는 <strong>워든 전용</strong>입니다.</p>
+
+  <div class="tw"><table>
+    <tr><th>부위</th><th>아이템</th><th>핵심 효과</th></tr>
+    <tr><td>보조</td><td><strong>고통의 볼트</strong><br><span class="mono">Pain Bolts</span> <span class="tag data">유니크</span></td><td>워든 전용 화살(보조). Lv10 도박 대상</td></tr>
+    <tr><td><strong>활</strong></td><td><strong>세레니티</strong><br><span class="mono">Serenity</span></td><td>공격 속도 <strong>120%</strong> · ★ <strong>모든 궁술 스킬의 공격 속도 +80%</strong> · 치명타 시 5% 확률로 전 스킬 기본 공속 +30%(5초) · 쿨감 +15%<br>플레이버 <em>“Can't take the sky from me”</em></td></tr>
+  </table></div>
+
+  <h3>다음 도박 목표 — Lv20 · Lv39</h3>
+  <div class="tw"><table>
+    <tr><th>레벨</th><th>아이템</th><th>핵심 효과</th></tr>
+    <tr><td><strong>20</strong></td><td><strong>폭풍 펜던트</strong><br><span class="mono">Storm Pendant</span></td><td>★ <strong>번개 화살·천둥 구체가 적중 시 님버스를 소환</strong> (Lv20판은 <strong>랭크 3</strong>, Lv100판은 <strong>랭크 5</strong>) · ★ 마나 재생 +4</td></tr>
+    <tr><td><strong>39</strong></td><td><strong>눈엘프의 장화</strong><br><span class="mono">Boots of The Snow Elf</span></td><td>★ <strong>겨울 폭발의 넉백이 사라지고, 착지 시 순간 결빙을 시전</strong> · 이동 속도 +20% · <strong>모든 회복량 +70%</strong> · 물약 효과 +50%</td></tr>
+  </table></div>
+  <p class="src"><span class="tag comm">커뮤니티</span> 수치는 가이드 스크린샷의 강화 표본입니다. 한글 명칭은 <code>locale/KR items</code> 대조 <span class="tag data">데이터</span></p>
+
+  <div class="note">
+    <strong>님버스는 워든 스킬입니다.</strong> 옛 한국어 자료 중에 님버스를 워록 레벨링에 넣으라는 글이 있는데 <strong>클래스를 잘못 본 것</strong>입니다 — 폭풍 펜던트가 워든 전용 아이템이라는 점이 근거입니다. <span class="tag data">데이터</span>
+  </div>
+</section>
+
+<section id="lv30">
+  <h2>Lv 30 — 폭풍 인도자의 예복 세트</h2>
+  <p class="src"><code>ward_leveling.pdf</code> 6쪽 · 캡션 <em>“Go for 3set + Serenity. Drop on-hit effects now”</em></p>
+  <p>캡션이 지시하는 게 두 가지입니다 — <strong>세트 3피스 + 세레니티</strong>를 맞추고, 이제 <strong>온힛 효과는 버리라</strong>는 것입니다. 저레벨을 캐리하던 온힛 발동이 여기서 세트 회로에 자리를 내줍니다.</p>
+
+  <h3>세트 보너스</h3>
+  <div class="tw"><table>
+    <tr><th>피스</th><th>효과</th></tr>
+    <tr><td>구성</td><td><strong>투구 · 갑옷 · 화살(보조) · 활</strong></td></tr>
+    <tr><td><strong>2</strong></td><td>피뢰침에 맞은 적에게 <strong>같은 양의 피해를 초당</strong> 5초간 화상 부여. <strong>중첩됩니다</strong></td></tr>
+    <tr><td><strong>3</strong></td><td>정전기 충전 시 <strong>남은 피뢰침 화상 총량을 발동 스킬 피해에 합산</strong>. 피뢰침·정전기 발동 확률 <strong>+40%</strong></td></tr>
+    <tr><td><strong>4</strong></td><td>피해 감소 <strong>+40%</strong></td></tr>
+  </table></div>
+
+  <h3>구성품 (Lv30 표본)</h3>
+  <div class="tw"><table>
+    <tr><th>부위</th><th>아이템</th><th>수치</th></tr>
+    <tr><td>갑옷</td><td><strong>폭풍 인도자의 예복</strong></td><td>체력 +414 · 마나 +51 · 피해 +112 · 번개 +25% · 전 원소 +20% · 전 저항 +15%</td></tr>
+    <tr><td>보조</td><td><strong>폭풍 인도자의 충격</strong></td><td>체력 +47 · 마나 +49 · 피해 +116 · <strong>공속 +15%</strong> · 이동 +15% · 피해 +157 · 치명타 피해 +25%</td></tr>
+    <tr><td>투구</td><td><strong>폭풍 인도자의 형상</strong></td><td>체력 +292 · 마나 +35 · 피해 +91 · 번개 +25% · 치명타 피해 +25% · 쿨감 +15%</td></tr>
+    <tr><td><strong>활</strong></td><td><strong>세레니티</strong> (세트 아님)</td><td>피해 <strong>253</strong> · 공속 120% · ★ 궁술 공속 <strong>+80%</strong></td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>이 시점은 세트 3피스입니다.</strong> 활 슬롯의 세트 아이템은 원래 <strong>폭풍 인도자의 조준</strong><span class="mono">(Stormcaller's Aim)</span>인데, Lv30에서는 <strong>세레니티</strong>를 대신 씁니다. 즉 <strong>4피스 피해 감소 +40%는 아직 없습니다</strong>. 100레벨에서 두 활이 <strong>«폭풍 인도자의 조준 · 세레니티 룬»</strong> 하나로 합쳐지며 세트가 완성됩니다 — <a href="progression.html">성장 문서</a> 참조.
+  </div>
+</section>
+
+<section id="lv55">
+  <h2>Lv 55 — 재세팅</h2>
+  <p class="src"><code>ward_leveling.pdf</code> 7쪽 · 캡션 <em>“At 55, respec and regear. Level up items with excess legendaries”</em></p>
+  <ul>
+    <li><strong>특성을 초기화하고 장비를 갈아치웁니다</strong></li>
+    <li>남아도는 레전더리는 팔지 말고 <strong>아이템 레벨업 재료</strong>로 씁니다</li>
+    <li>세레니티(Lv55): 피해 <strong>575</strong> · 피해 +379 — Lv30판의 두 배 이상</li>
+  </ul>
+</section>
+
+<section id="trees">
+  <h2>레벨 구간별 트리 배분</h2>
+  <p class="src"><code>ward_leveling.pdf</code> 5 · 7~10쪽 (캐릭터 <span class="mono">Bongie</span>)</p>
+
+  <div class="note warn">
+    <strong>노드 이름은 비워 두었습니다.</strong> 원본이 저해상도라 아이콘만 보입니다. 아래는 <strong>확인 가능한 것만</strong>입니다. 노드 이름은 <span class="tag unk">미확인</span>.
+  </div>
+
+  <div class="tw"><table>
+    <tr><th>시점</th><th>마스터리</th><th>트리별 포인트</th></tr>
+    <tr><td><strong>Lv 10</strong></td><td>M 1</td><td>폭풍 인도자 시작</td></tr>
+    <tr><td><strong>Lv 30</strong></td><td>M 11</td><td>폭풍 인도자 계속</td></tr>
+    <tr><td><strong>Lv 55</strong></td><td>M 33</td><td>폭풍 인도자 + <strong>겨울 전령</strong> 개시 (재세팅 직후)</td></tr>
+    <tr><td><strong>Lv 100 (레벨링 완성)</strong></td><td>M 91</td><td>바람 척후병 <strong>25</strong> · 드루이드 <strong>6</strong> · 폭풍 인도자 <strong>47</strong> · 겨울 전령 <strong>22</strong> = <strong>100</strong></td></tr>
+  </table></div>
+  <p>캡션: <em>“This is the completed build leading into progression”</em> — <strong>성장 단계로 넘어가는 완성형</strong>이라는 뜻입니다.</p>
+
+  <div class="note">
+    <strong>키 배치</strong> — 폭풍 인도자 트리에 <code>[R]</code> 노드 1개(5랭크)와 <strong><code>RMB</code> 노드 3개</strong>, 바람 척후병에 <code>[E]</code> 노드 1개(5랭크). 주력이 우클릭에 몰려 있습니다. <span class="tag comm">커뮤니티</span>
+  </div>
+
+  <div class="note ok">
+    <strong>마스터리는 100레벨 전부터 쌓입니다</strong> — <code>Lv10/M1 · Lv30/M11 · Lv55/M33 · Lv100/M91</code>. 모든 시점에서 <code>Mastery Points: 0</code>, 즉 얻는 족족 쓰고 있습니다. <span class="tag data">데이터</span>
+  </div>
+</section>
+
+<section id="next">
+  <h2>다음</h2>
+  <div class="grid">
+    <a class="tile" href="progression.html">
+      <h3>성장 (100렙 이후) →</h3>
+      <p>스타터/완성 장비 · 룬 조합 · 완성 트리와 마스터리 · 아티팩트</p>
+    </a>
+    <a class="tile" href="index.html">
+      <h3>← 워든 개요</h3>
+      <p>트리 4종 · 피뢰침·정전기 회로 · 룬으로 세트 완성하기</p>
+    </a>
+  </div>
+  <p class="src">원저자 <strong>Rahlence</strong> · «Warden Leveling and Progression» (2026-06-09, 공식 디스코드 #build-forum) · 전사본 <code>guides/transcripts/warden_transcript.md</code></p>
+</section>
+
+<footer>
+  개인 참고용 한국어 정리 · Chronicon 1.54.1 기준 · 검색엔진 색인 제외
+</footer>
+</div>
+<a href="#" class="totop">↑ 맨 위</a>
+<script src="../../assets/wiki.js"></script>
+</body>
+</html>

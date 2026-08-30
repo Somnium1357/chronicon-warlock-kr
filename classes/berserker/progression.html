@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>버서커 성장 · 크로니콘 위키</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../../assets/wiki.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="brand plain" href="../../index.html">크로니콘 <span>위키</span></a>
+  <span class="crumb"><a href="../index.html">클래스</a> › <a href="index.html">버서커</a> › 성장</span>
+</div>
+
+<nav class="side">
+  <div class="grp">시작</div>
+  <ul>
+    <li><a href="../../index.html">홈</a></li>
+  </ul>
+  <div class="grp">게임 기초</div>
+  <ul>
+    <li><a href="../../basics/damage.html">피해 계산</a></li>
+    <li><a href="../../basics/defense.html">방어</a></li>
+    <li><a href="../../basics/skills.html">스킬 · 태그</a></li>
+    <li><a href="../../basics/items.html">아이템 · 제작</a></li>
+    <li><a href="../../basics/endgame.html">난이도 · 엔드게임</a></li>
+    <li><a href="../../basics/glossary.html">한영 명칭</a></li>
+  </ul>
+  <div class="grp">클래스</div>
+  <ul>
+    <li><a href="../../classes/index.html">클래스 개요</a></li>
+    <li><a href="../../classes/warlock/index.html">워록</a></li>
+    <li><a href="../../classes/warlock/leveling.html">└ 레벨링</a></li>
+    <li><a href="../../classes/warlock/progression.html">└ 성장</a></li>
+    <li><a href="../../classes/warlock/builds.html">└ 빌드</a></li>
+    <li><a href="../../classes/templar/index.html">템플러</a></li>
+    <li><a href="../../classes/templar/leveling.html">└ 레벨링</a></li>
+    <li><a href="../../classes/templar/progression.html">└ 성장</a></li>
+    <li><a href="../../classes/berserker/index.html">버서커</a></li>
+    <li><a href="../../classes/berserker/leveling.html">└ 레벨링</a></li>
+    <li><a class="cur" href="../../classes/berserker/progression.html">└ 성장</a></li>
+    <li><a href="../../classes/warden/index.html">워든</a></li>
+    <li><a href="../../classes/warden/leveling.html">└ 레벨링</a></li>
+    <li><a href="../../classes/warden/progression.html">└ 성장</a></li>
+    <li><a class="soon" href="#">메카니스트 (예정)</a></li>
+  </ul>
+  <div class="grp">자료</div>
+  <ul>
+    <li><a href="../../meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="../../meta/patches.html">패치 동향</a></li>
+  </ul>
+</nav>
+
+<h1>버서커 성장 (100렙 이후)</h1>
+<p class="lede">Rahlence의 «Berserker Leveling and Progression» 중 성장 편. 초기 구성 → 완성 구성 두 단계입니다.</p>
+
+<div class="searchbar">
+  <input type="search" id="q" placeholder="이 문서에서 검색" autocomplete="off" spellcheck="false" aria-label="문서 내 검색">
+  <span class="cnt" id="cnt"></span>
+</div>
+<p id="none">검색 결과가 없습니다.</p>
+
+<section id="common">
+  <h2>먼저 — 클래스 공통 성장 절차</h2>
+  <div class="note">
+    파밍 대상별 변칙 종류, <strong>30레벨 도박(3,775) vs 100레벨(24,884)</strong>, 원정 트리 황금 크리스탈 차이표는 <a href="../warlock/progression.html">워록 성장</a>에 있고 문구가 동일합니다.
+  </div>
+</section>
+
+<section id="runes">
+  <h2>이 빌드를 만드는 룬들</h2>
+  <p class="src"><code>bers_prog.pdf</code> 3~5쪽 (초기, <span class="mono">Rolgor</span> M300) · 8~10쪽 (완성, <span class="mono">Rolmen</span> M1154)</p>
+  <p>버서커 성장은 <strong>룬을 하나씩 채워 넣는 과정</strong>입니다. 초기 구성에는 <strong>빈 룬 슬롯</strong>이 있고, 완성 구성에서 그 자리가 채워집니다.</p>
+
+  <div class="tw"><table>
+    <tr><th>룬</th><th>부위</th><th>효과</th></tr>
+    <tr><td><strong>무자비 격타</strong><br><span class="mono">Brutal Attacks</span></td><td>주먹</td><td><strong>공격 속도 150% 미만 1%당 피해 +8%</strong>. 100% 미만 구간은 <strong>2배</strong></td></tr>
+    <tr><td><strong>푸른 낙뢰</strong><br><span class="mono">The Blue Bolt</span></td><td>주먹</td><td><strong>급강하·도약 시전 시 드래곤 스톰을 랭크 5로 시전.</strong> 드래곤 스톰 피해 <strong>+200%</strong></td></tr>
+    <tr><td><strong>조상의 격노</strong><br><span class="mono">Ancestral Rage</span></td><td>투구</td><td>분노 기반 패시브를 <strong>항상 120%로 고정</strong></td></tr>
+    <tr><td><strong>표적 파괴</strong><br><span class="mono">Targeted Destruction</span></td><td>갑옷</td><td>파괴적 기동이 <strong>범위 내 무작위 적을 조준</strong>하고, 맞은 모든 적에게 <strong>중첩 화상</strong> — 준 피해의 <strong>150%를 초당 5초간</strong></td></tr>
+    <tr><td><strong>보초</strong><br><span class="mono">The Sentry</span></td><td>장화</td><td>보초 스킬 피해 <strong>+150%</strong>, 지속 <strong>+150%</strong>, 단 피해 반경 절반</td></tr>
+    <tr><td><strong>국왕 영주</strong><br><span class="mono">Kingsrock</span></td><td>반지</td><td><strong>모든 보석 효과 +65%</strong></td></tr>
+  </table></div>
+
+  <div class="note ok">
+    <strong>조상의 격노가 왜 필수인가</strong> — 분노 기반 패시브는 <strong>현재 분노 수치에 비례</strong>합니다. 그래서 이 룬이 없으면 분노를 소모하는 <span class="mono">Rage Release</span>를 찍는 순간 패시브가 약해져 <strong>오히려 손해</strong>가 됩니다. 룬이 패시브를 120%에 고정해야 비로소 분노 소모 빌드가 성립합니다. <span class="tag comm">커뮤니티</span>
+  </div>
+</section>
+
+<section id="gems">
+  <h2>최대 분노 보석 곱연산</h2>
+  <p>버서커 특유의 스케일링 고리입니다.</p>
+  <div class="card">
+    <p><strong>①</strong> 장비 여러 부위에 <strong>최대 분노 +29 (버서커 전용)</strong> 보석을 총 <strong>8개</strong> 박습니다<br>
+       <strong>②</strong> 반지 <span class="mono">Kingsrock</span>이 <strong>모든 보석 효과 +65%</strong><br>
+       <strong>③</strong> 거기에 각 부위의 <strong>보석 효과 +20%</strong>가 더 곱해집니다<br>
+       <strong>④</strong> 늘어난 최대 분노가 <span class="mono">Ancestral Rage</span>와 <span class="mono">Rage Release</span> <strong>양쪽</strong>을 키웁니다</p>
+  </div>
+  <p>즉 <strong>보석 효과 옵션이 곧 분노</strong>이고, 분노가 곧 화력과 방어입니다.</p>
+
+  <div class="note">
+    <strong>분노를 방어로 바꾸는 경로</strong> — 목걸이 <strong>서리 태생의 가보</strong><span class="mono">(Frostborn Heirloom)</span>가 <em>“Rage Release가 피해 대신 <strong>보호막</strong>을 제공. 소모한 분노 <strong>3당 최대 체력의 1%</strong>, 30초 지속”</em>입니다. 최대 분노를 키우면 보호막도 같이 커집니다. <span class="tag comm">커뮤니티</span>
+  </div>
+</section>
+
+<section id="finalgear">
+  <h2>완성 구성 핵심 아이템</h2>
+  <p class="src">캡션 <em>“Here is the progression setup once you have all the runes needed”</em></p>
+
+  <div class="tw"><table>
+    <tr><th>부위</th><th>아이템</th><th>핵심</th></tr>
+    <tr><td><strong>주먹</strong></td><td>《 <strong>무자비한 드래곤파이어 주먹 · 푸른 낙뢰 룬</strong> 》<br><span class="mono">Brutal Dragonfire Fists of The Blue Bolt</span><br><span class="tag data">신화 · 제작</span></td><td>피해 <strong>3,000</strong> · 공속 100%<br>★ 무자비 격타 + ★ 푸른 낙뢰 (룬 2개)<br>화염 +35% · 제압 +22% · <strong>최대 분노 +25</strong> · <strong>왕관 적에게 +25%</strong> · <strong>분노 생성 +50%</strong></td></tr>
+    <tr><td>갑옷</td><td><strong>드래곤파이어 갑옷 · 표적 파괴 룬</strong></td><td>체력 <strong>+3,138</strong> · 화염 +35% · 체력 재생 +25 · 전 저항 +20% · 전 원소 +20%</td></tr>
+    <tr><td>투구</td><td><strong>드래곤파이어 형상 · 조상의 격노 룬</strong></td><td>보석이 <strong>최대 체력 +28% ×2 · 회피 +14%</strong>로 상승</td></tr>
+    <tr><td>장화</td><td><strong>완충 군화 · 보초 룬</strong></td><td>★ 받는 피해 25% 분산 + 30% 감소 · ★ 보초 스킬 +150%<br>이동 +20% · 처치 후 이동 속도 +20%(5중첩)</td></tr>
+    <tr><td>목걸이</td><td><strong>서리 태생의 가보</strong></td><td>★ 분노 방출 → <strong>보호막</strong> (분노 3당 최대 체력 1%, 30초)</td></tr>
+    <tr><td>반지</td><td><strong>국왕 영주</strong> <span class="mono">Kingsrock</span></td><td>★ <strong>모든 보석 효과 +65%</strong> · 처치 시 25% 확률 추가 크리스탈</td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>확인하지 못한 지점</strong> — 완성 구성에서 장화가 <span class="mono">Brutal Stompers</span>(도약 쿨다운·마나 면제) → <span class="mono">Staggering Boots</span>로 <strong>교체</strong>됩니다. 그런데 주먹의 <span class="mono">The Blue Bolt</span> 룬은 <strong>도약 시전에 의존</strong>합니다. 원문 그대로 옮겼으나 이 조합이 실제로 성립하는지는 <span class="tag unk">미확인</span>입니다. 장화를 바꾸기 전에 직접 확인하세요.
+  </div>
+</section>
+
+<section id="chain">
+  <h2>완성형 시너지 고리</h2>
+  <div class="card">
+    <p><span class="mono">The Blue Bolt</span>(도약 → 드래곤 스톰 랭크 5, 피해 +200%)<br>
+       → <span class="mono">Soulstorm</span>(드래곤 스톰이 소환한 드래곤 소울 피해 +200%)<br>
+       → <span class="mono">Targeted Destruction</span>(파괴적 기동이 중첩 화상 부여)<br>
+       → <span class="mono">Burning Lightning</span>(불타는 적의 번개 피해 +50%)<br>
+       → <strong>원소 공명</strong>(원소별 직접 피해 +20%)</p>
+    <p>여기에 <span class="mono">Ancestral Rage</span>가 분노 패시브를 120%로 고정하고, <span class="mono">Released Heritage</span>가 분노 방출마다 유산 효과를 <strong>최대 65%</strong>(5%×13)까지 누적시킵니다.</p>
+  </div>
+</section>
+
+<section id="trees">
+  <h2>완성 트리와 마스터리</h2>
+  <p class="src"><code>bers_prog.pdf</code> 10~12쪽 · <span class="mono">Rolmen</span> Lv100 <strong>M1154</strong></p>
+
+  <div class="note warn">
+    <strong>🔴 표시 랭크와 실제 투자가 다릅니다.</strong> 완성 캐릭터의 <strong>모든 탭</strong>에서 표시 랭크 합계가 좌측 카운터보다 <strong>정확히 1 큽니다</strong>. 초기 캐릭터에서 <strong>5</strong>였던 노드가 완성 캐릭터에서 <strong>6</strong>으로 표시되는 것과 대응하므로, 아티팩트 <strong>Ancient Bead</strong>(모든 유산 스킬 +1 랭크)에 의한 <strong>장비 랭크</strong>로 보입니다. <strong>좌측 카운터가 실제 투자 포인트</strong>입니다.
+  </div>
+
+  <div class="tw"><table>
+    <tr><th>트리</th><th>Lv100 레벨링<br>(M151)</th><th>완성형<br>(M1154)</th></tr>
+    <tr><td>용의 혈족</td><td>35</td><td>주력 유지</td></tr>
+    <tr><td>수호자</td><td>14</td><td><strong>22</strong></td></tr>
+    <tr><td>하늘의 군주</td><td>17</td><td>—</td></tr>
+    <tr><td>서리 태생</td><td>14</td><td>—</td></tr>
+  </table></div>
+
+  <h3>마스터리 진행</h3>
+  <div class="tw"><table>
+    <tr><th>줄</th><th>M151 시점</th><th>완성형</th></tr>
+    <tr><td>수호자 (녹색)</td><td>28</td><td>—</td></tr>
+    <tr><td>하늘의 군주 (보라)</td><td>41</td><td><strong>94</strong></td></tr>
+    <tr><td>용의 혈족 (적색)</td><td>27</td><td><strong>93</strong></td></tr>
+    <tr><td>서리 태생 (청색)</td><td>미투자</td><td><strong>27</strong></td></tr>
+  </table></div>
+  <p>캡션이 지시한 <strong>화염 → 물리 → 번개 → 냉기</strong> 순서가 그대로 반영돼 있습니다 — 서리 태생 줄은 마지막에야 열립니다. 노드 이름은 <span class="tag unk">미확인</span>.</p>
+</section>
+
+<section id="artifacts">
+  <h2>아티팩트 6종</h2>
+  <p class="src"><code>bers_prog.pdf</code> 13쪽 · <strong>고대 야수 DLC</strong> 콘텐츠</p>
+  <div class="tw"><table>
+    <tr><th>형태</th><th>아티팩트</th><th>효과</th></tr>
+    <tr><td rowspan="2">삼각</td><td><strong>The Twins</strong></td><td>체력·마나 획득물이 항상 쌍으로</td></tr>
+    <tr><td><strong>Magnetic Device</strong></td><td>획득 반경 +50%</td></tr>
+    <tr><td rowspan="2">마름모</td><td><strong>Ancient Bead</strong></td><td><strong>모든 유산 스킬 +1 랭크</strong></td></tr>
+    <tr><td><strong>Battle Haze</strong></td><td><strong>−25% 공격 속도</strong>, +25% 이동 속도, +10% 회피</td></tr>
+    <tr><td rowspan="2">별</td><td><strong>Crystalized Life</strong></td><td>체력 +6,000</td></tr>
+    <tr><td><strong>Rahlence's Resurrection</strong></td><td>처치 시 발동 효과가 적중 시에도 7% 확률로 발동</td></tr>
+  </table></div>
+
+  <div class="note ok">
+    <strong>Battle Haze의 −25% 공격 속도는 페널티가 아닙니다.</strong> <span class="mono">Brutal Attacks</span> 룬이 <em>“150% 미만 공격 속도 1%당 피해 +8%(100% 미만은 2배)”</em>이므로, 공속을 <strong>깎을수록 화력이 오릅니다</strong>. 이동 속도와 회피는 덤입니다.
+  </div>
+  <div class="note">
+    <strong>Ancient Bead의 +1 유산 랭크</strong>가 위에서 관찰된 「표시 랭크 +1」의 유력한 원인입니다.
+  </div>
+</section>
+
+<section id="misc">
+  <h2>그 밖에</h2>
+  <ul>
+    <li><strong>번개 와이번 소환 주문서</strong> <span class="mono">Scroll of Lightning Wyrms</span> — 캡션 <em>“Use scrolls of Lightning Wyrms to group enemies and buff yourself”</em>. <strong>적을 모으고 자신을 버프</strong>하는 용도입니다<br>
+      <span class="tag data">데이터</span> 한글패치가 <span class="mono">wyrm</span>(다리 없는 용)을 <strong>「와이번」</strong>으로 오역했습니다</li>
+    <li><strong>인젝터·런처</strong>는 워록판과 <strong>슬롯 내용·수치가 다릅니다</strong> — 워록은 제압/공속/획득 강도 계열에 암흑 혐오 바이알, 버서커는 <strong>보호막 강도/대형 체력/이동 속도</strong> 계열에 <strong>번개 혐오</strong> 바이알입니다</li>
+  </ul>
+
+  <h3>완성 캐릭터 실측</h3>
+  <div class="tw"><table>
+    <tr><th>항목</th><th>값</th></tr>
+    <tr><td>레벨 · 마스터리</td><td>Lv 100 · <strong>M 1154</strong></td></tr>
+    <tr><td>체력</td><td><strong>155,444 / 155,444</strong></td></tr>
+    <tr><td>마나</td><td>10,683 / 10,683</td></tr>
+    <tr><td><strong>분노</strong></td><td><strong>249 / 408</strong></td></tr>
+    <tr><td>미사용 마스터리</td><td>653</td></tr>
+  </table></div>
+</section>
+
+<section id="next">
+  <h2>다음</h2>
+  <div class="grid">
+    <a class="tile" href="index.html">
+      <h3>← 버서커 개요</h3>
+      <p>트리 4종 · 드래곤파이어 세트 · 공속을 낮추는 역설</p>
+    </a>
+    <a class="tile" href="leveling.html">
+      <h3>← 레벨링 1 → 100</h3>
+      <p>Lv10 유니크 2종 · Lv20 리스펙와 핵심 장화 · Lv30 세트</p>
+    </a>
+  </div>
+  <p class="src">원저자 <strong>Rahlence</strong> · «Berserker Leveling and Progression» (2026-06-01, 공식 디스코드 #build-forum) · 전사본 <code>guides/transcripts/berserker_transcript.md</code></p>
+</section>
+
+<footer>
+  개인 참고용 한국어 정리 · Chronicon 1.54.1 기준 · 검색엔진 색인 제외
+</footer>
+</div>
+<a href="#" class="totop">↑ 맨 위</a>
+<script src="../../assets/wiki.js"></script>
+</body>
+</html>

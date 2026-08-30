@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>버서커 · 크로니콘 위키</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../../assets/wiki.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="brand plain" href="../../index.html">크로니콘 <span>위키</span></a>
+  <span class="crumb"><a href="../index.html">클래스</a> › 버서커</span>
+</div>
+
+<nav class="side">
+  <div class="grp">시작</div>
+  <ul>
+    <li><a href="../../index.html">홈</a></li>
+  </ul>
+  <div class="grp">게임 기초</div>
+  <ul>
+    <li><a href="../../basics/damage.html">피해 계산</a></li>
+    <li><a href="../../basics/defense.html">방어</a></li>
+    <li><a href="../../basics/skills.html">스킬 · 태그</a></li>
+    <li><a href="../../basics/items.html">아이템 · 제작</a></li>
+    <li><a href="../../basics/endgame.html">난이도 · 엔드게임</a></li>
+    <li><a href="../../basics/glossary.html">한영 명칭</a></li>
+  </ul>
+  <div class="grp">클래스</div>
+  <ul>
+    <li><a href="../../classes/index.html">클래스 개요</a></li>
+    <li><a href="../../classes/warlock/index.html">워록</a></li>
+    <li><a href="../../classes/warlock/leveling.html">└ 레벨링</a></li>
+    <li><a href="../../classes/warlock/progression.html">└ 성장</a></li>
+    <li><a href="../../classes/warlock/builds.html">└ 빌드</a></li>
+    <li><a href="../../classes/templar/index.html">템플러</a></li>
+    <li><a href="../../classes/templar/leveling.html">└ 레벨링</a></li>
+    <li><a href="../../classes/templar/progression.html">└ 성장</a></li>
+    <li><a class="cur" href="../../classes/berserker/index.html">버서커</a></li>
+    <li><a href="../../classes/berserker/leveling.html">└ 레벨링</a></li>
+    <li><a href="../../classes/berserker/progression.html">└ 성장</a></li>
+    <li><a href="../../classes/warden/index.html">워든</a></li>
+    <li><a href="../../classes/warden/leveling.html">└ 레벨링</a></li>
+    <li><a href="../../classes/warden/progression.html">└ 성장</a></li>
+    <li><a class="soon" href="#">메카니스트 (예정)</a></li>
+  </ul>
+  <div class="grp">자료</div>
+  <ul>
+    <li><a href="../../meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="../../meta/patches.html">패치 동향</a></li>
+  </ul>
+</nav>
+
+<h1>버서커</h1>
+<p class="lede"><span class="mono">Berserker</span> · 화염 · 번개 · 물리 · 냉기 — <strong>분노</strong>를 태워 주먹으로 싸우는 근접 클래스.</p>
+
+<div class="searchbar">
+  <input type="search" id="q" placeholder="이 문서에서 검색" autocomplete="off" spellcheck="false" aria-label="문서 내 검색">
+  <span class="cnt" id="cnt"></span>
+</div>
+<p id="none">검색 결과가 없습니다.</p>
+
+<section id="overview">
+  <h2>클래스 개요</h2>
+  <p class="src">원저자 <strong>Rahlence</strong> · 원문 <code>bers_leveling.pdf</code> · <code>bers_prog.pdf</code> (2026-06-01, 공식 디스코드 #build-forum «Berserker Leveling and Progression»)</p>
+
+  <div class="tw"><table>
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td>원소</td><td><span class="chip fire">화염</span><span class="chip lightning">번개</span><span class="chip phys">물리</span><span class="chip frost">냉기</span></td></tr>
+    <tr><td><strong>클래스 기본 보정</strong></td><td><strong>피해 감소 +30%</strong> · <strong>기본 체력·마나 재생 2배</strong> <span class="tag data">데이터</span></td></tr>
+    <tr><td>고유 자원</td><td><strong>분노</strong> <span class="mono">Rage</span> — 일부 능력이 분노를 소모합니다. HUD에 주황 게이지로 표시됩니다</td></tr>
+    <tr><td>무기</td><td>주먹 <span class="mono">Fists</span> + 발톱 <span class="mono">Claw (Offhand)</span></td></tr>
+    <tr><td>스킬 트리</td><td><strong>수호자 · 하늘의 군주 · 용의 혈족 · 서리 태생</strong> (+ 마스터리 탭) <span class="tag data">데이터</span></td></tr>
+    <tr><td>성별</td><td>게임 원문이 일관되게 <span class="mono">his/he</span>로 지칭합니다 <span class="tag data">데이터</span></td></tr>
+  </table></div>
+</section>
+
+<section id="trees">
+  <h2>스킬 트리 4종</h2>
+  <p>탭 순서는 왼쪽부터 <strong>수호자 → 하늘의 군주 → 용의 혈족 → 서리 태생 → 마스터리</strong>입니다 <span class="tag data">데이터</span></p>
+
+  <div class="tw"><table>
+    <tr><th>트리</th><th>원문</th><th>성격</th><th>가이드 빌드에서의 비중</th></tr>
+    <tr><td><strong>수호자</strong></td><td><span class="mono">Guardian</span></td><td>방어 · 물리 · 버티기</td><td>1~20레벨 임시 주력 → 이후 보조 (Lv100 <strong>14</strong> → 완성형 <strong>22</strong>)</td></tr>
+    <tr><td><strong>하늘의 군주</strong></td><td><span class="mono">Sky Lord</span></td><td>번개 · 폭풍</td><td>보조 (Lv100 <strong>17</strong>)</td></tr>
+    <tr><td><strong>용의 혈족</strong></td><td><span class="mono">Dragonkin</span></td><td>화염 · 용 · 폭발</td><td><strong>주력.</strong> Lv20에 갈아타 끝까지 (Lv100 <strong>35</strong>)</td></tr>
+    <tr><td><strong>서리 태생</strong></td><td><span class="mono">Frostborn</span></td><td>냉기 · 결빙</td><td>마지막 순서 (Lv100 <strong>14</strong>)</td></tr>
+  </table></div>
+
+  <div class="note">
+    <strong>가이드가 지시하는 순서</strong> — <em>“Finish the fire tree, then work on phys, then lightning, then frost trees”</em>. 즉 <strong>화염 → 물리 → 번개 → 냉기</strong> 순으로 마스터리를 밉니다. 1~20레벨만 <em>“Run around and punch things”</em>(수호자로 두들기며 진행)이고, <strong>Lv20에 용의 혈족으로 리스펙</strong>합니다. <span class="tag comm">커뮤니티</span>
+  </div>
+
+  <div class="note warn">
+    <strong>트리 랭크 표시가 실제 투자보다 1 큽니다.</strong> 완성 캐릭터(M1154)의 모든 탭에서 표시 랭크 합계가 좌측 카운터보다 정확히 1 큰데, 아티팩트 <strong>Ancient Bead</strong>(<em>모든 유산 스킬 +1 랭크</em>) 때문으로 보입니다. <strong>좌측 카운터가 실제 투자값</strong>입니다 — 스크린샷을 보고 트리를 따라 찍을 때 주의하세요. <span class="tag comm">커뮤니티</span>
+  </div>
+</section>
+
+<section id="engine">
+  <h2>핵심 기제 — 드래곤파이어 세트와 광란</h2>
+  <p class="src">캡션 <em>“At 30, gamble for the dragonfire set. 2p is enough, 3-4 is better”</em></p>
+  <p>30레벨에 도박으로 노리는 세트입니다. <strong>2피스면 충분하고 3~4피스면 더 좋다</strong>고 원문이 명시합니다.</p>
+
+  <div class="tw"><table>
+    <tr><th>피스</th><th>효과</th></tr>
+    <tr><td>구성</td><td><strong>투구 · 갑옷 · 발톱(보조) · 주먹</strong></td></tr>
+    <tr><td><strong>2</strong></td><td><strong>폭발적 기동</strong>이 <strong>적중 시 항상 발동</strong>하고, <strong>파괴적 기동</strong>의 피해가 <strong>+200%</strong></td></tr>
+    <tr><td><strong>3</strong></td><td>두 기동이 발동할 때 <strong>광란</strong><span class="mono">(Rampage)</span> 부여. <strong>20중첩</strong>까지 쌓이고 중첩당 폭발적 기동 피해 <strong>+10%</strong>, 5초 지속</td></tr>
+    <tr><td><strong>4</strong></td><td>광란이 켜져 있는 동안 <strong>피해 감소 +40%</strong></td></tr>
+  </table></div>
+  <p class="src"><span class="tag comm">커뮤니티</span></p>
+
+  <div class="note ok">
+    <strong>3피스가 전환점입니다.</strong> 20중첩 × 10% = <strong>최대 +200%</strong>이고, 4피스에서 그 광란 상태가 <strong>그대로 방어</strong>(+40% 피해 감소)로도 환산됩니다. 공격을 계속 넣는 것이 곧 생존이 되는 구조라, 근접 클래스의 위험이 상쇄됩니다.
+  </div>
+</section>
+
+<section id="paradox">
+  <h2>이 빌드의 역설 — 공격 속도를 일부러 낮춥니다</h2>
+  <p>버서커 가이드에서 가장 눈에 띄는 설계입니다. 보통 ARPG에서 공격 속도는 무조건 이득인데, 여기서는 반대입니다.</p>
+
+  <div class="card">
+    <p><strong>무자비 격타</strong> <span class="mono">Brutal Attacks</span> 룬 — 공격 속도가 <strong>150% 미만일 때 1%당 피해 +8%</strong>. <strong>100% 미만 구간은 그 2배</strong>. <span class="tag comm">커뮤니티</span></p>
+  </div>
+
+  <p>그래서 완성형 구성은 공격 속도 옵션을 <strong>일부러 피합니다.</strong> 아티팩트 <strong>Battle Haze</strong>가 <em>“−25% 공격 속도, +25% 이동 속도, +10% 회피”</em>인 것도 같은 이유입니다 — <strong>공속 페널티가 페널티가 아니라 화력</strong>입니다.</p>
+
+  <div class="note warn">
+    <strong>다른 클래스 문서를 보고 오면 헷갈립니다.</strong> <a href="../templar/index.html">템플러</a>는 공속이 곧 폭발 횟수라 공속을 최대로 올리고, <a href="../warden/index.html">워든</a>은 완성형 공속이 <strong>306%</strong>입니다. 버서커만 정반대입니다. 스탯 우선순위를 클래스 간에 그대로 옮기지 마세요.
+  </div>
+</section>
+
+<section id="chain">
+  <h2>완성형 시너지 고리</h2>
+  <p>완성 구성은 룬 여러 개가 한 줄로 이어집니다.</p>
+  <div class="card">
+    <p><strong>①</strong> <span class="mono">Brutal Stompers</span>가 <strong>도약류의 쿨다운·마나를 없앰</strong> → 도약 연타 가능<br>
+       <strong>②</strong> <span class="mono">The Blue Bolt</span>가 도약 시전마다 <strong>드래곤 스톰(랭크 5)</strong>을 부르고 피해 <strong>+200%</strong><br>
+       <strong>③</strong> <span class="mono">Soulstorm</span>이 드래곤 스톰이 소환한 <strong>드래곤 소울 피해 +200%</strong><br>
+       <strong>④</strong> <span class="mono">Targeted Destruction</span>이 파괴적 기동에 <strong>중첩 화상</strong> 부여 (초당 준 피해의 150%, 5초)<br>
+       <strong>⑤</strong> <span class="mono">Burning Lightning</span>이 <strong>불타는 적의 번개 피해 +50%</strong><br>
+       <strong>⑥</strong> 엘레멘티움이 <strong>원소별 공명</strong>으로 직접 피해 +20%씩 누적</p>
+  </div>
+  <p>여기에 <span class="mono">Ancestral Rage</span> 룬이 분노 기반 패시브를 <strong>항상 120%로 고정</strong>하고, <span class="mono">Released Heritage</span>가 분노 방출마다 유산 효과를 <strong>최대 65%</strong>(5%×13)까지 누적시킵니다.</p>
+
+  <div class="note warn">
+    <strong>검증이 필요한 지점이 하나 있습니다.</strong> 완성 구성에서 장화가 <span class="mono">Brutal Stompers</span> → <span class="mono">Staggering Boots</span>로 <strong>교체</strong>되는데, 그러면 ①의 「도약 쿨다운·마나 면제」가 사라집니다. 그런데 같은 페이지의 <span class="mono">The Blue Bolt</span> 룬은 도약 시전에 의존합니다. 원문 그대로 옮겼으나 <strong>이 조합이 실제로 성립하는지는 확인하지 못했습니다</strong> <span class="tag unk">미확인</span>.
+  </div>
+</section>
+
+<section id="prosncons">
+  <h2>강점과 약점</h2>
+  <h3>강점</h3>
+  <ul>
+    <li><strong>피해 감소 +30%</strong>에 세트 4피스 <strong>+40%</strong>가 더 붙습니다 <span class="tag data">데이터</span></li>
+    <li><strong>기본 체력·마나 재생 2배</strong> — 5클래스 중 유일한 보정입니다</li>
+    <li><strong>공격이 곧 방어</strong> — 광란 중첩이 화력과 피해 감소를 동시에 올립니다</li>
+    <li><strong>무한 도약 이동</strong> — <span class="mono">Brutal Stompers</span>로 도약 쿨다운·마나가 사라져 기동성이 매우 높습니다</li>
+    <li>공격 속도를 포기해도 되므로 <strong>장비 옵션 선택지가 넓습니다</strong></li>
+  </ul>
+  <h3>약점</h3>
+  <ul>
+    <li><strong>근접</strong> — 몸을 넣어야 하고, 광란이 끊기면 방어 40%가 함께 사라집니다</li>
+    <li><strong>분노 관리</strong> — 분노 기반 패시브가 현재 분노에 비례하므로, <span class="mono">Ancestral Rage</span> 룬이 없으면 분노를 소모하는 스킬이 오히려 손해입니다</li>
+    <li><strong>세트 의존</strong> — 화력이 드래곤파이어 2·3피스 회로에 걸려 있습니다</li>
+    <li><strong>막기 불가</strong> — 방패가 없습니다</li>
+  </ul>
+</section>
+
+<section id="sub">
+  <h2>하위 문서</h2>
+  <div class="grid">
+    <a class="tile" href="leveling.html">
+      <h3>레벨링 1 → 100</h3>
+      <p>Lv10 장비 · Lv20 리스펙와 핵심 장화 · Lv30 드래곤파이어 세트 · 구간별 트리</p>
+    </a>
+    <a class="tile" href="progression.html">
+      <h3>성장 (100렙 이후)</h3>
+      <p>초기/완성 구성 · 룬 6종 · 최대 분노 보석 곱연산 · 아티팩트 · 인젝터</p>
+    </a>
+    <a class="tile soon" href="#">
+      <h3>엔드게임 빌드</h3>
+      <p>예정 — Aphroditeto/Benz의 «마그마 히드라» 가이드가 디스코드에 별도로 있습니다</p>
+    </a>
+  </div>
+  <p class="src">전사본 원본: <code>guides/transcripts/berserker_transcript.md</code> · PDF 원본: <code>guides/pdf/bers_leveling.pdf</code> · <code>bers_prog.pdf</code></p>
+</section>
+
+<footer>
+  개인 참고용 한국어 정리 · Chronicon 1.54.1 기준 · 검색엔진 색인 제외
+</footer>
+</div>
+<a href="#" class="totop">↑ 맨 위</a>
+<script src="../../assets/wiki.js"></script>
+</body>
+</html>
