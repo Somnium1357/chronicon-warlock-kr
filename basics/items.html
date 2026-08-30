@@ -166,6 +166,85 @@
   </div>
 </section>
 
+<!-- ══════════ 실행파일 분석 ══════════ -->
+<section id="binary">
+  <h2>실행 파일에서 확인한 확률</h2>
+  <p>아래 수치는 <strong><code>Chronicon.exe</code>를 직접 뜯어</strong> 얻은 것입니다. 패치 노트에도 게임 안에도 나오지 않는 값입니다.</p>
+
+  <div class="note">
+    <strong>왜 실행 파일인가</strong> — <code>data.win</code>에는 <code>CODE</code> 청크가 없습니다. <strong>YYC 네이티브 컴파일</strong>이라 게임 로직과 상수가 전부 <code>Chronicon.exe</code> 안에 있습니다. 그래서 <code>changelog/</code>에 안 적힌 확률은 실행 파일을 봐야 합니다.
+  </div>
+
+  <h3>아이템 등급 굴림 <span class="mono">itemRollQuality</span></h3>
+  <p>드랍한 아이템의 등급을 정하는 함수입니다. <strong>10만분율로 네 번 굴리고</strong>, 먼저 걸리는 쪽으로 확정합니다.</p>
+  <div class="formula">
+    roll = irandom(100000)<br>
+    &nbsp;&nbsp;roll &lt; &nbsp;&nbsp;&nbsp;100 → <strong>전설</strong><br>
+    roll = irandom(100000) &nbsp;&nbsp;<span class="mono">(단계마다 새로 굴립니다)</span><br>
+    &nbsp;&nbsp;roll &lt; &nbsp;1,000 → <strong>유니크</strong><br>
+    roll = irandom(100000)<br>
+    &nbsp;&nbsp;roll &lt; 10,000 → <strong>희귀</strong><br>
+    roll = irandom(100000)<br>
+    &nbsp;&nbsp;roll &lt; 60,000 → <strong>마법부여</strong><br>
+    &nbsp;&nbsp;그 외 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ <strong>일반</strong>
+  </div>
+  <div class="tw"><table>
+    <tr><th>등급</th><th>문턱값</th><th>그 단계 확률</th><th>순차 적용 최종</th></tr>
+    <tr><td><strong>전설</strong> <span class="mono">Legendary</span></td><td>100 / 100,000</td><td>0.1%</td><td><strong>0.100%</strong></td></tr>
+    <tr><td><strong>유니크</strong> <span class="mono">Unique</span></td><td>1,000 / 100,000</td><td>1%</td><td><strong>0.999%</strong></td></tr>
+    <tr><td><strong>희귀</strong> <span class="mono">Rare</span></td><td>10,000 / 100,000</td><td>10%</td><td><strong>9.89%</strong></td></tr>
+    <tr><td><strong>마법부여</strong> <span class="mono">Enchanted</span></td><td>60,000 / 100,000</td><td>60%</td><td><strong>53.4%</strong></td></tr>
+    <tr><td><strong>일반</strong> <span class="mono">Ordinary</span></td><td>—</td><td>—</td><td><strong>35.6%</strong></td></tr>
+  </table></div>
+  <div class="note warn">
+    <strong>이건 매직 파인드가 붙지 않은 기본값입니다.</strong> MF가 이 굴림에 어떻게 들어가는지는 확인하지 못했습니다 <span class="tag unk">미확인</span>. 실제 게임에서는 위 수치보다 좋게 나옵니다.
+  </div>
+
+  <h3>가방 굴림 <span class="mono">bagDrop</span></h3>
+  <p>등급 굴림과 <strong>똑같은 구조</strong>입니다 — 만분율로 네 번 순차 굴림.</p>
+  <div class="tw"><table>
+    <tr><th>가방</th><th>문턱값</th><th>그 단계</th><th>순차 최종</th></tr>
+    <tr><td><strong>무한한 가방</strong> <span class="mono">Bottomless Bag</span></td><td>300 / 10,000</td><td>3%</td><td><strong>3.00%</strong></td></tr>
+    <tr><td><strong>배낭</strong> <span class="mono">Backpack</span></td><td>900 / 10,000</td><td>9%</td><td><strong>8.73%</strong></td></tr>
+    <tr><td><strong>장비 가방</strong> <span class="mono">Gear Bag</span></td><td>2,500 / 10,000</td><td>25%</td><td><strong>22.07%</strong></td></tr>
+    <tr><td><strong>작은 가방</strong> <span class="mono">Satchel</span></td><td>5,000 / 10,000</td><td>50%</td><td><strong>33.10%</strong></td></tr>
+    <tr><td><strong>주머니</strong> <span class="mono">Pouch</span></td><td>—</td><td>—</td><td><strong>33.10%</strong></td></tr>
+  </table></div>
+  <p class="src">가방 아이템 ID 396~400이 함수 안에 직접 박혀 있어 <code>locale/items</code>와 1:1로 맞춰 확인했습니다</p>
+
+  <h3>체력 · 마나 구슬은 70% 문턱입니다</h3>
+  <p>몬스터가 죽을 때 도는 <span class="mono">actorDeathDrops</span>가 <span class="mono">playerGetLowHealth()</span>와 <span class="mono">playerGetLowMana()</span>를 부른 뒤, 둘 다 <strong>0.7과 비교</strong>합니다.</p>
+  <div class="formula">
+    if (체력비율 &lt; 0.7) → 체력 구슬 분기<br>
+    if (마나비율 &lt; 0.7) → 마나 구슬 분기
+  </div>
+  <div class="note ok">
+    <strong>즉 구슬은 무작위로 떨어지는 게 아니라 문턱 판정입니다.</strong> 필요할 때만 나오는 것처럼 느껴지는 이유가 이것입니다. 비교 방향(<code>&lt;</code>)은 판정 헬퍼를 직접 열어 부호 플래그 사용까지 확인했습니다.
+  </div>
+
+  <h3>「몬스터 → 아이템」 드랍 테이블은 없습니다</h3>
+  <p>찾아봤지만 그런 표 자체가 존재하지 않습니다. 대신 <strong>절차적으로 만듭니다.</strong></p>
+  <ol>
+    <li><strong>등급을 먼저 굴린다</strong> — 위 <span class="mono">itemRollQuality</span></li>
+    <li><strong>아이템별 조건으로 거른다</strong> — <span class="mono">itemGetMinLevel</span> · <span class="mono">itemGetMinRarity</span> · <span class="mono">itemGetMinDifficulty</span> · <span class="mono">itemGetClass</span> 가 전부 <strong>상수 없는 순수 접근자</strong>입니다. 조건이 코드가 아니라 <strong>아이템 데이터베이스</strong>에 항목별로 들어 있다는 뜻입니다</li>
+    <li><strong>특수 드랍만 별도</strong> — 예컨대 <span class="mono">specificStuffDrop</span>은 중형 마나 물약·대형 체력 물약을 ID로 직접 지정합니다</li>
+  </ol>
+  <p>아이템 DB는 <strong>정의 1,584건</strong>(<span class="mono">itemDataAdd</span> 918 + <span class="mono">itemDataAddExt</span> 666)이고 <strong>클래스별로 등록</strong>됩니다. 필드 구성도 확인했습니다 — <strong>4번 최소 등급 · 5번 최소 레벨 · 6번 클래스</strong>.</p>
+  <div class="note warn">
+    <strong>DB 내용 자체는 못 뽑았습니다.</strong> 정의마다 인자가 13개인데 그중 약 40%가 <strong>실행 중에 채워지는 메모리</strong>를 가리켜 파일에는 값이 없습니다. 완전히 복원하려면 실행 중인 게임 메모리를 읽어야 합니다 — 거기까진 하지 않았습니다.
+  </div>
+
+  <h3>덤으로 확인한 것</h3>
+  <div class="tw"><table>
+    <tr><th>함수</th><th>내용</th></tr>
+    <tr><td><span class="mono">craftingMaterialDropEnchanting</span></td><td>마법 정수(295) · 수정 정수(296) · 영혼 정수(297)를 ID로 직접 지정. 배율 0.8 / 1.5 / 2.5</td></tr>
+    <tr><td><span class="mono">rareStuffDrop</span></td><td>등급 굴림과 같은 10만분율에 문턱 20,000 · 25,000 · 30,000, 배율 1.3 — <strong>의미는 미확정</strong> <span class="tag unk">미확인</span></td></tr>
+    <tr><td><span class="mono">actorUniqueDrops</span></td><td>몬스터 ID <strong>57개</strong>짜리 고정 배열. 폭풍인도자 · 박쥐 · 픽시 · 엘프 드루이드 · 수사슴 · 케르베로스 … <strong>고유 드랍을 가진 몬스터 목록으로 보이나 확정 못 함</strong> <span class="tag unk">미확인</span></td></tr>
+  </table></div>
+
+  <p class="src">방법: <code>.pdata</code>로 함수 경계 103,083개를 뜨고, 각 함수가 시작부에서 자기 이름 문자열을 참조하는 성질을 이용해 <strong>2,513개 함수의 이름↔주소</strong>를 만든 뒤 디스어셈블했습니다. GML의 수는 전부 double이라 <code>.rdata</code>에서 rip 상대로 읽히는데, 그 참조를 따라가면 함수가 쓰는 수치가 그대로 나옵니다. 도구는 <code>exe_work/</code>에 있습니다</p>
+</section>
+
 <!-- ══════════ 변환 ══════════ -->
 <section id="transmute">
   <h2>변환 (테오)</h2>
