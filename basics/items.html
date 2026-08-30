@@ -91,6 +91,81 @@
   </div>
 </section>
 
+<!-- ══════════ 드랍·매직파인드 ══════════ -->
+<section id="drops">
+  <h2>드랍과 매직 파인드</h2>
+  <p>수치는 전부 <code>changelog/</code> 원문에서 뽑았습니다. 버전을 함께 적었으니 더 최신 변경이 있는지 직접 확인할 수 있습니다.</p>
+
+  <h3>매직 파인드 <span class="mono">Magic Find</span></h3>
+  <div class="tw"><table>
+    <tr><th>항목</th><th>값</th><th>도입</th></tr>
+    <tr><td><strong>상한</strong></td><td><strong>999%</strong></td><td><code>0.634</code> — 500% → 700%(<code>0.610</code>) → <strong>999%</strong> 순으로 올랐습니다</td></tr>
+    <tr><td>캐릭터 레벨 보너스</td><td><strong>4레벨당 +1%</strong></td><td><code>0.500</code> (이전엔 2레벨당 1%)</td></tr>
+    <tr><td>아노말리 기본 보너스</td><td><strong>+100%</strong> — 레벨과 무관하게 고정</td><td><code>0.634</code></td></tr>
+    <tr><td><strong>도박</strong></td><td>항상 <strong>250% 고정</strong> — 내 MF와 무관</td><td><code>0.500</code></td></tr>
+    <tr><td>세트 3피스 보너스</td><td>MF <strong>50%</strong> (이전 20%)</td><td><code>0.540</code></td></tr>
+    <tr><td>난이도별 보너스</td><td>난이도 선택 화면에 MF·크리스탈·경험치 보너스가 표시됩니다. 구체적 수치는 패치 노트에 없습니다 <span class="tag unk">미확인</span></td><td><code>0.230</code></td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>정정 — MF 상한은 500%도 700%도 아닙니다.</strong> 옛 가이드에 그 숫자가 남아 있는데 <strong>현재는 999%</strong>입니다. <span class="tag data">데이터</span>
+  </div>
+
+  <h3>MF는 곱연산입니다</h3>
+  <p><code>0.500</code>에서 합연산 → <strong>곱연산</strong>으로 바뀌었습니다. 패치 노트가 직접 예시를 듭니다. <span class="tag data">데이터</span></p>
+  <div class="formula">
+    챔피언 MF +300% · 내 MF +30%<br>
+    예전: 300 + 30 = <strong>330%</strong> → 지금: 300 × 1.3 = <strong>390%</strong>
+  </div>
+  <p><code>0.902</code>에서 곱해지는 항이 더 늘었습니다 — <strong>플레이어 MF × 상자 희귀도 보너스 × 적 MF 보너스</strong>.</p>
+  <div class="note ok">
+    <strong>그래서 MF는 쌓을수록 가치가 커집니다.</strong> 패치 노트도 <em>“so it's worth stacking it up”</em>이라고 명시합니다. <code>0.901</code>에서 전설 이상 난이도의 MF가 기본 드랍률과 곱연산으로 겹친다는 이유로 재조정됐고, 그 결과 <strong>장비·마스터리의 MF가 훨씬 더 값어치 있어졌다</strong>고 적혀 있습니다.
+  </div>
+
+  <h3>어떤 적을 잡아야 하나</h3>
+  <div class="tw"><table>
+    <tr><th>대상</th><th>내용</th><th>근거</th></tr>
+    <tr><td><strong>챔피언 · 엘리트</strong></td><td>보너스 MF가 <strong>같은 레벨 평균 몬스터 대비 최대 체력 비율</strong>로 정해집니다. 즉 <strong>크고 잘 안 죽는 챔피언일수록 좋은 게 나옵니다</strong></td><td><code>0.500</code> <span class="tag data">데이터</span></td></tr>
+    <tr><td>엘리트</td><td><strong>약 25% 확률로 보석</strong> 드랍</td><td><span class="tag data">데이터</span></td></tr>
+    <tr><td>「미니언」 표시 몬스터</td><td>훨씬 약하고 <strong>드랍 확률도 낮습니다</strong> — 잡아도 이득이 적습니다</td><td><span class="tag data">데이터</span></td></tr>
+    <tr><td>일반 몬스터</td><td>유니크·전설 드랍률이 <strong>크게 낮아졌고</strong>, 대신 챔피언·엘리트 처치 보너스가 <strong>크게 올랐습니다</strong></td><td><span class="tag data">데이터</span></td></tr>
+  </table></div>
+
+  <h3>다른 클래스용 아이템</h3>
+  <ul>
+    <li>MF를 올리면 <strong>다른 클래스용 아이템이 나올 확률이 줄어듭니다</strong> <code>0.530</code></li>
+    <li><strong>유니크 등급 이상은 애초에 다른 클래스 것이 나오지 않습니다</strong> — MF와 무관합니다 <code>0.530</code> <span class="tag data">데이터</span></li>
+  </ul>
+
+  <h3>천장(안티 불운) 시스템 — <span class="mono">1.322</span></h3>
+  <p><strong>신화 무기 부품</strong>에는 운이 나쁠 때를 보정하는 장치가 걸려 있습니다. <span class="tag data">데이터</span></p>
+  <ul>
+    <li>해당 부품을 <strong>한 번도 못 봤으면</strong> 드랍률이 크게 올라갑니다</li>
+    <li><strong>같은 부품이 연속으로 나오지 않습니다</strong> — 항상 번갈아 나옵니다</li>
+    <li><strong>변칙을 많이 돌았는데 하나도 안 나오면</strong> 드랍률이 나올 때까지 서서히 오릅니다</li>
+    <li>협동에서는 플레이어마다 <strong>따로 굴립니다</strong></li>
+  </ul>
+
+  <h3>알아두면 좋은 것</h3>
+  <div class="note">
+    <strong>킬스트릭 보너스는 「처치한 순간」의 스탯으로 계산됩니다</strong> <code>0.924</code> — 스트릭이 끝나기 전에 틴카의 영역으로 돌아가도 보너스가 날아가지 않습니다. 예전에는 스트릭 종료 시점 스탯을 봐서 손해였습니다. <span class="tag data">데이터</span>
+  </div>
+
+  <h3>드랍 처리 구조</h3>
+  <p>게임 파일에 남아 있는 스크립트 이름으로 본 흐름입니다. <span class="tag data">데이터</span></p>
+  <div class="tw"><table>
+    <tr><th>단계</th><th>스크립트</th></tr>
+    <tr><td>무엇이 떨어뜨리나</td><td><span class="mono">actorDeathDrops</span>(일반) · <span class="mono">actorBossDrops</span>(보스) · <span class="mono">actorUniqueDrops</span>(유니크) · <span class="mono">chestDropLoot</span>(상자) · <span class="mono">dyeDrop</span>(염료)</td></tr>
+    <tr><td>아이템 만들기</td><td><span class="mono">itemRollQuality</span>(등급) → <span class="mono">itemRollEnchants</span>(대·소·강도·궁극) → <span class="mono">itemRollSockets</span>(홈)</td></tr>
+    <tr><td>적 MF 계산</td><td><span class="mono">monsterSetMF</span></td></tr>
+    <tr><td>엔드게임 보상</td><td><span class="mono">endgameGetCrystalReward</span> · <span class="mono">…EssenceReward</span> · <span class="mono">…RunestoneReward</span> · <span class="mono">…XPReward</span></td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>드랍 테이블 원본 수치는 추출할 수 없습니다.</strong> <code>data.win</code>에 <code>CODE</code> 청크가 없습니다 — <strong>YYC 네이티브 컴파일</strong>이라 게임 로직과 상수가 전부 <code>Chronicon.exe</code> 안에 들어가 있습니다. 내장 데이터 파일(<code>DAFL</code>)도 비어 있습니다. 그래서 위 수치는 <strong>전부 패치 노트에서 온 것</strong>이고, 노트에 안 적힌 확률(등급별 굴림 확률, 난이도별 MF 등)은 알 수 없습니다. <span class="tag data">데이터</span>
+  </div>
+</section>
+
 <!-- ══════════ 변환 ══════════ -->
 <section id="transmute">
   <h2>변환 (테오)</h2>
