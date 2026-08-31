@@ -29,6 +29,7 @@ NAV = [
     ]),
     ('클래스', [
         ('클래스 개요', 'classes/index.html'),
+        ('빌드 가이드 색인', 'classes/build-index.html'),
         ('워록', 'classes/warlock/index.html'),
         ('└ 레벨링', 'classes/warlock/leveling.html'),
         ('└ 성장', 'classes/warlock/progression.html'),
