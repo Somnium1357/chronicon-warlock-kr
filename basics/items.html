@@ -250,6 +250,77 @@
   <p class="src">방법: <code>.pdata</code>로 함수 경계 103,083개를 뜨고, 각 함수가 시작부에서 자기 이름 문자열을 참조하는 성질을 이용해 <strong>2,513개 함수의 이름↔주소</strong>를 만든 뒤 디스어셈블했습니다. GML의 수는 전부 double이라 <code>.rdata</code>에서 rip 상대로 읽히는데, 그 참조를 따라가면 함수가 쓰는 수치가 그대로 나옵니다. 도구는 <code>exe_work/</code>에 있습니다</p>
 </section>
 
+<!-- ══════════ 크리스탈 ══════════ -->
+<section id="crystals">
+  <h2>크리스탈 — 획득과 파밍</h2>
+
+  <div class="note warn">
+    <strong>크리스탈 발견은 상인 판매가에 적용되지 않습니다.</strong>
+    스탯 설명이 <em>「상인을 제외한 모든 출처에서 획득하는 크리스탈의 양을 증가시킵니다」</em>입니다.
+    0.320에서 판매가에 적용되던 것이 <strong>버그로 수정</strong>된 이력이 있습니다. 장비를 팔아 버는 것은 이 스탯으로 늘릴 수 없습니다.
+    <span class="tag data">데이터</span>
+  </div>
+
+  <h3>1.400 재조정 — 난이도로 해결하려 하지 마세요 <span class="tag data">데이터</span></h3>
+  <blockquote>기본 크리스탈 드랍과 <strong>난이도별 스케일링을 대폭 재조정</strong>했습니다. 엔드게임에서 너무 빠르게 불어나 무의미해지는 문제가 있었기 때문입니다.<br>
+  이 재조정으로 <strong>다른 출처의 +크리스탈 발견이 (무의미해지는 대신) 더 가치 있어집니다.</strong></blockquote>
+  <p class="src"><span class="mono">changelog/1.400.txt</span> — 라이브 1.54.1에 적용되어 있습니다</p>
+  <p>즉 <strong>난이도를 올려 크리스탈을 버는 시대는 끝났습니다.</strong> 지금은 아래의 스탯·인챈트·아노말리 수식어 쪽이 훨씬 큽니다.</p>
+
+  <h3>획득량을 올리는 것 <span class="tag data">데이터</span></h3>
+  <div class="tw"><table>
+    <tr><th>출처</th><th>이름</th><th>효과</th></tr>
+    <tr><td><strong>마스터리</strong></td><td>크리스탈 발견 <span class="mono">Crystals Found</span></td><td>+% 크리스탈 발견. <strong>가장 먼저 챙길 것</strong></td></tr>
+    <tr><td>인챈트</td><td><strong>공동체의 연대결속</strong> <span class="mono">Community</span></td><td>+% 크리스탈 <strong>및 경험치</strong> — 두 개를 같이 올립니다</td></tr>
+    <tr><td>인챈트</td><td><strong>크리스탈 보너스 획득량</strong> <span class="mono">Bonus Crystals</span><br><em>접두 「욕심많은」·「탐욕스러운」</em></td><td>+% 보너스 크리스탈</td></tr>
+    <tr><td>인챈트</td><td><strong>적 처치 시 추가 크리스탈</strong> <span class="mono">Kill Hoarder</span><br><em>접미 「부귀」·「풍요」</em></td><td>처치 시 % 확률로 <strong>추가 분출</strong> — 밀집 파밍 빌드와 궁합이 좋습니다</td></tr>
+    <tr><td>DLC 노드</td><td><strong>사막의 부</strong> <span class="mono">Riches Of The Desert</span></td><td>+% 크리스탈 발견</td></tr>
+    <tr><td>신전 버프</td><td><strong>수정 발견</strong> <span class="mono">Crystal Find</span></td><td>일시 +%</td></tr>
+    <tr><td>난이도</td><td>영웅 이상</td><td>+CF% — <strong>1.400에서 축소됨</strong></td></tr>
+    <tr><td>스탯</td><td><strong>아이템 획득 반경</strong> <span class="mono">Pickup Radius</span></td><td>배수는 아니지만 <strong>흘리는 것을 줄입니다.</strong> 동료도 이 스탯을 씁니다</td></tr>
+  </table></div>
+
+  <h3>어디서 나오는가 <span class="tag data">데이터</span></h3>
+  <div class="tw"><table>
+    <tr><th>출처</th><th>메모</th></tr>
+    <tr><td><strong>킬스트릭</strong></td><td><strong>연쇄가 길수록 지수적으로</strong> 늘어납니다. 크리스탈 파밍의 가장 큰 변수</td></tr>
+    <tr><td>모든 상자</td><td>희귀 상자일수록 많이</td></tr>
+    <tr><td><strong>보물고</strong> <span class="mono">Trove</span></td><td>각 막의 <strong>선택 구역</strong>에 등장. <strong>전설 상자보다 더 많은</strong> 전리품·크리스탈·재료·경험치</td></tr>
+    <tr><td>보스</td><td>0.420에서 추가, 0.620에서 증량</td></tr>
+    <tr><td>크리스탈 퍼즐</td><td>대부분의 구역에 무작위 생성. 풀면 희귀 전리품 상자</td></tr>
+    <tr><td>퀘스트</td><td>0.700부터 <strong>모든 퀘스트</strong>가 크리스탈을 줍니다</td></tr>
+    <tr><td>무한 아노말리</td><td><strong>황금 크리스탈</strong> — <a href="endgame.html#anomaly-types">아노말리 종류별 파밍 목적</a> 참고</td></tr>
+  </table></div>
+
+  <div class="note ok">
+    <strong>킬스트릭은 처치 시점의 스탯으로 계산됩니다.</strong> 0.924에서 「연쇄가 끝난 시점」이 아니라 「처치한 시점」의 난이도·크리스탈 발견을 쓰도록 고쳐졌습니다.
+    개발자 표현 그대로 <em>연쇄가 끝나기 전에 틴카에게 돌아가도 안전합니다.</em> <span class="tag data">데이터</span>
+  </div>
+
+  <h3>가장 효율이 높은 것 — 희귀 아노말리 수식어 <span class="tag data">데이터</span></h3>
+  <p>1.320 기준 희귀 수식어 전체 목록입니다. <strong>일부는 서로 조합됩니다.</strong></p>
+  <div class="tw"><table>
+    <tr><th>수식어</th><th>크리스탈 파밍</th></tr>
+    <tr><td><strong>모든 몬스터가 크리스탈 사재기꾼 · 수집가 · 보석 사재기꾼</strong></td><td>◎ <strong>최상.</strong> 사재기꾼은 「사망 시 드롭되는 추가 크리스탈을 소지」합니다</td></tr>
+    <tr><td><strong>황금 더미가 파괴물로</strong> <span class="mono">Gold Piles as breakables</span></td><td>◎ 추가 재화 직행</td></tr>
+    <tr><td><strong>상자 대량</strong> <span class="mono">Lots of Chests</span></td><td>○ 모든 상자가 크리스탈을 뱉습니다</td></tr>
+    <tr><td>신전 대량 <span class="mono">Lots of Shrines</span></td><td>△ <strong>수정 발견</strong> 신전이 걸리면 유효</td></tr>
+    <tr><td>하수인만 · 슬라임 왕만 · 공허 소생체만</td><td>△ 밀집도가 높아 <strong>킬스트릭</strong>이 길게 이어집니다</td></tr>
+    <tr><td>수수께끼의 적 <span class="mono">Mysterious Enemies</span></td><td>—</td></tr>
+  </table></div>
+  <p class="src"><span class="mono">changelog/1.320.txt</span> · 접두 설명은 <span class="mono">locale/EN/help/12.txt</span></p>
+
+  <div class="note warn">
+    <strong>한글패치 — 크리스탈 용어가 네 가지로 갈립니다.</strong> 같은 재화가 파일마다 다르게 적혀 있으니 검색할 때 주의하세요.
+    <ul>
+      <li><strong>크리스탈</strong> (주 표기) · <strong>결정</strong> (<span class="mono">enchant_23_txt</span>, <span class="mono">node_136_text</span>) · <strong>수정</strong> (<span class="mono">buff_319</span> 「수정 발견」) · <strong>결정석</strong> (<span class="mono">enchant_1717</span>)</li>
+      <li>같은 인챈트인데 <strong>이름은 「크리스탈 보너스 획득량」, 설명은 「결정 추가 획득량」</strong>입니다</li>
+      <li>도움말의 스탯 <span class="mono">Crystals Found</span>가 <strong>「보너스 크리스탈」</strong>로 번역돼, 별개 인챈트인 <span class="mono">Bonus Crystals</span>와 이름이 겹칩니다</li>
+      <li>접두 <span class="mono">Crystal Hoarder</span>가 몬스터 표시에는 <strong>「크리스탈 사재기꾼」</strong>, 도움말에는 <strong>「크리스탈 수집가」</strong> — 후자는 별개 접두 <span class="mono">Collector</span>(「수집가」)와 겹칩니다</li>
+    </ul>
+  </div>
+</section>
+
 <!-- ══════════ 변환 ══════════ -->
 <section id="transmute">
   <h2>변환 (테오)</h2>
