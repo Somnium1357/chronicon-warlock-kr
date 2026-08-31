@@ -23,10 +23,13 @@ NAV = [
         ('피해 계산', 'basics/damage.html'),
         ('방어', 'basics/defense.html'),
         ('스킬 · 태그', 'basics/skills.html'),
+    ]),
+    ('아이템 · 제작', [
         ('아이템 · 드랍', 'basics/items.html'),
         ('제작 · 변환', 'basics/crafting.html'),
+    ]),
+    ('진행', [
         ('난이도 · 엔드게임', 'basics/endgame.html'),
-        ('한영 명칭', 'basics/glossary.html'),
     ]),
     ('클래스', [
         ('클래스 개요', 'classes/index.html'),
@@ -48,11 +51,11 @@ NAV = [
         ('메카니스트', 'classes/mechanist/index.html'),
     ]),
     ('자료', [
+        ('한영 명칭', 'basics/glossary.html'),
         ('출처 · 신뢰도', 'meta/sources.html'),
         ('패치 동향', 'meta/patches.html'),
     ]),
 ]
-
 NAV_RE = re.compile(r'<nav class="side">.*?</nav>', re.S)
 
 
