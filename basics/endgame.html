@@ -95,7 +95,13 @@
   </table></div>
 
   <h3>난이도 변경</h3>
-  <p><strong>영웅 불러오기 메뉴</strong> 또는 크로니콘의 <strong>틴카</strong>에게서 바꿉니다. <strong>언제든 가능하고, 진행 초기화가 없습니다.</strong></p>
+  <p><strong>영웅 불러오기 메뉴</strong> 또는 크로니콘의 <strong>틴카</strong>(대화 &gt; <strong>난이도 변경</strong>)에서 바꿉니다.
+     언제든 가능하고 <strong>캠페인 진행도는 유지</strong>됩니다. 메인 메뉴까지 나갈 필요가 없습니다.</p>
+  <div class="note warn">
+    <strong>다만 모든 구역이 초기화됩니다.</strong> 확인창 문구가
+    <em>「난이도를 변경하면 모든 구역이 초기화됩니다! 지금 난이도를 변경하시겠어요?」</em>입니다.
+    보스 한 마리만 다시 잡으려는 거라면 <a href="#zone-reset">구역 하나만 초기화하는 방법</a>이 따로 있습니다.
+  </div>
 
   <h3>판단 기준</h3>
   <div class="note ok">
@@ -110,6 +116,48 @@
   <div class="note warn">
     <strong>영웅 난이도 이상이어야 전설이 나옵니다.</strong> 캐주얼·일반에서 아무리 오래 파밍해도 전설은 드랍되지 않습니다. 레벨 10을 넘겼다면 <strong>영웅으로 올리는 것이 사실상 필수</strong>입니다.
   </div>
+</section>
+
+<!-- ══════════ 구역 초기화 ══════════ -->
+<section id="zone-reset">
+  <h2>구역 초기화 — 보스 반복 파밍</h2>
+
+  <div class="note ok">
+    <strong>길잡이 돌 지도에서 구역을 <span class="mono">우클릭</span>하면 그 구역만 초기화하고 바로 들어갑니다.</strong><br>
+    게임을 나갔다가 난이도를 바꿔서 다시 들어올 필요가 없습니다.
+  </div>
+
+  <p>보스를 반복해서 잡으려면 구역이 초기화돼야 합니다. 난이도를 왔다갔다 하는 방법이 널리 쓰이지만,
+     그건 <strong>모든</strong> 구역을 초기화하는 부작용을 이용한 우회로입니다. 게임에는 구역 하나만 되돌리는 정식 조작이 있습니다.</p>
+
+  <h3>조작 <span class="tag data">데이터</span></h3>
+  <div class="tw"><table>
+    <tr><th>입력</th><th>표시</th><th>동작</th></tr>
+    <tr><td><span class="mono">LMB</span> (좌클릭)</td><td><strong>선택</strong></td><td>해당 구역으로 이동. <strong>진행 상태 유지</strong> — 잡은 보스는 그대로 죽어 있습니다</td></tr>
+    <tr><td><span class="mono">RMB</span> (우클릭)</td><td><strong>초기화</strong></td><td><strong>그 구역만</strong> 초기화하고 진입. 몬스터·보스가 새로 배치됩니다</td></tr>
+    <tr><td>패드</td><td><strong>초기화</strong></td><td>길잡이 돌 화면 하단에 버튼이 따로 표시됩니다</td></tr>
+  </table></div>
+  <p class="src">출처: <span class="mono">locale/EN/interface</span>의 <span class="mono">waypoint_controls_mouse1/mouse2</span>,
+     <span class="mono">waypoint_controls_gamepad2</span>. 한글패치 표기는 「선택」·「초기화」</p>
+
+  <p>우클릭하면 확인창이 뜹니다:</p>
+  <blockquote>「<strong>ZONE</strong> 구역을 초기화하고 진입할까요? 모든 신전 버프가 해제됩니다!」</blockquote>
+  <p class="src"><span class="mono">popup_reset_txt</span>. <span class="mono">ZONE</span>은 구역 이름으로 치환됩니다</p>
+
+  <div class="note warn">
+    <strong>신전(사원) 버프가 전부 풀립니다.</strong> 이건 난이도 변경도 마찬가지이므로 손해는 아니지만,
+    버프를 받고 도는 루틴이라면 <strong>버프는 초기화 뒤에</strong> 챙기세요.
+  </div>
+
+  <h3>어느 쪽을 쓸까</h3>
+  <div class="tw"><table>
+    <tr><th>목적</th><th>방법</th></tr>
+    <tr><td><strong>보스 한 마리 반복</strong></td><td>길잡이 돌에서 그 구역 <strong>우클릭</strong>. 가장 빠릅니다</td></tr>
+    <tr><td>전체를 갈아엎고 싶을 때</td><td>틴카 &gt; <strong>난이도 변경</strong> — 모든 구역이 초기화됩니다</td></tr>
+    <tr><td>매직 파인드·경험치 구간 조정</td><td>틴카 &gt; <strong>난이도 변경</strong></td></tr>
+  </table></div>
+
+  <p class="src">키바인드로 이 동작을 다른 키에 걸 수는 없습니다. <span class="mono">save/keybinds/</span>가 노출하는 조작은 29종뿐이고 구역 초기화는 거기 없습니다 <span class="tag data">데이터</span></p>
 </section>
 
 <!-- ══════════ 캠페인 ══════════ -->
