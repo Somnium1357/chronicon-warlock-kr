@@ -27,7 +27,8 @@
     <li><a href="../basics/damage.html">피해 계산</a></li>
     <li><a href="../basics/defense.html">방어</a></li>
     <li><a href="../basics/skills.html">스킬 · 태그</a></li>
-    <li><a href="../basics/items.html">아이템 · 제작</a></li>
+    <li><a href="../basics/items.html">아이템 · 드랍</a></li>
+    <li><a href="../basics/crafting.html">제작 · 변환</a></li>
     <li><a href="../basics/endgame.html">난이도 · 엔드게임</a></li>
     <li><a class="cur" href="../basics/glossary.html">한영 명칭</a></li>
   </ul>
@@ -226,14 +227,18 @@
   <h3>NPC · 지역</h3>
   <div class="tw"><table>
     <tr><th>한글</th><th>역할</th><th>영문</th></tr>
-    <tr><td><strong>틴카</strong></td><td>난이도 변경 · 상급 강화 · 영약</td><td><span class="mono">Tinka</span></td></tr>
-    <tr><td><strong>틴카의 영역</strong></td><td>캠페인 완주 시 계정 전체 개방</td><td><span class="tag unk">미확인</span></td></tr>
-    <tr><td><strong>테오</strong></td><td>변환 · 룬 제작</td><td><span class="tag unk">미확인</span></td></tr>
-    <tr><td><strong>샹텔</strong></td><td>마법부여 (스크램블 · 리롤 · 강화)</td><td><span class="tag unk">미확인</span></td></tr>
-    <tr><td><strong>젬마</strong></td><td>보석</td><td><span class="tag unk">미확인</span></td></tr>
-    <tr><td><strong>사렉</strong></td><td>초월 물약 판매 (1.54)</td><td><span class="tag unk">미확인</span></td></tr>
-    <tr><td><strong>크로니콘</strong></td><td>거점 — 영약 상점 · 틴카</td><td><span class="mono">Chronicon</span></td></tr>
-    <tr><td>헬포지</td><td>신화 무기 제작 (야수 DLC)</td><td><span class="mono">Hellforge</span> <span class="tag unk">미확인</span></td></tr>
+    <tr><td><strong>틴카</strong> <em>(기계공 틴카)</em></td><td>난이도 변경 · 길잡이 돌 · 영약</td><td><span class="mono">Tinka — The Tinkerer</span></td></tr>
+    <tr><td><strong>틴카의 영역</strong></td><td>캠페인 완주 시 계정 전체 개방</td><td><span class="mono">Tinka's Domain</span></td></tr>
+    <tr><td><strong>코렘</strong> <em>(인도자 및 기술 초기화)</em></td><td>막 시작 · 스킬/마스터리 초기화 · 빌드 불러오기</td><td><span class="mono">Korem — Guide &amp; Skill Resets</span></td></tr>
+    <tr><td><strong>테오</strong> <em>(형태 변환사)</em></td><td>변환 25종 · 룬 제작</td><td><span class="mono">Theo — Transmutation</span></td></tr>
+    <tr><td><strong>찬티</strong> <em>(마법부여사)</em></td><td><strong>마법부여</strong> — 스크램블 · 재굴림 · 강화</td><td><span class="mono">Chantie — Enchanting</span></td></tr>
+    <tr><td><strong>샹텔</strong> <em>(고대의 마법부여사)</em></td><td><strong>상급 강화 전담</strong> — 찬티와 다른 NPC입니다</td><td><span class="mono">Chantelle — Ancient Enchantress</span></td></tr>
+    <tr><td><strong>젬마</strong> <em>(보석 및 홈 세공사)</em></td><td>보석 삽입 · 승급 · 제거, 소켓 추가</td><td><span class="mono">Gemma — Gems &amp; Socketing</span></td></tr>
+    <tr><td><strong>사렉</strong> <em>(물약 및 장비 상인)</em></td><td>물약 · 장비 판매</td><td><span class="mono">Sarek — Potions &amp; Equipment</span></td></tr>
+    <tr><td><strong>타로</strong> <em>(도박꾼)</em></td><td>도박 — 크리스탈로 무작위 장비</td><td><span class="mono">Tarot — Gambling</span></td></tr>
+    <tr><td><strong>메델라</strong> <em>(헬포지 관리자)</em></td><td>헬포지 — 별도 레시피책 <span class="tag">DLC</span></td><td><span class="mono">Medella — Hellforge Overseer</span></td></tr>
+    <tr><td><strong>크로니콘</strong></td><td>거점 — 상점 · 제작 NPC 전원 · 틴카</td><td><span class="mono">Chronicon</span></td></tr>
+    <tr><td>헬포지</td><td>신화 무기 제작 · 1.530부터 샹텔과 창고도 있음</td><td><span class="mono">Hellforge</span></td></tr>
   </table></div>
 </section>
 
@@ -401,7 +406,7 @@
     <tr><td><strong>메건의 불꽃</strong></td><td>미사용 스킬 포인트 1개당 부 스탯 +1%</td></tr>
     <tr><td><strong>의식석</strong></td><td>의식 스킬 랭크 +1 (표시상 최대 랭크 초과)</td></tr>
     <tr><td><strong>원소술사의 축복</strong></td><td>"원소형 적 대상 피해"의 250%를 모든 원소 피해 스탯에 합산</td></tr>
-    <tr><td>룬로드의 후회</td><td>소형 보스 아노말리 드랍</td></tr>
+    <tr><td>룬군주의 후회</td><td>소형 보스 아노말리 드랍</td></tr>
   </table></div>
 </section>
 
@@ -426,7 +431,8 @@
   <h2>관련 문서</h2>
   <ul>
     <li><a href="skills.html">스킬 · 태그</a> — 계열/형태 태그가 실제로 어떻게 쓰이는가</li>
-    <li><a href="items.html">아이템 · 제작</a> — 세트 · 룬 · 보석 · 변환 규칙</li>
+    <li><a href="items.html">아이템 · 드랍</a> — 등급 · 드랍 · 크리스탈</li>
+    <li><a href="crafting.html">제작 · 변환</a> — 변환 25종 · 마법부여 · 보석</li>
     <li><a href="endgame.html">난이도 · 엔드게임</a> — 난이도 표와 아노말리 종류</li>
   </ul>
 </section>
