@@ -60,5 +60,5 @@ Burning	화상		상태. Combustion(연소)과 구분	both
 Knockback	밀쳐내기	넉백|밀치기	화면 표기. 위키가 「넉백」·「밀림」으로 갈려 있었다	both
 Isolation	고립 모드	격리	1.54 신규 캐릭터 모드	both
 Trove	보물함	보물고	각 막 선택 구역의 대형 상자	both
-Shrine	신단	신전 버프|성소	만지는 대상. 「신전」은 Temple(무너진 신전 등)과 겹친다	both
+Shrine	신단	신전 버프|신전 대량|신전 효과	만지는 대상. 「신전」은 Temple 과 겹친다. 「성소」는 Inner Sanctum 이라 금지어에서 뺐다	both
 Deepwood	깊은숲	딥우드	지역명	both
