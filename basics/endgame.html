@@ -196,6 +196,51 @@
   </div>
 </section>
 
+<!-- ══════════ 신전 ══════════ -->
+<section id="shrine">
+  <h2>신전 — 35가지가 있고, 나쁜 것도 있습니다</h2>
+
+  <p>신전 <span class="mono">Shrine</span>은 만지면 무작위 효과가 걸리는 오브젝트입니다.
+     지역마다 이름이 다르지만(<span class="mono">Hell Shrine</span>, <span class="mono">Elven Shrine</span>,
+     <span class="mono">Shrine of Ayeela</span> …) <strong>나오는 효과 풀은 같습니다</strong>.
+     현재 <strong>35종</strong>이 있습니다. <span class="tag data">데이터</span></p>
+
+  <div class="note warn">
+    <strong>전부 좋은 것은 아닙니다.</strong> <em>「신속한 죽음의 선물...」</em>,
+    <em>「불타는 죽음이 기다려...」</em> 같은 <strong>나쁜 효과</strong>와
+    <em>「훌륭한 적수로다!」</em>(<strong>적이 소환됩니다</strong>)가 같은 풀에 들어 있습니다.<br>
+    <code>0.650</code>에서 <em>“<strong>나쁜 신전 효과가 처음 한 번은 뜰 확률을 높이고, 그 뒤로는 확률을
+    대폭 낮췄다</strong>”</em>고 조정됐습니다 — 한 번 당하고 나면 거의 안 나옵니다.
+  </div>
+
+  <h3>효과 갈래</h3>
+  <div class="tw"><table>
+    <tr><th>갈래</th><th>내용</th></tr>
+    <tr><td><strong>전리품 계열</strong></td><td>전리품 · <strong>대량 전리품</strong> · 크리스탈 · 보석 · <strong>마법 발견</strong></td></tr>
+    <tr><td><strong>공격 계열</strong></td><td>피해 · 광란 · 공격 속도 · <strong>무기 속성 부여 6종</strong>(암흑·신성·번개·냉기·독·화염)</td></tr>
+    <tr><td><strong>유틸리티</strong></td><td>쿨다운 감소 · 마나 소모 감소 · <strong>경험치</strong> · 이동 속도 · 은신</td></tr>
+    <tr><td><strong>방어 계열</strong></td><td><strong>속성 저항 7종</strong> · 체력 · 완전 회복 · 가시 · 강인</td></tr>
+    <tr><td>나쁜 것</td><td>죽음 · 화염사 · <strong>적 소환</strong> · 악취</td></tr>
+  </table></div>
+
+  <h3>알아둘 규칙 <span class="tag data">데이터</span></h3>
+  <div class="tw"><table>
+    <tr><th>규칙</th><th>내용</th></tr>
+    <tr><td>지속시간</td><td>대부분 <strong>2분</strong> (<code>0.500</code>에서 대폭 연장)</td></tr>
+    <tr><td><strong>구역 초기화</strong></td><td><strong>신전 버프가 전부 사라집니다.</strong> 쿨다운도 함께 초기화됩니다 — <strong>무한 중첩을 막기 위한 장치</strong>입니다</td></tr>
+    <tr><td>아노말리 안</td><td>일부 효과는 <strong>등장하지 않습니다</strong>. 나쁜 효과와 악취 효과도 아노말리에서는 발동하지 않습니다</td></tr>
+    <tr><td>회복 효과</td><td><strong>동료도 함께</strong> 회복시킵니다</td></tr>
+    <tr><td>신전에서 나온 적</td><td>맞기 전까지 <strong>1.5초 동안 비활성</strong> 상태입니다</td></tr>
+  </table></div>
+
+  <div class="note ok">
+    <strong>파밍 순서에 영향을 줍니다.</strong> 신전 버프를 받고 도는 루틴이라면
+    <a href="#zone-reset">구역 초기화</a>를 <strong>먼저</strong> 하고 버프를 나중에 챙기세요 —
+    순서가 반대면 방금 받은 버프가 그대로 날아갑니다.<br>
+    희귀 아노말리 수식어 중 <strong>「신전 대량」</strong>이 걸리면 원하는 버프가 나올 때까지 여러 번 시도할 수 있습니다.
+  </div>
+</section>
+
 <!-- ══════════ 레벨링 → 성장 ══════════ -->
 <section id="handover">
   <h2>레벨링에서 성장으로 — 인수인계</h2>
@@ -360,7 +405,7 @@
     <li><strong>캠페인을 완주하면 계정 전체에</strong> 개방됩니다. 캐릭터마다 다시 뚫을 필요가 없습니다.</li>
     <li><strong>난이도 변경</strong>을 여기서 할 수 있습니다 (영웅 불러오기 메뉴에서도 가능).</li>
     <li><strong>상급 강화</strong> — <strong>기억 정수</strong>를 소모해 인챈트 수치를 더 올립니다.</li>
-    <li><strong>영약 구매</strong> — 1.40 개편 이후 영약은 여기와 크로니콘 영약 상점에서만 나옵니다.</li>
+    <li><strong>엘릭서 구매</strong> — 1.40 개편 이후 엘릭서은 여기와 크로니콘 엘릭서 상점에서만 나옵니다.</li>
     <li><strong>아노말리에서 죽으면</strong> 런이 끝나지 않고 <strong>틴카의 영역으로 이동</strong>합니다. 단 <strong>정예 던전은 사망 불가</strong> 모드입니다.</li>
   </ul>
 

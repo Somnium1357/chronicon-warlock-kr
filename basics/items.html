@@ -66,7 +66,7 @@
 </nav>
 
 <h1>아이템 · 드랍</h1>
-<p class="lede">등급 사다리부터 변환·마법부여·룬·보석·영약까지 — 그리고 어떤 옵션이 어느 부위에 붙는가</p>
+<p class="lede">등급 사다리부터 변환·마법부여·룬·보석·엘릭서까지 — 그리고 어떤 옵션이 어느 부위에 붙는가</p>
 
 <div class="searchbar">
   <input type="search" id="q" placeholder="이 문서에서 검색" autocomplete="off" spellcheck="false" aria-label="문서 내 검색">
@@ -443,7 +443,7 @@
     <tr><td>체력</td><td>투구 · 갑옷 · 무기 · 장화 · 장신구 · 반지 · 목걸이</td></tr>
     <tr><td>적중 시 체력</td><td>무기 · 장화 · 목걸이 · 보조장비</td></tr>
     <tr><td>저항</td><td>투구 · 갑옷 · 장화 · 반지 · 목걸이 · 보조장비 (<strong>무기 불가</strong>)</td></tr>
-    <tr><td>경험치 +% (최대 50%)</td><td>투구 · 무기 · 장신구 · 반지 · 목걸이 · 마도서 (<strong>갑옷·장화 불가</strong>)</td></tr>
+    <tr><td>경험치 +% (최대 50%)</td><td>투구 · 무기 · 장신구 · 반지 · 목걸이 · 마법서 (<strong>갑옷·장화 불가</strong>)</td></tr>
   </table></div>
 
   <ul>
@@ -453,26 +453,119 @@
   </ul>
 </section>
 
-<!-- ══════════ 영약 ══════════ -->
+<!-- ══════════ 엘릭서 ══════════ -->
 <section id="elixir">
-  <h2>영약 · 물약</h2>
+  <h2>소모품 — 물약 · 엘릭서 · 투척병 · 장치</h2>
 
-  <div class="note warn">
-    <strong>1.40에서 영약이 전면 개편되었습니다.</strong> <span class="tag data">데이터</span><br>
-    이제 <strong>몹이 영약을 드랍하지 않습니다.</strong> <strong>틴카의 영역</strong>과 <strong>크로니콘의 영약 상점</strong>에서 구매합니다. 구버전 영약은 더 이상 나오지 않으므로, "영약은 파밍으로 모은다"는 가이드는 <strong>낡은 정보</strong>입니다.
+  <div class="note ok">
+    <strong>네 갈래를 먼저 구분하세요.</strong> 이름이 비슷해서 가이드를 읽을 때 자주 뒤섞입니다.
   </div>
 
   <div class="tw"><table>
-    <tr><th>항목</th><th>내용</th></tr>
-    <tr><td>영약 동시 적용</td><td>등급별 <strong>2개씩</strong></td></tr>
-    <tr><td><strong>인젝터 · 런처</strong></td><td><strong>50레벨 + 영웅 난이도 이상</strong>에서만 드랍 <span class="tag data">데이터: 1.50</span></td></tr>
-    <tr><td>물약 쿨다운</td><td><strong>10초</strong></td></tr>
-    <tr><td>물약 회복</td><td><strong>절반만 즉시</strong>, 나머지는 5초에 걸쳐</td></tr>
-    <tr><td><strong>초월 물약</strong> <span class="mono">Transcendent</span></td><td>1.54 신규 <strong>4종</strong> — 100레벨 몹 드랍 또는 <strong>사렉</strong> 구매</td></tr>
+    <tr><th>분류</th><th>영문</th><th>무엇</th></tr>
+    <tr><td><strong>물약</strong></td><td><span class="mono">Potion</span></td><td>체력·마나 즉시 회복</td></tr>
+    <tr><td><strong>엘릭서</strong></td><td><span class="mono">Elixir</span></td><td><strong>나에게 거는 버프.</strong> 지속시간이 있습니다</td></tr>
+    <tr><td><strong>투척병</strong></td><td><span class="mono">Vial</span></td><td><strong>적에게 던지는 디버프.</strong> 착탄 지점 <strong>반경 3m</strong></td></tr>
+    <tr><td><strong>장치</strong></td><td><span class="mono">Device</span></td><td>위 셋을 <strong>자동으로</strong> 쓰게 해주는 장비</td></tr>
   </table></div>
 
+  <h3>장치 — 인젝터와 런처 <span class="tag data">데이터</span></h3>
+  <p>장치 슬롯에 <strong>주입기</strong>나 <strong>투척기</strong>를 끼우고, 플라스크 슬롯에 내용물을 넣습니다.
+     게임 설명 그대로 — <em>「슬롯에 장착된 장치의 요구 사항에 맞는 엘릭서, 투척병, 물약을 여기에 놓으세요」</em>.</p>
+  <div class="tw"><table>
+    <tr><th>장치</th><th>영문</th><th>넣는 것</th><th>등급</th></tr>
+    <tr><td><strong>주입기</strong></td><td><span class="mono">Injector</span></td><td>엘릭서 · 물약 → <strong>나에게 자동 사용</strong></td><td>MK 1 ~ MK 5</td></tr>
+    <tr><td><strong>투척기</strong></td><td><span class="mono">Launcher</span></td><td>투척병 → <strong>적에게 자동 투척</strong></td><td>MK 1 ~ MK 5</td></tr>
+  </table></div>
+  <p class="src">MK 3부터 특화형으로 갈립니다 — 주입기는 <strong>신속 · 강화 · 물약 · 엘릭서 · 체력 · 마나</strong>,
+     투척기는 <strong>신속 · 캐터펄트 · 분산</strong>과 그 조합. MK 5는 <strong>슈퍼</strong> 하나입니다</p>
+  <div class="note warn">
+    <strong>인젝터·런처는 50레벨 + 영웅 난이도 이상에서만 드랍됩니다.</strong> <span class="tag data">1.50</span><br>
+    장치에 붙는 옵션에는 <strong>장착된 엘릭서의 효과 +%</strong>와 <strong>지속시간 +%</strong>가 있습니다 —
+    장치 자체가 내용물을 강화합니다.
+  </div>
+
+  <h3>엘릭서 <span class="tag data">데이터</span></h3>
+  <div class="note warn">
+    <strong>1.40에서 전면 개편되었습니다.</strong>
+    이제 <strong>몹이 엘릭서를 드랍하지 않습니다.</strong> <strong>틴카의 영역</strong>과
+    <strong>크로니콘의 상점</strong>에서 구매합니다. "엘릭서는 파밍으로 모은다"는 가이드는 <strong>낡은 정보</strong>입니다.
+  </div>
+  <p><strong>동시 적용은 등급별 2개까지</strong>입니다 — 게임 문구가
+     <em>「동시에 활성화할 수 있는 (등급) 엘릭서는 최대 2개입니다」</em>. 등급이 다르면 별도로 셉니다.</p>
+  <p><code>1.400</code>에서 <strong>엘릭서 효율</strong> <span class="mono">Elixir Efficiency</span> 스탯이 추가됐습니다.
+     현재는 <strong>샤로아이트(암흑) 별 보석</strong>으로만 얻을 수 있고, <strong>곱연산이라 감소 수익</strong>이 있습니다.</p>
+
+  <h3>투척병 — 무엇을 던질 수 있나 <span class="tag data">데이터</span></h3>
+  <p>전부 착탄 지점 <strong>반경 3m</strong>에 적용됩니다.</p>
+  <div class="tw"><table>
+    <tr><th>투척병</th><th>효과</th></tr>
+    <tr><td><strong>약화</strong> <span class="mono">Weakness</span></td><td>받는 <strong>직접 피해</strong> 증가</td></tr>
+    <tr><td><strong>○○ 반감</strong> <span class="mono">Aversion</span></td><td>해당 <strong>속성 직접 피해</strong>를 더 받게 함</td></tr>
+    <tr><td><strong>○○ 폭발</strong> <span class="mono">Burst</span></td><td>속성 피해. <strong>직접 피해라 타격 시 효과가 발동합니다</strong></td></tr>
+    <tr><td>공포</td><td>도망. <strong>피해를 주면 풀릴 수 있습니다</strong></td></tr>
+    <tr><td>기절</td><td><strong>감소 수익 있음</strong></td></tr>
+    <tr><td>방해</td><td><strong>감소 수익 있음</strong></td></tr>
+    <tr><td>둔화</td><td>최대 5초</td></tr>
+    <tr><td>밀림 · 끌기</td><td><strong>짧은 쿨다운이 있습니다</strong></td></tr>
+  </table></div>
+  <div class="note ok">
+    <strong>약화와 반감이 실전에서 가장 큽니다.</strong> 둘 다 <strong>받는 피해를 늘리는</strong> 디버프라
+    내 피해 계산에 <strong>곱연산으로</strong> 얹힙니다. 군중 제어형 투척병은 보스에게 대체로 안 통합니다
+    (<a href="defense.html#status">단단한 적과 보스는 저항</a>).
+  </div>
+
+  <h3>물약</h3>
+  <div class="tw"><table>
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td>쿨다운</td><td><strong>10초</strong></td></tr>
+    <tr><td>회복 방식</td><td><strong>절반만 즉시</strong>, 나머지는 5초에 걸쳐</td></tr>
+    <tr><td>승급</td><td><a href="crafting.html#transmute">변환</a> — <strong>10개 → 다음 등급 5개</strong></td></tr>
+    <tr><td><strong>초월 물약</strong> <span class="mono">Transcendent</span></td><td><code>1.540</code> 신규 <strong>4종</strong> — 레벨 100 적 드랍 또는 <strong>사렉</strong> 구매</td></tr>
+    <tr><td>물약 효율</td><td>회복량을 늘립니다. <strong>템플러는 레벨업으로 자동 획득</strong> (100레벨 +30%)</td></tr>
+  </table></div>
+  <div class="note warn">
+    <strong>물약은 위급할 때가 아니라 위급해지기 전에 눌러야 합니다.</strong>
+    절반만 즉시 들어오기 때문에, 체력이 바닥일 때 눌러도 <strong>다음 한 방을 못 버티는</strong> 경우가 많습니다.
+  </div>
   <div class="note">
-    물약이 <strong>절반만 즉시</strong> 회복된다는 점이 실전에서 중요합니다. 체력이 바닥일 때 물약을 눌러도 <strong>다음 한 방을 못 버티는</strong> 경우가 많습니다. 물약은 위급할 때가 아니라 <strong>위급해지기 전에</strong> 눌러야 합니다.
+    <strong>초월 물약 4종</strong> — 체력 <strong>15%</strong> 즉시 · 마나 <strong>15%</strong> 즉시 ·
+    회복(체력·마나 각 <strong>10%</strong>) · <strong>시간</strong>(보유 중인 스태거 피해의 <strong>15% 제거</strong>).
+    전부 <strong>물약 효율의 영향</strong>을 받습니다. <span class="tag data">데이터</span>
+  </div>
+
+  <h3>주문서와 코덱스 <span class="tag data">데이터</span></h3>
+  <p>클래스 스킬과 별개로, <strong>아무나 쓸 수 있는 주문</strong>을 담은 소모품입니다.
+     보조 무기 슬롯의 <strong>마법서</strong> <span class="mono">Spellbook</span>와는 다른 것입니다.</p>
+  <div class="tw"><table>
+    <tr><th></th><th>영문</th><th>사용 횟수</th><th>제약</th></tr>
+    <tr><td><strong>주문서</strong></td><td><span class="mono">Scroll of …</span></td><td><strong>1회 소모</strong></td><td>개수만큼만</td></tr>
+    <tr><td><strong>코덱스</strong></td><td><span class="mono">Codex of …</span></td><td><strong>무제한</strong></td><td><strong>재사용 대기시간이 있습니다</strong></td></tr>
+  </table></div>
+  <div class="note warn">
+    <strong>코덱스가 항상 우월한 것은 아닙니다.</strong> 무제한인 대신 <strong>쿨다운</strong>이 붙습니다.
+    주문서는 쿨다운이 없어서 <strong>연속으로 난사</strong>할 수 있습니다 —
+    그래서 저주 모독자 빌드는 이동용으로 코덱스가 아니라
+    <strong>영혼 전송 왜곡 주문서 999개</strong>를 씁니다.
+    <a href="../classes/warlock/builds.html">워록 빌드</a> 참고
+  </div>
+  <p><strong>코덱스 만들기</strong> — <a href="crafting.html#transmute">변환</a>에서
+     주문 코덱스 + <strong>같은 주문서 50개</strong>. 자주 쓰는 유틸리티 주문은 코덱스로,
+     난사가 필요한 주문은 주문서로 두는 편이 낫습니다.</p>
+  <div class="note">
+    <strong>「코덱스」가 두 가지를 가리킵니다.</strong> 위의 <strong>주문 코덱스</strong>와,
+    게임 내 백과사전인 <strong>도감</strong> <span class="mono">The Codex</span>입니다.
+    한글패치는 후자를 <strong>「도감」</strong>으로 옮겨 구분해 두었습니다 —
+    영어 가이드에서 <span class="mono">Codex</span>가 나오면 어느 쪽인지 확인하세요.
+  </div>
+
+  <div class="note">
+    <strong>한글패치 — 엘릭서 표기를 통일했습니다.</strong> 원래 아이템 이름은 「생명의 <strong>엘릭서</strong>」인데
+    종류 표기는 「비약」, 설명문은 「엘릭서」, 상점은 「비약 상점」으로 <strong>네 갈래</strong>였습니다.
+    아이템명 13개가 쓰던 <strong>엘릭서</strong>로 맞췄고, <span class="mono">Vial</span>도
+    「바이알」과 「투척병」이 섞여 있던 것을 <strong>투척병</strong>으로 통일했습니다 (12건).<br>
+    또 <span class="mono">Spellbook</span>(보조 무기)과 <span class="mono">Scroll</span>(소모품)이
+    <strong>둘 다 「주문서」</strong>였습니다 → 보조 무기를 <strong>「마법서」</strong>로 분리했습니다.
   </div>
 </section>
 
@@ -491,7 +584,7 @@
   <h3>조절 항목</h3>
   <ul>
     <li>등급 토글: 일반 · 마법부여 · 희귀 · 고유 · 전설 · 진정한 전설 — <strong>표시용과 방사형용을 각각</strong> 설정</li>
-    <li>소모품: 물약 · 영약 · 두루마리 · 열쇠 · 기타 소모품</li>
+    <li>소모품: 물약 · 엘릭서 · 주문서 · 열쇠 · 기타 소모품</li>
     <li>다른 클래스 아이템 필터링</li>
     <li>게임 세계에서 품질 필터링된 장비 제거 (<strong>되돌릴 수 없음</strong>)</li>
     <li>방사형 루팅으로 장비를 줍지 않음 (<code>Q</code>를 소모품 전용으로)</li>
