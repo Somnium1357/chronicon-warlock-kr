@@ -307,16 +307,74 @@
 <section id="killstreak">
   <h2>킬 연계 (킬스트릭)</h2>
 
+  <p>끊기지 않고 계속 처치하면 <strong>연계</strong>가 쌓입니다. 파밍 효율을 좌우하는 장치라
+     빌드를 고를 때도 영향을 줍니다.</p>
+
+  <h3>단계 8종 <span class="tag data">데이터</span></h3>
   <div class="tw"><table>
-    <tr><th>주는 것</th><th>주지 않는 것</th></tr>
-    <tr><td>보너스 <strong>경험치</strong></td><td rowspan="2"><strong>피해 버프는 없습니다.</strong> 킬 연계는 순수하게 획득량 보상입니다</td></tr>
-    <tr><td>보너스 <strong>크리스탈</strong></td></tr>
+    <tr><th>처치 수</th><th>한글패치</th><th>영문</th></tr>
+    <tr><td>25</td><td>학살!</td><td><span class="mono">Slaughter!</span></td></tr>
+    <tr><td>50</td><td>피바다!</td><td><span class="mono">Bloodbath!</span></td></tr>
+    <tr><td><strong>100</strong></td><td><strong>대학살!</strong></td><td><span class="mono">Carnage!</span></td></tr>
+    <tr><td>200</td><td>도살!</td><td><span class="mono">Massacre!</span></td></tr>
+    <tr><td>500</td><td>초토화!</td><td><span class="mono">Devastation!</span></td></tr>
+    <tr><td><strong>1,000</strong></td><td><strong>섬멸!</strong></td><td><span class="mono">Annihilation!</span></td></tr>
+    <tr><td>1,500</td><td>아마겟돈!</td><td><span class="mono">Armageddon!</span></td></tr>
+    <tr><td><strong>5,000</strong></td><td><strong>신의 경지!</strong></td><td><span class="mono">Godlike!</span></td></tr>
   </table></div>
 
-  <ul>
-    <li>끊김 없이 연속으로 처치할수록 배율이 올라가고, <strong>난이도가 높을수록 더 많이</strong> 줍니다.</li>
-    <li>도트·연쇄 빌드는 <strong>화면 밖에서도 처치가 계속 발생</strong>하기 때문에 게이지가 유지되어, 사실상 <strong>맵 하나가 통째로 한 번의 스트릭</strong>이 됩니다. 레벨링·마스터리 파밍에서 도트/연쇄 빌드가 유독 빠른 이유입니다.</li>
-  </ul>
+  <h3>주는 것 — 셋입니다</h3>
+  <div class="tw"><table>
+    <tr><th>보상</th><th>내용</th></tr>
+    <tr><td><strong>크리스탈</strong></td><td><strong>연계가 길수록 지수적으로</strong> 늘어납니다 — 크리스탈 파밍의 가장 큰 변수</td></tr>
+    <tr><td><strong>경험치</strong></td><td>난이도와 연계 길이에 따라. <a href="endgame.html#difficulty">난이도 표</a>가 단계별 문구를 명시합니다</td></tr>
+    <tr><td><strong>킬스트릭 효과</strong></td><td>단계에 도달하면 <strong>화면을 쓸어버리는 주문</strong>이 터집니다</td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>「킬스트릭은 획득량만 준다」는 틀린 정보입니다.</strong>
+    <span class="mono">Carnage</span>(100)의 <strong>화염구</strong>,
+    <span class="mono">Annihilation</span>(1,000)과 <span class="mono">Godlike</span>(5,000)의
+    <strong>운석</strong>처럼 실제 피해를 주는 효과가 붙습니다. <span class="tag data">데이터</span><br>
+    <strong>다만 그 피해는 내 스탯과 무관합니다</strong> — <code>0.810</code>에서
+    <em>“플레이어 스탯이 아니라 <strong>몬스터 체력과 난이도·아노말리 레벨</strong>을 기준으로”</em>
+    계산하도록 바뀌었습니다. 빌드가 약해도 킬스트릭 운석은 똑같이 강합니다.
+  </div>
+
+  <h3>연계가 끊기는 규칙 <span class="tag data">데이터</span></h3>
+  <div class="tw"><table>
+    <tr><th>상황</th><th>타이머</th></tr>
+    <tr><td>적이 <strong>피해를 입거나 죽을 때</strong></td><td><strong>갱신</strong></td></tr>
+    <tr><td>내가 맞을 때</td><td>무관 — <code>0.310</code>에서 고쳐졌습니다</td></tr>
+    <tr><td><strong>구역 이동 · 컷신</strong></td><td><strong>처치한 것처럼 갱신됩니다</strong> — 맵을 넘어가도 안 끊깁니다</td></tr>
+    <tr><td>지속 피해(도트)만 들어갈 때</td><td><strong>유지되지 않습니다</strong> — <code>0.540</code>에서 막혔습니다</td></tr>
+  </table></div>
+
+  <div class="note ok">
+    <strong>맵 이동으로 안 끊긴다는 점이 실전에서 큽니다.</strong> 한 구역을 쓸고 다음 구역으로 넘어가도
+    연계가 이어지므로, <strong>여러 구역을 연달아 도는 파밍 루트</strong>가 성립합니다.
+  </div>
+  <div class="note warn">
+    <strong>도트만으로는 연계가 유지되지 않습니다.</strong> <code>0.540</code>에서
+    지속 피해가 연계를 살려 두던 것이 수정됐고, <code>0.600</code>에서
+    <span class="mono">Sludge Threads</span> 같은 장판도 같은 처리를 받았습니다.<br>
+    다만 <strong>도트로 인한 「처치」는 갱신됩니다</strong> — 화면 밖에서 적이 죽어 나가는 동안에는 연계가 이어집니다.
+    도트·연쇄 빌드가 파밍에 강한 이유는 여기까지입니다.
+  </div>
+
+  <div class="note">
+    <strong>연계가 끝나기 전에 틴카에게 돌아가도 안전합니다.</strong> <code>0.924</code>에서
+    보너스를 <strong>「연계가 끝난 시점」이 아니라 「처치한 시점」의 스탯</strong>으로 계산하도록 고쳤습니다.
+    마법 발견이나 크리스탈 발견을 바꾸려고 서두를 필요가 없습니다. <span class="tag data">데이터</span>
+  </div>
+
+  <div class="note">
+    <strong>같이 볼 것</strong> —
+    <a href="items.html#crystals">크리스탈 파밍</a> ·
+    <a href="endgame.html#anomaly-types">아노말리 종류별 파밍 목적</a> ·
+    <a href="endgame.html#zone-reset">구역 초기화</a> ·
+    <a href="endgame.html#shrine">신전</a>
+  </div>
 </section>
 
 <!-- ══════════ 소환수 ══════════ -->
@@ -344,14 +402,26 @@
   </div>
 </section>
 
+  <div class="note">
+    <strong>파밍은 여러 문서에 나뉘어 있습니다</strong> —
+    <a href="items.html#drops">드랍과 매직 파인드</a> ·
+    <a href="items.html#crystals">크리스탈</a> ·
+    <a href="damage.html#killstreak">킬스트릭</a> ·
+    <a href="endgame.html#anomaly-types">아노말리 종류별 목적</a> ·
+    <a href="endgame.html#zone-reset">구역 초기화</a> ·
+    <a href="endgame.html#shrine">신전</a> ·
+    <a href="endgame.html#world">보물함 · 퍼즐</a>
+  </div>
+
 <!-- ══════════ 관련 문서 ══════════ -->
 <section id="related">
   <h2>관련 문서</h2>
   <ul>
-    <li><a href="defense.html">방어</a> — 저항 오버캡, 간접 피해 5% 상한, 회피·피해 감소 곱연산</li>
-    <li><a href="skills.html">스킬 · 태그</a> — 계열/형태 태그 두 축, 스킬 랭크와 슬롯 규칙</li>
-    <li><a href="items.html">아이템 · 드랍</a> — 어떤 부위에 어떤 옵션이 붙는가</li>
-    <li><a href="crafting.html">제작 · 변환</a> — 마법부여로 붙일 수 있는 옵션과 없는 옵션</li>
+    <li><a href="defense.html">방어</a> — 저항·회피·감소 수익. 피해의 반대편</li>
+    <li><a href="skills.html">스킬 · 태그</a> — 어떤 스킬이 어떤 피해로 분류되는가</li>
+    <li><a href="items.html#power">아이템 · 드랍 › 파워</a> — 피해를 바꾸는 특수 효과가 어디서 오는가</li>
+    <li><a href="crafting.html#enchant">제작 · 변환 › 마법부여</a> — 원소 % 피해는 붙일 수 없다는 규칙</li>
+    <li><a href="endgame.html#league">난이도 · 엔드게임 › 리그와 티어</a> — 적이 얼마나 단단해지는가</li>
   </ul>
 </section>
 

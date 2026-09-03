@@ -270,6 +270,28 @@
 <section id="enchant">
   <h2>마법부여 — 찬티</h2>
 
+  <div class="note warn">
+    <strong>먼저 찬티의 퀘스트를 깨야 열립니다.</strong> 크로니콘에서 찬티에게 말을 걸어
+    퀘스트를 시작하세요. 그전에는 마법부여 자체를 쓸 수 없습니다. <span class="tag data">0.600</span>
+  </div>
+
+  <h3>세 버튼이 정확히 무엇을 하는가 <span class="tag data">데이터</span></h3>
+  <div class="tw"><table>
+    <tr><th>버튼</th><th>게임 내 설명</th></tr>
+    <tr><td><strong>재굴림</strong><br><span class="mono">Re-roll</span></td><td><em>「선택한 <strong>잠기지 않은</strong> 마법부여의 <strong>세기</strong>를 다시 굴립니다. <strong>주황 옵션도 잠겨 있지 않다면</strong> 재굴림할 수 있습니다」</em></td></tr>
+    <tr><td><strong>스크램블</strong><br><span class="mono">Scramble</span></td><td><em>「아이템에 <strong>새로운 마법부여 한 벌</strong>을 생성합니다. <strong>잠긴 것은 그대로 남고</strong>, <strong>주황 옵션도 바뀌지 않습니다</strong>」</em></td></tr>
+    <tr><td><strong>강화</strong><br><span class="mono">Augment</span></td><td><em>「선택한 마법부여를 개선하고 <strong>잠급니다</strong>. 잠기면 스크램블도 재굴림도 되지 않습니다」</em></td></tr>
+    <tr><td><strong>상급 강화</strong><br><span class="mono">Greater Augment</span></td><td><em>「<strong>일반 강화 상한을 넘어서</strong> 개선합니다」</em> — <a href="#ga">아래 참고</a></td></tr>
+  </table></div>
+
+  <div class="note ok">
+    <strong>이 세 문장이 반복 굴리기의 전부입니다.</strong>
+    강화가 <strong>잠금</strong>을 겸하고, 스크램블이 <strong>잠긴 것을 건드리지 않기</strong> 때문에
+    「마음에 드는 것만 잠그고 나머지를 다시 굴리는」 반복이 성립합니다.<br>
+    <strong>주황 옵션은 애초에 스크램블 대상이 아니므로</strong> 굴릴 칸을 잡아먹지 않습니다 —
+    <a href="items.html#power">주황 옵션이 있는 아이템이 이득인 이유</a>입니다.
+  </div>
+
   <p>찬티 본인의 설명으로는 마법부여가 세 갈래입니다 —
      <strong>스크램블 · 재굴림 · 강화</strong>. <em>「셋은 하는 일이 다르고 드는 재료도 다릅니다.
      비용은 아이템의 등급과 계산된 가치에 따라서도 달라집니다.」</em> <span class="tag data">데이터</span></p>
@@ -417,6 +439,12 @@
     <tr><td><strong>진정한 전설</strong>의 파워</td><td><strong>상급 룬</strong> <span class="mono">Greater</span></td></tr>
     <tr><td><strong>유니크 · 전설</strong>의 파워</td><td><strong>하급 룬</strong> <span class="mono">Lesser</span></td></tr>
   </table></div>
+  <div class="note">
+    <strong>등급은 내가 고르는 것이 아닙니다.</strong> 넣은 아이템의 등급이 그대로 결정합니다 —
+    상급 룬이 필요하면 <strong>진정한 전설을 갈아 넣어야</strong> 하고,
+    진전설은 <a href="items.html#drops">전설 난이도 + 레벨 100</a>에서만 나옵니다.<br>
+    즉 <strong>상급 룬 제작은 사실상 레벨 100 이후의 작업</strong>입니다.
+  </div>
 
   <h3>장착 제한 <span class="tag data">데이터</span></h3>
   <div class="tw"><table>
@@ -631,9 +659,10 @@
 <section id="related">
   <h2>관련 문서</h2>
   <ul>
-    <li><a href="items.html">아이템 · 드랍</a> — 등급 · 드랍과 매직 파인드 · 크리스탈 · 옵션 부위표 · 루팅 필터</li>
-    <li><a href="endgame.html">난이도 · 엔드게임</a> — 아노말리 종류별로 무엇이 나오는가</li>
-    <li><a href="glossary.html">한영 명칭</a> — 전체 용어 대조표</li>
+    <li><a href="items.html#power">아이템 · 드랍 › 파워</a> — 룬으로 옮기는 그 「파워」가 무엇인가</li>
+    <li><a href="items.html#drops">드랍과 매직 파인드</a> — 재료가 나오는 조건</li>
+    <li><a href="endgame.html#anomaly-types">아노말리 종류별 파밍 목적</a> — 룬스톤과 신화 재료를 어디서 얻는가</li>
+    <li><a href="endgame.html#handover">레벨링에서 성장으로</a> — 마법부여를 언제 굴려야 싼가</li>
     <li><a href="../classes/warlock/builds.html">워록 빌드</a> — 신화 제작 무기가 필수인 빌드의 실례</li>
   </ul>
 </section>
