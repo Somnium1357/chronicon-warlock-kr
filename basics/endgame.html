@@ -63,6 +63,7 @@
     <li><a href="../basics/glossary.html">한영 명칭</a></li>
     <li><a href="../basics/names.html">이름 찾기</a></li>
     <li><a href="../meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="../meta/binary.html">실행 파일 조사</a></li>
     <li><a href="../meta/patches.html">패치 동향</a></li>
   </ul>
 </nav>
@@ -126,49 +127,6 @@
     <strong>영웅 난이도 이상이어야 전설이 나옵니다.</strong> 캐주얼·일반에서 아무리 오래 파밍해도 전설은 드랍되지 않습니다. 레벨 10을 넘겼다면 <strong>영웅으로 올리는 것이 사실상 필수</strong>입니다.
   </div>
 </section>
-
-<!-- ══════════ 구역 초기화 ══════════ -->
-<section id="zone-reset">
-  <h2>구역 초기화 — 보스 반복 파밍</h2>
-
-  <div class="note ok">
-    <strong>길잡이 돌 지도에서 구역을 <span class="mono">우클릭</span>하면 그 구역만 초기화하고 바로 들어갑니다.</strong><br>
-    게임을 나갔다가 난이도를 바꿔서 다시 들어올 필요가 없습니다.
-  </div>
-
-  <p>보스를 반복해서 잡으려면 구역이 초기화돼야 합니다. 난이도를 왔다갔다 하는 방법이 널리 쓰이지만,
-     그건 <strong>모든</strong> 구역을 초기화하는 부작용을 이용한 우회로입니다. 게임에는 구역 하나만 되돌리는 정식 조작이 있습니다.</p>
-
-  <h3>조작 <span class="tag data">데이터</span></h3>
-  <div class="tw"><table>
-    <tr><th>입력</th><th>표시</th><th>동작</th></tr>
-    <tr><td><span class="mono">LMB</span> (좌클릭)</td><td><strong>선택</strong></td><td>해당 구역으로 이동. <strong>진행 상태 유지</strong> — 잡은 보스는 그대로 죽어 있습니다</td></tr>
-    <tr><td><span class="mono">RMB</span> (우클릭)</td><td><strong>초기화</strong></td><td><strong>그 구역만</strong> 초기화하고 진입. 몬스터·보스가 새로 배치됩니다</td></tr>
-    <tr><td>패드</td><td><strong>초기화</strong></td><td>길잡이 돌 화면 하단에 버튼이 따로 표시됩니다</td></tr>
-  </table></div>
-  <p class="src">출처: <span class="mono">locale/EN/interface</span>의 <span class="mono">waypoint_controls_mouse1/mouse2</span>,
-     <span class="mono">waypoint_controls_gamepad2</span>. 한글패치 표기는 「선택」·「초기화」</p>
-
-  <p>우클릭하면 확인창이 뜹니다:</p>
-  <blockquote>「<strong>ZONE</strong> 구역을 초기화하고 진입할까요? 모든 신단 버프가 해제됩니다!」</blockquote>
-  <p class="src"><span class="mono">popup_reset_txt</span>. <span class="mono">ZONE</span>은 구역 이름으로 치환됩니다</p>
-
-  <div class="note warn">
-    <strong>신단 버프가 전부 풀립니다.</strong> 이건 난이도 변경도 마찬가지이므로 손해는 아니지만,
-    버프를 받고 도는 루틴이라면 <strong>버프는 초기화 뒤에</strong> 챙기세요.
-  </div>
-
-  <h3>어느 쪽을 쓸까</h3>
-  <div class="tw"><table>
-    <tr><th>목적</th><th>방법</th></tr>
-    <tr><td><strong>보스 한 마리 반복</strong></td><td>길잡이 돌에서 그 구역 <strong>우클릭</strong>. 가장 빠릅니다</td></tr>
-    <tr><td>전체를 갈아엎고 싶을 때</td><td>틴카 &gt; <strong>난이도 변경</strong> — 모든 구역이 초기화됩니다</td></tr>
-    <tr><td>매직 파인드·경험치 구간 조정</td><td>틴카 &gt; <strong>난이도 변경</strong></td></tr>
-  </table></div>
-
-  <p class="src">키바인드로 이 동작을 다른 키에 걸 수는 없습니다. <span class="mono">save/keybinds/</span>가 노출하는 조작은 29종뿐이고 구역 초기화는 거기 없습니다 <span class="tag data">데이터</span></p>
-</section>
-
 <!-- ══════════ 캠페인 ══════════ -->
 <section id="campaign">
   <h2>캠페인 — 5막</h2>
@@ -197,52 +155,6 @@
     1.54부터는 <strong>신전 상부 회랑의 제단에 동전을 헌납</strong>하면 유용한 아이템이 나올 확률이 크게 올라갑니다.
   </div>
 </section>
-
-<!-- ══════════ 신단 ══════════ -->
-<section id="shrine">
-  <h2>신단 — 35가지가 있고, 나쁜 것도 있습니다</h2>
-
-  <p>신단 <span class="mono">Shrine</span>은 만지면 무작위 효과가 걸리는 오브젝트입니다.
-     지역마다 이름이 다르지만(<span class="mono">Hell Shrine</span>, <span class="mono">Elven Shrine</span>,
-     <span class="mono">Shrine of Ayeela</span> …) <strong>나오는 효과 풀은 같습니다</strong>.
-     현재 <strong>35종</strong>이 있습니다. <span class="tag data">데이터</span></p>
-
-  <div class="note warn">
-    <strong>전부 좋은 것은 아닙니다.</strong> <em>「신속한 죽음의 선물...」</em>,
-    <em>「불타는 죽음이 기다려...」</em> 같은 <strong>나쁜 효과</strong>와
-    <em>「훌륭한 적수로다!」</em>(<strong>적이 소환됩니다</strong>)가 같은 풀에 들어 있습니다.<br>
-    <code>0.650</code>에서 <em>“<strong>나쁜 신단 효과가 처음 한 번은 뜰 확률을 높이고, 그 뒤로는 확률을
-    대폭 낮췄다</strong>”</em>고 조정됐습니다 — 한 번 당하고 나면 거의 안 나옵니다.
-  </div>
-
-  <h3>효과 갈래</h3>
-  <div class="tw"><table>
-    <tr><th>갈래</th><th>내용</th></tr>
-    <tr><td><strong>전리품 계열</strong></td><td>전리품 · <strong>대량 전리품</strong> · 크리스탈 · 보석 · <strong>마법 발견</strong></td></tr>
-    <tr><td><strong>공격 계열</strong></td><td>피해 · 광란 · 공격 속도 · <strong>무기 속성 부여 6종</strong>(암흑·신성·번개·냉기·독·화염)</td></tr>
-    <tr><td><strong>유틸리티</strong></td><td>쿨다운 감소 · 마나 소모 감소 · <strong>경험치</strong> · 이동 속도 · 은신</td></tr>
-    <tr><td><strong>방어 계열</strong></td><td><strong>속성 저항 7종</strong> · 체력 · 완전 회복 · 가시 · 강인</td></tr>
-    <tr><td>나쁜 것</td><td>죽음 · 화염사 · <strong>적 소환</strong> · 악취</td></tr>
-  </table></div>
-
-  <h3>알아둘 규칙 <span class="tag data">데이터</span></h3>
-  <div class="tw"><table>
-    <tr><th>규칙</th><th>내용</th></tr>
-    <tr><td>지속시간</td><td>대부분 <strong>2분</strong> (<code>0.500</code>에서 대폭 연장)</td></tr>
-    <tr><td><strong>구역 초기화</strong></td><td><strong>신단 버프가 전부 사라집니다.</strong> 쿨다운도 함께 초기화됩니다 — <strong>무한 중첩을 막기 위한 장치</strong>입니다</td></tr>
-    <tr><td>아노말리 안</td><td>일부 효과는 <strong>등장하지 않습니다</strong>. 나쁜 효과와 악취 효과도 아노말리에서는 발동하지 않습니다</td></tr>
-    <tr><td>회복 효과</td><td><strong>동료도 함께</strong> 회복시킵니다</td></tr>
-    <tr><td>신단에서 나온 적</td><td>맞기 전까지 <strong>1.5초 동안 비활성</strong> 상태입니다</td></tr>
-  </table></div>
-
-  <div class="note ok">
-    <strong>파밍 순서에 영향을 줍니다.</strong> 신단 버프를 받고 도는 루틴이라면
-    <a href="#zone-reset">구역 초기화</a>를 <strong>먼저</strong> 하고 버프를 나중에 챙기세요 —
-    순서가 반대면 방금 받은 버프가 그대로 날아갑니다.<br>
-    희귀 아노말리 수식어 중 <strong>「신단 대량」</strong>이 걸리면 원하는 버프가 나올 때까지 여러 번 시도할 수 있습니다.
-  </div>
-</section>
-
 <!-- ══════════ 레벨링 → 성장 ══════════ -->
 <section id="handover">
   <h2>레벨링에서 성장으로 — 인수인계</h2>
@@ -333,7 +245,6 @@
     옛 가이드가 말하는 레벨링 중 수급량은 지금과 다를 수 있습니다. <span class="tag data">데이터</span>
   </div>
 </section>
-
 <!-- ══════════ 아노말리 생성 ══════════ -->
 <section id="anomaly-gen">
   <h2>아노말리 — 맵이 만들어지는 방식</h2>
@@ -362,18 +273,6 @@
     <tr><td><strong>제거</strong></td><td><span class="mono">Bone Pits</span> <strong>레이아웃</strong> (동명 <strong>타일셋은 유지</strong>)</td></tr>
   </table></div>
 </section>
-
-  <div class="note">
-    <strong>파밍은 여러 문서에 나뉘어 있습니다</strong> —
-    <a href="items.html#drops">드랍과 매직 파인드</a> ·
-    <a href="items.html#crystals">크리스탈</a> ·
-    <a href="damage.html#killstreak">킬스트릭</a> ·
-    <a href="endgame.html#anomaly-types">아노말리 종류별 목적</a> ·
-    <a href="endgame.html#zone-reset">구역 초기화</a> ·
-    <a href="endgame.html#shrine">신단</a> ·
-    <a href="endgame.html#world">보물함 · 퍼즐</a>
-  </div>
-
 <!-- ══════════ 아노말리 종류 ══════════ -->
 <section id="anomaly-types">
   <h2>아노말리 종류별 파밍 목적</h2>
@@ -409,7 +308,6 @@
     소환·세트 의존 빌드를 만드는 중이라면 <strong>신화 I 던전 아노말리에서 멈추세요.</strong> 신화 XIV까지는 룬이 <strong>1개씩만</strong> 나오므로 더 밀어봐야 룬 수급은 같습니다. 사이사이 <strong>정예 던전</strong>으로 룬스톤을 모아 직접 제작하는 편이 빠릅니다.
   </div>
 </section>
-
 <!-- ══════════ 리그 ══════════ -->
 <section id="league">
   <h2>리그와 티어 — 아노말리의 난이도 축</h2>
@@ -438,7 +336,107 @@
     <a href="#anomaly-types">안정적으로 도는 티어를 반복</a>하는 편이 시간당 효율이 높습니다.
   </div>
 </section>
+<!-- ══════════ 틴카의 영역 ══════════ -->
+<section id="tinka">
+  <h2>틴카의 영역</h2>
 
+  <ul>
+    <li><strong>캠페인을 완주하면 계정 전체에</strong> 개방됩니다. 캐릭터마다 다시 뚫을 필요가 없습니다.</li>
+    <li><strong>난이도 변경</strong>을 여기서 할 수 있습니다 (영웅 불러오기 메뉴에서도 가능).</li>
+    <li><strong>상급 강화</strong> — <strong>기억 정수</strong>를 소모해 인챈트 수치를 더 올립니다.</li>
+    <li><strong>엘릭서 구매</strong> — 1.40 개편 이후 엘릭서은 여기와 크로니콘 엘릭서 상점에서만 나옵니다.</li>
+    <li><strong>아노말리에서 죽으면</strong> 런이 끝나지 않고 <strong>틴카의 영역으로 이동</strong>합니다. 단 <strong>정예 던전은 사망 불가</strong> 모드입니다.</li>
+  </ul>
+
+  <div class="note ok">
+    <strong>서두르지 마세요.</strong> 레벨링 빌드만으로도 <strong>초반 신화 난이도 아노말리는 충분히</strong> 돌 수 있습니다. 자원이 갖춰지고 나면 낮은 마스터리에서도 <strong>신화 VIII 이상</strong>에 바로 들어갈 수 있습니다.
+  </div>
+</section>
+<!-- ══════════ 구역 초기화 ══════════ -->
+<section id="zone-reset">
+  <h2>구역 초기화 — 보스 반복 파밍</h2>
+
+  <div class="note ok">
+    <strong>길잡이 돌 지도에서 구역을 <span class="mono">우클릭</span>하면 그 구역만 초기화하고 바로 들어갑니다.</strong><br>
+    게임을 나갔다가 난이도를 바꿔서 다시 들어올 필요가 없습니다.
+  </div>
+
+  <p>보스를 반복해서 잡으려면 구역이 초기화돼야 합니다. 난이도를 왔다갔다 하는 방법이 널리 쓰이지만,
+     그건 <strong>모든</strong> 구역을 초기화하는 부작용을 이용한 우회로입니다. 게임에는 구역 하나만 되돌리는 정식 조작이 있습니다.</p>
+
+  <h3>조작 <span class="tag data">데이터</span></h3>
+  <div class="tw"><table>
+    <tr><th>입력</th><th>표시</th><th>동작</th></tr>
+    <tr><td><span class="mono">LMB</span> (좌클릭)</td><td><strong>선택</strong></td><td>해당 구역으로 이동. <strong>진행 상태 유지</strong> — 잡은 보스는 그대로 죽어 있습니다</td></tr>
+    <tr><td><span class="mono">RMB</span> (우클릭)</td><td><strong>초기화</strong></td><td><strong>그 구역만</strong> 초기화하고 진입. 몬스터·보스가 새로 배치됩니다</td></tr>
+    <tr><td>패드</td><td><strong>초기화</strong></td><td>길잡이 돌 화면 하단에 버튼이 따로 표시됩니다</td></tr>
+  </table></div>
+  <p class="src">출처: <span class="mono">locale/EN/interface</span>의 <span class="mono">waypoint_controls_mouse1/mouse2</span>,
+     <span class="mono">waypoint_controls_gamepad2</span>. 한글패치 표기는 「선택」·「초기화」</p>
+
+  <p>우클릭하면 확인창이 뜹니다:</p>
+  <blockquote>「<strong>ZONE</strong> 구역을 초기화하고 진입할까요? 모든 신단 버프가 해제됩니다!」</blockquote>
+  <p class="src"><span class="mono">popup_reset_txt</span>. <span class="mono">ZONE</span>은 구역 이름으로 치환됩니다</p>
+
+  <div class="note warn">
+    <strong>신단 버프가 전부 풀립니다.</strong> 이건 난이도 변경도 마찬가지이므로 손해는 아니지만,
+    버프를 받고 도는 루틴이라면 <strong>버프는 초기화 뒤에</strong> 챙기세요.
+  </div>
+
+  <h3>어느 쪽을 쓸까</h3>
+  <div class="tw"><table>
+    <tr><th>목적</th><th>방법</th></tr>
+    <tr><td><strong>보스 한 마리 반복</strong></td><td>길잡이 돌에서 그 구역 <strong>우클릭</strong>. 가장 빠릅니다</td></tr>
+    <tr><td>전체를 갈아엎고 싶을 때</td><td>틴카 &gt; <strong>난이도 변경</strong> — 모든 구역이 초기화됩니다</td></tr>
+    <tr><td>매직 파인드·경험치 구간 조정</td><td>틴카 &gt; <strong>난이도 변경</strong></td></tr>
+  </table></div>
+
+  <p class="src">키바인드로 이 동작을 다른 키에 걸 수는 없습니다. <span class="mono">save/keybinds/</span>가 노출하는 조작은 29종뿐이고 구역 초기화는 거기 없습니다 <span class="tag data">데이터</span></p>
+</section>
+<!-- ══════════ 신단 ══════════ -->
+<section id="shrine">
+  <h2>신단 — 35가지가 있고, 나쁜 것도 있습니다</h2>
+
+  <p>신단 <span class="mono">Shrine</span>은 만지면 무작위 효과가 걸리는 오브젝트입니다.
+     지역마다 이름이 다르지만(<span class="mono">Hell Shrine</span>, <span class="mono">Elven Shrine</span>,
+     <span class="mono">Shrine of Ayeela</span> …) <strong>나오는 효과 풀은 같습니다</strong>.
+     현재 <strong>35종</strong>이 있습니다. <span class="tag data">데이터</span></p>
+
+  <div class="note warn">
+    <strong>전부 좋은 것은 아닙니다.</strong> <em>「신속한 죽음의 선물...」</em>,
+    <em>「불타는 죽음이 기다려...」</em> 같은 <strong>나쁜 효과</strong>와
+    <em>「훌륭한 적수로다!」</em>(<strong>적이 소환됩니다</strong>)가 같은 풀에 들어 있습니다.<br>
+    <code>0.650</code>에서 <em>“<strong>나쁜 신단 효과가 처음 한 번은 뜰 확률을 높이고, 그 뒤로는 확률을
+    대폭 낮췄다</strong>”</em>고 조정됐습니다 — 한 번 당하고 나면 거의 안 나옵니다.
+  </div>
+
+  <h3>효과 갈래</h3>
+  <div class="tw"><table>
+    <tr><th>갈래</th><th>내용</th></tr>
+    <tr><td><strong>전리품 계열</strong></td><td>전리품 · <strong>대량 전리품</strong> · 크리스탈 · 보석 · <strong>마법 발견</strong></td></tr>
+    <tr><td><strong>공격 계열</strong></td><td>피해 · 광란 · 공격 속도 · <strong>무기 속성 부여 6종</strong>(암흑·신성·번개·냉기·독·화염)</td></tr>
+    <tr><td><strong>유틸리티</strong></td><td>쿨다운 감소 · 마나 소모 감소 · <strong>경험치</strong> · 이동 속도 · 은신</td></tr>
+    <tr><td><strong>방어 계열</strong></td><td><strong>속성 저항 7종</strong> · 체력 · 완전 회복 · 가시 · 강인</td></tr>
+    <tr><td>나쁜 것</td><td>죽음 · 화염사 · <strong>적 소환</strong> · 악취</td></tr>
+  </table></div>
+
+  <h3>알아둘 규칙 <span class="tag data">데이터</span></h3>
+  <div class="tw"><table>
+    <tr><th>규칙</th><th>내용</th></tr>
+    <tr><td>지속시간</td><td>대부분 <strong>2분</strong> (<code>0.500</code>에서 대폭 연장)</td></tr>
+    <tr><td><strong>구역 초기화</strong></td><td><strong>신단 버프가 전부 사라집니다.</strong> 쿨다운도 함께 초기화됩니다 — <strong>무한 중첩을 막기 위한 장치</strong>입니다</td></tr>
+    <tr><td>아노말리 안</td><td>일부 효과는 <strong>등장하지 않습니다</strong>. 나쁜 효과와 악취 효과도 아노말리에서는 발동하지 않습니다</td></tr>
+    <tr><td>회복 효과</td><td><strong>동료도 함께</strong> 회복시킵니다</td></tr>
+    <tr><td>신단에서 나온 적</td><td>맞기 전까지 <strong>1.5초 동안 비활성</strong> 상태입니다</td></tr>
+  </table></div>
+
+  <div class="note ok">
+    <strong>파밍 순서에 영향을 줍니다.</strong> 신단 버프를 받고 도는 루틴이라면
+    <a href="#zone-reset">구역 초기화</a>를 <strong>먼저</strong> 하고 버프를 나중에 챙기세요 —
+    순서가 반대면 방금 받은 버프가 그대로 날아갑니다.<br>
+    희귀 아노말리 수식어 중 <strong>「신단 대량」</strong>이 걸리면 원하는 버프가 나올 때까지 여러 번 시도할 수 있습니다.
+  </div>
+</section>
 <!-- ══════════ 월드 콘텐츠 ══════════ -->
 <section id="world">
   <h2>맵에서 마주치는 것들</h2>
@@ -477,7 +475,6 @@
     전부 <strong>크로니콘</strong>에 나타납니다.
   </div>
 </section>
-
 <!-- ══════════ 도감 ══════════ -->
 <section id="codex">
   <h2>도감 <span class="mono">The Codex</span></h2>
@@ -508,24 +505,6 @@
     도감을 채우려면 구역을 다시 방문해야 합니다. <span class="tag data">데이터</span>
   </div>
 </section>
-
-<!-- ══════════ 틴카의 영역 ══════════ -->
-<section id="tinka">
-  <h2>틴카의 영역</h2>
-
-  <ul>
-    <li><strong>캠페인을 완주하면 계정 전체에</strong> 개방됩니다. 캐릭터마다 다시 뚫을 필요가 없습니다.</li>
-    <li><strong>난이도 변경</strong>을 여기서 할 수 있습니다 (영웅 불러오기 메뉴에서도 가능).</li>
-    <li><strong>상급 강화</strong> — <strong>기억 정수</strong>를 소모해 인챈트 수치를 더 올립니다.</li>
-    <li><strong>엘릭서 구매</strong> — 1.40 개편 이후 엘릭서은 여기와 크로니콘 엘릭서 상점에서만 나옵니다.</li>
-    <li><strong>아노말리에서 죽으면</strong> 런이 끝나지 않고 <strong>틴카의 영역으로 이동</strong>합니다. 단 <strong>정예 던전은 사망 불가</strong> 모드입니다.</li>
-  </ul>
-
-  <div class="note ok">
-    <strong>서두르지 마세요.</strong> 레벨링 빌드만으로도 <strong>초반 신화 난이도 아노말리는 충분히</strong> 돌 수 있습니다. 자원이 갖춰지고 나면 낮은 마스터리에서도 <strong>신화 VIII 이상</strong>에 바로 들어갈 수 있습니다.
-  </div>
-</section>
-
 <!-- ══════════ 협동 ══════════ -->
 <section id="coop">
   <h2>협동 플레이</h2>
@@ -565,7 +544,6 @@
     <a href="defense.html#death">사망 페널티와 모드</a> 참고
   </div>
 </section>
-
 <!-- ══════════ 관련 문서 ══════════ -->
 <section id="related">
   <h2>관련 문서</h2>

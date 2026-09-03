@@ -55,6 +55,7 @@ NAV = [
         ('한영 명칭', 'basics/glossary.html'),
         ('이름 찾기', 'basics/names.html'),
         ('출처 · 신뢰도', 'meta/sources.html'),
+        ('실행 파일 조사', 'meta/binary.html'),
         ('패치 동향', 'meta/patches.html'),
     ]),
 ]

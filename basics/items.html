@@ -63,6 +63,7 @@
     <li><a href="../basics/glossary.html">한영 명칭</a></li>
     <li><a href="../basics/names.html">이름 찾기</a></li>
     <li><a href="../meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="../meta/binary.html">실행 파일 조사</a></li>
     <li><a href="../meta/patches.html">패치 동향</a></li>
   </ul>
 </nav>
@@ -101,7 +102,79 @@
     유니크 등급 세트 <strong>10레벨</strong> · 전설 클래스 세트 <strong>30레벨</strong>. 그래서 레벨링 가이드가 <strong>10레벨과 30레벨에서 캐릭터를 복사</strong>해 두라고 하는 것입니다 — 그 저레벨 캐릭터로 도박하면 훨씬 싸고(30레벨 3,775 크리스탈 vs 100레벨 24,884 크리스탈), 얻은 세트는 공용 창고로 넘기면 됩니다.
   </div>
 </section>
+<!-- ══════════ 파워 ══════════ -->
+<section id="power">
+  <h2>파워 — 세 가지가 같은 이름을 씁니다</h2>
 
+  <div class="note warn">
+    <strong>한글패치에서 「파워」가 세 가지를 가리킵니다.</strong> 영어 가이드를 읽을 때 특히 헷갈리는 지점입니다.
+  </div>
+
+  <div class="tw"><table>
+    <tr><th>무엇</th><th>영문</th><th>현재 상태</th></tr>
+    <tr><td><strong>아이템의 파워</strong> — 특수 효과</td><td><span class="mono">item power</span></td><td><strong>이것이 중요한 그 파워입니다</strong></td></tr>
+    <tr><td>장비 파워 — 캐릭터 지표</td><td><span class="mono">Gear Power</span></td><td>지금도 있습니다</td></tr>
+    <tr><td>아이템 파워 — 아이템별 점수</td><td><span class="mono">Power: N</span></td><td><strong><code>1.100</code>에서 삭제됐습니다</strong></td></tr>
+  </table></div>
+
+  <h3>① 아이템의 파워 — 특수 효과 <span class="tag data">데이터</span></h3>
+  <div class="note ok">
+    <strong>툴팁에 빨간 글씨로 뜨는 것</strong>이 파워입니다. 게임 도움말 표현으로는
+    <em>「그 아이템만의 매우 강력한 효과로, <strong>다른 어떤 아이템에서도 찾을 수 없습니다</strong>」</em>.
+  </div>
+  <p>빌드가 특정 아이템을 <strong>필수</strong>라고 하는 이유는 대개 스탯이 아니라 이 파워 때문입니다.
+     그리고 <a href="crafting.html#runes">룬</a>이 존재하는 이유이기도 합니다 —
+     <strong>파워만 떼어내 다른 아이템에 옮기는 장치</strong>가 룬입니다.</p>
+
+  <h3>마법부여 색 세 가지</h3>
+  <div class="tw"><table>
+    <tr><th>색</th><th>의미</th><th>스크램블</th><th>재굴림</th></tr>
+    <tr><td><strong>빨강</strong></td><td><strong>파워</strong> — 그 아이템 전용 효과</td><td>불가</td><td>불가</td></tr>
+    <tr><td><strong>주황</strong></td><td><strong>고정 옵션</strong> — 그 아이템에 <strong>항상</strong> 굴러나옵니다</td><td>불가</td><td>가능</td></tr>
+    <tr><td>흰색</td><td>보통 옵션</td><td>가능</td><td>가능</td></tr>
+  </table></div>
+  <div class="note ok">
+    <strong>주황 옵션이 있는 아이템이 이득입니다.</strong> 게임 도움말이 명시합니다 —
+    <em>「고정 옵션이 있다는 것은 그 아이템이 <strong>더 많은 총 마법부여 개수</strong>를 굴린다는 뜻입니다」</em>.
+    고정 칸이 일반 칸을 잡아먹는 것이 아니라 <strong>추가로 붙습니다</strong>. <span class="tag data">데이터</span>
+  </div>
+
+  <h3>② 장비 파워 — 참고 지표일 뿐입니다</h3>
+  <p>레벨 · 박은 보석 · 등급 · 마법부여의 강도와 수치로 계산되는 <strong>캐릭터 전체 지표</strong>입니다.</p>
+  <div class="note warn">
+    <strong>높다고 좋은 것이 아닙니다.</strong> 개발자가 직접 못박았습니다 —
+    <em>「파워가 높다고 반드시 당신에게 더 좋은 것은 아닙니다. <strong>빌드에 따라 크게 달라집니다</strong>.
+    한눈에 대략의 감을 주는 용도입니다」</em>. <span class="tag data">데이터</span> <code>0.820</code><br>
+    실제로 <strong>아이템별 파워 점수는 <code>1.100</code>에서 「오해를 부른다」는 이유로 삭제</strong>됐습니다.
+    장비 파워를 기준으로 장비를 고르지 마세요.
+  </div>
+
+  <h3>숨은 제한 — 내부 쿨다운 <span class="tag data">데이터</span></h3>
+  <div class="note warn">
+    <strong>일부 아이템과 전설 파워에는 표시되지 않는 쿨다운이 걸려 있습니다.</strong>
+    <code>0.820</code>에서 도입된 <strong>내부 쿨다운</strong> <span class="mono">Internal Cooldown</span>으로,
+    발동률과 지속률을 조정하기 위한 장치입니다.<br>
+    개발자 설명이 <em>「일반적으로 매우 짧고, <strong>표시되지 않습니다</strong>」</em>입니다.
+    계산상 나와야 할 발동 횟수보다 실제가 적다면 이것을 의심하세요.
+  </div>
+
+  <h3>세트는 언제부터 나오나 <span class="tag data">데이터</span></h3>
+  <div class="tw"><table>
+    <tr><th>구분</th><th>등장 레벨</th></tr>
+    <tr><td><strong>유니크 등급 세트</strong></td><td>레벨 <strong>10</strong>부터</td></tr>
+    <tr><td><strong>전설 클래스 세트</strong></td><td>레벨 <strong>30</strong>부터</td></tr>
+  </table></div>
+  <p class="src">게임 내 도감이 아이템별 <strong>획득 최소 레벨</strong>을 표시합니다 — 모독자 세트를 확인한 결과 <strong>30</strong>이었습니다 <span class="tag obs">실측</span></p>
+
+  <h3>다른 클래스 아이템이 나오는 이유</h3>
+  <div class="note">
+    <strong>낮은 등급만 타 클래스 것이 나옵니다.</strong> <strong>유니크 이상은 항상 내 클래스</strong> 것입니다
+    (퀘스트 보상과 특정 몬스터 확정 드랍은 예외).<br>
+    <strong>매직 파인드를 올리면 타 클래스 아이템이 나올 확률이 줄어듭니다</strong> —
+    매직 파인드가 단순히 "좋은 것"만이 아니라 <strong>내 클래스 것</strong>을 뽑는 스탯이기도 한 이유입니다.
+    <span class="tag data">데이터</span>
+  </div>
+</section>
 <!-- ══════════ 드랍·매직파인드 ══════════ -->
 <section id="drops">
   <h2>드랍과 매직 파인드</h2>
@@ -176,100 +249,40 @@
     <strong>드랍 테이블 원본 수치는 추출할 수 없습니다.</strong> <code>data.win</code>에 <code>CODE</code> 청크가 없습니다 — <strong>YYC 네이티브 컴파일</strong>이라 게임 로직과 상수가 전부 <code>Chronicon.exe</code> 안에 들어가 있습니다. 내장 데이터 파일(<code>DAFL</code>)도 비어 있습니다. 그래서 위 수치는 <strong>전부 패치 노트에서 온 것</strong>이고, 노트에 안 적힌 확률(등급별 굴림 확률, 난이도별 MF 등)은 알 수 없습니다. <span class="tag data">데이터</span>
   </div>
 </section>
-
-<!-- ══════════ 실행파일 분석 ══════════ -->
+<!-- ══════════ 실행 파일 조사 ══════════ -->
 <section id="binary">
-  <h2>실행 파일에서 확인한 확률</h2>
-  <p>아래 수치는 <strong><code>Chronicon.exe</code>를 직접 뜯어</strong> 얻은 것입니다. 패치 노트에도 게임 안에도 나오지 않는 값입니다.</p>
-
+  <h2>확률을 직접 확인하고 싶다면</h2>
   <div class="note">
-    <strong>왜 실행 파일인가</strong> — <code>data.win</code>에는 <code>CODE</code> 청크가 없습니다. <strong>YYC 네이티브 컴파일</strong>이라 게임 로직과 상수가 전부 <code>Chronicon.exe</code> 안에 있습니다. 그래서 <code>changelog/</code>에 안 적힌 확률은 실행 파일을 봐야 합니다.
+    <strong>게임 실행 파일에서 뽑아낸 확률 수치는 <a href="../meta/binary.html">실행 파일 조사</a>로 옮겼습니다.</strong>
+    아이템 사용법이 아니라 <strong>역분석 기록</strong>이라 자료 쪽에 두는 편이 맞다고 봤습니다.
   </div>
-
-  <h3>아이템 등급 굴림 <span class="mono">itemRollQuality</span></h3>
-  <p>드랍한 아이템의 등급을 정하는 함수입니다. <strong>10만분율로 네 번 굴리고</strong>, 먼저 걸리는 쪽으로 확정합니다.</p>
-  <div class="formula">
-    roll = irandom(100000)<br>
-    &nbsp;&nbsp;roll &lt; &nbsp;&nbsp;&nbsp;100 → <strong>전설</strong><br>
-    roll = irandom(100000) &nbsp;&nbsp;<span class="mono">(단계마다 새로 굴립니다)</span><br>
-    &nbsp;&nbsp;roll &lt; &nbsp;1,000 → <strong>유니크</strong><br>
-    roll = irandom(100000)<br>
-    &nbsp;&nbsp;roll &lt; 10,000 → <strong>희귀</strong><br>
-    roll = irandom(100000)<br>
-    &nbsp;&nbsp;roll &lt; 60,000 → <strong>마법부여</strong><br>
-    &nbsp;&nbsp;그 외 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ <strong>일반</strong>
-  </div>
-  <div class="tw"><table>
-    <tr><th>등급</th><th>문턱값</th><th>그 단계 확률</th><th>순차 적용 최종</th></tr>
-    <tr><td><strong>전설</strong> <span class="mono">Legendary</span></td><td>100 / 100,000</td><td>0.1%</td><td><strong>0.100%</strong></td></tr>
-    <tr><td><strong>유니크</strong> <span class="mono">Unique</span></td><td>1,000 / 100,000</td><td>1%</td><td><strong>0.999%</strong></td></tr>
-    <tr><td><strong>희귀</strong> <span class="mono">Rare</span></td><td>10,000 / 100,000</td><td>10%</td><td><strong>9.89%</strong></td></tr>
-    <tr><td><strong>마법부여</strong> <span class="mono">Enchanted</span></td><td>60,000 / 100,000</td><td>60%</td><td><strong>53.4%</strong></td></tr>
-    <tr><td><strong>일반</strong> <span class="mono">Ordinary</span></td><td>—</td><td>—</td><td><strong>35.6%</strong></td></tr>
-  </table></div>
-  <div class="note warn">
-    <strong>이건 매직 파인드가 붙지 않은 기본값입니다.</strong> MF가 이 굴림에 어떻게 들어가는지는 확인하지 못했습니다 <span class="tag unk">미확인</span>. 실제 게임에서는 위 수치보다 좋게 나옵니다.
-  </div>
-
-  <h3>가방 굴림 <span class="mono">bagDrop</span></h3>
-  <p>등급 굴림과 <strong>똑같은 구조</strong>입니다 — 만분율로 네 번 순차 굴림.</p>
-  <div class="tw"><table>
-    <tr><th>가방</th><th>문턱값</th><th>그 단계</th><th>순차 최종</th></tr>
-    <tr><td><strong>무한한 가방</strong> <span class="mono">Bottomless Bag</span></td><td>300 / 10,000</td><td>3%</td><td><strong>3.00%</strong></td></tr>
-    <tr><td><strong>배낭</strong> <span class="mono">Backpack</span></td><td>900 / 10,000</td><td>9%</td><td><strong>8.73%</strong></td></tr>
-    <tr><td><strong>장비 가방</strong> <span class="mono">Gear Bag</span></td><td>2,500 / 10,000</td><td>25%</td><td><strong>22.07%</strong></td></tr>
-    <tr><td><strong>작은 가방</strong> <span class="mono">Satchel</span></td><td>5,000 / 10,000</td><td>50%</td><td><strong>33.10%</strong></td></tr>
-    <tr><td><strong>주머니</strong> <span class="mono">Pouch</span></td><td>—</td><td>—</td><td><strong>33.10%</strong></td></tr>
-  </table></div>
-  <p class="src">가방 아이템 ID 396~400이 함수 안에 직접 박혀 있어 <code>locale/items</code>와 1:1로 맞춰 확인했습니다</p>
-  <div class="note ok">
-    <strong>교차 확인</strong> — 개발자 테스트 노트 <span class="mono">tinka build 250930</span>에 <em>“작은 가방<span class="mono">(Satchel)</span>이 드랍되지 않고 <strong>항상 한 단계 위 가방이 대신 떨어지던 버그</strong>를 수정”</em>이라는 항목이 있습니다. 위 표에서 작은 가방이 <strong>바로 아래 단계(주머니)와 같은 33.10%</strong>를 차지하는 구조라, 이 한 칸이 빠지면 확률이 위로 쏠린다는 게 맞아떨어집니다. 같은 노트에 <em>“가방이 더 자주 떨어지도록”</em>도 있으니 <strong>실제 드랍 빈도는 이 확률표와 별개로 조정</strong>됩니다 — 위 표는 <strong>어느 가방이 나오는지의 비율</strong>이지 가방 자체가 떨어질 확률이 아닙니다. <span class="tag dev">개발자</span>
-  </div>
-
-  <h3>체력 · 마나 구슬은 70% 문턱입니다</h3>
-  <p>몬스터가 죽을 때 도는 <span class="mono">actorDeathDrops</span>가 <span class="mono">playerGetLowHealth()</span>와 <span class="mono">playerGetLowMana()</span>를 부른 뒤, 둘 다 <strong>0.7과 비교</strong>합니다.</p>
-  <div class="formula">
-    if (체력비율 &lt; 0.7) → 체력 구슬 분기<br>
-    if (마나비율 &lt; 0.7) → 마나 구슬 분기
-  </div>
-  <div class="note ok">
-    <strong>즉 구슬은 무작위로 떨어지는 게 아니라 문턱 판정입니다.</strong> 필요할 때만 나오는 것처럼 느껴지는 이유가 이것입니다. 비교 방향(<code>&lt;</code>)은 판정 헬퍼를 직접 열어 부호 플래그 사용까지 확인했습니다.
-  </div>
-
-  <h3>「몬스터 → 아이템」 드랍 테이블은 없습니다</h3>
-  <p>찾아봤지만 그런 표 자체가 존재하지 않습니다. 대신 <strong>절차적으로 만듭니다.</strong></p>
-  <ol>
-    <li><strong>등급을 먼저 굴린다</strong> — 위 <span class="mono">itemRollQuality</span></li>
-    <li><strong>아이템별 조건으로 거른다</strong> — <span class="mono">itemGetMinLevel</span> · <span class="mono">itemGetMinRarity</span> · <span class="mono">itemGetMinDifficulty</span> · <span class="mono">itemGetClass</span> 가 전부 <strong>상수 없는 순수 접근자</strong>입니다. 조건이 코드가 아니라 <strong>아이템 데이터베이스</strong>에 항목별로 들어 있다는 뜻입니다</li>
-    <li><strong>특수 드랍만 별도</strong> — 예컨대 <span class="mono">specificStuffDrop</span>은 중형 마나 물약·대형 체력 물약을 ID로 직접 지정합니다</li>
-  </ol>
-  <p>아이템 DB는 <strong>정의 1,584건</strong>(<span class="mono">itemDataAdd</span> 918 + <span class="mono">itemDataAddExt</span> 666)이고 <strong>클래스별로 등록</strong>됩니다. 필드 구성도 확인했습니다 — <strong>4번 최소 등급 · 5번 최소 레벨 · 6번 클래스</strong>.</p>
-  <div class="note warn">
-    <strong>DB 내용 자체는 못 뽑았습니다.</strong> 정의마다 인자가 13개인데 그중 약 40%가 <strong>실행 중에 채워지는 메모리</strong>를 가리켜 파일에는 값이 없습니다. 완전히 복원하려면 실행 중인 게임 메모리를 읽어야 합니다 — 거기까진 하지 않았습니다.
-  </div>
-
-  <h3>덤으로 확인한 것</h3>
-  <div class="tw"><table>
-    <tr><th>함수</th><th>내용</th></tr>
-    <tr><td><span class="mono">craftingMaterialDropEnchanting</span></td><td>마법 정수(295) · 수정 정수(296) · 영혼 정수(297)를 ID로 직접 지정. 배율 0.8 / 1.5 / 2.5</td></tr>
-    <tr><td><span class="mono">rareStuffDrop</span></td><td>등급 굴림과 같은 10만분율에 문턱 20,000 · 25,000 · 30,000, 배율 1.3 — <strong>의미는 미확정</strong> <span class="tag unk">미확인</span></td></tr>
-    <tr><td><span class="mono">actorUniqueDrops</span></td><td>몬스터 ID <strong>57개</strong>짜리 고정 배열. 폭풍인도자 · 박쥐 · 픽시 · 엘프 드루이드 · 수사슴 · 케르베로스 … <strong>고유 드랍을 가진 몬스터 목록으로 보이나 확정 못 함</strong> <span class="tag unk">미확인</span></td></tr>
-  </table></div>
-
-  <p class="src">방법: <code>.pdata</code>로 함수 경계 103,083개를 뜨고, 각 함수가 시작부에서 자기 이름 문자열을 참조하는 성질을 이용해 <strong>2,513개 함수의 이름↔주소</strong>를 만든 뒤 디스어셈블했습니다. GML의 수는 전부 double이라 <code>.rdata</code>에서 rip 상대로 읽히는데, 그 참조를 따라가면 함수가 쓰는 수치가 그대로 나옵니다. 도구는 <code>exe_work/</code>에 있습니다</p>
+  <p>거기서 다루는 것 — 등급 판정 사다리 · 가방 드랍 사다리 · <strong>몬스터별 드랍 테이블이 존재하지 않는다는 결론</strong> ·
+     그리고 <strong>어디까지 알아낼 수 있었고 어디서 막혔는가</strong></p>
 </section>
+<!-- ══════════ 옵션 부위 표 ══════════ -->
+<section id="affixslots">
+  <h2>어떤 옵션이 어느 부위에 붙는가</h2>
 
-  <div class="note">
-    <strong>파밍은 여러 문서에 나뉘어 있습니다</strong> —
-    <a href="items.html#drops">드랍과 매직 파인드</a> ·
-    <a href="items.html#crystals">크리스탈</a> ·
-    <a href="damage.html#killstreak">킬스트릭</a> ·
-    <a href="endgame.html#anomaly-types">아노말리 종류별 목적</a> ·
-    <a href="endgame.html#zone-reset">구역 초기화</a> ·
-    <a href="endgame.html#shrine">신단</a> ·
-    <a href="endgame.html#world">보물함 · 퍼즐</a>
-  </div>
+  <p>인챈트로 굴려도 <strong>그 부위에 나올 수 없는 옵션</strong>이 있습니다. 재화를 태우기 전에 확인하세요. <span class="tag comm">커뮤니티 DB</span></p>
 
+  <div class="tw"><table>
+    <tr><th>옵션</th><th>붙는 부위</th></tr>
+    <tr><td><strong>피해(고정)</strong></td><td>무기 · 반지 · 보조장비 <strong>만</strong></td></tr>
+    <tr><td>공격 속도<br><span class="mono">= 시전 속도</span></td><td>무기 · 장신구 · 반지 · 목걸이 · 보조장비</td></tr>
+    <tr><td>치명타 확률</td><td>투구 · 무기 · 장신구 · 반지 · 목걸이 · 보조장비</td></tr>
+    <tr><td>이동 속도</td><td><strong>장화</strong> · 장신구 · 반지 · 목걸이</td></tr>
+    <tr><td>체력</td><td>투구 · 갑옷 · 무기 · 장화 · 장신구 · 반지 · 목걸이</td></tr>
+    <tr><td>적중 시 체력</td><td>무기 · 장화 · 목걸이 · 보조장비</td></tr>
+    <tr><td>저항</td><td>투구 · 갑옷 · 장화 · 반지 · 목걸이 · 보조장비 (<strong>무기 불가</strong>)</td></tr>
+    <tr><td>경험치 +% (최대 50%)</td><td>투구 · 무기 · 장신구 · 반지 · 목걸이 · 마법서 (<strong>갑옷·장화 불가</strong>)</td></tr>
+  </table></div>
+
+  <ul>
+    <li><strong>시전 속도라는 별도 스탯은 없습니다.</strong> 공격 속도가 곧 시전 속도입니다.</li>
+    <li><strong>반지와 목걸이는 에픽 옵션이 확정 1개</strong> 붙습니다. 그래서 두 부위가 유독 값어치가 큽니다.</li>
+    <li>피해(고정) 스탯이 <strong>무기·반지·보조장비에만</strong> 붙는다는 점이 빌드 설계의 큰 제약입니다.</li>
+  </ul>
+</section>
 <!-- ══════════ 크리스탈 ══════════ -->
 <section id="crystals">
   <h2>크리스탈 — 획득과 파밍</h2>
@@ -340,132 +353,6 @@
     </ul>
   </div><!--/tq-->
 </section>
-
-<!-- ══════════ 파워 ══════════ -->
-<section id="power">
-  <h2>파워 — 세 가지가 같은 이름을 씁니다</h2>
-
-  <div class="note warn">
-    <strong>한글패치에서 「파워」가 세 가지를 가리킵니다.</strong> 영어 가이드를 읽을 때 특히 헷갈리는 지점입니다.
-  </div>
-
-  <div class="tw"><table>
-    <tr><th>무엇</th><th>영문</th><th>현재 상태</th></tr>
-    <tr><td><strong>아이템의 파워</strong> — 특수 효과</td><td><span class="mono">item power</span></td><td><strong>이것이 중요한 그 파워입니다</strong></td></tr>
-    <tr><td>장비 파워 — 캐릭터 지표</td><td><span class="mono">Gear Power</span></td><td>지금도 있습니다</td></tr>
-    <tr><td>아이템 파워 — 아이템별 점수</td><td><span class="mono">Power: N</span></td><td><strong><code>1.100</code>에서 삭제됐습니다</strong></td></tr>
-  </table></div>
-
-  <h3>① 아이템의 파워 — 특수 효과 <span class="tag data">데이터</span></h3>
-  <div class="note ok">
-    <strong>툴팁에 빨간 글씨로 뜨는 것</strong>이 파워입니다. 게임 도움말 표현으로는
-    <em>「그 아이템만의 매우 강력한 효과로, <strong>다른 어떤 아이템에서도 찾을 수 없습니다</strong>」</em>.
-  </div>
-  <p>빌드가 특정 아이템을 <strong>필수</strong>라고 하는 이유는 대개 스탯이 아니라 이 파워 때문입니다.
-     그리고 <a href="crafting.html#runes">룬</a>이 존재하는 이유이기도 합니다 —
-     <strong>파워만 떼어내 다른 아이템에 옮기는 장치</strong>가 룬입니다.</p>
-
-  <h3>마법부여 색 세 가지</h3>
-  <div class="tw"><table>
-    <tr><th>색</th><th>의미</th><th>스크램블</th><th>재굴림</th></tr>
-    <tr><td><strong>빨강</strong></td><td><strong>파워</strong> — 그 아이템 전용 효과</td><td>불가</td><td>불가</td></tr>
-    <tr><td><strong>주황</strong></td><td><strong>고정 옵션</strong> — 그 아이템에 <strong>항상</strong> 굴러나옵니다</td><td>불가</td><td>가능</td></tr>
-    <tr><td>흰색</td><td>보통 옵션</td><td>가능</td><td>가능</td></tr>
-  </table></div>
-  <div class="note ok">
-    <strong>주황 옵션이 있는 아이템이 이득입니다.</strong> 게임 도움말이 명시합니다 —
-    <em>「고정 옵션이 있다는 것은 그 아이템이 <strong>더 많은 총 마법부여 개수</strong>를 굴린다는 뜻입니다」</em>.
-    고정 칸이 일반 칸을 잡아먹는 것이 아니라 <strong>추가로 붙습니다</strong>. <span class="tag data">데이터</span>
-  </div>
-
-  <h3>② 장비 파워 — 참고 지표일 뿐입니다</h3>
-  <p>레벨 · 박은 보석 · 등급 · 마법부여의 강도와 수치로 계산되는 <strong>캐릭터 전체 지표</strong>입니다.</p>
-  <div class="note warn">
-    <strong>높다고 좋은 것이 아닙니다.</strong> 개발자가 직접 못박았습니다 —
-    <em>「파워가 높다고 반드시 당신에게 더 좋은 것은 아닙니다. <strong>빌드에 따라 크게 달라집니다</strong>.
-    한눈에 대략의 감을 주는 용도입니다」</em>. <span class="tag data">데이터</span> <code>0.820</code><br>
-    실제로 <strong>아이템별 파워 점수는 <code>1.100</code>에서 「오해를 부른다」는 이유로 삭제</strong>됐습니다.
-    장비 파워를 기준으로 장비를 고르지 마세요.
-  </div>
-
-  <h3>숨은 제한 — 내부 쿨다운 <span class="tag data">데이터</span></h3>
-  <div class="note warn">
-    <strong>일부 아이템과 전설 파워에는 표시되지 않는 쿨다운이 걸려 있습니다.</strong>
-    <code>0.820</code>에서 도입된 <strong>내부 쿨다운</strong> <span class="mono">Internal Cooldown</span>으로,
-    발동률과 지속률을 조정하기 위한 장치입니다.<br>
-    개발자 설명이 <em>「일반적으로 매우 짧고, <strong>표시되지 않습니다</strong>」</em>입니다.
-    계산상 나와야 할 발동 횟수보다 실제가 적다면 이것을 의심하세요.
-  </div>
-
-  <h3>세트는 언제부터 나오나 <span class="tag data">데이터</span></h3>
-  <div class="tw"><table>
-    <tr><th>구분</th><th>등장 레벨</th></tr>
-    <tr><td><strong>유니크 등급 세트</strong></td><td>레벨 <strong>10</strong>부터</td></tr>
-    <tr><td><strong>전설 클래스 세트</strong></td><td>레벨 <strong>30</strong>부터</td></tr>
-  </table></div>
-  <p class="src">게임 내 도감이 아이템별 <strong>획득 최소 레벨</strong>을 표시합니다 — 모독자 세트를 확인한 결과 <strong>30</strong>이었습니다 <span class="tag obs">실측</span></p>
-
-  <h3>다른 클래스 아이템이 나오는 이유</h3>
-  <div class="note">
-    <strong>낮은 등급만 타 클래스 것이 나옵니다.</strong> <strong>유니크 이상은 항상 내 클래스</strong> 것입니다
-    (퀘스트 보상과 특정 몬스터 확정 드랍은 예외).<br>
-    <strong>매직 파인드를 올리면 타 클래스 아이템이 나올 확률이 줄어듭니다</strong> —
-    매직 파인드가 단순히 "좋은 것"만이 아니라 <strong>내 클래스 것</strong>을 뽑는 스탯이기도 한 이유입니다.
-    <span class="tag data">데이터</span>
-  </div>
-</section>
-
-<!-- ══════════ 제작 ══════════ -->
-<section id="crafting">
-  <h2>제작 — 별도 문서</h2>
-
-  <div class="note ok">
-    <strong>제작은 분량이 커서 <a href="crafting.html">제작 · 변환</a> 문서로 분리했습니다.</strong>
-    <ul>
-      <li><a href="crafting.html#npc">제작 NPC 다섯</a> — 누가 무엇을 하는가</li>
-      <li><a href="crafting.html#transmute">변환 (테오) — 레시피 <strong>25종 전부</strong></a></li>
-      <li><a href="crafting.html#mythical">신화 무기 제작</a> — 부품표와 불운 방지 시스템</li>
-      <li><a href="crafting.html#enchant">마법부여 (찬티)</a> — 스크램블 · 재굴림 · 강화</li>
-      <li><a href="crafting.html#ga">상급 강화 (샹텔)</a></li>
-      <li><a href="crafting.html#gems">보석 (젬마)</a></li>
-      <li><a href="crafting.html#materials">재료는 어디서 나오는가</a></li>
-    </ul>
-  </div>
-
-  <h3>세 줄 요약</h3>
-  <div class="tw"><table>
-    <tr><th>무엇</th><th>핵심</th></tr>
-    <tr><td>주 재화</td><td><strong>챔피언의 왕관</strong> — 크리스탈이 아니라 이쪽이 병목입니다. <strong>영웅 이상 · 레벨 50+</strong></td></tr>
-    <tr><td>가장 쓸모있는 규칙</td><td>무작위 변환에 <strong>같은 부위만 넣으면 그 부위가 확정</strong>됩니다</td></tr>
-    <tr><td>가장 위험한 조작</td><td><strong>강화는 되돌릴 수 없고</strong>, <strong>보석을 빼면 전부 부서집니다</strong></td></tr>
-  </table></div>
-</section>
-
-<!-- ══════════ 옵션 부위 표 ══════════ -->
-<section id="affixslots">
-  <h2>어떤 옵션이 어느 부위에 붙는가</h2>
-
-  <p>인챈트로 굴려도 <strong>그 부위에 나올 수 없는 옵션</strong>이 있습니다. 재화를 태우기 전에 확인하세요. <span class="tag comm">커뮤니티 DB</span></p>
-
-  <div class="tw"><table>
-    <tr><th>옵션</th><th>붙는 부위</th></tr>
-    <tr><td><strong>피해(고정)</strong></td><td>무기 · 반지 · 보조장비 <strong>만</strong></td></tr>
-    <tr><td>공격 속도<br><span class="mono">= 시전 속도</span></td><td>무기 · 장신구 · 반지 · 목걸이 · 보조장비</td></tr>
-    <tr><td>치명타 확률</td><td>투구 · 무기 · 장신구 · 반지 · 목걸이 · 보조장비</td></tr>
-    <tr><td>이동 속도</td><td><strong>장화</strong> · 장신구 · 반지 · 목걸이</td></tr>
-    <tr><td>체력</td><td>투구 · 갑옷 · 무기 · 장화 · 장신구 · 반지 · 목걸이</td></tr>
-    <tr><td>적중 시 체력</td><td>무기 · 장화 · 목걸이 · 보조장비</td></tr>
-    <tr><td>저항</td><td>투구 · 갑옷 · 장화 · 반지 · 목걸이 · 보조장비 (<strong>무기 불가</strong>)</td></tr>
-    <tr><td>경험치 +% (최대 50%)</td><td>투구 · 무기 · 장신구 · 반지 · 목걸이 · 마법서 (<strong>갑옷·장화 불가</strong>)</td></tr>
-  </table></div>
-
-  <ul>
-    <li><strong>시전 속도라는 별도 스탯은 없습니다.</strong> 공격 속도가 곧 시전 속도입니다.</li>
-    <li><strong>반지와 목걸이는 에픽 옵션이 확정 1개</strong> 붙습니다. 그래서 두 부위가 유독 값어치가 큽니다.</li>
-    <li>피해(고정) 스탯이 <strong>무기·반지·보조장비에만</strong> 붙는다는 점이 빌드 설계의 큰 제약입니다.</li>
-  </ul>
-</section>
-
 <!-- ══════════ 엘릭서 ══════════ -->
 <section id="elixir">
   <h2>소모품 — 물약 · 엘릭서 · 투척병 · 장치</h2>
@@ -581,7 +468,6 @@
     <strong>둘 다 「주문서」</strong>였습니다 → 보조 무기를 <strong>「마법서」</strong>로 분리했습니다.
   </div><!--/tq-->
 </section>
-
 <!-- ══════════ 루팅 필터 ══════════ -->
 <section id="filter">
   <h2>루팅 필터</h2>
@@ -612,7 +498,31 @@
     그래서 <em>지식의 연대기</em>의 경험치 스택(유니크 이상이 드랍되면 초기화)을 유지하려면, 필터가 아니라 <strong>마법 발견 0%</strong>가 조건입니다. 필터로 안 보이게 해도 스택은 끊깁니다.
   </div>
 </section>
+<!-- ══════════ 제작 ══════════ -->
+<section id="crafting">
+  <h2>제작 — 별도 문서</h2>
 
+  <div class="note ok">
+    <strong>제작은 분량이 커서 <a href="crafting.html">제작 · 변환</a> 문서로 분리했습니다.</strong>
+    <ul>
+      <li><a href="crafting.html#npc">제작 NPC 다섯</a> — 누가 무엇을 하는가</li>
+      <li><a href="crafting.html#transmute">변환 (테오) — 레시피 <strong>25종 전부</strong></a></li>
+      <li><a href="crafting.html#mythical">신화 무기 제작</a> — 부품표와 불운 방지 시스템</li>
+      <li><a href="crafting.html#enchant">마법부여 (찬티)</a> — 스크램블 · 재굴림 · 강화</li>
+      <li><a href="crafting.html#ga">상급 강화 (샹텔)</a></li>
+      <li><a href="crafting.html#gems">보석 (젬마)</a></li>
+      <li><a href="crafting.html#materials">재료는 어디서 나오는가</a></li>
+    </ul>
+  </div>
+
+  <h3>세 줄 요약</h3>
+  <div class="tw"><table>
+    <tr><th>무엇</th><th>핵심</th></tr>
+    <tr><td>주 재화</td><td><strong>챔피언의 왕관</strong> — 크리스탈이 아니라 이쪽이 병목입니다. <strong>영웅 이상 · 레벨 50+</strong></td></tr>
+    <tr><td>가장 쓸모있는 규칙</td><td>무작위 변환에 <strong>같은 부위만 넣으면 그 부위가 확정</strong>됩니다</td></tr>
+    <tr><td>가장 위험한 조작</td><td><strong>강화는 되돌릴 수 없고</strong>, <strong>보석을 빼면 전부 부서집니다</strong></td></tr>
+  </table></div>
+</section>
 <!-- ══════════ 관련 문서 ══════════ -->
 <section id="related">
   <h2>관련 문서</h2>

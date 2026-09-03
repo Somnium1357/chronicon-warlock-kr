@@ -63,6 +63,7 @@
     <li><a href="../basics/glossary.html">한영 명칭</a></li>
     <li><a href="../basics/names.html">이름 찾기</a></li>
     <li><a href="../meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="../meta/binary.html">실행 파일 조사</a></li>
     <li><a href="../meta/patches.html">패치 동향</a></li>
   </ul>
 </nav>
@@ -96,7 +97,6 @@
     <tr><td><strong>별도 곱연산</strong></td><td>"가해 피해 % 증가"(generic increased damage)</td><td>모든 계산이 끝난 뒤 마지막에 곱해짐</td></tr>
   </table></div>
 </section>
-
 <!-- ══════════ 합연산 곱연산 ══════════ -->
 <section id="addmul">
   <h2>합연산과 곱연산</h2>
@@ -120,7 +120,6 @@
     <strong>실전 판단법</strong> — 인챈트 한 칸을 두고 고민할 때, "내가 이미 이 종류를 몇 % 갖고 있나"를 먼저 보세요. 이미 +300%인 원소에 +30%를 더하는 것보다, 아직 0%인 <strong>계열 피해</strong>나 <strong>가해 피해 % 증가</strong> 한 줄이 대체로 더 큽니다.
   </div>
 </section>
-
 <!-- ══════════ 제압 ══════════ -->
 <section id="overpower">
   <h2>제압 (저항 관통)</h2>
@@ -140,24 +139,6 @@
     <strong>제압이 무의미한 빌드가 있습니다.</strong> 피해가 저항 계산을 아예 우회하는 구조(에테르 피해, 고정값 피해 등)라면 제압 인챈트는 낭비입니다. 예를 들어 워록의 <em>죽음의 대변자</em> 기반 저주 빌드는 추가 피해가 고정값이라 제압·치명타가 전부 무시됩니다.
   </div>
 </section>
-
-<!-- ══════════ 에테르 ══════════ -->
-<section id="ethereal">
-  <h2>에테르 피해</h2>
-  <p><strong>에테르</strong> <span class="mono">Ethereal</span>는 원소가 아닌 별개의 피해 채널입니다.</p>
-
-  <div class="tw"><table>
-    <tr><th>성질</th><th>내용</th></tr>
-    <tr><td>저항</td><td>적의 <strong>모든 저항을 무시</strong>합니다</td></tr>
-    <tr><td>스케일링</td><td>내 <strong>가장 높은 원소 피해 스탯</strong>의 혜택을 받습니다</td></tr>
-    <tr><td>출혈</td><td><strong>출혈은 에테르 취급</strong>이라 원소 스탯을 따로 받지 못합니다</td></tr>
-  </table></div>
-
-  <div class="note">
-    "최고 원소 스탯을 따라간다"는 성질 때문에, 에테르 피해가 주력인 빌드는 <strong>원소를 하나로 몰아주는</strong> 편이 유리합니다. 여러 원소에 골고루 나눠 찍으면 에테르가 참조하는 최댓값이 낮아집니다.
-  </div>
-</section>
-
 <!-- ══════════ 기본 공격 ══════════ -->
 <section id="baseskill">
   <h2>기본 공격</h2>
@@ -179,7 +160,6 @@
     마나 회복 수단이 빈약한 초·중반에는 기본 공격을 한 자리 넣어두는 것만으로 마나 순환이 크게 안정됩니다. 반대로 마나가 남아도는 완성 빌드에서는 슬롯 낭비입니다.
   </div>
 </section>
-
 <!-- ══════════ 도트 ══════════ -->
 <section id="dot">
   <h2>지속 피해 (DoT)</h2>
@@ -212,7 +192,22 @@
     <tr><td><strong>출혈</strong> <span class="mono">Bleed</span></td><td><strong>에테르</strong> — 원소 스탯을 받지 못함</td></tr>
   </table></div>
 </section>
+<!-- ══════════ 에테르 ══════════ -->
+<section id="ethereal">
+  <h2>에테르 피해</h2>
+  <p><strong>에테르</strong> <span class="mono">Ethereal</span>는 원소가 아닌 별개의 피해 채널입니다.</p>
 
+  <div class="tw"><table>
+    <tr><th>성질</th><th>내용</th></tr>
+    <tr><td>저항</td><td>적의 <strong>모든 저항을 무시</strong>합니다</td></tr>
+    <tr><td>스케일링</td><td>내 <strong>가장 높은 원소 피해 스탯</strong>의 혜택을 받습니다</td></tr>
+    <tr><td>출혈</td><td><strong>출혈은 에테르 취급</strong>이라 원소 스탯을 따로 받지 못합니다</td></tr>
+  </table></div>
+
+  <div class="note">
+    "최고 원소 스탯을 따라간다"는 성질 때문에, 에테르 피해가 주력인 빌드는 <strong>원소를 하나로 몰아주는</strong> 편이 유리합니다. 여러 원소에 골고루 나눠 찍으면 에테르가 참조하는 최댓값이 낮아집니다.
+  </div>
+</section>
 <!-- ══════════ 공속 프레임 ══════════ -->
 <section id="frames">
   <h2>공격 속도와 프레임 브레이크포인트</h2>
@@ -241,7 +236,30 @@
   </div>
   <p>따라서 도트·오라 중심 빌드에서 공속 인챈트는 <strong>시전 모션을 줄여 도트를 더 자주 새로 거는 용도</strong> 이상은 아닙니다. 참고로 <strong>시전 속도라는 별도 스탯은 없습니다</strong> — 공격 속도가 곧 시전 속도입니다.</p>
 </section>
+<!-- ══════════ 소환수 ══════════ -->
+<section id="minion">
+  <h2>소환수(동료) 스케일링</h2>
 
+  <div class="formula">소환수 피해 = 스킬 계수% × 내 피해 스탯 × 원소% × 동료 피해%</div>
+
+  <p>소환수는 <strong>플레이어의 피해 스탯을 그대로 참조</strong>합니다. 그 위에 <strong>동료 피해</strong> <span class="mono">Companion Damage</span> · <strong>동료 체력</strong> <span class="mono">Companion Health</span> 스탯이 곱해집니다. <span class="tag dev">개발자</span></p>
+
+  <div class="tw"><table>
+    <tr><th>항목</th><th>상속 여부</th><th>근거</th></tr>
+    <tr><td>치명타 확률</td><td>상속함</td><td><span class="tag comm">커뮤니티</span></td></tr>
+    <tr><td>이동 속도</td><td>상속함</td><td><span class="tag comm">커뮤니티</span></td></tr>
+    <tr><td>공격 속도</td><td>적용됨</td><td><span class="tag comm">커뮤니티</span></td></tr>
+    <tr><td><strong>제압</strong></td><td><strong>상속하지 않음</strong></td><td><span class="tag comm">커뮤니티</span> <span class="tag unk">개발자 확인 없음</span></td></tr>
+  </table></div>
+
+  <div class="note ok">
+    <strong>1.53부터 소환수는 항상 스킬을 최대 랭크로 사용합니다.</strong> <span class="tag data">데이터</span> 소환수가 쓰는 스킬에 포인트를 더 넣어 랭크를 올릴 필요가 없어졌습니다.
+  </div>
+
+  <div class="note warn">
+    <strong>테스트 빌드 정보</strong> <span class="tag test">테스트빌드</span> — 2026-06-25 <span class="mono">tinka build</span>에서 사령 소환 비술 의식이 <strong>최대 랭크 초과 1랭크당 스켈레톤 +1</strong>로 바뀌었고, 동료가 장비 교체 등으로 해산될 때 <strong>사망 폭발 효과가 발동하지 않도록</strong> 수정되었습니다. <strong>정식 출시본이 아닙니다.</strong>
+  </div>
+</section>
 <!-- ══════════ 잘 안 알려진 스탯 ══════════ -->
 <section id="reach">
   <h2>설명이 잘 안 보이는 스탯들</h2>
@@ -303,7 +321,6 @@
      <strong>동료도 이 스탯을 씁니다</strong>. 또 <strong>반경 전리품 획득</strong>(기본 <code>Q</code>)의 범위도 넓힙니다.
      <a href="items.html#crystals">크리스탈 파밍</a>에서 흘리는 양을 줄여줍니다.</p>
 </section>
-
 <!-- ══════════ 킬 연계 ══════════ -->
 <section id="killstreak">
   <h2>킬 연계 (킬스트릭)</h2>
@@ -377,43 +394,6 @@
     <a href="endgame.html#shrine">신단</a>
   </div>
 </section>
-
-<!-- ══════════ 소환수 ══════════ -->
-<section id="minion">
-  <h2>소환수(동료) 스케일링</h2>
-
-  <div class="formula">소환수 피해 = 스킬 계수% × 내 피해 스탯 × 원소% × 동료 피해%</div>
-
-  <p>소환수는 <strong>플레이어의 피해 스탯을 그대로 참조</strong>합니다. 그 위에 <strong>동료 피해</strong> <span class="mono">Companion Damage</span> · <strong>동료 체력</strong> <span class="mono">Companion Health</span> 스탯이 곱해집니다. <span class="tag dev">개발자</span></p>
-
-  <div class="tw"><table>
-    <tr><th>항목</th><th>상속 여부</th><th>근거</th></tr>
-    <tr><td>치명타 확률</td><td>상속함</td><td><span class="tag comm">커뮤니티</span></td></tr>
-    <tr><td>이동 속도</td><td>상속함</td><td><span class="tag comm">커뮤니티</span></td></tr>
-    <tr><td>공격 속도</td><td>적용됨</td><td><span class="tag comm">커뮤니티</span></td></tr>
-    <tr><td><strong>제압</strong></td><td><strong>상속하지 않음</strong></td><td><span class="tag comm">커뮤니티</span> <span class="tag unk">개발자 확인 없음</span></td></tr>
-  </table></div>
-
-  <div class="note ok">
-    <strong>1.53부터 소환수는 항상 스킬을 최대 랭크로 사용합니다.</strong> <span class="tag data">데이터</span> 소환수가 쓰는 스킬에 포인트를 더 넣어 랭크를 올릴 필요가 없어졌습니다.
-  </div>
-
-  <div class="note warn">
-    <strong>테스트 빌드 정보</strong> <span class="tag test">테스트빌드</span> — 2026-06-25 <span class="mono">tinka build</span>에서 사령 소환 비술 의식이 <strong>최대 랭크 초과 1랭크당 스켈레톤 +1</strong>로 바뀌었고, 동료가 장비 교체 등으로 해산될 때 <strong>사망 폭발 효과가 발동하지 않도록</strong> 수정되었습니다. <strong>정식 출시본이 아닙니다.</strong>
-  </div>
-</section>
-
-  <div class="note">
-    <strong>파밍은 여러 문서에 나뉘어 있습니다</strong> —
-    <a href="items.html#drops">드랍과 매직 파인드</a> ·
-    <a href="items.html#crystals">크리스탈</a> ·
-    <a href="damage.html#killstreak">킬스트릭</a> ·
-    <a href="endgame.html#anomaly-types">아노말리 종류별 목적</a> ·
-    <a href="endgame.html#zone-reset">구역 초기화</a> ·
-    <a href="endgame.html#shrine">신단</a> ·
-    <a href="endgame.html#world">보물함 · 퍼즐</a>
-  </div>
-
 <!-- ══════════ 관련 문서 ══════════ -->
 <section id="related">
   <h2>관련 문서</h2>
