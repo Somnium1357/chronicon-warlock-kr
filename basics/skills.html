@@ -164,6 +164,54 @@
   <p>그래서 실전 빌드는 의식 스킬을 <strong>"장착 전용" 슬롯</strong>으로 한두 칸 쓰는 경우가 많습니다. 워록의 <em>파멸의 비술 제단 의식</em>이 대표적으로, 시전하지 않고 장착만 해서 피해 감소 오라를 얻습니다.</p>
 </section>
 
+<!-- ══════════ 자동 시전 ══════════ -->
+<section id="autocast">
+  <h2>자동 시전 — 눌러 두면 알아서 돕니다</h2>
+
+  <div class="note ok">
+    <strong>스킬을 자동으로 반복 시전하게 만드는 기능입니다.</strong> <span class="tag data">데이터</span>
+    빌드 문서에 <em>“이 스킬은 자동 시전으로 돌린다”</em>가 나오면 이 얘기입니다.
+  </div>
+
+  <h3>켜는 법 <span class="tag data">1.530</span></h3>
+  <div class="tw"><table>
+    <tr><th>단계</th><th>내용</th></tr>
+    <tr><td>①</td><td>스킬 트리의 <strong>스킬 바인드 메뉴</strong>에서 <strong>「자동」</strong> <span class="mono">Auto</span>에 체크</td></tr>
+    <tr><td>②</td><td>그 슬롯의 <strong>키를 누르면</strong> 자동 시전이 <strong>켜지고 꺼집니다</strong> (토글)</td></tr>
+    <tr><td>③</td><td>켜진 슬롯에는 스킬 바에 <strong>체크 표시</strong>가 붙습니다</td></tr>
+  </table></div>
+  <p><strong>언제든 껐다 켤 수 있습니다.</strong> 한번 설정하면 고정되는 것이 아닙니다.</p>
+
+  <div class="note">
+    <strong>자동 시전 중에는 오류 음성이 꺼집니다.</strong> 마나가 모자라거나 쿨다운일 때 나오는
+    <em>“…”</em> 소리가 계속 나면 견딜 수 없기 때문에 개발자가 일부러 음소거해 뒀습니다.
+    원문 표현이 <em>「당신의 정신 건강을 위해」</em>입니다. <span class="tag data">데이터</span>
+  </div>
+
+  <h3>옛 방식 — 아직도 됩니다</h3>
+  <div class="note warn">
+    <strong>1.530 이전에는 버그를 이용했습니다.</strong> 키 바인딩 중에 <code>Esc</code>를 눌러
+    슬롯을 <span class="mono">&lt;none&gt;</span>으로 비우면 그 스킬이 자동 시전됐습니다.<br>
+    개발자가 <code>1.520</code>에서 <em>“고치는 대신 <strong>패드에서도 되도록 확장했다</strong>”</em>고 밝혔습니다 —
+    <strong>버그가 아니라 기능이 된 것</strong>입니다. 옛 가이드의 스크린샷에서
+    스킬 슬롯이 <span class="mono">&lt;none&gt;</span>으로 보이면 <strong>비어 있는 것이 아니라
+    자동 시전이 걸린 상태</strong>입니다. <span class="tag data">데이터</span>
+  </div>
+
+  <h3>어디에 쓰나</h3>
+  <p>유지형 버프·오라·소환처럼 <strong>계속 눌러 줘야 하지만 판단이 필요 없는 스킬</strong>에 씁니다.
+     손을 이동과 주력기에 집중할 수 있게 해 줍니다.</p>
+  <div class="note ok">
+    <strong>워록의 메테오라 빌드가 대표적입니다</strong> — 슬롯 대부분을 자동 시전으로 돌리고
+    수동으로는 <strong>폭발</strong> 하나만 12초마다 눌러 저항 패시브를 유지합니다.
+    <a href="../classes/warlock/builds.html">워록 빌드</a> 참고
+  </div>
+  <div class="note warn">
+    <strong>모든 스킬이 되는 것은 아닙니다.</strong> 조준이 필요하거나 위치를 지정하는 스킬은
+    자동으로 돌려도 원하는 곳에 나가지 않습니다. 자동 시전은 <strong>“아무 데나 나가도 되는 것”</strong>에만 거세요.
+  </div>
+</section>
+
 <!-- ══════════ 태그 ══════════ -->
 <section id="tags">
   <h2>스킬 태그 — 두 축을 구분하세요</h2>

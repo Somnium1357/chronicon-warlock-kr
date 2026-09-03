@@ -330,21 +330,34 @@
 <section id="death">
   <h2>사망 페널티와 모드</h2>
 
-  <h3>소프트코어</h3>
+  <h3>부활 — 소프트코어</h3>
   <div class="tw"><table>
     <tr><th>부활 방식</th><th>대가</th></tr>
     <tr><td>시체 근처 부활</td><td><strong>크리스탈</strong> 소모 + 소량 <strong>경험치 손실</strong></td></tr>
     <tr><td>마을 부활</td><td><strong>무료</strong></td></tr>
   </table></div>
+  <div class="note warn">
+    <strong>부활 비용은 「내가 가진 크리스탈」이 아니라 「장비의 가치」로 정해집니다.</strong>
+    <code>0.630</code>에서 바뀌었습니다 — 그전에는 보유 크리스탈 총액 기준이었습니다. <span class="tag data">데이터</span><br>
+    즉 <strong>장비를 좋게 맞출수록 죽었을 때 비싸집니다.</strong> 낼 수 없는 금액이면
+    비용이 <strong>빨간색</strong>으로 표시되고, 그때는 마을 부활(무료)만 남습니다.
+  </div>
+
   <div class="note ok">
     <strong>아이템은 잃지 않습니다.</strong> <span class="tag dev">개발자</span> 크로니콘의 사망은 다른 핵앤슬래시보다 훨씬 가볍습니다. 죽는 게 무서워서 난이도를 낮게 유지할 이유는 없습니다.
   </div>
 
-  <h3>하드코어</h3>
+  <h3>하드코어와 무덤</h3>
   <div class="tw"><table>
     <tr><th>잃는 것</th><th>남는 것</th></tr>
     <tr><td>캐릭터 <strong>영구 삭제</strong> · <strong>개인 창고</strong></td><td><strong>공용 창고 · 재화는 보존</strong></td></tr>
   </table></div>
+  <p><strong>죽은 영웅은 무덤</strong> <span class="mono">Graveyard</span>에 남습니다.
+     묘비에는 <strong>도달한 무한 아노말리 티어</strong>가 함께 기록됩니다 (<code>1.100</code>부터). <span class="tag data">데이터</span></p>
+  <div class="note">
+    묘비에 적히는 것 — 총 처치 수와 보스·챔피언·정예별 내역, 발견한 전설 수와 파괴한 오브젝트 수,
+    <strong>생전에 모은 크리스탈</strong>, 레벨과 마스터리, 생존 시간, 도달한 아노말리와 무한 티어.
+  </div>
 
   <h3>고립 (1.54 신규)</h3>
   <div class="note warn">

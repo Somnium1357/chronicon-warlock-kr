@@ -58,3 +58,5 @@ Cape	망토		Cloak(외투)과 구분	both
 Evasion	회피		Elusive(날렵함)와 구분	both
 Burning	화상		상태. Combustion(연소)과 구분	both
 Knockback	밀쳐내기	넉백|밀치기	화면 표기. 위키가 「넉백」·「밀림」으로 갈려 있었다	both
+Isolation	고립 모드	격리	1.54 신규 캐릭터 모드	both
+Trove	보물함	보물고	각 막 선택 구역의 대형 상자	both
