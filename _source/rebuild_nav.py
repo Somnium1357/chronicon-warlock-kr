@@ -27,6 +27,7 @@ NAV = [
     ('아이템 · 제작', [
         ('아이템 · 드랍', 'basics/items.html'),
         ('제작 · 변환', 'basics/crafting.html'),
+        ('필요한 것 구하기', 'basics/acquire.html'),
     ]),
     ('진행', [
         ('난이도 · 엔드게임', 'basics/endgame.html'),

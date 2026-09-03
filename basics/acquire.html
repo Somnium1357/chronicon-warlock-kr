@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>필요한 것 구하기 · 크로니콘 위키</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/wiki.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="brand plain" href="../index.html">크로니콘 <span>위키</span></a>
+  <span class="crumb">아이템 · 제작 › 필요한 것 구하기</span>
+</div>
+
+<nav class="side">
+  <div class="grp">시작</div>
+  <ul>
+    <li><a href="../index.html">홈</a></li>
+  </ul>
+  <div class="grp">게임 기초</div>
+  <ul>
+    <li><a href="../basics/damage.html">피해 계산</a></li>
+    <li><a href="../basics/defense.html">방어</a></li>
+    <li><a href="../basics/skills.html">스킬 · 태그</a></li>
+  </ul>
+  <div class="grp">아이템 · 제작</div>
+  <ul>
+    <li><a href="../basics/items.html">아이템 · 드랍</a></li>
+    <li><a href="../basics/crafting.html">제작 · 변환</a></li>
+    <li><a class="cur" href="../basics/acquire.html">필요한 것 구하기</a></li>
+  </ul>
+  <div class="grp">진행</div>
+  <ul>
+    <li><a href="../basics/endgame.html">난이도 · 엔드게임</a></li>
+  </ul>
+  <div class="grp">클래스</div>
+  <ul>
+    <li><a href="../classes/index.html">클래스 개요</a></li>
+    <li><a href="../classes/picks.html">추천 빌드</a></li>
+    <li><a href="../classes/build-index.html">빌드 가이드 색인</a></li>
+    <li><a href="../classes/warlock/index.html">워록</a></li>
+    <li><a href="../classes/warlock/leveling.html">└ 레벨링</a></li>
+    <li><a href="../classes/warlock/progression.html">└ 성장</a></li>
+    <li><a href="../classes/warlock/builds.html">└ 빌드</a></li>
+    <li><a href="../classes/templar/index.html">템플러</a></li>
+    <li><a href="../classes/templar/leveling.html">└ 레벨링</a></li>
+    <li><a href="../classes/templar/progression.html">└ 성장</a></li>
+    <li><a href="../classes/berserker/index.html">버서커</a></li>
+    <li><a href="../classes/berserker/leveling.html">└ 레벨링</a></li>
+    <li><a href="../classes/berserker/progression.html">└ 성장</a></li>
+    <li><a href="../classes/warden/index.html">워든</a></li>
+    <li><a href="../classes/warden/leveling.html">└ 레벨링</a></li>
+    <li><a href="../classes/warden/progression.html">└ 성장</a></li>
+    <li><a href="../classes/mechanist/index.html">메카니스트</a></li>
+  </ul>
+  <div class="grp">자료</div>
+  <ul>
+    <li><a href="../basics/glossary.html">한영 명칭</a></li>
+    <li><a href="../basics/names.html">이름 찾기</a></li>
+    <li><a href="../meta/sources.html">출처 · 신뢰도</a></li>
+    <li><a href="../meta/patches.html">패치 동향</a></li>
+  </ul>
+</nav>
+
+<h1>필요한 것 구하기</h1>
+<p class="lede">빌드 문서가 「이걸 구해라」라고 할 때, 그래서 어디서 어떻게 구하는가</p>
+
+<div class="searchbar">
+  <input type="search" id="q" placeholder="이 문서에서 검색" autocomplete="off" spellcheck="false" aria-label="문서 내 검색">
+  <span class="cnt" id="cnt"></span>
+</div>
+<p id="none">검색 결과가 없습니다.</p>
+
+<section id="how">
+  <h2>이 문서를 쓰는 법</h2>
+  <div class="note ok">
+    <strong>빌드 문서의 「파밍 순서」에 나오는 항목을 여기서 찾으세요.</strong>
+    각 항목마다 <strong>어디서 나오는가</strong>와 <strong>안 나올 때 대체 경로가 있는가</strong>를 적었습니다.
+  </div>
+  <p>메커니즘의 자세한 설명은 <a href="crafting.html">제작 · 변환</a>과
+     <a href="items.html">아이템 · 드랍</a>에 있습니다. 이 문서는 <strong>「그래서 뭘 해야 하나」</strong>만 다룹니다.</p>
+</section>
+
+<section id="gate">
+  <h2>먼저 — 문이 열려야 나옵니다</h2>
+
+  <p>파밍을 시작하기 전에 조건 세 개를 통과해야 합니다. 안 나오는 이유가 <strong>운이 아니라 자격</strong>인 경우가 많습니다.</p>
+
+  <div class="tw"><table>
+    <tr><th>열리는 것</th><th>조건</th></tr>
+    <tr><td><strong>전설 · 고유 재료</strong></td><td><strong>영웅 난이도 이상 · 레벨 10+</strong>. 캐주얼·일반에서는 아무리 돌아도 안 나옵니다</td></tr>
+    <tr><td><strong>챔피언의 왕관 · 프리즈매틱</strong></td><td><strong>영웅 이상 · 레벨 50+</strong> — 제작의 실질적 출발선</td></tr>
+    <tr><td><strong>유니크 세트</strong></td><td>레벨 <strong>10</strong>+</td></tr>
+    <tr><td><strong>전설 클래스 세트</strong></td><td>레벨 <strong>30</strong>+</td></tr>
+    <tr><td><strong>진정한 전설</strong></td><td><strong>전설 난이도 이상 + 레벨 100</strong>. 도박으로는 절대 안 나옵니다</td></tr>
+    <tr><td><strong>룬군주의 후회 · 프리즈매틱 액체</strong></td><td>영웅 이상 <strong>+ 레벨 100</strong> — 되돌리기가 여기서 열립니다</td></tr>
+    <tr><td><strong>신화 난이도</strong></td><td><strong>캠페인 완주</strong></td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>레벨 100 이전에는 룬과 프리즈매틱 소켓을 되돌릴 수 없습니다.</strong>
+    빼는 데 쓰는 재료가 둘 다 레벨 100 전용이기 때문입니다.
+    그전에 박는 것은 <strong>확정</strong>이라고 생각하세요.
+    <a href="endgame.html#handover">레벨링에서 성장으로</a>
+  </div>
+</section>
+
+<section id="set">
+  <h2>세트 아이템</h2>
+
+  <div class="note ok">
+    <strong>원하는 부위가 안 나올 때 기다릴 필요가 없습니다.</strong>
+    <strong>세트 아이템 변환</strong>이 있습니다 — 그 세트의 아무 조각 1개 + <strong>챔피언의 왕관 30</strong>
+    → <strong>같은 세트의 다른 아이템</strong>.
+  </div>
+
+  <div class="tw"><table>
+    <tr><th>상황</th><th>할 일</th></tr>
+    <tr><td>세트 조각이 <strong>하나도 없다</strong></td><td>영웅 이상에서 파밍. 전설 클래스 세트는 <strong>레벨 30</strong>부터</td></tr>
+    <tr><td>조각은 있는데 <strong>부위가 겹친다</strong></td><td><strong>세트 아이템 변환</strong> (왕관 30). 중복 조각을 넣으세요</td></tr>
+    <tr><td>세트 조각의 <strong>레벨이 낮다</strong></td><td><strong>아이템 레벨 업</strong> — 같은 품질의 고레벨 아이템을 연료로. 고레벨 쪽은 소모됩니다</td></tr>
+    <tr><td>세트 무기를 <strong>신화로 올리고 싶다</strong></td><td><a href="#mythic">신화 무기 제작</a> — 룬 소켓 2개가 열립니다</td></tr>
+  </table></div>
+  <p class="src">변환 결과물의 레벨은 <strong>재료들의 평균이고 소수점은 내림</strong>합니다. 캐릭터 레벨보다 높게는 못 올립니다</p>
+</section>
+
+<section id="legendary">
+  <h2>특정 전설 · 유니크 아이템</h2>
+
+  <p>빌드가 특정 아이템을 지목하는 이유는 대개 스탯이 아니라 <a href="items.html#power"><strong>파워</strong></a>(툴팁 빨간 글씨) 때문입니다.
+     그래서 <strong>경로가 둘</strong>입니다.</p>
+
+  <div class="tw"><table>
+    <tr><th>경로</th><th>내용</th></tr>
+    <tr><td><strong>① 그 아이템을 직접 파밍</strong></td><td>도감에서 <strong>획득 최소 레벨</strong>과 출처(유니크 적 전용 / 퀘스트 보상 / 제작)를 먼저 확인하세요</td></tr>
+    <tr><td><strong>② 파워만 룬으로 옮기기</strong></td><td>그 아이템을 갈아 <a href="#rune">룬</a>으로 만들어 <strong>다른 아이템에 붙입니다</strong>. 아이템 자체는 안 입어도 됩니다</td></tr>
+  </table></div>
+
+  <div class="note ok">
+    <strong>도감을 먼저 여세요.</strong> 유니크 이상 장비마다
+    <strong>획득 최소 레벨 · 출처</strong>가 적혀 있습니다. 「몇 레벨부터 나오나」를
+    추측할 필요가 없습니다. <a href="endgame.html#codex">도감</a>
+  </div>
+
+  <h3>무작위로 굴려서 뽑기</h3>
+  <div class="tw"><table>
+    <tr><th>레시피</th><th>재료</th></tr>
+    <tr><td>랜덤 고유</td><td>유니크 <strong>3</strong></td></tr>
+    <tr><td>랜덤 전설</td><td>전설 <strong>3</strong></td></tr>
+    <tr><td>랜덤 진정한 전설</td><td>진전설 <strong>5</strong></td></tr>
+  </table></div>
+  <div class="note warn">
+    <strong>같은 부위만 넣으면 그 부위가 확정됩니다.</strong> 이 문서에서 가장 실전적인 규칙입니다.<br>
+    쓸모없는 전설을 <strong>부위별로 분류해 쌓아두었다가</strong> 같은 부위끼리 3개씩 넣으세요.
+    섞으면 완전 무작위가 됩니다.
+  </div>
+
+  <h3>전설을 진전설급으로</h3>
+  <p><strong>전설 강화</strong> — 전설 + <strong>같은 레벨·같은 유형</strong>의 진전설 + 왕관 <strong>20</strong>
+     → 전설이 진전설급 기본 스탯을 얻습니다. <strong>진전설은 소모</strong>됩니다.</p>
+</section>
+
+<section id="rune">
+  <h2>룬</h2>
+
+  <div class="note ok">
+    <strong>경로가 둘이고, 둘이 전혀 다릅니다.</strong>
+  </div>
+
+  <div class="tw"><table>
+    <tr><th></th><th>드랍 룬 <span class="mono">Anomalous</span></th><th>제작 룬 <span class="mono">Crafted</span></th></tr>
+    <tr><td>어디서</td><td><strong>던전 아노말리 보스</strong> 직드랍</td><td><strong>내가 만듦</strong> — 아래</td></tr>
+    <tr><td>담긴 파워</td><td><strong>다른 어디에도 없는 전용 파워</strong></td><td>재료로 넣은 아이템의 파워</td></tr>
+    <tr><td>붙일 부위</td><td><strong>더 넓음</strong></td><td>재료와 같은 슬롯만</td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>빌드가 필수라고 하는 룬은 대개 드랍 룬입니다.</strong> 전용 파워라서 만들 수가 없습니다.
+    이건 <strong>돌아서 기다리는 수밖에 없습니다.</strong>
+  </div>
+
+  <h3>안 나올 때 — 기다리는 게 맞습니다</h3>
+  <div class="note ok">
+    아노말리 룬은 <strong>순환으로 보장</strong>됩니다. 내 캐릭터가 먹을 수 있는 것은
+    <strong>내 클래스 20종 + 공용 20종 = 40종</strong>이고, 안 나오는 것이 아니라 <strong>순서를 기다리는 것</strong>입니다.<br>
+    다만 이미 상당수를 모았다면 남은 대기가 길어지므로 — <strong>새 캐릭터를 하나 키우는 편이 빠를 수 있습니다.</strong>
+    파밍이 아니라 육성이 수급 수단이 되는 드문 구조입니다.
+  </div>
+
+  <h3>직접 만들기</h3>
+  <div class="tw"><table>
+    <tr><th>만들 것</th><th>필요한 것</th></tr>
+    <tr><td>하급 룬</td><td>왕관 <strong>50</strong> + <strong>파워가 붙은</strong> 유니크/전설 + <strong>빈 룬스톤</strong></td></tr>
+    <tr><td>상급 룬</td><td>왕관 <strong>50</strong> + <strong>파워가 붙은</strong> 진전설 + <strong>빈 룬스톤</strong></td></tr>
+    <tr><td>부착</td><td>왕관 <strong>50</strong> — <strong>룬이 없는 아이템에만</strong></td></tr>
+  </table></div>
+  <div class="note warn">
+    <strong>재료 아이템은 사라집니다.</strong> 그리고 <strong>등급은 재료가 정합니다</strong> —
+    상급 룬이 필요하면 진전설을 갈아야 하고, 진전설은 레벨 100 전용이므로
+    <strong>상급 룬 제작은 사실상 100 이후 작업</strong>입니다.<br>
+    룬스톤 하나에 <strong>왕관 100개</strong>(제작 50 + 부착 50)가 드니 <strong>파워를 정해두고</strong> 쓰세요.
+  </div>
+  <p><strong>빈 룬스톤</strong>은 <strong>정예 던전 아노말리</strong> 완료 보상입니다. <strong>사망 불가</strong> 모드라는 점만 주의하세요.</p>
+
+  <h3>장착 한도</h3>
+  <div class="tw"><table>
+    <tr><th>제한</th><th>값</th></tr>
+    <tr><td>상급 룬</td><td>캐릭터 전체 <strong>3개</strong> (<strong>위대함</strong> 하급 룬으로 <strong>4개</strong>)</td></tr>
+    <tr><td>하급 룬</td><td>캐릭터 전체 <strong>8개</strong></td></tr>
+    <tr><td>아이템당</td><td><strong>1칸.</strong> 상급·하급이 같은 칸을 씁니다 — <a href="#mythic">신화 무기만 2칸</a></td></tr>
+  </table></div>
+</section>
+
+<section id="gem">
+  <h2>보석</h2>
+
+  <div class="tw"><table>
+    <tr><th>필요한 것</th><th>얻는 법</th></tr>
+    <tr><td>1·2등급 (거친 · 세공된)</td><td><strong>드랍</strong>으로 나옵니다</td></tr>
+    <tr><td><strong>3등급 (연마된)</strong></td><td><strong>드랍되지 않습니다.</strong> 같은 등급 <strong>5개 + 제작 재료</strong> → 다음 등급 1개</td></tr>
+    <tr><td>소켓이 없다</td><td>젬마에게 소켓 추가. <strong>프리즈매틱 소켓</strong>은 변환 (왕관 <strong>30</strong> + 해당 프리즈매틱)</td></tr>
+    <tr><td>소켓 모양이 틀렸다</td><td><strong>보석을 전부 뺀 뒤에만</strong> 바꿀 수 있습니다</td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>순서를 지키세요 — 되돌리는 비용이 큽니다.</strong>
+    <ol>
+      <li><strong>승급 먼저, 삽입 나중에.</strong> 박은 뒤에는 승급할 수 없습니다</li>
+      <li><strong>빼면 그 아이템의 보석이 전부 파괴</strong>됩니다. 하나만 골라 못 뺍니다</li>
+      <li>프리즈매틱 소켓은 <strong>아이템당 하나</strong>. 바꾸려면 <strong>프리즈매틱 액체</strong>(레벨 100 전용)를 태워야 합니다</li>
+    </ol>
+    <strong>넣을 보석을 정하고 나서 소켓을 뚫으세요.</strong>
+  </div>
+  <p>같은 원소라도 <strong>형태(큐브·구체·별)</strong>와 <strong>박은 부위</strong>에 따라 보너스가 달라집니다.
+     빌드 문서가 「갑옷에 별 시트린」처럼 <strong>세 가지를 다 지정하는</strong> 이유입니다.</p>
+</section>
+
+<section id="mythic">
+  <h2>신화 무기</h2>
+
+  <div class="note warn">
+    <strong>룬을 두 개 낄 수 있는 유일한 슬롯입니다.</strong> 빌드가 핵심 룬 두 개를 동시에 요구한다면
+    이 무기 없이는 성립하지 않습니다.
+  </div>
+
+  <div class="tw"><table>
+    <tr><th>필요한 것</th><th>내용</th></tr>
+    <tr><td>바탕</td><td><strong>전설 등급 클래스 세트 무기</strong></td></tr>
+    <tr><td>고대 부품</td><td>무기별 <strong>2종</strong> — <a href="crafting.html#mythical">부품표</a></td></tr>
+    <tr><td>공통 재료</td><td>오염된 피 · 마법이 깃든 잎사귀 · 전기 머리카락 · 거인의 이빨 · 사악한 눈 <strong>각 10개</strong></td></tr>
+    <tr><td>어디서</td><td><strong>상급 보스 아노말리</strong> <span class="mono">Greater Boss</span></td></tr>
+    <tr><td>주의</td><td><strong>기존에 박힌 룬은 제거됩니다</strong></td></tr>
+  </table></div>
+
+  <div class="note ok">
+    <strong>부품이 안 나온다고 포기하지 마세요.</strong> <code>1.322</code>의 불운 방지가 걸려 있습니다 —
+    <strong>한 번도 못 본 부품은 확률이 크게 오르고</strong>, <strong>같은 부품이 연속으로 나오지 않으며</strong>,
+    계속 못 얻으면 확률이 서서히 올라갑니다. 협동에서는 <strong>플레이어별로 따로</strong> 굴립니다.
+  </div>
+</section>
+
+<section id="artifact">
+  <h2>아티팩트 <span class="tag">고대 야수 DLC</span></h2>
+
+  <div class="tw"><table>
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td>슬롯 모양</td><td><strong>삼각 · 마름모 · 별</strong> 3종</td></tr>
+    <tr><td>제작</td><td><strong>유물 파편</strong> <span class="mono">Artifact Fragments</span>을 소모해 제련</td></tr>
+    <tr><td>파편 사용처</td><td>「이것들을 <strong>다이애나 존스</strong>에게 가져가면 엄청난 보상을 받습니다」</td></tr>
+    <tr><td>보관</td><td>아티팩트는 <strong>고대 야수가 지니고 다닙니다</strong></td></tr>
+    <tr><td>원정</td><td><code>1.330</code>부터 <strong>난이도 슬라이더</strong>로 무한 티어까지 올릴 수 있습니다. 다만 <strong>원정으로 티어를 올릴 수는 없습니다</strong></td></tr>
+  </table></div>
+  <div class="note ok">
+    <strong>원정에는 체크포인트가 있습니다.</strong> <code>1.330</code>부터
+    알 해금 · 야수 성장 1·2 지점에 도달하면 <strong>거기까지 필요한 원정이 모든 캐릭터에 해금</strong>됩니다.
+    부캐와 하드코어의 반복을 줄이기 위한 장치입니다. 다만 <strong>본선에서 갈라져 나가는 선택 원정</strong>은
+    캐릭터마다 따로 깨야 합니다. <span class="tag data">데이터</span>
+  </div>
+</section>
+
+<section id="enchant">
+  <h2>마법부여 옵션</h2>
+
+  <div class="note warn">
+    <strong>먼저 — 원소 % 피해는 마법부여로 붙일 수 없습니다.</strong> <span class="tag comm">커뮤니티 DB 검증</span>
+    화염 +%, 암흑 +% 같은 것은 <strong>아이템이 원래 갖고 나오는 옵션</strong>입니다.
+    필요하면 <strong>그 옵션을 갖고 나오는 아이템</strong>을 파밍하거나 보석·룬으로 채워야 합니다.
+  </div>
+
+  <h3>순서를 지키면 비용이 크게 줄어듭니다</h3>
+  <div class="note ok">
+    <ol>
+      <li><strong>찬티의 퀘스트를 먼저 깨세요.</strong> 그전에는 마법부여를 쓸 수 없습니다</li>
+      <li><strong>100레벨로 올리기 전에</strong> 굴리세요. 비용이 <strong>등급과 아이템 가치</strong>로 정해져서, 레벨을 올린 뒤에는 몇 배가 듭니다</li>
+      <li><strong>스크램블</strong>로 판을 돌리고 → 마음에 드는 것만 <strong>강화해서 잠그고</strong> → 나머지를 다시 스크램블</li>
+      <li>수치가 낮게 떴다면 <strong>강화보다 재굴림이 쌉니다.</strong> 재굴림은 <strong>최대값 쪽으로 치우친 분포</strong>입니다</li>
+      <li><strong>완전 강화는 마지막에.</strong> 아이템 가치가 오르면 이후 작업 비용이 전부 올라갑니다</li>
+    </ol>
+  </div>
+
+  <div class="note warn">
+    <strong>강화하면 되돌릴 수 없습니다.</strong> 강화한 옵션은 재굴림도 스크램블도 안 됩니다.
+    푸는 방법은 하나뿐 — 테오의 <strong>「마법부여 잠금 해제」</strong>(장비 + <strong>열쇠 25개</strong>)입니다.
+  </div>
+
+  <h3>저항을 어떻게 채우나</h3>
+  <p><strong>저항 캡이 1순위입니다.</strong> 상한은 <strong>80%</strong>지만 높은 난이도가 기본 저항을 깎으므로
+     표기상 <strong>130%</strong>를 목표로 잡습니다.</p>
+  <div class="tw"><table>
+    <tr><th>수단</th><th>내용</th></tr>
+    <tr><td><strong>마법부여</strong></td><td>가능한 <strong>모든 부위에 전 저항</strong> + <strong>물리 저항 메이저 1개 + 원소별 마이너</strong></td></tr>
+    <tr><td>보석</td><td>부위와 원소를 맞춰 보충</td></tr>
+    <tr><td>신전</td><td>속성 저항 버프 7종이 풀에 있습니다 (일시적)</td></tr>
+  </table></div>
+
+  <h3>상급 강화</h3>
+  <p>일반 강화 상한을 넘어야 할 때만 씁니다. <strong>일반 강화가 효율이 더 좋으므로</strong>
+     한계까지 올린 뒤에 넘어가세요.</p>
+  <div class="tw"><table>
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td>대상</td><td><strong>유니크 이상</strong></td></tr>
+    <tr><td>비용</td><td><strong>기억 정수</strong> <span class="mono">Memory Essence</span></td></tr>
+    <tr><td>어디서</td><td><strong>틴카의 영역</strong> · <strong>헬포지</strong>(1.530부터)</td></tr>
+  </table></div>
+</section>
+
+<section id="bottleneck">
+  <h2>결국 무엇이 병목인가</h2>
+
+  <div class="note ok">
+    <strong>크리스탈이 아닙니다.</strong> 제작의 주 재화는 <strong>챔피언의 왕관</strong>이고,
+    엔드게임에서 실제로 발목을 잡는 것은 아래 넷입니다.
+  </div>
+
+  <div class="tw"><table>
+    <tr><th>병목</th><th>어디서</th><th>무엇에 쓰나</th></tr>
+    <tr><td><strong>챔피언의 왕관</strong></td><td>영웅 이상 · 레벨 50+</td><td>변환 거의 전부. 룬 하나에 <strong>100개</strong></td></tr>
+    <tr><td><strong>빈 룬스톤</strong></td><td><strong>정예 던전 아노말리</strong> 완료</td><td>룬 제작</td></tr>
+    <tr><td><strong>신화 부품</strong></td><td><strong>상급 보스 아노말리</strong></td><td>신화 무기 (불운 방지 있음)</td></tr>
+    <tr><td><strong>기억 정수</strong></td><td>틴카의 영역 · 무한 아노말리</td><td>상급 강화</td></tr>
+  </table></div>
+
+  <h3>목적을 정하고 도세요</h3>
+  <p>원저자의 지시가 한 문장입니다 — <em>「마스터리나 드랍 말고도 <strong>지금 필요한 무언가</strong>를 항상 노리면서 돌아라」</em>.</p>
+  <div class="tw"><table>
+    <tr><th>필요한 것</th><th>어디를 돌까</th></tr>
+    <tr><td>클래스 룬</td><td><strong>던전 아노말리</strong></td></tr>
+    <tr><td>빈 룬스톤</td><td><strong>정예 던전 아노말리</strong></td></tr>
+    <tr><td>프리즈매틱 · 룬군주의 후회</td><td><strong>소형 보스 아노말리</strong></td></tr>
+    <tr><td>신화 무기 재료</td><td><strong>대형 보스 아노말리</strong> (신화 XV)</td></tr>
+    <tr><td>황금 크리스탈</td><td><strong>무한 아노말리</strong></td></tr>
+    <tr><td>경험치 · 마스터리 · 상급 강화 재료</td><td><strong>무작위 아노말리</strong></td></tr>
+  </table></div>
+
+  <div class="note">
+    <strong>같이 볼 것</strong> —
+    <a href="items.html#drops">드랍과 매직 파인드</a> ·
+    <a href="items.html#crystals">크리스탈</a> ·
+    <a href="damage.html#killstreak">킬스트릭</a> ·
+    <a href="endgame.html#zone-reset">구역 초기화</a> ·
+    <a href="endgame.html#shrine">신전</a> ·
+    <a href="endgame.html#world">보물함 · 퍼즐</a>
+  </div>
+</section>
+
+<section id="related">
+  <h2>관련 문서</h2>
+  <ul>
+    <li><a href="crafting.html">제작 · 변환</a> — 각 레시피의 정확한 동작과 전체 목록</li>
+    <li><a href="items.html">아이템 · 드랍</a> — 등급 · 매직 파인드 · 파워</li>
+    <li><a href="endgame.html#anomaly-types">아노말리 종류별 파밍 목적</a></li>
+    <li><a href="endgame.html#handover">레벨링에서 성장으로</a> — 100을 찍기 전에 해둘 것</li>
+    <li><a href="../classes/picks.html">클래스별 추천 빌드</a> — 무엇을 목표로 삼을까</li>
+  </ul>
+</section>
+
+</div>
+<a href="#" class="totop">↑ 맨 위</a>
+<script src="../assets/wiki.js"></script>
+</body>
+</html>
