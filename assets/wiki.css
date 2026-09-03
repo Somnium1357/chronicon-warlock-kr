@@ -113,6 +113,7 @@ tr:last-child td{border-bottom:none}
 /* 근거 등급 배지 */
 .tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.05em;padding:1px 7px;border:1px solid currentColor;border-radius:999px;margin-left:5px;white-space:nowrap;vertical-align:1px}
 .tag.data{color:var(--ok)}
+.cnt-badge{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:400;color:var(--muted);margin-left:8px}
 .tag.dev{color:var(--frost)}
 .tag.comm{color:var(--muted)}
 .tag.unk{color:var(--warn)}
