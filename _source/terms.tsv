@@ -48,7 +48,7 @@ Collector	수집가	제작 재료 수집가		patch
 Treasurer	재무관	보물 보유자		both
 Desecrator	모독자	파멸자	워록 세트·마스터리	patch
 Overpower	제압	압도	저항 관통 스탯	patch
-Reach	사거리	리치|범위	스탯 화면 표기. 「리치」는 워록 Lich 트리와 겹친다	patch
+Reach	사거리	리치|도달 범위|공격 범위/유효 거리	스탯 화면 표기. 「리치」는 워록 Lich 트리, 「범위」는 일반 명사와 겹쳐 금지어를 좁혔다	patch
 Parry	패리	패링|받아치기|받아넘기기	메카니스트 전용 방어 스탯	both
 Lich	리치		워록 트리 — Reach 와 혼동 주의	both
 Detonation	폭발		워록. Blast(포격)와 구분	both
