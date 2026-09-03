@@ -1,0 +1,48 @@
+영문	정본	금지어	비고	범위
+Crystals	크리스탈	결정|결정석|수정	재화. 「결정」은 決定과 겹침	patch
+Crystal Find	크리스탈 발견	수정 발견	신전 버프	both
+Crystals Found	크리스탈 발견	획득 결정량|보너스 크리스탈	Crystal Find 와 같은 스탯 · 금지어 「보너스 크리스탈」은 Bonus Crystals 의 정본이라 패치에서만 검사	patch
+Bonus Crystals	크리스탈 보너스 획득량	골드 크리스탈 보너스	Crystals Found 와 별개 스탯	patch
+Prismatic	프리즈매틱	무지갯빛	레시피책 표기에 맞춤	both
+Anomaly	아노말리	변칙|변칙 구역|변칙 던전	「이상」은 以上 과 겹침	both
+Anomalies	아노말리	변칙|변칙 구역		both
+Elixir	엘릭서	비약|영약	아이템명 13개 기준	both
+Vial	투척병	바이알		both
+Spellbook	마법서		Scroll 과 충돌하던 것	patch
+Scroll	주문서	두루마리		both
+Codex	코덱스		도감(The Codex)과 구분	both
+The Codex	도감		게임 내 백과사전	both
+Runestone	룬스톤			both
+Blank Runestone	빈 룬스톤			both
+Runelord's Remorse	룬군주의 후회	룬로드의 후회		both
+Champion's Crown	챔피언의 왕관		변환 주 재화	both
+Dragonkin	용의 동족	용의 혈족|드래곤킨	버서커 트리	both
+Cube	큐브	정방형	보석·소켓 모양	patch
+Sphere	구체	구형		patch
+Star	별	성형		patch
+Rough	거친		보석 1등급	patch
+Cut	세공된		보석 2등급	patch
+Polished	연마된		보석 3등급	patch
+Ancient Hilt	고대 검자루		검	both
+Ancient Blade	고대 칼날	고대의 칼날	검	patch
+Ancient Shaft	고대 자루	고대 화살대	도끼	both
+Ancient Axe Blade	고대 도끼날		도끼	both
+Ancient String	고대 활시위	고대의 줄	활	both
+Ancient Bow	고대 활		활	both
+Ancient Power Crystal	고대 동력 크리스탈	고대 파워 크리스탈|고대 동력 수정	지팡이	both
+Ancient Staff	고대 지팡이	고대의 지팡이	지팡이	patch
+Ancient Straps	고대 끈	고대의 끈	건틀릿	patch
+Ancient Gloves	고대 장갑	고대의 장갑	건틀릿	patch
+Theo	테오		형태 변환사	both
+Chantie	찬티		마법부여사	both
+Chantelle	샹텔		고대의 마법부여사 — 찬티와 별개	both
+Gemma	젬마		보석 및 홈 세공사	both
+Medella	메델라		헬포지 관리자	both
+Korem	코렘		인도자 및 기술 초기화	both
+Tarot	타로		도박꾼	both
+Sarek	사렉		물약 및 장비 상인	both
+Tinka	틴카		기계공	both
+Crystal Hoarder	크리스탈 사재기꾼	크리스탈 수집가	도움말이 다르게 적고 있었음	both
+Gem Hoarder	보석 사재기꾼	보석 수집가		both
+Collector	수집가	제작 재료 수집가		patch
+Treasurer	재무관	보물 보유자		both
