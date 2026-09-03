@@ -240,6 +240,68 @@
   <p>따라서 도트·오라 중심 빌드에서 공속 인챈트는 <strong>시전 모션을 줄여 도트를 더 자주 새로 거는 용도</strong> 이상은 아닙니다. 참고로 <strong>시전 속도라는 별도 스탯은 없습니다</strong> — 공격 속도가 곧 시전 속도입니다.</p>
 </section>
 
+<!-- ══════════ 잘 안 알려진 스탯 ══════════ -->
+<section id="reach">
+  <h2>설명이 잘 안 보이는 스탯들</h2>
+
+  <p>게임 내 도움말에는 있지만 툴팁만 봐서는 뭔지 알기 어려운 것들입니다. <span class="tag data">데이터</span></p>
+
+  <h3>리치 <span class="mono">Reach</span></h3>
+  <div class="note ok">
+    <strong>모든 스킬의 유효 사거리 · 반경 · 거리를 늘립니다.</strong> 특정 스킬만이 아니라 <strong>전부</strong>입니다.
+  </div>
+  <p>장판·오라·소환물 배치 범위까지 함께 늘어나므로, <strong>밀집 파밍 빌드에서 체감이 큽니다.</strong>
+     다만 <a href="defense.html#mitigation">감소 수익</a> 대상이라 무한정 쌓을 수는 없습니다.</p>
+
+  <h3>가시 <span class="mono">Thorns</span></h3>
+  <div class="tw"><table>
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td>발동</td><td>적이 <strong>나를 때릴 때</strong> 되돌려주는 피해</td></tr>
+    <tr><td>속성</td><td>따로 명시가 없으면 <strong>물리</strong></td></tr>
+    <tr><td>치명타</td><td><strong>가능합니다</strong></td></tr>
+    <tr><td>분류</td><td><strong>간접 피해</strong></td></tr>
+  </table></div>
+  <div class="note ok">
+    <strong>가시는 제압이 필요 없습니다.</strong> 간접 피해라 <strong>적의 저항 자체를 타지 않습니다</strong> —
+    제압을 올려도 가시 피해는 늘지 않고, 반대로 저항 높은 적에게도 그대로 들어갑니다.
+  </div>
+  <div class="note warn">
+    <strong>적의 가시에는 거리 감쇠가 있습니다.</strong> <code>0.820</code>에서
+    원거리·설치형 스킬이 지나치게 손해 보지 않도록 <strong>거리에 따라 피해가 줄어들도록</strong> 바뀌었습니다.
+  </div>
+
+  <h3>타격 시 회복에는 0.1초 쿨다운이 있습니다</h3>
+  <div class="note warn">
+    <strong>체력 · 마나 타격 시 회복</strong> <span class="mono">Health / Mana on hit</span>은
+    <strong>0.1초 내부 쿨다운</strong>이 걸려 있습니다. <span class="tag data">데이터</span><br>
+    초당 10회를 넘는 다단히트 빌드에서는 <strong>때린 횟수만큼 회복되지 않습니다.</strong>
+    공격 속도를 올려도 이 스탯의 실효 회복량은 <strong>초당 10회에서 멈춥니다</strong>.<br>
+    표기값은 <strong>최소값</strong>이고, <strong>한 방이 셀수록 더 많이</strong> 회복합니다 —
+    즉 <strong>다단히트보다 한 방이 굵은 빌드</strong>에 유리한 스탯입니다.
+  </div>
+
+  <h3>물약 효율 <span class="mono">Potion Effectiveness</span></h3>
+  <p>체력·마나 물약의 회복량을 늘립니다. 템플러는 <strong>레벨이 오르면서 자동으로 얻습니다</strong> —
+     <code>0.520</code>에서 추가된 클래스 특성으로 <strong>100레벨에 +30%</strong>입니다. <span class="tag data">데이터</span></p>
+
+  <h3>동료 스탯 세 갈래</h3>
+  <div class="tw"><table>
+    <tr><th>스탯</th><th>무엇을 올리나</th></tr>
+    <tr><td><strong>동료 체력</strong></td><td>동료의 체력</td></tr>
+    <tr><td><strong>동료 피해</strong></td><td>동료의 피해</td></tr>
+    <tr><td><strong>동료 패시브 · 사용 효과</strong></td><td><strong>동료가 주는 버프·오라의 세기</strong>와 동료 스킬의 「사용」 효과.<br>예: 「사용」이 주문 시전인 동료는 이 스탯만큼 <strong>그 주문의 피해가 증가</strong></td></tr>
+  </table></div>
+  <div class="note">
+    세 번째 것을 놓치기 쉽습니다. <strong>동료를 딜이 아니라 버프원으로 쓰는 빌드</strong>라면
+    동료 피해가 아니라 이쪽을 올려야 합니다.
+  </div>
+
+  <h3>획득 반경 <span class="mono">Pickup Radius</span></h3>
+  <p>체력·마나·<strong>크리스탈</strong>을 자동으로 끌어당기는 거리입니다.
+     <strong>동료도 이 스탯을 씁니다</strong>. 또 <strong>반경 전리품 획득</strong>(기본 <code>Q</code>)의 범위도 넓힙니다.
+     <a href="items.html#crystals">크리스탈 파밍</a>에서 흘리는 양을 줄여줍니다.</p>
+</section>
+
 <!-- ══════════ 킬 연계 ══════════ -->
 <section id="killstreak">
   <h2>킬 연계 (킬스트릭)</h2>

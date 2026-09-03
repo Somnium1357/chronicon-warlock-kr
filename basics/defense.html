@@ -116,6 +116,26 @@
     <tr><td>30% × 5</td><td>150%</td><td>83.2%</td></tr>
   </table></div>
 
+  <h3>이 규칙이 적용되는 스탯 10종 <span class="tag data">데이터</span></h3>
+  <p>회피와 피해 감소만이 아닙니다. 게임 내 도움말이 <strong>「감소 수익」</strong> <span class="mono">Diminishing Returns</span>으로 묶어 열거하는 목록입니다.</p>
+  <div class="tw"><table>
+    <tr><th>스탯</th><th>메모</th></tr>
+    <tr><td><strong>피해 감소</strong></td><td rowspan="2">—</td></tr>
+    <tr><td>동료 피해 감소</td></tr>
+    <tr><td><strong>회피</strong></td><td>워든·워록 주력</td></tr>
+    <tr><td><strong>쿨다운 감소</strong></td><td><strong>상한 90%</strong></td></tr>
+    <tr><td>마나 소모 감소</td><td>—</td></tr>
+    <tr><td><strong>효과 지속</strong></td><td><strong>상한 없음</strong> — 버프·주문 지속시간</td></tr>
+    <tr><td><strong>리치</strong> <span class="mono">Reach</span></td><td><a href="damage.html#reach">사거리·반경</a></td></tr>
+    <tr><td><strong>스태거</strong></td><td>아래 참고</td></tr>
+    <tr><td>마나 실드</td><td>—</td></tr>
+    <tr><td>의지력 <span class="mono">Willpower</span></td><td>받는 <strong>부정 효과 지속시간 감소</strong></td></tr>
+  </table></div>
+  <div class="note warn">
+    <strong>쿨다운 감소를 90% 넘게 쌓아도 의미가 없습니다.</strong> 상한이 있는 유일한 항목입니다.
+    <strong>효과 지속</strong>은 반대로 상한이 없어서, 곱연산이라도 계속 넣을 가치가 있습니다.
+  </div>
+
   <div class="note">
     피해 감소 계열 옵션(직접 피해 감소 20% 등)은 <strong>여러 부위에 나눠 넣어도 계속 유효</strong>합니다. 하나에 몰아넣을 수 없는 구조라서, 실전 빌드는 보통 <strong>3부위 이상</strong>에 직접 피해 감소를 깔아둡니다.
   </div>
@@ -171,12 +191,86 @@
   <h3>스태거</h3>
   <p><strong>스태거</strong> <span class="mono">Stagger</span>는 받은 피해의 일부를 <strong>3초에 걸쳐 분산</strong>시킵니다. 한 방을 즉시 다 맞지 않고 나눠 맞기 때문에, 그 사이에 회복·배리어가 개입할 여지가 생깁니다.</p>
   <div class="note ok">
-    스태거는 <strong>곱연산으로 스케일</strong>합니다. 다른 피해 감소 수단과 별도의 통에 들어가므로, 이미 피해 감소가 높은 빌드에도 체감이 있습니다.
+    <strong>스태거에는 숨은 30% 피해 감소가 붙어 있습니다.</strong> <span class="tag data">데이터</span>
+    분산된 피해는 원래 값의 <strong>70%만</strong> 실제로 들어옵니다. 단순한 시간 분산이 아니라 <strong>실질 감소</strong>입니다.
+  </div>
+  <div class="note warn">
+    <strong>다만 분산된 피해는 배리어를 무시하고 체력에 직접 들어옵니다.</strong> <span class="tag data">데이터</span>
+    배리어로 버티는 빌드에서 스태거만 올리면 오히려 새는 구멍이 됩니다 —
+    <strong>체력 재생을 같이 올리세요.</strong> 게임 도움말이 명시적으로 경고하는 부분입니다.
+  </div>
+  <div class="note">
+    스태거는 <strong>곱연산</strong>이라 다른 피해 감소와 별도의 통에 들어갑니다. 이미 피해 감소가 높은 빌드에도 체감이 있습니다.
   </div>
 
   <h3>막기는 방패 전용</h3>
   <div class="note warn">
     <strong>막기</strong> <span class="mono">Block</span>는 <strong>방패를 든 클래스만</strong> 쓸 수 있습니다. <strong>워록과 워든에는 해당 사항이 없습니다.</strong> 영어 가이드에서 "블록 수치를 올려라"는 조언을 보면 방패 클래스(주로 템플러) 이야기인지 먼저 확인하세요.
+  </div>
+  <p><strong>방패만 들고 있으면 어떤 공격이든 막을 수 있습니다.</strong> 막기 확률과 막은 피해량 두 스탯이
+     각각 <strong>막을 확률</strong>과 <strong>막았을 때 줄어드는 양</strong>을 정합니다. <span class="tag data">데이터</span></p>
+</section>
+
+<!-- ══════════ 상태 이상 ══════════ -->
+<section id="status">
+  <h2>상태 이상 — 무엇이 나에게 걸리고 무엇이 안 걸리는가</h2>
+
+  <div class="note ok">
+    <strong>플레이어는 조작 불능이 되지 않습니다.</strong> <span class="tag data">데이터</span><br>
+    게임 도움말 첫 줄이 <em>「플레이어는 밀리거나 끌리는 것, 그리고 둔화·속박 외에는
+    캐릭터 조작을 잃지 않습니다」</em>입니다.<br>
+    <strong>기절 · 공포 · 빙결 · 방해는 적에게만 걸립니다.</strong>
+    영어 가이드에서 "이 적은 스턴이 위험하다"는 말은 <strong>쿨다운이 멈춘다</strong>는 뜻이지
+    조작을 뺏긴다는 뜻이 아닙니다.
+  </div>
+
+  <div class="tw"><table>
+    <tr><th>효과</th><th>영문</th><th>내용</th><th>나에게</th></tr>
+    <tr><td><strong>밀림</strong></td><td><span class="mono">Knockback</span></td><td>적을 밀어냅니다. 밀리는 동안 공격을 시도하지 않습니다 — <strong>이미 공격 모션에 들어갔다면 예외</strong></td><td>걸림</td></tr>
+    <tr><td><strong>끌기</strong></td><td><span class="mono">Pull</span></td><td>밀림의 반대. 규칙은 같습니다</td><td>걸림</td></tr>
+    <tr><td><strong>둔화 · 속박</strong></td><td><span class="mono">Slow / Immobilize</span></td><td>이동 속도를 % 감소. <strong>속박 = 둔화 100%</strong></td><td>걸림</td></tr>
+    <tr><td><strong>냉각 · 빙결</strong></td><td><span class="mono">Chilled / Frozen</span></td><td>기술적으로 둔화·속박과 같고, 냉기 계열 부가 효과가 얹힙니다</td><td>적만</td></tr>
+    <tr><td><strong>기절</strong></td><td><span class="mono">Stun</span></td><td>모든 행동 차단 + <strong>쿨다운 타이머 정지</strong>. <strong>반복 기절은 감소 수익</strong></td><td>적만</td></tr>
+    <tr><td><strong>방해</strong></td><td><span class="mono">Interrupt</span></td><td>공격 모션을 끊고 <strong>그 능력을 최대 쿨다운으로 되돌립니다</strong></td><td>적만</td></tr>
+    <tr><td><strong>공포</strong></td><td><span class="mono">Fear</span></td><td>적이 마구 도망칩니다. <strong>직접 피해를 주면 풀릴 수 있습니다</strong></td><td>적만</td></tr>
+  </table></div>
+
+  <div class="note warn">
+    <strong>단단한 적과 보스는 대체로 이 효과들에 저항합니다.</strong>
+    <span class="mono">Sturdy</span> 접두가 붙은 적에게 군중 제어로 버티는 전략은 통하지 않습니다. <span class="tag data">데이터</span>
+  </div>
+
+  <h3>출혈과 화상은 성격이 다릅니다</h3>
+  <div class="tw"><table>
+    <tr><th></th><th>추가 효과</th></tr>
+    <tr><td><strong>출혈</strong> <span class="mono">Bleed</span></td><td>피해 외에 <strong>적의 체력 재생을 막습니다</strong></td></tr>
+    <tr><td><strong>화상</strong> <span class="mono">Burn</span></td><td><strong>전파됩니다</strong> — 아래 참고</td></tr>
+  </table></div>
+
+  <div class="note ok">
+    <strong>화상 전파 규칙</strong> <span class="tag data">데이터</span>
+    <ul>
+      <li><strong>피해 틱마다 1회</strong>, <strong>1.8m 이내</strong> 무작위 대상에게 옮겨붙습니다</li>
+      <li>옮겨간 화상은 <strong>효율 80%</strong>입니다</li>
+      <li><strong>불타고 있지 않은 대상에게만</strong> 붙습니다 — 무한 전파도, 지속시간 갱신도 없습니다</li>
+      <li>협동에서는 <strong>동료와 다른 플레이어에게도</strong> 번집니다</li>
+    </ul>
+    밀집한 무리에서 화염 빌드가 유난히 강한 이유가 이것입니다.
+  </div>
+
+  <h3>조각내기</h3>
+  <p><strong>조각내기</strong> <span class="mono">Gibbing</span>는 처치된 적이 터져 흩어지는 것입니다.
+     <strong>마지막 타격이 적 최대 체력의 절반을 넘을 때</strong> 발생합니다.
+     일부 마법부여·패시브·아이템 파워는 <strong>피해량과 무관하게</strong> 조각내기를 일으킵니다. <span class="tag data">데이터</span></p>
+  <div class="note">
+    버서커는 조각낸 적에게서 <strong>분노를 추가로</strong> 얻습니다. 단순한 연출이 아니라 자원 수급 조건입니다.
+  </div>
+
+  <h3>마나 실드는 배리어가 아닙니다</h3>
+  <div class="note warn">
+    <strong>마나 실드</strong> <span class="mono">Mana Shield</span>는 피해를 체력 대신 <strong>마나로</strong> 받습니다.
+    <strong>직접 피해와 간접 피해를 모두 막는 유일한 수단</strong>입니다. <span class="tag data">데이터</span><br>
+    체력바 위에 <strong>하늘색 막대</strong>로 표시되는 일반 배리어(임시 추가 체력)와는 <strong>다른 것</strong>입니다.
   </div>
 </section>
 

@@ -328,6 +328,80 @@
   </div>
 </section>
 
+<!-- ══════════ 파워 ══════════ -->
+<section id="power">
+  <h2>파워 — 세 가지가 같은 이름을 씁니다</h2>
+
+  <div class="note warn">
+    <strong>한글패치에서 「파워」가 세 가지를 가리킵니다.</strong> 영어 가이드를 읽을 때 특히 헷갈리는 지점입니다.
+  </div>
+
+  <div class="tw"><table>
+    <tr><th>무엇</th><th>영문</th><th>현재 상태</th></tr>
+    <tr><td><strong>아이템의 파워</strong> — 특수 효과</td><td><span class="mono">item power</span></td><td><strong>이것이 중요한 그 파워입니다</strong></td></tr>
+    <tr><td>장비 파워 — 캐릭터 지표</td><td><span class="mono">Gear Power</span></td><td>지금도 있습니다</td></tr>
+    <tr><td>아이템 파워 — 아이템별 점수</td><td><span class="mono">Power: N</span></td><td><strong><code>1.100</code>에서 삭제됐습니다</strong></td></tr>
+  </table></div>
+
+  <h3>① 아이템의 파워 — 특수 효과 <span class="tag data">데이터</span></h3>
+  <div class="note ok">
+    <strong>툴팁에 빨간 글씨로 뜨는 것</strong>이 파워입니다. 게임 도움말 표현으로는
+    <em>「그 아이템만의 매우 강력한 효과로, <strong>다른 어떤 아이템에서도 찾을 수 없습니다</strong>」</em>.
+  </div>
+  <p>빌드가 특정 아이템을 <strong>필수</strong>라고 하는 이유는 대개 스탯이 아니라 이 파워 때문입니다.
+     그리고 <a href="crafting.html#runes">룬</a>이 존재하는 이유이기도 합니다 —
+     <strong>파워만 떼어내 다른 아이템에 옮기는 장치</strong>가 룬입니다.</p>
+
+  <h3>마법부여 색 세 가지</h3>
+  <div class="tw"><table>
+    <tr><th>색</th><th>의미</th><th>스크램블</th><th>재굴림</th></tr>
+    <tr><td><strong>빨강</strong></td><td><strong>파워</strong> — 그 아이템 전용 효과</td><td>불가</td><td>불가</td></tr>
+    <tr><td><strong>주황</strong></td><td><strong>고정 옵션</strong> — 그 아이템에 <strong>항상</strong> 굴러나옵니다</td><td>불가</td><td>가능</td></tr>
+    <tr><td>흰색</td><td>보통 옵션</td><td>가능</td><td>가능</td></tr>
+  </table></div>
+  <div class="note ok">
+    <strong>주황 옵션이 있는 아이템이 이득입니다.</strong> 게임 도움말이 명시합니다 —
+    <em>「고정 옵션이 있다는 것은 그 아이템이 <strong>더 많은 총 마법부여 개수</strong>를 굴린다는 뜻입니다」</em>.
+    고정 칸이 일반 칸을 잡아먹는 것이 아니라 <strong>추가로 붙습니다</strong>. <span class="tag data">데이터</span>
+  </div>
+
+  <h3>② 장비 파워 — 참고 지표일 뿐입니다</h3>
+  <p>레벨 · 박은 보석 · 등급 · 마법부여의 강도와 수치로 계산되는 <strong>캐릭터 전체 지표</strong>입니다.</p>
+  <div class="note warn">
+    <strong>높다고 좋은 것이 아닙니다.</strong> 개발자가 직접 못박았습니다 —
+    <em>「파워가 높다고 반드시 당신에게 더 좋은 것은 아닙니다. <strong>빌드에 따라 크게 달라집니다</strong>.
+    한눈에 대략의 감을 주는 용도입니다」</em>. <span class="tag data">데이터</span> <code>0.820</code><br>
+    실제로 <strong>아이템별 파워 점수는 <code>1.100</code>에서 「오해를 부른다」는 이유로 삭제</strong>됐습니다.
+    장비 파워를 기준으로 장비를 고르지 마세요.
+  </div>
+
+  <h3>숨은 제한 — 내부 쿨다운 <span class="tag data">데이터</span></h3>
+  <div class="note warn">
+    <strong>일부 아이템과 전설 파워에는 표시되지 않는 쿨다운이 걸려 있습니다.</strong>
+    <code>0.820</code>에서 도입된 <strong>내부 쿨다운</strong> <span class="mono">Internal Cooldown</span>으로,
+    발동률과 지속률을 조정하기 위한 장치입니다.<br>
+    개발자 설명이 <em>「일반적으로 매우 짧고, <strong>표시되지 않습니다</strong>」</em>입니다.
+    계산상 나와야 할 발동 횟수보다 실제가 적다면 이것을 의심하세요.
+  </div>
+
+  <h3>세트는 언제부터 나오나 <span class="tag data">데이터</span></h3>
+  <div class="tw"><table>
+    <tr><th>구분</th><th>등장 레벨</th></tr>
+    <tr><td><strong>유니크 등급 세트</strong></td><td>레벨 <strong>10</strong>부터</td></tr>
+    <tr><td><strong>전설 클래스 세트</strong></td><td>레벨 <strong>30</strong>부터</td></tr>
+  </table></div>
+  <p class="src">게임 내 도감이 아이템별 <strong>획득 최소 레벨</strong>을 표시합니다 — 모독자 세트를 확인한 결과 <strong>30</strong>이었습니다 <span class="tag obs">실측</span></p>
+
+  <h3>다른 클래스 아이템이 나오는 이유</h3>
+  <div class="note">
+    <strong>낮은 등급만 타 클래스 것이 나옵니다.</strong> <strong>유니크 이상은 항상 내 클래스</strong> 것입니다
+    (퀘스트 보상과 특정 몬스터 확정 드랍은 예외).<br>
+    <strong>매직 파인드를 올리면 타 클래스 아이템이 나올 확률이 줄어듭니다</strong> —
+    매직 파인드가 단순히 "좋은 것"만이 아니라 <strong>내 클래스 것</strong>을 뽑는 스탯이기도 한 이유입니다.
+    <span class="tag data">데이터</span>
+  </div>
+</section>
+
 <!-- ══════════ 제작 ══════════ -->
 <section id="crafting">
   <h2>제작 — 별도 문서</h2>
