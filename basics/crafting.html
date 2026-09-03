@@ -388,41 +388,102 @@
 <section id="runes">
   <h2>룬</h2>
 
+  <div class="note ok">
+    <strong>룬은 「아이템의 파워를 떼어내 옮기는 장치」입니다.</strong> <span class="tag data">데이터</span><br>
+    전설 아이템에 붙은 <strong>파워</strong>(그 아이템 고유의 특수 효과)를 룬으로 뽑아내면,
+    <strong>다른 아이템에 그 파워를 붙일 수 있습니다.</strong> 결과적으로 아이템 하나가
+    <strong>파워를 두 개</strong> 갖게 됩니다.<br>
+    개발자 표현 그대로 — <em>“같은 슬롯·유형의 아이템에 적용할 수 있어, <strong>전설 파워를 두 개 겹치게</strong> 해줍니다.”</em>
+  </div>
+
+  <p>즉 <strong>「이 파워는 좋은데 아이템 자체는 구리다」</strong>를 해결하는 수단입니다.
+     그 아이템을 입지 않고도 파워만 가져올 수 있습니다.</p>
+
+  <h3>두 종류 — 어디서 왔느냐가 다릅니다</h3>
   <div class="tw"><table>
-    <tr><th>구분</th><th>어디서</th></tr>
-    <tr><td><strong>하급 룬</strong> <span class="mono">Lesser</span></td><td><strong>던전 아노말리 보스</strong> 직드랍, 또는 유니크·전설의 <strong>파워 추출</strong></td></tr>
-    <tr><td><strong>상급 룬</strong> <span class="mono">Greater</span></td><td><strong>진전설</strong> 파워 추출</td></tr>
+    <tr><th></th><th><strong>제작 룬</strong> <span class="mono">Crafted</span></th><th><strong>변칙 룬</strong> <span class="mono">Anomalous</span></th></tr>
+    <tr><td>출처</td><td>내가 아이템을 갈아서 만듦</td><td><strong>아노말리에서 직접 드랍</strong></td></tr>
+    <tr><td>담긴 파워</td><td>재료로 쓴 아이템의 파워</td><td><strong>다른 곳에는 없는 전용 파워</strong></td></tr>
+    <tr><td>붙일 수 있는 부위</td><td>재료 아이템과 <strong>같은 슬롯·유형</strong>만</td><td><strong>더 넓은 범위</strong>에 붙습니다</td></tr>
+    <tr><td>재료 재활용</td><td colspan="2"><strong>제작 룬은 「랜덤 하급 룬」 변환의 재료로 쓸 수 없습니다</strong></td></tr>
   </table></div>
 
-  <h3>규칙</h3>
-  <ul>
-    <li><strong>아이템당 룬 1개.</strong> 예외는 <a href="#mythical">신화 제작 무기</a>로, 유일하게 <strong>2개</strong>가 들어갑니다</li>
-    <li><strong>같은 이름의 룬은 중첩되지 않습니다.</strong> <code>1.330</code>에서 신화 무기에 같은 룬 2개를 끼울 수 있던 버그가 수정됐습니다 (효과는 어차피 하나만 적용됐습니다) <span class="tag data">데이터</span></li>
-    <li>착용 가능한 <strong>상급 룬은 최대 3개</strong>. 「<strong>위대함</strong>」 룬을 쓰면 <strong>4개</strong>가 됩니다 <span class="tag comm">커뮤니티</span></li>
-    <li>룬도 <strong>상급 강화 상한이 툴팁에 표시</strong>됩니다 (<code>0.970</code>부터) <span class="tag data">데이터</span></li>
-  </ul>
+  <div class="note warn">
+    <strong>드랍 룬이 더 중요합니다.</strong> 변칙 룬에 붙은 파워는
+    <em>“어디에도 없는 완전히 새로운 파워”</em>입니다 — 아이템으로는 얻을 수 없습니다.
+    빌드 가이드가 특정 룬을 <strong>필수</strong>라고 못박는 경우는 대개 이쪽입니다.
+    <span class="tag data">데이터</span>
+  </div>
+
+  <h3>등급 — 재료가 등급을 정합니다</h3>
+  <div class="tw"><table>
+    <tr><th>재료로 넣은 아이템</th><th>나오는 룬</th></tr>
+    <tr><td><strong>진정한 전설</strong>의 파워</td><td><strong>상급 룬</strong> <span class="mono">Greater</span></td></tr>
+    <tr><td><strong>유니크 · 전설</strong>의 파워</td><td><strong>하급 룬</strong> <span class="mono">Lesser</span></td></tr>
+  </table></div>
+
+  <h3>장착 제한 <span class="tag data">데이터</span></h3>
+  <div class="tw"><table>
+    <tr><th>제한</th><th>값</th></tr>
+    <tr><td><strong>상급 룬</strong></td><td>캐릭터 전체에 <strong>3개</strong>까지</td></tr>
+    <tr><td><strong>하급 룬</strong></td><td>캐릭터 전체에 <strong>8개</strong>까지</td></tr>
+    <tr><td><strong>아이템당</strong></td><td><strong>1개.</strong> 상급과 하급이 <strong>같은 칸을 씁니다</strong> — 상급을 넣은 아이템에는 하급을 못 넣습니다</td></tr>
+    <tr><td>예외</td><td><a href="#mythical">신화 제작 무기</a>만 <strong>2칸</strong></td></tr>
+    <tr><td>중첩</td><td><strong>같은 이름의 룬은 중첩되지 않습니다</strong></td></tr>
+  </table></div>
+
+  <div class="note ok">
+    <strong>상급 룬 한도를 늘리는 룬이 있습니다.</strong>
+    <strong>위대함</strong> <span class="mono">Lesser Rune of Greatness</span> —
+    <em>「장착 가능한 상급 룬 최대 제한 수가 <strong>1 증가</strong>합니다」</em>.
+    하급 룬 한 칸을 써서 상급 한 칸을 사는 셈이라, <strong>상급 3 → 4</strong>가 됩니다.
+    <span class="tag data">데이터</span> <code>1.000</code>
+  </div>
+
+  <h3>몇 종이나 있나 <span class="tag data">데이터</span></h3>
+  <blockquote><code>1.200</code> — 모든 클래스가 각각 <strong>룬 20종</strong>을 갖게 되었고,
+     <strong>전 클래스 공용 20종</strong>이 더해져 <strong>총 100종</strong>입니다.</blockquote>
+  <div class="note">
+    <strong>커뮤니티가 말하는 「40종 순환」과 맞아떨어집니다.</strong>
+    내 캐릭터가 먹을 수 있는 것은 <strong>내 클래스 20 + 공용 20 = 40종</strong>이니까요.
+    원하는 룬이 안 나오는 것이 아니라 <strong>순서를 기다리는 것</strong>입니다.
+    이미 상당수를 모았다면 남은 대기가 길어지므로 —
+    <strong>새 캐릭터를 하나 키우는 편이 빠를 수 있습니다.</strong>
+    <span class="tag comm">커뮤니티</span>
+  </div>
+  <p class="src">위 100종은 <code>1.200</code> 시점이라 <strong>메카니스트(DLC) 이전</strong> 숫자입니다.
+     메카니스트도 20종을 갖는다면 지금은 120종이겠지만, 그렇게 적은 기록은 찾지 못했습니다</p>
 
   <h3>직접 만들기 — <a href="#transmute">변환 ③</a></h3>
   <div class="tw"><table>
     <tr><th>하려는 것</th><th>필요한 것</th></tr>
     <tr><td>하급 룬 생성</td><td>왕관 <strong>50</strong> + <strong>파워가 붙은</strong> 유니크/전설 + <strong>빈 룬스톤</strong></td></tr>
     <tr><td>상급 룬 생성</td><td>왕관 <strong>50</strong> + <strong>파워가 붙은</strong> 진전설 + <strong>빈 룬스톤</strong></td></tr>
-    <tr><td>부착</td><td>왕관 <strong>50</strong> + 룬</td></tr>
+    <tr><td>부착</td><td>왕관 <strong>50</strong> + 룬 — <strong>룬이 없는 아이템에만</strong></td></tr>
     <tr><td>제거</td><td><strong>룬군주의 후회</strong> 1 — <strong>레벨 100 전용 드랍</strong></td></tr>
   </table></div>
-  <p><strong>빈 룬스톤</strong>은 <strong>정예 던전 아노말리</strong> 완료 보상입니다.</p>
 
-  <div class="note ok">
-    <strong>아노말리 룬은 40종이 순환으로 보장됩니다.</strong> <span class="tag comm">커뮤니티</span>
-    원하는 룬이 안 나오는 것이 아니라 <strong>순서를 기다리는 것</strong>입니다.
-    다만 이미 상당수를 모았다면 남은 대기가 길어지므로 —
-    <strong>새 캐릭터를 하나 키우는 편이 빠를 수 있습니다.</strong>
-    파밍이 아니라 캐릭터 육성이 수급 수단이 되는 드문 구조입니다.
-  </div>
   <div class="note warn">
-    <strong>룬 생성은 아이템을 갈아 없앱니다.</strong> 원하는 파워가 붙은 장비를 넣으면
+    <strong>룬 생성은 재료 아이템을 없앱니다.</strong> 원하는 파워가 붙은 장비를 넣으면
     그 장비는 사라지고 파워만 룬으로 남습니다. <strong>쓰고 있는 장비를 넣지 마세요.</strong>
   </div>
+
+  <h3>빈 룬스톤을 받았다면</h3>
+  <div class="note ok">
+    <strong>빈 룬스톤</strong> <span class="mono">Blank Runestone</span>은 <strong>정예 던전 아노말리 완료 보상</strong>입니다.
+    설명이 <em>「아이템과 변환하여 그 힘을 흡수할 수 있습니다」</em> 한 줄뿐이라 용도가 잘 안 보이는데,
+    쓰는 곳은 하나입니다 — <strong>테오에게 가서 「하급/상급 룬 생성」</strong>.
+    <ol>
+      <li>가져오고 싶은 <strong>파워가 붙은 아이템</strong>을 고릅니다 (안 쓰는 것으로 — 사라집니다)</li>
+      <li>빈 룬스톤 + 그 아이템 + <strong>챔피언의 왕관 50</strong></li>
+      <li>나온 룬을 <strong>룬이 비어 있는</strong> 다른 아이템에 부착 (왕관 50 추가)</li>
+    </ol>
+    룬스톤 하나에 <strong>왕관 100개</strong>가 드는 셈이니, 아무 파워나 뽑지 말고
+    <strong>빌드에 필요한 파워를 정해두고</strong> 쓰세요.
+  </div>
+
+  <p class="src">룬 툴팁에는 <span class="mono">「POWER의 힘을 다음 장비 유형에 부여할 수 있습니다」</span>가 뜨고
+     그 아래에 붙일 수 있는 부위가 나열됩니다. 상급 강화 상한도 함께 표시됩니다 (<code>0.970</code>부터)</p>
 </section>
 
 <!-- ══════════ 보석 ══════════ -->
